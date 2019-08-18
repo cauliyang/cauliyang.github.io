@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://cauliyang.github.io</id>
+    <title>Vince&apos;s Core </title>
+    <updated>2019-08-18T07:35:11.435Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://cauliyang.github.io"/>
+    <link rel="self" href="https://cauliyang.github.io/atom.xml"/>
+    <subtitle>记录并分享学习过程</subtitle>
+    <logo>https://cauliyang.github.io/images/avatar.png</logo>
+    <icon>https://cauliyang.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2019, Vince&apos;s Core </rights>
+</feed>
