@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cauliyang.github.io</id>
     <title>Vince&apos;s Core </title>
-    <updated>2019-08-18T08:48:37.514Z</updated>
+    <updated>2019-09-09T00:44:15.632Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cauliyang.github.io"/>
     <link rel="self" href="https://cauliyang.github.io/atom.xml"/>
@@ -10,4 +10,256 @@
     <logo>https://cauliyang.github.io/images/avatar.png</logo>
     <icon>https://cauliyang.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Vince&apos;s Core </rights>
+    <entry>
+        <title type="html"><![CDATA[Vcftools  使用概述]]></title>
+        <id>https://cauliyang.github.io/post/vcftools-1</id>
+        <link href="https://cauliyang.github.io/post/vcftools-1">
+        </link>
+        <updated>2019-08-20T04:54:06.000Z</updated>
+        <summary type="html"><![CDATA[<p>整理并记录处理VCf文件格式的工具<strong>vcftools</strong>的使用方法，主要用于自己使用。<strong>（侵权，立即删。😊）</strong></p>
+]]></summary>
+        <content type="html"><![CDATA[<p>整理并记录处理VCf文件格式的工具<strong>vcftools</strong>的使用方法，主要用于自己使用。<strong>（侵权，立即删。😊）</strong></p>
+<!-- more -->
+<h2 id="1-文件的读入和输出">1. 文件的读入和输出。</h2>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--vcf</td>
+<td style="text-align:left">读入vcf类型文件，如不输入其他参数则统计位点，个体信息</td>
+</tr>
+<tr>
+<td>--gzvcf</td>
+<td style="text-align:left">读入vcf.gz类型文件，如不输入其他参数则统计位点，个体信息</td>
+</tr>
+<tr>
+<td>--bcf</td>
+<td style="text-align:left">读入bcf类型文件，如不输入其他参数则统计位点，个体信息</td>
+</tr>
+<tr>
+<td>--out</td>
+<td style="text-align:left">输出文件，需要添加 --recode 参数(重构vcf结果输出INFO列信息）</td>
+</tr>
+<tr>
+<td>--stdout</td>
+<td style="text-align:left">输出到标准输出，可配合bgzip，gzip进行压缩</td>
+</tr>
+<tr>
+<td>--recode</td>
+<td style="text-align:left">一般与--out一起使用，加入--recode-INFO-all则保留原文件INFO</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>For instance:</strong></p>
+<ul>
+<li>提取一号染色体上的变异信息到filename文件<br>
+<strong><code>vcftools --vcf infile.vcf --chr 1 --recode --out filename</code></strong></li>
+</ul>
+<ul>
+<li>将一号染色体上的变异信息输出到屏幕<br>
+<strong><code>vcftools --vcf infile.vcf --chr 1 --recode --stdout</code></strong></li>
+</ul>
+<ul>
+<li>统计个体个数和突变位点总数<br>
+<strong><code>vcftools --vcf infile.vcf</code></strong></li>
+<li>提取染色体A01上的SNP，输出到A01.vcf。<strong>需要带--recode参数</strong><br>
+<strong><code>vcftools --vcf infile.vcf --chr A01 --from-bp 1000000 --to-bp 2000000 --recode --recode-INFO-all --out A01.vcf</code></strong></li>
+</ul>
+<h2 id="2vcftools-对snp数据过滤">2.vcftools 对snp数据过滤</h2>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--chr，--not-chr</td>
+<td>保留或者去掉某条染色体</td>
+</tr>
+<tr>
+<td>--keep-only-indels，--remove-indels</td>
+<td>保留indels，或者去掉indels保留snps</td>
+</tr>
+<tr>
+<td>--indv，--remove-indv</td>
+<td>保留或者去掉<strong>某种样品</strong></td>
+</tr>
+<tr>
+<td>--keep，--remove</td>
+<td>保留或者去掉<strong>某些样品</strong></td>
+</tr>
+<tr>
+<td>--max-maf</td>
+<td>最大等位基因频率</td>
+</tr>
+<tr>
+<td>--maf</td>
+<td>最小等位基因频率</td>
+</tr>
+<tr>
+<td>--max-missing</td>
+<td><strong>完整度(0-1之间）= 1 - 缺失度</strong></td>
+</tr>
+<tr>
+<td>--minDP</td>
+<td>最小深度</td>
+</tr>
+<tr>
+<td>--snps ，--exclude</td>
+<td>根据SNP位点过滤</td>
+</tr>
+<tr>
+<td>--min-alleles</td>
+<td>最小等位基因数量</td>
+</tr>
+<tr>
+<td>--max-alleles</td>
+<td>最大等位基因数量</td>
+</tr>
+<tr>
+<td>--remove-filtered-all</td>
+<td>删除FILTER列不是PASS</td>
+</tr>
+<tr>
+<td>--SNPdensity</td>
+<td>计算snp在bin内的密度，其后接bin大小</td>
+</tr>
+<tr>
+<td>--extract-FORMAT-info</td>
+<td>提取你想要的info，e.g. GT</td>
+</tr>
+<tr>
+<td>--get-INFO</td>
+<td>多次提取info，e.g. --get-INFO NS --get-INFO DB</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>For instance:</strong></p>
+<ul>
+<li>深度设置为2，每个SNP位点完整度设置为0.7，最小等位基因频率设置为0.05<br>
+<strong><code>vcftools --vcf infile.vcf --minDP 2 --maf 0.05 --max-missing 0.7 --recode --out o utfile</code></strong></li>
+<li>从所有样品中提取S1和S2<br>
+<strong><code>vcftools --vcf infile.vcf --indv S1 --indv S2 --recode --out outfile</code></strong></li>
+<li>从所有样品中批量提取样品<br>
+<strong><code>vcftools --vcf infile.vcf --keep sample.list --recode --out outfile</code></strong></li>
+<li>提取两个等位基因的SNP位点<br>
+<strong><code>vcftools --vcf infile.vcf --min-alleles 2 --max-alleles 2 --recode --out outfile</code></strong></li>
+</ul>
+<h2 id="3vcftools-在群体遗传学中的应用">3.Vcftools 在群体遗传学中的应用</h2>
+<blockquote>
+<p>计算遗传多样性参数 ： <strong>Fst，π，Tajima'sD</strong> 等</p>
+</blockquote>
+<h3 id="31-fst计算">3.1 Fst计算</h3>
+<pre><code> Fst是衡量群体间分化程度的重要参数，Fst越大，表明群体分化程度越高，受选择程度越高。基于Fst可以进行选择性消除分析。
+</code></pre>
+<p><strong>For instance:</strong></p>
+<ul>
+<li>计算两个群体间fst值，S1.txt和S2.txt是包含了各群体的样品名<br>
+<strong><code>vcftools --vcf all.vcf --weir-fst-pop S1.txt --weir-fst-pop S2.txt ---fst-window-size 200000 --fst-window-step 100000 --out outfile</code></strong></li>
+</ul>
+<h3 id="32-核苷酸多态性统计">3.2 核苷酸多态性统计</h3>
+<pre><code>核苷酸多样性π反映了群体的多态性。一般来说受选择程度越高的群体，遗传多样性越单一；野生群体遗传多样性较高。基于π可以进行选择性消除分析。
+</code></pre>
+<p><strong>For instance:</strong></p>
+<ul>
+<li>计算群体核苷酸多态性<br>
+<strong><code>vcftools --vcf infile.vcf --window-pi 1000 --window-pi-step 1000 --out filename</code></strong></li>
+<li>计算所有单点或所选多点(--positions)的核苷酸多态性<br>
+<strong><code>vcftools --vcf infile.vcf --site-pi (--positions SNP_list.txt) --out filename</code></strong></li>
+</ul>
+<h3 id="33-tajimas-d计算">3.3 Tajima's D计算</h3>
+<pre><code>Tajima's D衡量群体中性进化理论的指标，越偏离0，受选择程度越高。
+</code></pre>
+<p><strong>For instance:</strong></p>
+<ul>
+<li>计算Tajima's D<br>
+<strong><code>vcftools --vcf infile.vcf --TajimaD 100000 --out filename</code></strong></li>
+</ul>
+<h3 id="34-ld等其他统计参数">3.4 LD等其他统计参数</h3>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--hap-r2，--geno-r2</td>
+<td>LD统计</td>
+</tr>
+<tr>
+<td>--TsTV</td>
+<td>SNP转换/颠换统计</td>
+</tr>
+<tr>
+<td>--freq</td>
+<td>每个SNP等位基因频率统计</td>
+</tr>
+<tr>
+<td>--counts</td>
+<td>每个SNP等位基因个数统计</td>
+</tr>
+<tr>
+<td>--SNPdensity</td>
+<td>SNP频率</td>
+</tr>
+<tr>
+<td>--missing-indv</td>
+<td>样品等缺失率统计</td>
+</tr>
+<tr>
+<td>--missing-site</td>
+<td>SNP缺失率统计</td>
+</tr>
+<tr>
+<td>--depth</td>
+<td>个体深度统计</td>
+</tr>
+<tr>
+<td>--site-depth，--site-mean-depth</td>
+<td>位点深度，平均深度统计</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4其他">4.其他</h2>
+<h3 id="41-比较两个vcf文件">4.1 比较两个vcf文件</h3>
+<ul>
+<li>比较2个群体的vcf文件，包含多个选项，常用的如<br>
+–diff-site<br>
+–diff-indv<br>
+<strong><code>vcftools --gzvcf input_file1.vcf.gz --gzdiff input_file2.vcf.gz --diff-site --out in1_v_in2</code></strong></li>
+</ul>
+<h3 id="42-vcf转化plink">4.2 VCF转化plink</h3>
+<ul>
+<li>vcftools还可以转化多种格式，常用的是转化成plink格式。<br>
+参数：--012，--IMPUTE，--ldhat-geno，--BEAGLE-GL，--BEAGLE-PL，--plink<br>
+<strong><code>vcftools --vcf infile.vcf --plink --chr 1 --out output_in_plink</code></strong></li>
+<li>合并多个vcf文件(也可以使用GATK）<br>
+<strong><code>bcftools merge A.vcf B.vcf &gt; AB.vcf</code></strong></li>
+</ul>
+<h3 id="43-其他格式转换">4.3 其他格式转换</h3>
+<ul>
+<li>--012</li>
+<li>--IMPUTE</li>
+<li>--ldhat</li>
+<li>--ldhat-geno</li>
+<li>--BEAGLE-GL</li>
+<li>--BEAGLE-PL</li>
+</ul>
+<hr>
+<p>具体使用方法可以看 <a href="https://vcftools.github.io/man_latest.html"><strong>vcftools说明</strong></a></p>
+<h2 id="总结">总结</h2>
+<p>本文旨在学习和整理用到的大部分vcftools方法，如果有所纰漏欢迎指正！😊</p>
+]]></content>
+    </entry>
 </feed>

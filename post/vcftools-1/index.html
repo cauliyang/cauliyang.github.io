@@ -1,0 +1,503 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vince&#39;s Core </title>
+<meta name="description" content="记录并分享学习过程" />
+<link rel="shortcut icon" href="https://cauliyang.github.io/favicon.ico?v=1567989852719">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="https://cauliyang.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Vince&#39;s Core  - Atom Feed" href="https://cauliyang.github.io/atom.xml">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://cauliyang.github.io">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://cauliyang.github.io/images/avatar.png?v=1567989852719" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Vince&#39;s Core </h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#1-%E6%96%87%E4%BB%B6%E7%9A%84%E8%AF%BB%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA">1. 文件的读入和输出。</a></li>
+<li><a href="#2vcftools-%E5%AF%B9snp%E6%95%B0%E6%8D%AE%E8%BF%87%E6%BB%A4">2.vcftools 对snp数据过滤</a></li>
+<li><a href="#3vcftools-%E5%9C%A8%E7%BE%A4%E4%BD%93%E9%81%97%E4%BC%A0%E5%AD%A6%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8">3.Vcftools 在群体遗传学中的应用</a>
+<ul>
+<li><a href="#31-fst%E8%AE%A1%E7%AE%97">3.1 Fst计算</a></li>
+<li><a href="#32-%E6%A0%B8%E8%8B%B7%E9%85%B8%E5%A4%9A%E6%80%81%E6%80%A7%E7%BB%9F%E8%AE%A1">3.2 核苷酸多态性统计</a></li>
+<li><a href="#33-tajimas-d%E8%AE%A1%E7%AE%97">3.3 Tajima's D计算</a></li>
+<li><a href="#34-ld%E7%AD%89%E5%85%B6%E4%BB%96%E7%BB%9F%E8%AE%A1%E5%8F%82%E6%95%B0">3.4 LD等其他统计参数</a></li>
+</ul>
+</li>
+<li><a href="#4%E5%85%B6%E4%BB%96">4.其他</a>
+<ul>
+<li><a href="#41-%E6%AF%94%E8%BE%83%E4%B8%A4%E4%B8%AAvcf%E6%96%87%E4%BB%B6">4.1 比较两个vcf文件</a></li>
+<li><a href="#42-vcf%E8%BD%AC%E5%8C%96plink">4.2 VCF转化plink</a></li>
+<li><a href="#43-%E5%85%B6%E4%BB%96%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2">4.3 其他格式转换</a></li>
+</ul>
+</li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="remixicon-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="https://cauliyang.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">Vcftools  使用概述</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-08-20 / 3 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://mgo.azureedge.net/cloudcache/0/2/a/c/0/3/02ac03eaf4099407eaf881c3133063b4134b18c9.jpg" alt="">
+        
+        <div class="post-content yue">
+          <p>整理并记录处理VCf文件格式的工具<strong>vcftools</strong>的使用方法，主要用于自己使用。<strong>（侵权，立即删。😊）</strong></p>
+<!-- more -->
+<h2 id="1-文件的读入和输出">1. 文件的读入和输出。</h2>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--vcf</td>
+<td style="text-align:left">读入vcf类型文件，如不输入其他参数则统计位点，个体信息</td>
+</tr>
+<tr>
+<td>--gzvcf</td>
+<td style="text-align:left">读入vcf.gz类型文件，如不输入其他参数则统计位点，个体信息</td>
+</tr>
+<tr>
+<td>--bcf</td>
+<td style="text-align:left">读入bcf类型文件，如不输入其他参数则统计位点，个体信息</td>
+</tr>
+<tr>
+<td>--out</td>
+<td style="text-align:left">输出文件，需要添加 --recode 参数(重构vcf结果输出INFO列信息）</td>
+</tr>
+<tr>
+<td>--stdout</td>
+<td style="text-align:left">输出到标准输出，可配合bgzip，gzip进行压缩</td>
+</tr>
+<tr>
+<td>--recode</td>
+<td style="text-align:left">一般与--out一起使用，加入--recode-INFO-all则保留原文件INFO</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>For instance:</strong></p>
+<ul>
+<li>提取一号染色体上的变异信息到filename文件<br>
+<strong><code>vcftools --vcf infile.vcf --chr 1 --recode --out filename</code></strong></li>
+</ul>
+<ul>
+<li>将一号染色体上的变异信息输出到屏幕<br>
+<strong><code>vcftools --vcf infile.vcf --chr 1 --recode --stdout</code></strong></li>
+</ul>
+<ul>
+<li>统计个体个数和突变位点总数<br>
+<strong><code>vcftools --vcf infile.vcf</code></strong></li>
+<li>提取染色体A01上的SNP，输出到A01.vcf。<strong>需要带--recode参数</strong><br>
+<strong><code>vcftools --vcf infile.vcf --chr A01 --from-bp 1000000 --to-bp 2000000 --recode --recode-INFO-all --out A01.vcf</code></strong></li>
+</ul>
+<h2 id="2vcftools-对snp数据过滤">2.vcftools 对snp数据过滤</h2>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--chr，--not-chr</td>
+<td>保留或者去掉某条染色体</td>
+</tr>
+<tr>
+<td>--keep-only-indels，--remove-indels</td>
+<td>保留indels，或者去掉indels保留snps</td>
+</tr>
+<tr>
+<td>--indv，--remove-indv</td>
+<td>保留或者去掉<strong>某种样品</strong></td>
+</tr>
+<tr>
+<td>--keep，--remove</td>
+<td>保留或者去掉<strong>某些样品</strong></td>
+</tr>
+<tr>
+<td>--max-maf</td>
+<td>最大等位基因频率</td>
+</tr>
+<tr>
+<td>--maf</td>
+<td>最小等位基因频率</td>
+</tr>
+<tr>
+<td>--max-missing</td>
+<td><strong>完整度(0-1之间）= 1 - 缺失度</strong></td>
+</tr>
+<tr>
+<td>--minDP</td>
+<td>最小深度</td>
+</tr>
+<tr>
+<td>--snps ，--exclude</td>
+<td>根据SNP位点过滤</td>
+</tr>
+<tr>
+<td>--min-alleles</td>
+<td>最小等位基因数量</td>
+</tr>
+<tr>
+<td>--max-alleles</td>
+<td>最大等位基因数量</td>
+</tr>
+<tr>
+<td>--remove-filtered-all</td>
+<td>删除FILTER列不是PASS</td>
+</tr>
+<tr>
+<td>--SNPdensity</td>
+<td>计算snp在bin内的密度，其后接bin大小</td>
+</tr>
+<tr>
+<td>--extract-FORMAT-info</td>
+<td>提取你想要的info，e.g. GT</td>
+</tr>
+<tr>
+<td>--get-INFO</td>
+<td>多次提取info，e.g. --get-INFO NS --get-INFO DB</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>For instance:</strong></p>
+<ul>
+<li>深度设置为2，每个SNP位点完整度设置为0.7，最小等位基因频率设置为0.05<br>
+<strong><code>vcftools --vcf infile.vcf --minDP 2 --maf 0.05 --max-missing 0.7 --recode --out o utfile</code></strong></li>
+<li>从所有样品中提取S1和S2<br>
+<strong><code>vcftools --vcf infile.vcf --indv S1 --indv S2 --recode --out outfile</code></strong></li>
+<li>从所有样品中批量提取样品<br>
+<strong><code>vcftools --vcf infile.vcf --keep sample.list --recode --out outfile</code></strong></li>
+<li>提取两个等位基因的SNP位点<br>
+<strong><code>vcftools --vcf infile.vcf --min-alleles 2 --max-alleles 2 --recode --out outfile</code></strong></li>
+</ul>
+<h2 id="3vcftools-在群体遗传学中的应用">3.Vcftools 在群体遗传学中的应用</h2>
+<blockquote>
+<p>计算遗传多样性参数 ： <strong>Fst，π，Tajima'sD</strong> 等</p>
+</blockquote>
+<h3 id="31-fst计算">3.1 Fst计算</h3>
+<pre><code> Fst是衡量群体间分化程度的重要参数，Fst越大，表明群体分化程度越高，受选择程度越高。基于Fst可以进行选择性消除分析。
+</code></pre>
+<p><strong>For instance:</strong></p>
+<ul>
+<li>计算两个群体间fst值，S1.txt和S2.txt是包含了各群体的样品名<br>
+<strong><code>vcftools --vcf all.vcf --weir-fst-pop S1.txt --weir-fst-pop S2.txt ---fst-window-size 200000 --fst-window-step 100000 --out outfile</code></strong></li>
+</ul>
+<h3 id="32-核苷酸多态性统计">3.2 核苷酸多态性统计</h3>
+<pre><code>核苷酸多样性π反映了群体的多态性。一般来说受选择程度越高的群体，遗传多样性越单一；野生群体遗传多样性较高。基于π可以进行选择性消除分析。
+</code></pre>
+<p><strong>For instance:</strong></p>
+<ul>
+<li>计算群体核苷酸多态性<br>
+<strong><code>vcftools --vcf infile.vcf --window-pi 1000 --window-pi-step 1000 --out filename</code></strong></li>
+<li>计算所有单点或所选多点(--positions)的核苷酸多态性<br>
+<strong><code>vcftools --vcf infile.vcf --site-pi (--positions SNP_list.txt) --out filename</code></strong></li>
+</ul>
+<h3 id="33-tajimas-d计算">3.3 Tajima's D计算</h3>
+<pre><code>Tajima's D衡量群体中性进化理论的指标，越偏离0，受选择程度越高。
+</code></pre>
+<p><strong>For instance:</strong></p>
+<ul>
+<li>计算Tajima's D<br>
+<strong><code>vcftools --vcf infile.vcf --TajimaD 100000 --out filename</code></strong></li>
+</ul>
+<h3 id="34-ld等其他统计参数">3.4 LD等其他统计参数</h3>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--hap-r2，--geno-r2</td>
+<td>LD统计</td>
+</tr>
+<tr>
+<td>--TsTV</td>
+<td>SNP转换/颠换统计</td>
+</tr>
+<tr>
+<td>--freq</td>
+<td>每个SNP等位基因频率统计</td>
+</tr>
+<tr>
+<td>--counts</td>
+<td>每个SNP等位基因个数统计</td>
+</tr>
+<tr>
+<td>--SNPdensity</td>
+<td>SNP频率</td>
+</tr>
+<tr>
+<td>--missing-indv</td>
+<td>样品等缺失率统计</td>
+</tr>
+<tr>
+<td>--missing-site</td>
+<td>SNP缺失率统计</td>
+</tr>
+<tr>
+<td>--depth</td>
+<td>个体深度统计</td>
+</tr>
+<tr>
+<td>--site-depth，--site-mean-depth</td>
+<td>位点深度，平均深度统计</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4其他">4.其他</h2>
+<h3 id="41-比较两个vcf文件">4.1 比较两个vcf文件</h3>
+<ul>
+<li>比较2个群体的vcf文件，包含多个选项，常用的如<br>
+–diff-site<br>
+–diff-indv<br>
+<strong><code>vcftools --gzvcf input_file1.vcf.gz --gzdiff input_file2.vcf.gz --diff-site --out in1_v_in2</code></strong></li>
+</ul>
+<h3 id="42-vcf转化plink">4.2 VCF转化plink</h3>
+<ul>
+<li>vcftools还可以转化多种格式，常用的是转化成plink格式。<br>
+参数：--012，--IMPUTE，--ldhat-geno，--BEAGLE-GL，--BEAGLE-PL，--plink<br>
+<strong><code>vcftools --vcf infile.vcf --plink --chr 1 --out output_in_plink</code></strong></li>
+<li>合并多个vcf文件(也可以使用GATK）<br>
+<strong><code>bcftools merge A.vcf B.vcf &gt; AB.vcf</code></strong></li>
+</ul>
+<h3 id="43-其他格式转换">4.3 其他格式转换</h3>
+<ul>
+<li>--012</li>
+<li>--IMPUTE</li>
+<li>--ldhat</li>
+<li>--ldhat-geno</li>
+<li>--BEAGLE-GL</li>
+<li>--BEAGLE-PL</li>
+</ul>
+<hr>
+<p>具体使用方法可以看 <a href="https://vcftools.github.io/man_latest.html"><strong>vcftools说明</strong></a></p>
+<h2 id="总结">总结</h2>
+<p>本文旨在学习和整理用到的大部分vcftools方法，如果有所纰漏欢迎指正！😊</p>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://cauliyang.github.io/tag/sEW192Upq">
+            <span class="flex-auto">Bio-software</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'dfb1ac2fcbca6a2c77ad',
+    clientSecret: 'ffba352fef69134f25f13c27e2e0225bf8a605b8',
+    repo: 'cauliyang.github.io',
+    owner: 'cauliyang',
+    admin: ['cauliyang'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="https://cauliyang.github.io/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>
