@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Vince&#39;s Core </title>
 <meta name="description" content="记录并分享学习过程" />
-<link rel="shortcut icon" href="https://cauliyang.github.io/favicon.ico?v=1567989852719">
+<link rel="shortcut icon" href="https://cauliyang.github.io/favicon.ico?v=1567991127214">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
@@ -24,7 +24,7 @@
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
         <a href="https://cauliyang.github.io">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://cauliyang.github.io/images/avatar.png?v=1567989852719" alt="">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://cauliyang.github.io/images/avatar.png?v=1567991127214" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Vince&#39;s Core </h1>
       </div>
@@ -37,7 +37,7 @@
             <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#1-%E6%96%87%E4%BB%B6%E7%9A%84%E8%AF%BB%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA">1. 文件的读入和输出。</a></li>
+<li><a href="#1-%E6%96%87%E4%BB%B6%E7%9A%84%E8%AF%BB%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA">1. 文件的读入和输出</a></li>
 <li><a href="#2vcftools-%E5%AF%B9snp%E6%95%B0%E6%8D%AE%E8%BF%87%E6%BB%A4">2.vcftools 对snp数据过滤</a></li>
 <li><a href="#3vcftools-%E5%9C%A8%E7%BE%A4%E4%BD%93%E9%81%97%E4%BC%A0%E5%AD%A6%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8">3.Vcftools 在群体遗传学中的应用</a>
 <ul>
@@ -54,7 +54,7 @@
 <li><a href="#43-%E5%85%B6%E4%BB%96%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2">4.3 其他格式转换</a></li>
 </ul>
 </li>
-<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+<li><a href="#5%E6%80%BB%E7%BB%93">5.总结</a></li>
 </ul>
 </li>
 </ul>
@@ -113,7 +113,7 @@
         <div class="post-content yue">
           <p>整理并记录处理VCf文件格式的工具<strong>vcftools</strong>的使用方法，主要用于自己使用。<strong>（侵权，立即删。😊）</strong></p>
 <!-- more -->
-<h2 id="1-文件的读入和输出">1. 文件的读入和输出。</h2>
+<h2 id="1-文件的读入和输出">1. 文件的读入和输出</h2>
 <table>
 <thead>
 <tr>
@@ -151,19 +151,21 @@
 <hr>
 <p><strong>For instance:</strong></p>
 <ul>
-<li>提取一号染色体上的变异信息到filename文件<br>
-<strong><code>vcftools --vcf infile.vcf --chr 1 --recode --out filename</code></strong></li>
+<li>提取一号染色体上的变异信息到filename文件</li>
 </ul>
+<p><strong><code>vcftools --vcf infile.vcf --chr 1 --recode --out filename</code></strong></p>
 <ul>
-<li>将一号染色体上的变异信息输出到屏幕<br>
-<strong><code>vcftools --vcf infile.vcf --chr 1 --recode --stdout</code></strong></li>
+<li>将一号染色体上的变异信息输出到屏幕</li>
 </ul>
+<p><strong><code>vcftools --vcf infile.vcf --chr 1 --recode --stdout</code></strong></p>
 <ul>
-<li>统计个体个数和突变位点总数<br>
-<strong><code>vcftools --vcf infile.vcf</code></strong></li>
-<li>提取染色体A01上的SNP，输出到A01.vcf。<strong>需要带--recode参数</strong><br>
-<strong><code>vcftools --vcf infile.vcf --chr A01 --from-bp 1000000 --to-bp 2000000 --recode --recode-INFO-all --out A01.vcf</code></strong></li>
+<li>统计个体个数和突变位点总数</li>
 </ul>
+<p><strong><code>vcftools --vcf infile.vcf</code></strong></p>
+<ul>
+<li>提取染色体A01上的SNP，输出到A01.vcf。<strong>需要带--recode参数</strong></li>
+</ul>
+<p><strong><code>vcftools --vcf infile.vcf --chr A01 --from-bp 1000000 --to-bp 2000000 --recode --recode-INFO-all --out A01.vcf</code></strong></p>
 <h2 id="2vcftools-对snp数据过滤">2.vcftools 对snp数据过滤</h2>
 <table>
 <thead>
@@ -235,18 +237,24 @@
 </tr>
 </tbody>
 </table>
-<hr>
+<p>-------------------;</p>
 <p><strong>For instance:</strong></p>
 <ul>
-<li>深度设置为2，每个SNP位点完整度设置为0.7，最小等位基因频率设置为0.05<br>
-<strong><code>vcftools --vcf infile.vcf --minDP 2 --maf 0.05 --max-missing 0.7 --recode --out o utfile</code></strong></li>
-<li>从所有样品中提取S1和S2<br>
-<strong><code>vcftools --vcf infile.vcf --indv S1 --indv S2 --recode --out outfile</code></strong></li>
-<li>从所有样品中批量提取样品<br>
-<strong><code>vcftools --vcf infile.vcf --keep sample.list --recode --out outfile</code></strong></li>
-<li>提取两个等位基因的SNP位点<br>
-<strong><code>vcftools --vcf infile.vcf --min-alleles 2 --max-alleles 2 --recode --out outfile</code></strong></li>
+<li>深度设置为2，每个SNP位点完整度设置为0.7，最小等位基因频率设置为0.05</li>
 </ul>
+<p><strong><code>vcftools --vcf infile.vcf --minDP 2 --maf 0.05 --max-missing 0.7 --recode --out o utfile</code></strong></p>
+<ul>
+<li>从所有样品中提取S1和S2</li>
+</ul>
+<p><strong><code>vcftools --vcf infile.vcf --indv S1 --indv S2 --recode --out outfile</code></strong></p>
+<ul>
+<li>从所有样品中批量提取样品</li>
+</ul>
+<p><strong><code>vcftools --vcf infile.vcf --keep sample.list --recode --out outfile</code></strong></p>
+<ul>
+<li>提取两个等位基因的SNP位点</li>
+</ul>
+<p><strong><code>vcftools --vcf infile.vcf --min-alleles 2 --max-alleles 2 --recode --out outfile</code></strong></p>
 <h2 id="3vcftools-在群体遗传学中的应用">3.Vcftools 在群体遗传学中的应用</h2>
 <blockquote>
 <p>计算遗传多样性参数 ： <strong>Fst，π，Tajima'sD</strong> 等</p>
@@ -256,27 +264,31 @@
 </code></pre>
 <p><strong>For instance:</strong></p>
 <ul>
-<li>计算两个群体间fst值，S1.txt和S2.txt是包含了各群体的样品名<br>
-<strong><code>vcftools --vcf all.vcf --weir-fst-pop S1.txt --weir-fst-pop S2.txt ---fst-window-size 200000 --fst-window-step 100000 --out outfile</code></strong></li>
+<li>
+<p>计算两个群体间fst值，S1.txt和S2.txt是包含了各群体的样品名</p>
+<p><strong><code>vcftools --vcf all.vcf --weir-fst-pop S1.txt --weir-fst-pop S2.txt ---fst-window-size 200000 --fst-window-step 100000 --out outfile</code></strong></p>
+</li>
 </ul>
 <h3 id="32-核苷酸多态性统计">3.2 核苷酸多态性统计</h3>
 <pre><code>核苷酸多样性π反映了群体的多态性。一般来说受选择程度越高的群体，遗传多样性越单一；野生群体遗传多样性较高。基于π可以进行选择性消除分析。
 </code></pre>
 <p><strong>For instance:</strong></p>
 <ul>
-<li>计算群体核苷酸多态性<br>
-<strong><code>vcftools --vcf infile.vcf --window-pi 1000 --window-pi-step 1000 --out filename</code></strong></li>
-<li>计算所有单点或所选多点(--positions)的核苷酸多态性<br>
-<strong><code>vcftools --vcf infile.vcf --site-pi (--positions SNP_list.txt) --out filename</code></strong></li>
+<li>计算群体核苷酸多态性</li>
 </ul>
+<p><strong><code>vcftools --vcf infile.vcf --window-pi 1000 --window-pi-step 1000 --out filename</code></strong></p>
+<ul>
+<li>计算所有单点或所选多点(--positions)的核苷酸多态性</li>
+</ul>
+<p><strong><code>vcftools --vcf infile.vcf --site-pi (--positions SNP_list.txt) --out filename</code></strong></p>
 <h3 id="33-tajimas-d计算">3.3 Tajima's D计算</h3>
 <pre><code>Tajima's D衡量群体中性进化理论的指标，越偏离0，受选择程度越高。
 </code></pre>
 <p><strong>For instance:</strong></p>
 <ul>
-<li>计算Tajima's D<br>
-<strong><code>vcftools --vcf infile.vcf --TajimaD 100000 --out filename</code></strong></li>
+<li>计算Tajima's D</li>
 </ul>
+<p><strong><code>vcftools --vcf infile.vcf --TajimaD 100000 --out filename</code></strong></p>
 <h3 id="34-ld等其他统计参数">3.4 LD等其他统计参数</h3>
 <table>
 <thead>
@@ -327,19 +339,23 @@
 <h2 id="4其他">4.其他</h2>
 <h3 id="41-比较两个vcf文件">4.1 比较两个vcf文件</h3>
 <ul>
-<li>比较2个群体的vcf文件，包含多个选项，常用的如<br>
+<li>
+<p>比较2个群体的vcf文件，包含多个选项，常用的如<br>
 –diff-site<br>
-–diff-indv<br>
-<strong><code>vcftools --gzvcf input_file1.vcf.gz --gzdiff input_file2.vcf.gz --diff-site --out in1_v_in2</code></strong></li>
+–diff-indv</p>
+<p><strong><code>vcftools --gzvcf input_file1.vcf.gz --gzdiff input_file2.vcf.gz --diff-site --out in1_v_in2</code></strong></p>
+</li>
 </ul>
 <h3 id="42-vcf转化plink">4.2 VCF转化plink</h3>
 <ul>
-<li>vcftools还可以转化多种格式，常用的是转化成plink格式。<br>
-参数：--012，--IMPUTE，--ldhat-geno，--BEAGLE-GL，--BEAGLE-PL，--plink<br>
-<strong><code>vcftools --vcf infile.vcf --plink --chr 1 --out output_in_plink</code></strong></li>
-<li>合并多个vcf文件(也可以使用GATK）<br>
-<strong><code>bcftools merge A.vcf B.vcf &gt; AB.vcf</code></strong></li>
+<li>vcftools还可以转化多种格式，常用的是转化成plink格式。</li>
 </ul>
+<p>参数：--012，--IMPUTE，--ldhat-geno，--BEAGLE-GL，--BEAGLE-PL，--plink</p>
+<p><strong><code>vcftools --vcf infile.vcf --plink --chr 1 --out output_in_plink</code></strong></p>
+<ul>
+<li>合并多个vcf文件(也可以使用GATK）</li>
+</ul>
+<p><strong><code>bcftools merge A.vcf B.vcf &gt; AB.vcf</code></strong></p>
 <h3 id="43-其他格式转换">4.3 其他格式转换</h3>
 <ul>
 <li>--012</li>
@@ -347,11 +363,11 @@
 <li>--ldhat</li>
 <li>--ldhat-geno</li>
 <li>--BEAGLE-GL</li>
-<li>--BEAGLE-PL</li>
+<li>--BEAGLE-PL<br>
+---;</li>
 </ul>
-<hr>
 <p>具体使用方法可以看 <a href="https://vcftools.github.io/man_latest.html"><strong>vcftools说明</strong></a></p>
-<h2 id="总结">总结</h2>
+<h2 id="5总结">5.总结</h2>
 <p>本文旨在学习和整理用到的大部分vcftools方法，如果有所纰漏欢迎指正！😊</p>
 
         </div>
@@ -364,6 +380,15 @@
 
 
         <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="https://cauliyang.github.io/post/bo-ke-xiang-fa">
+                <h3 class="post-title">
+                  <i class="remixicon-arrow-left-line"></i>
+                  博客想法
+                </h3>
+              </a>
+            </div>
           
 
           

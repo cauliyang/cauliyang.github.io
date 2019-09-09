@@ -31,37 +31,9 @@
       
         <div class="animated fadeInLeft" style="animation-delay: 0.4s">
           <p class="my-4 text-gray-600 font-light hidden lg:block">
-            记录并分享学习过程
+            文章目录
           </p>
-          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
-            
-              
-                <a href="https://github.com/cauliyang" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="remixicon-github-line"></i>
-                </a>
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-                <a href="982966845" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="remixicon-qq-line"></i>
-                </a>
-              
+          <div class="toc-container hidden lg:block">
             
           </div>
         </div>
@@ -106,18 +78,69 @@
 </div>
 <div class="mask" onclick="closeMenu()">
 </div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="text-lg text-gray-700 mb-8">
-          <i class="remixicon-bookmark-2-line"></i> 标签云
-        </h2>
-        <div class="tags-container">
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">博客想法</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-09-09 / 1 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://mgo.azureedge.net/cloudcache/7/4/2/8/2/7/7428279d2244b5e9076795ddec048f6eca4450cd.jpg" alt="">
+        
+        <div class="post-content yue">
+          <p>博客记录学习过程，欢迎大家一起交流！😊</p>
+<!-- more -->
+<p>本博客用来当作公开的个人笔记，记录自己的学习过程。希望能够帮助到他人～。<br>
+如果有侵权问题，可以联系我。我会立即删除。</p>
+<p><img src="https://cauliyang.github.io/post-images/1567990179919" alt=""></p>
+
+        </div>
+
+        
+
+
+        <div class="flex justify-between py-8">
           
-            <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://cauliyang.github.io/tag/sEW192Upq" :style="{ 'animation-delay': `${0 * 0.2}s` }">
-              <span class="flex-auto">Bio-software</span>
-              <span class="flex rounded-full bg-gray-200 px-2 py-1 text-xs ml-1">1</span>
-            </a>
+
+          
+            <div class="next-post">
+              <a href="https://cauliyang.github.io/post/vcftools-1">
+                <h3 class="post-title">
+                  Vcftools  使用概述
+                  <i class="remixicon-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
           
         </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'dfb1ac2fcbca6a2c77ad',
+    clientSecret: 'ffba352fef69134f25f13c27e2e0225bf8a605b8',
+    repo: 'cauliyang.github.io',
+    owner: 'cauliyang',
+    admin: ['cauliyang'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
       </div>
     </div>
 
