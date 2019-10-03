@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cauliyang.github.io</id>
     <title>Vince&apos;s Core </title>
-    <updated>2019-09-09T01:18:47.514Z</updated>
+    <updated>2019-10-03T14:07:15.170Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cauliyang.github.io"/>
     <link rel="self" href="https://cauliyang.github.io/atom.xml"/>
@@ -11,14 +11,14 @@
     <icon>https://cauliyang.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Vince&apos;s Core </rights>
     <entry>
-        <title type="html"><![CDATA[芯片数据构建遗传连锁图标记筛选流程]]></title>
+        <title type="html"><![CDATA[Bin map ]]></title>
         <id>https://cauliyang.github.io/post/xin-pian-shu-ju-gou-jian-yi-chuan-lian-suo-tu-biao-ji-shai-xuan-liu-cheng</id>
         <link href="https://cauliyang.github.io/post/xin-pian-shu-ju-gou-jian-yi-chuan-lian-suo-tu-biao-ji-shai-xuan-liu-cheng">
         </link>
         <updated>2019-09-09T01:06:33.000Z</updated>
-        <summary type="html"><![CDATA[<p><strong>本文记录芯片数据如何筛选，用来构建遗传图谱。</strong></p>
+        <summary type="html"><![CDATA[<p><strong>本文记录芯片数据如何筛选，以及使用bin map方法构建遗传图谱。</strong></p>
 ]]></summary>
-        <content type="html"><![CDATA[<p><strong>本文记录芯片数据如何筛选，用来构建遗传图谱。</strong></p>
+        <content type="html"><![CDATA[<p><strong>本文记录芯片数据如何筛选，以及使用bin map方法构建遗传图谱。</strong></p>
 <!-- more -->
 <p>芯片数据的筛选大致分为以下步骤：</p>
 <ol>
@@ -56,7 +56,7 @@
 <!-- more -->
 <p>本博客用来当作公开的个人笔记，记录自己的学习过程。希望能够帮助到他人～。<br>
 如果有侵权问题，可以联系我。我会立即删除。</p>
-<p><img src="https://cauliyang.github.io/post-images/1567990179919" alt=""></p>
+<figure data-type="image" tabindex="1"><img src="https://cauliyang.github.io/post-images/1567990179919" alt=""></figure>
 ]]></content>
     </entry>
     <entry>
