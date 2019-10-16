@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Vince&#39;s Core </title>
 <meta name="description" content="珍惜时间，像珍惜你的眼睛一样。" />
-<link rel="shortcut icon" href="https://cauliyang.github.io/favicon.ico?v=1570112008872">
+<link rel="shortcut icon" href="https://cauliyang.github.io/favicon.ico?v=1571241601089">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
@@ -24,7 +24,7 @@
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
         <a href="https://cauliyang.github.io">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://cauliyang.github.io/images/avatar.png?v=1570112008872" alt="">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://cauliyang.github.io/images/avatar.png?v=1571241601089" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Vince&#39;s Core </h1>
       </div>
@@ -34,7 +34,15 @@
             文章目录
           </p>
           <div class="toc-container hidden lg:block">
-            
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#1k-means%E6%A6%82%E5%BF%B5%E4%BB%8B%E7%BB%8D">1.<strong>K-means</strong>概念介绍</a></li>
+<li><a href="#2%E4%BD%BF%E7%94%A8scikit-learn%E5%AE%9E%E7%8E%B0k-means%E6%96%B9%E6%B3%95">2.使用<strong>scikit-learn</strong>实现<strong>K-means</strong>方法</a></li>
+</ul>
+</li>
+</ul>
+
           </div>
         </div>
       
@@ -85,9 +93,20 @@
         </div>
         
         <div class="post-content yue">
-          <p><strong>本篇文章，详细记录如何使用python进行K-means分析，分别用两种方法实现</strong></p>
-<!-- more -->
-<p>先开坑，在填坑！！</p>
+          <p>本篇文章，详细记录如何使用<strong>Python</strong>进行<strong>K-means</strong>，分别用两种方法实现，并记录如何选取K值，并进行可视化评估结果。</p>
+<!-- more --> 
+<h2 id="1k-means概念介绍">1.<strong>K-means</strong>概念介绍</h2>
+<hr>
+<p><strong>K-means</strong>是一种常用的无监督学习技术，用于在无法知道正确答案下发现数据中隐藏的结构，聚类的目标是在数据中找到自然分组，确保相同集群中元素比不同的集群中元素更加相似。<strong>K-means</strong>方法非常擅长识别球形数据，其缺点是必须指定集群数<strong>K</strong>。如果选择<strong>K</strong>值不当会造成分群效果不好，后文将会介绍两种方法用老评估<strong>K</strong>值及分群效果。本文采用两种方式实现<strong>K-means</strong></p>
+<ul>
+<li>
+<p>使用<strong>scikit-learn</strong>模块进行<strong>K-means</strong>聚类分析。</p>
+</li>
+<li>
+<p>从头手写<strong>K-means</strong>方法。</p>
+</li>
+</ul>
+<h2 id="2使用scikit-learn实现k-means方法">2.使用<strong>scikit-learn</strong>实现<strong>K-means</strong>方法</h2>
 
         </div>
 
