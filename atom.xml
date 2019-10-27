@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cauliyang.github.io</id>
     <title>Vince&apos;s Core </title>
-    <updated>2019-10-27T08:44:07.180Z</updated>
+    <updated>2019-10-27T08:45:34.088Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cauliyang.github.io"/>
     <link rel="self" href="https://cauliyang.github.io/atom.xml"/>
-    <subtitle>珍惜时间，像珍惜你的眼睛一样。</subtitle>
+    <subtitle>Cherish time, just like cherishing your eyes.</subtitle>
     <logo>https://cauliyang.github.io/images/avatar.png</logo>
     <icon>https://cauliyang.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Vince&apos;s Core </rights>
