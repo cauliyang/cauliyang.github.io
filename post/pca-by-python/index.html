@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Vince&#39;s Core </title>
 <meta name="description" content="Cherish time, just like cherishing your eyes." />
-<link rel="shortcut icon" href="https://cauliyang.github.io/favicon.ico?v=1572172137323">
+<link rel="shortcut icon" href="https://cauliyang.github.io/favicon.ico?v=1572342419412">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
@@ -24,7 +24,7 @@
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
         <a href="https://cauliyang.github.io">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://cauliyang.github.io/images/avatar.png?v=1572172137323" alt="">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://cauliyang.github.io/images/avatar.png?v=1572342419412" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Vince&#39;s Core </h1>
       </div>
@@ -34,7 +34,14 @@
             文章目录
           </p>
           <div class="toc-container hidden lg:block">
-            
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#1intrduction">1.Intrduction</a></li>
+</ul>
+</li>
+</ul>
+
           </div>
         </div>
       
@@ -81,13 +88,55 @@
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
         <h1 class="text-3xl font-bold lg:mt-16">PCA by Python </h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2019-10-03 / 1 min read
+          2019-10-03 / 2 min read
         </div>
         
         <div class="post-content yue">
-          <p><strong>本篇文章记录使用Python进行PCA分析的两种方法，及可视化2维结果</strong></p>
+          <p><strong>This article documents two methods of PCA analysis using Python, and visualizes 2-dimensional results.</strong></p>
 <!-- more -->
-<p>先开坑，励志填坑</p>
+<h2 id="1intrduction">1.Intrduction</h2>
+<p>when it comes to methods of reducing  dimension , PCA  that is common approaches  must be  not ignored. moreover ,if you want to know the subtle relation among data set and reduce computational complexity in downstream analysis. if you have a high dimension data to conduct complicated calculation but you do not want to consume too much time ,then PCA may  be  your best choices!meanwhile if you  would like to present your data in 2-dimension or 3-dimension coordinate system,and PCA would swept your problems!</p>
+<p>What is  reducing dimension?  I will show  you  a example as follows:</p>
+<p>First , supposing you have 5 dimensional data set :</p>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>1-d</th>
+<th>2-d</th>
+<th>3-d</th>
+<th>4-d</th>
+<th>5-d</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data-1</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>data-2</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+</tr>
+<tr>
+<td>..</td>
+<td>..</td>
+<td>..</td>
+<td>..</td>
+<td>..</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>then, you  want to know if there is subtle relation among data set and reduce computational complexity</p>
 
         </div>
 

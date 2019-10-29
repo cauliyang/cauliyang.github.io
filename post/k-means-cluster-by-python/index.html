@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Vince&#39;s Core </title>
 <meta name="description" content="Cherish time, just like cherishing your eyes." />
-<link rel="shortcut icon" href="https://cauliyang.github.io/favicon.ico?v=1572172137323">
+<link rel="shortcut icon" href="https://cauliyang.github.io/favicon.ico?v=1572342419412">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
@@ -24,7 +24,7 @@
       <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
         <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
         <a href="https://cauliyang.github.io">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://cauliyang.github.io/images/avatar.png?v=1572172137323" alt="">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://cauliyang.github.io/images/avatar.png?v=1572342419412" alt="">
         </a>
         <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Vince&#39;s Core </h1>
       </div>
@@ -179,7 +179,7 @@ plt.scatter(X[:, 0], X[:, 1], c='white', marker='o', edgecolor='black', s=50)
 plt.grid()
 plt.show()
 </code></pre>
-<img src="file:///Users/liyang/Documents/Gridea/post-images/1572156791933.png" width="400" hegiht="200" align=center />
+<figure data-type="image" tabindex="1"><img src="https://cauliyang.github.io/post-images/1572156791933.png" alt=""></figure>
 <p>从图中可以看出创建的测试数据有明显的分群情况,当然在真实的数据当中原始数据可能没有这么理想。我们先在没有推理的情况下确定<strong>K</strong>的值为3。</p>
 <pre><code class="language-python"># k-means
 km = KMeans(n_clusters=3, # K value 
@@ -223,7 +223,7 @@ def plot_res(y_km, X, n_cluster):
     plt.show()
 
 </code></pre>
-<img src="file:///Users/liyang/Documents/Gridea/post-images/1572158215803.png" width="400" hegiht="200" align=center />
+<figure data-type="image" tabindex="2"><img src="https://cauliyang.github.io/post-images/1572158215803.png" alt=""></figure>
 <p>可以明显看到分群效果十分明显。不过其中还有许多问题：</p>
 <ol>
 <li>如何确实<strong>K</strong>值</li>
@@ -253,7 +253,7 @@ plt.xlabel('Number of clusters')
 plt.ylabel('Distortion')
 plt.show()
 </code></pre>
-<img src="file:///Users/liyang/Documents/Gridea/post-images/1572160740933.png" width="400" hegiht="200" align=center />
+<figure data-type="image" tabindex="3"><img src="https://cauliyang.github.io/post-images/1572160740933.png" alt=""></figure>
 <p>从图中我们可以看出在<strong>K</strong>值为3的时候，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mi>S</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">SSE</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span></span></span></span>变化幅度最大，即可得知<strong>K</strong>为3是最优解。</p>
 <h3 id="23-如何评估分群的质量">2.3 如何评估分群的质量</h3>
 <p>评价聚类质量的一种方法是<strong>轮廓分析</strong>，他可以应用于其他聚类算法，度量其紧密程度。计算轮廓系数的步骤为：</p>
@@ -311,7 +311,7 @@ def plot_sil(y_km, X):
     plt.show()
 
 </code></pre>
-<img src="file:///Users/liyang/Documents/Gridea/post-images/1572162327225.png" width="400" hegiht="200" align=center />
+<figure data-type="image" tabindex="4"><img src="https://cauliyang.github.io/post-images/1572162327225.png" alt=""></figure>
 <p>从图中我们可以看出轮廓系数不接近于0，且接近于1表明我们的分群结果良好。且在图中轮廓系数的高度代表群内样本数量，如果样本数量相差太大，说明分群效果不是很好。图中虚线表示平均轮廓系数。</p>
 <p>为更好的理解轮廓系数的使用，将<strong>K</strong>值变为2，进行聚类。</p>
 <pre><code class="language-python">km = KMeans(
@@ -324,9 +324,9 @@ def plot_sil(y_km, X):
 y_km = km.fit_predict(X)
 </code></pre>
 <p>使用上方作图函数，先观察分群效果。</p>
-<figure data-type="image" tabindex="1"><img src="https://cauliyang.github.io/post-images/1572162593247.png" alt=""></figure>
+<figure data-type="image" tabindex="5"><img src="https://cauliyang.github.io/post-images/1572162593247.png" alt=""></figure>
 <p>从图中可以看出分群效果很差，可视化轮廓系数查看结果。</p>
-<figure data-type="image" tabindex="2"><img src="https://cauliyang.github.io/post-images/1572162888640.png" alt=""></figure>
+<figure data-type="image" tabindex="6"><img src="https://cauliyang.github.io/post-images/1572162888640.png" alt=""></figure>
 <p>两个群的高度不一致表明分群效果不是很理想，且有的样本轮廓系数极低接近于0。表示分群有很大的问题，需要重新思考<strong>K</strong>值的选取。</p>
 <h2 id="3-k-means-from-scratch">3. K-means from scratch</h2>
 <p>我们根据算法原理使用<strong>Python</strong>一步步实现<strong>K-means</strong>，首先展示我们所用到的数据集，有关基因在不同条件下处理的表达数据，其中基因数量为样本数量，处理方式为纬度。并且设计为<strong>Terminal</strong>端使用。</p>
@@ -576,7 +576,7 @@ def main():
               <a href="https://cauliyang.github.io/post/vcftools-1">
                 <h3 class="post-title">
                   <i class="remixicon-arrow-left-line"></i>
-                  Vcftools  使用概述
+                  Vcftools  Manual
                 </h3>
               </a>
             </div>
