@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cauliyang.github.io</id>
     <title>Vince&apos;s Core </title>
-    <updated>2019-11-03T01:13:41.413Z</updated>
+    <updated>2019-11-03T08:41:39.479Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cauliyang.github.io"/>
     <link rel="self" href="https://cauliyang.github.io/atom.xml"/>
@@ -10,61 +10,6 @@
     <logo>https://cauliyang.github.io/images/avatar.png</logo>
     <icon>https://cauliyang.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Vince&apos;s Core </rights>
-    <entry>
-        <title type="html"><![CDATA[PCA by Python ]]></title>
-        <id>https://cauliyang.github.io/post/pca-by-python</id>
-        <link href="https://cauliyang.github.io/post/pca-by-python">
-        </link>
-        <updated>2019-10-03T14:07:56.000Z</updated>
-        <summary type="html"><![CDATA[<p><strong>This article documents two methods of PCA analysis using Python, and visualizes 2-dimensional results.</strong></p>
-]]></summary>
-        <content type="html"><![CDATA[<p><strong>This article documents two methods of PCA analysis using Python, and visualizes 2-dimensional results.</strong></p>
-<!-- more -->
-<h2 id="1intrduction">1.Intrduction</h2>
-<p>when it comes to methods of reducing  dimension , PCA  that is common approaches  must be  not ignored. moreover ,if you want to know the subtle relation among data set and reduce computational complexity in downstream analysis. if you have a high dimension data to conduct complicated calculation but you do not want to consume too much time ,then PCA may  be  your best choices!meanwhile if you  would like to present your data in 2-dimension or 3-dimension coordinate system,and PCA would swept your problems!</p>
-<p>What is  reducing dimension?  I will show  you  a example as follows:</p>
-<p>First , supposing you have 5 dimensional data set :</p>
-<table>
-<thead>
-<tr>
-<th>Id</th>
-<th>1-d</th>
-<th>2-d</th>
-<th>3-d</th>
-<th>4-d</th>
-<th>5-d</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>data-1</td>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-<td>4</td>
-<td>5</td>
-</tr>
-<tr>
-<td>data-2</td>
-<td>6</td>
-<td>7</td>
-<td>8</td>
-<td>9</td>
-<td>10</td>
-</tr>
-<tr>
-<td>..</td>
-<td>..</td>
-<td>..</td>
-<td>..</td>
-<td>..</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>then, you  want to know if there is subtle relation among data set and reduce computational complexity</p>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[Bin map ]]></title>
         <id>https://cauliyang.github.io/post/xin-pian-shu-ju-gou-jian-yi-chuan-lian-suo-tu-biao-ji-shai-xuan-liu-cheng</id>
@@ -815,6 +760,321 @@ def main():
 <h2 id="4-summary">4. Summary</h2>
 <p>本篇文章详细记录两种方式实现<strong>K-means</strong>方法，并且记录如何选取<strong>K</strong>值，如何评估聚类质量。本文最终涉及的代码都会在<a href="https://github.com/cauliyang/Python_book_practice/blob/master/effective_python_practice.ipynb"><strong>Jupyter notebook</strong></a>找到,并且使用<a href="https://github.com/cauliyang/work/tree/master/001_k_mean">脚本程序</a></p>
 <p>谢谢观看，欢迎交流！😎</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[PCA by Python ]]></title>
+        <id>https://cauliyang.github.io/post/pca-by-python-2</id>
+        <link href="https://cauliyang.github.io/post/pca-by-python-2">
+        </link>
+        <updated>2019-07-19T14:07:56.000Z</updated>
+        <summary type="html"><![CDATA[<p><strong>This article documents two methods of PCA analysis using Python, and visualizes 2-dimensional results.</strong></p>
+]]></summary>
+        <content type="html"><![CDATA[<p><strong>This article documents two methods of PCA analysis using Python, and visualizes 2-dimensional results.</strong></p>
+<!-- more -->
+<style>
+img{
+    width: 70%;
+    padding-left: 1%;
+}
+</style>
+<h2 id="1intrduction">1.Intrduction</h2>
+<h3 id="11-whats-pca">1.1 What's PCA?</h3>
+<p>When it comes to methods of reducing dimension, PCA that is an unsupervised linear transformation technique, must be not ignored. Moreover, if you want to know the subtle relationships among data set and reduce the computational complexity in downstream analysis, the PCA may be your best choice! Meanwhile, if you would like to present your data in a 2-dimension or 3-dimension coordinate system, and PCA would sweep your problems!</p>
+<p>What is reducing dimension? I will show you an example as follows:</p>
+<p>First, suppose you have a five-dimensional data set :</p>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>1-d</th>
+<th>2-d</th>
+<th>3-d</th>
+<th>4-d</th>
+<th>5-d</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data-1</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>data-2</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+</tr>
+<tr>
+<td>..</td>
+<td>..</td>
+<td>..</td>
+<td>..</td>
+<td>..</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Then, you could pick up PC1 and PC2 after PCA to reduce dimension for plotting:</p>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>PC1</th>
+<th>PC2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data-1</td>
+<td>0.3</td>
+<td>0.6</td>
+</tr>
+<tr>
+<td>data-2</td>
+<td>0.1</td>
+<td>1.2</td>
+</tr>
+<tr>
+<td>..</td>
+<td>..</td>
+<td>..</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PC1</strong> and <strong>PC2</strong> are the result obtained through data is projection on the unit vectors, which enable result to have the most biggest variance(means its distribution is wide) and to be irrelevant(covariance = 0).</p>
+<h3 id="12-algorithm">1.2 Algorithm</h3>
+<ol>
+<li>
+<p>Normalize <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi></mrow><annotation encoding="application/x-tex">d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">d</span></span></span></span> dimension raw data</p>
+</li>
+<li>
+<p>Creat the covariance matrix</p>
+</li>
+<li>
+<p>Calculate the eigenvalues of the covariance matrix and the corresponding eigenvectors</p>
+</li>
+<li>
+<p>The eigenvectors are sorted in the matrix according to the corresponding feature value, and the first k rows are formed into a matrix <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>W</mi></mrow><annotation encoding="application/x-tex">W</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">W</span></span></span></span>.(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi><mo>&lt;</mo><mo>&lt;</mo><mi>d</mi></mrow><annotation encoding="application/x-tex">k&lt;&lt;d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.73354em;vertical-align:-0.0391em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">d</span></span></span></span>)</p>
+</li>
+<li>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>Y</mi><mo>=</mo><mi>x</mi><mi>W</mi></mrow><annotation encoding="application/x-tex">Y = xW</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">Y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">x</span><span class="mord mathdefault" style="margin-right:0.13889em;">W</span></span></span></span> is the result after reducting dimension to k dimension</p>
+</li>
+</ol>
+<p><strong>Note:</strong> There are two prerequisites for conducting PCA</p>
+<ul>
+<li>
+<p>Raw data has no NA</p>
+</li>
+<li>
+<p>The raw data should be normalized</p>
+</li>
+</ul>
+<h2 id="2-pca-from-scratch">2. PCA from scratch</h2>
+<ul>
+<li>Importing necessary modules</li>
+</ul>
+<pre><code class="language-python">import pandas as pd 
+import numpy as np
+import matplotlib.pyplot as plt 
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+</code></pre>
+<ul>
+<li>Creating raw data</li>
+</ul>
+<pre><code class="language-python"># get  data set 
+df_wine = pd.read_csv(
+    'http://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data',
+    header=None,
+    engine='python')
+# check data
+df_wine.head()
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://cauliyang.github.io/post-images/1572760322010.png" alt=""></figure>
+<ul>
+<li>Creating train and test data set</li>
+</ul>
+<pre><code class="language-python"># creat train and test data set 
+x_train,X_test,y_train,y_test = \
+    train_test_split(X,y,test_size = 0.3 , 
+                    stratify= y,
+                    random_state = 0 )
+</code></pre>
+<ul>
+<li>Standarding the features</li>
+</ul>
+<pre><code class="language-python"># create standard instance
+sc = StandardScaler()
+# standard data 
+x_train_std = sc.fit_transform(x_train)
+x_test_std = sc.fit_transform(x_test)
+</code></pre>
+<ul>
+<li>Creating the covariance matrix and Getting eigenvectors and eigenvalues</li>
+</ul>
+<p>the calculation of the covriance matrix :</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>σ</mi><mrow><mi>j</mi><mi>k</mi></mrow></msub><mo>=</mo><mfrac><mn>1</mn><mi>n</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mo fence="false">(</mo><msubsup><mi>x</mi><mi>j</mi><mrow><mo>(</mo><mi>i</mi><mo>)</mo></mrow></msubsup><mo>−</mo><msub><mi>μ</mi><mi>j</mi></msub><mo fence="false">)</mo><mo fence="false">(</mo><msubsup><mi>x</mi><mi>k</mi><mrow><mo>(</mo><mi>i</mi><mo>)</mo></mrow></msubsup><mo>−</mo><msub><mi>μ</mi><mi>k</mi></msub><mo fence="false">)</mo></mrow><annotation encoding="application/x-tex">\sigma_{jk} =  \frac{1}{n} \sum^{n}_{i=1}\bigg(x_{j}^{(i)} - \mu_j\bigg)\bigg(x_{k}^{(i)} - \mu_k\bigg)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.716668em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.929066em;vertical-align:-1.277669em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">n</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6513970000000002em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.277669em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0448em;"><span style="top:-2.4231360000000004em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span><span style="top:-3.2198em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathdefault mtight">i</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.412972em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.40003em;vertical-align:-0.95003em;"></span><span class="mord"><span class="mord mathdefault">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mord"><span class="delimsizing size3">)</span></span><span class="mord"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0448em;"><span style="top:-2.3986920000000005em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span style="top:-3.2198em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathdefault mtight">i</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3013079999999999em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.40003em;vertical-align:-0.95003em;"></span><span class="mord"><span class="mord mathdefault">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="delimsizing size3">)</span></span></span></span></span></span></p>
+<p>Then, using <code>numpy.cov</code> and `numpy.linalg.eig' to get the covariance matrix and eigenvectors respectively</p>
+<pre><code class="language-python"># calculate the covariance matrix 
+cov_mat = np.cov(x_train_std.T)
+# Getting eigenvectors and eigenvalues
+eigen_vals, eigen_vecs = np.linalg.eig(cov_mat)
+</code></pre>
+<p><strong>NOTE:</strong> there are 13 eigenvectors totally, the number of eigenvalues might be not as same as the number of features sometimes.</p>
+<p>Firstly, plotting the Variance interpretation ratio, which is obtained through eigenvalue <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>λ</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">\lambda_j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span> divided by the sum of all the eigenvalues:</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><msub><mi>λ</mi><mi>j</mi></msub><mrow><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>d</mi></munderover><msub><mi>λ</mi><mi>j</mi></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{\lambda_j}{\sum^d_{j=1}\lambda_j}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.686266em;vertical-align:-1.314826em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.120992em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9890079999999999em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.43581800000000004em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.314826em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<pre><code class="language-python"># get sum of all the eigenvalues
+tot = sum(eigen_vals)
+# get variance interpretation ratio
+var_exp = [(i / tot) for i in sorted(eigen_vals, reverse=True)]
+cum_var_exp = np.cumsum(var_exp)
+</code></pre>
+<p>Besides, plotting the result to get in-depth understanding:</p>
+<pre><code class="language-python">plt.figure() # creat plot
+# creat bar plot
+plt.bar(
+    range(1, 14),
+    var_exp,
+    alpha=0.5,
+    label='individual explained variance',
+)
+# creat step plot 
+plt.step(range(1, 14),
+         cum_var_exp,
+         where='mid',
+         label='cumulative explained variance')
+# add label 
+plt.ylabel('Explained variance ratio')
+plt.xlabel('Principal component index')
+# add legend
+plt.legend(loc='best')
+# save picture
+plt.savefig('pca_index.png', format='png', bbox_inches='tight', dpi=300)
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="https://cauliyang.github.io/post-images/1572764173795.png" alt=""></figure>
+<p>We can conclude that <strong>PC1</strong> only takes account for about 40%. Furthermore, the sum of <strong>PC1</strong> and <strong>PC2</strong> have 60% variance.</p>
+<ul>
+<li>Selecting the first <strong>k</strong> values to form matrix <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>W</mi></mrow><annotation encoding="application/x-tex">W</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">W</span></span></span></span></li>
+</ul>
+<pre><code class="language-python"># integrate eigenvalues  and eigenvectors 
+eigen_paris = [(np.abs(eigen_vals[i]), eigen_vecs[:, i])
+               for i in range(len(eigen_vals))]
+# sort according to eigenvalues 
+eigen_paris.sort(key=lambda x: x[0], reverse=True)
+# pick up the first 2 eigenvalues 
+w = np.hstack(
+    [eigen_paris[0][1][:, np.newaxis], eigen_paris[1][1][:, np.newaxis]])
+# check matrix x 
+w
+</code></pre>
+<figure data-type="image" tabindex="3"><img src="https://cauliyang.github.io/post-images/1572766213478.png" alt=""></figure>
+<ul>
+<li>Tranforming raw data</li>
+</ul>
+<pre><code class="language-python"># reduce dimension 
+x_train_pca = x_train_std.dot(w)
+# check resulted data 
+x_train_pca.shape
+</code></pre>
+<p><code>(124, 2)</code></p>
+<p>Then plotting the result and putting the label in terms of original info, but keeping in mind PCA is unsupervised learning skill without labels</p>
+<pre><code class="language-python"># init colors and markers 
+colors = ['r', 'b', 'g']
+markers = ['s', 'x', 'o']
+# plot scatter
+for l, c, m in zip(np.unique(y_train), colors, markers):
+    plt.scatter(x_train_pca[y_train == l, 0],
+                x_train_pca[y_train == l, 1],
+                c=c,
+                label=1,
+                marker=m)
+# add label and legend 
+plt.xlabel('PC 1')
+plt.ylabel('PC 2')
+plt.legend(loc='lower left')
+plt.savefig('distribution.png', format='png', bbox_inches='tight', dpi=300)
+
+</code></pre>
+<figure data-type="image" tabindex="4"><img src="https://cauliyang.github.io/post-images/1572766761786.png" alt=""></figure>
+<h2 id="3-pca-by-scikit-learn">3. PCA by  scikit-learn</h2>
+<p>we can  conduct PCA easily by <strong>sklearn</strong></p>
+<ul>
+<li>Importing modules</li>
+</ul>
+<pre><code class="language-python">from sklearn.decomposition import PCA
+from matplotlib.colors import ListedColormap
+from sklearn.linear_model import LogisticRegression
+</code></pre>
+<ul>
+<li>Defining  function of plot_decision_region</li>
+</ul>
+<pre><code class="language-python">
+def plot_dicision_regions(X, y, classifier, resolution=0.02):
+    # init markers and colors 
+    markers = ('s', 'x', 'o', '^', 'v')
+    colors = ('red', 'blue', 'lightgreen', 'gray', 'cyan')
+    cmap = ListedColormap(colors[:len(np.unique(y))])
+    # creat info for plot region
+    x1_min, x1_max = X[:, 0].min() - 1, X[:, 0].max() + 1
+    x2_min, x2_max = X[:, 1].min() - 1, X[:, 1].max() + 1
+    xx1, xx2 = np.meshgrid(np.arange(x1_min, x1_max, resolution),
+                           np.arange(x2_min, x2_max, resolution))
+    # test classifier's accurate 
+    z = classifier.predict(np.array([xx1.ravel(), xx2.ravel()]).T)
+    z = z.reshape(xx1.shape)
+    # plot desicion region 
+    plt.contourf(xx1, xx2, z, alpha=0.4, cmap=cmap)
+    # set x,y length
+    plt.xlim(xx1.min(), xx1.max())
+    plt.ylim(xx2.min(), xx2.max())
+    # plot result 
+    for idx, cl in enumerate(np.unique(y)):
+        plt.scatter(
+            x=X[y == cl, 0],
+            y=X[y == cl, 1],
+            alpha=0.6,
+            color=cmap(idx),
+            edgecolor='black',
+            marker=markers[idx],
+            label=cl,
+        )
+</code></pre>
+<ul>
+<li>PCA by sklearn</li>
+</ul>
+<pre><code class="language-python"># creat pca instance 
+pca = PCA(n_components = 2 )
+# creat classifier instance 
+lr = LogisticRegression()
+# reduce dimension for  data set 
+x_train_pca = pca.fit_transform(x_train_std)
+x_test_pca  = pca.transform(x_test_std)
+# classify x_train_pca 
+lr.fit(x_train_pca,y_train)
+# plot dicision region
+plot_dicision_regions(x_train_pca,y_train,classifier=lr)
+# add info
+plt.xlabel('PC 1')
+plt.ylabel('PC 2')
+plt.legend(loc='lower left')
+plt.show()
+</code></pre>
+<figure data-type="image" tabindex="5"><img src="https://cauliyang.github.io/post-images/1572767868782.png" alt=""></figure>
+<p>We can see that the classifier's accurate is excellent according to actual labels</p>
+<p><strong>TIPS</strong>:</p>
+<p>You can set <code>n_components = None</code>, and the result would retain all principle components. Moreover, you could call <code>explained_variance_ration_</code> to use variance explanation ratio.</p>
+<h2 id="3summary">3.Summary</h2>
+<p>All the above are the main content, welcome everybody communicates with me! 🤠</p>
+<p><strong>Reference book :</strong> <a href="https://www.amazon.com/dp/B0742K7HYF/ref=sr_1_1?__mk_zh_CN=%E4%BA%9A%E9%A9%AC%E9%80%8A%E7%BD%91%E7%AB%99&amp;crid=27TEKOK8R4TOR&amp;keywords=python+machine+learning+sebastian+raschka&amp;qid=1572770147&amp;s=digital-text&amp;sprefix=python+machine++learning+seb%2Cdigital-text%2C389&amp;sr=1-1">Python marchine learning</a></p>
 ]]></content>
     </entry>
     <entry>
