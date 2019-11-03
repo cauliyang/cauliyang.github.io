@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cauliyang.github.io</id>
     <title>Vince&apos;s Core </title>
-    <updated>2019-10-29T11:27:04.356Z</updated>
+    <updated>2019-11-03T01:11:27.443Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cauliyang.github.io"/>
     <link rel="self" href="https://cauliyang.github.io/atom.xml"/>
@@ -815,6 +815,21 @@ def main():
 <h2 id="4-summary">4. Summary</h2>
 <p>本篇文章详细记录两种方式实现<strong>K-means</strong>方法，并且记录如何选取<strong>K</strong>值，如何评估聚类质量。本文最终涉及的代码都会在<a href="https://github.com/cauliyang/Python_book_practice/blob/master/effective_python_practice.ipynb"><strong>Jupyter notebook</strong></a>找到,并且使用<a href="https://github.com/cauliyang/work/tree/master/001_k_mean">脚本程序</a></p>
 <p>谢谢观看，欢迎交流！😎</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Blog Ideas ]]></title>
+        <id>https://cauliyang.github.io/post/bo-ke-xiang-fa</id>
+        <link href="https://cauliyang.github.io/post/bo-ke-xiang-fa">
+        </link>
+        <updated>2019-08-01T00:46:16.000Z</updated>
+        <summary type="html"><![CDATA[<p>This Blog record learning process, welcome everyone to communicate with me!😊</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>This Blog record learning process, welcome everyone to communicate with me!😊</p>
+<!-- more -->
+<h1 id="ideas">Ideas</h1>
+<p>This blog is used as a public note to record my learning process. I also hope to help others~.</p>
+<p>If you have an infringement problem, then you can contact me. if it is true ,I will delete it immediately.</p>
 ]]></content>
     </entry>
 </feed>
