@@ -31,7 +31,7 @@
         <div class="menu-wrapper">
           <div class="">
             <div class="logo">
-              <a href="https://cauliyang.github.io"><img src="" alt=""></a>
+              <a href="https://cauliyang.github.io"><img src="/media/images/logoo.png" alt=""></a>
             </div>
             <!-- start: .main-nav -->
 
@@ -58,6 +58,18 @@
                   </li>
                 
                   <li class="" >
+                    <a href="/movies" class="menu">
+                      Movies
+                    </a>
+                  </li>
+                
+                  <li class="" >
+                    <a href="/books" class="menu">
+                      Books
+                    </a>
+                  </li>
+                
+                  <li class="" >
                     <a href="/post/about" class="menu">
                       About
                     </a>
@@ -79,7 +91,7 @@
       <div class="hide-on-mobile hide-on-tablet hide-on-desktop">
         <div id="search-lightbox" class="grid-container grid-small grid-parent mfp-hide">
           <div class="search-wrapper section">
-            <form id="gridea-search-form" data-update="1586959308050" action="/search/index.html" class="search-form" _lpchecked="1">
+            <form id="gridea-search-form" data-update="1586961465291" action="/search/index.html" class="search-form" _lpchecked="1">
               <input type="text" name="q" id="s" value="" class="search-field" placeholder="搜点啥..." aria-label="搜点啥..." required="">
               <button type="submit" class="submit" aria-label="Submit">
                 <i class="fa fa-search-line"></i>
@@ -189,6 +201,8 @@
                     <p class="founder">Cherish time, just like cherishing your eyes.</p>
                     <div class="social">
                       
+                          
+                            <a href="https://github.com/cauliyang" class="translate-effect" target="_blank"><i class="fa fa-github"></i></a>
                         
                       
                         
@@ -210,7 +224,7 @@
         </div>
 
         <div class="logo">
-          <a href="https://cauliyang.github.io"><img src="" alt=""></a>
+          <a href="https://cauliyang.github.io"><img src="/media/images/gridea.png" alt=""></a>
         </div>
         <p class="published border-effect">
           ©2019 共 7 篇文章
@@ -226,12 +240,25 @@
     <div class="clear"></div>
 
         
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/valine/1.3.10/Valine.Pure.min.js"></script>
+<script>
+    new Valine({
+        el: '#comments',
+        appId: 'zPwvEFPIxLCJK1MShFnaJ3tx-gzGzoHsz' ,
+        appKey: '6d46XrT8xrLcdytkO4A8dWec',
+        pageSize: 30,
+        placeholder: '既然来了，那就留个痕迹吧~',
+        visitor: true // 阅读量统计
+    })
+</script>
+    
 
     <script>
     new Bmdb({
       type: 'books',
       selector: '.section-content',
-      secret: '',
+      secret: 'https://bm.weajs.com/api/movies?page=1&amp;secret=V5TwstRCrpXA0T0jjYIrnb47daJ85jV6XGbo5zucp5OAcK3oZodzJwfVruxgoo31&amp;limit=30',
       noMoreText: '没有更多数据了',
       limit: 30
     })
