@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cauliyang.github.io</id>
     <title>Vince&apos;s Tree Hole </title>
-    <updated>2020-04-15T14:48:39.590Z</updated>
+    <updated>2020-04-15T15:04:59.407Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cauliyang.github.io"/>
     <link rel="self" href="https://cauliyang.github.io/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://cauliyang.github.io/images/avatar.png</logo>
     <icon>https://cauliyang.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Vince&apos;s Tree Hole </rights>
+    <entry>
+        <title type="html"><![CDATA[生活随想 ]]></title>
+        <id>https://cauliyang.github.io/9jaKMB68a/</id>
+        <link href="https://cauliyang.github.io/9jaKMB68a/">
+        </link>
+        <updated>2020-04-15T14:49:04.000Z</updated>
+        <content type="html"><![CDATA[<p>自从疫情开始以来，已足足在家3月有余。在家的生活状态和学校是完全不一样的，这篇文章用做总结并且计划后面的事情，用以勉励自己。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[T-SNE by Python]]></title>
         <id>https://cauliyang.github.io/t-sne-by-python/</id>
