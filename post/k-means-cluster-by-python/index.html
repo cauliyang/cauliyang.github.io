@@ -1,118 +1,122 @@
-
-<!DOCTYPE html>
 <html>
   <head>
-    
-<meta charset="utf-8" >
-
-<title>K-means  by Python | Vince&#39;s Tree Hole </title>
-<meta name="description" content="Cherish time, just like cherishing your eyes.">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://cauliyang.github.io/favicon.ico?v=1586914765809">
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vince&#39;s Tree Hole </title>
+<meta name="description" content="Cherish time, just like cherishing your eyes." />
+<link rel="shortcut icon" href="https://cauliyang.github.io/favicon.ico?v=1586915089501">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
 <link rel="stylesheet" href="https://cauliyang.github.io/styles/main.css">
-
-
-  
-    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
-  
-
-  
-
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<link rel="alternate" type="application/atom+xml" title="Vince&#39;s Tree Hole  - Atom Feed" href="https://cauliyang.github.io/atom.xml">
 
 
 
   </head>
   <body>
-    <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://cauliyang.github.io">
-        <img class="avatar" src="https://cauliyang.github.io/images/avatar.png?v=1586914765809" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://cauliyang.github.io">
-        <h1 class="site-title">Vince&#39;s Tree Hole </h1>
-      </a>
-    </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://cauliyang.github.io">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://cauliyang.github.io/images/avatar.png?v=1586915089501" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Vince&#39;s Tree Hole </h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#1k-means%E6%A6%82%E5%BF%B5%E4%BB%8B%E7%BB%8D">1.<strong>K-means</strong>概念介绍</a>
+<ul>
+<li><a href="#11-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5">1.1 基础概念</a></li>
+<li><a href="#12-%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86">1.2 算法原理</a></li>
+</ul>
+</li>
+<li><a href="#2%E4%BD%BF%E7%94%A8scikit-learn%E5%AE%9E%E7%8E%B0k-means%E6%96%B9%E6%B3%95">2.使用<strong>scikit-learn</strong>实现<strong>K-means</strong>方法</a>
+<ul>
+<li><a href="#21-%E5%88%9B%E5%BB%BA%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE%E5%B9%B6%E5%AE%9E%E7%8E%B0%E7%AE%97%E6%B3%95">2.1 创建测试数据并实现算法</a></li>
+<li><a href="#22-%E5%A6%82%E4%BD%95%E9%80%89%E5%8F%96k%E5%80%BC">2.2 如何选取<strong>K</strong>值</a></li>
+<li><a href="#23-%E5%A6%82%E4%BD%95%E8%AF%84%E4%BC%B0%E5%88%86%E7%BE%A4%E7%9A%84%E8%B4%A8%E9%87%8F">2.3 如何评估分群的质量</a></li>
+</ul>
+</li>
+<li><a href="#3-k-means-from-scratch">3. K-means from scratch</a>
+<ul>
+<li><a href="#31-get-parameters-from-terminal">3.1 Get parameters from terminal</a></li>
+<li><a href="#32-creating-function-of-report">3.2 Creating function of report</a></li>
+<li><a href="#33-calculating-euclidean-distance">3.3 Calculating Euclidean distance</a></li>
+<li><a href="#34-getting-centroid-information-and-recursive-function">3.4 Getting centroid information and recursive function</a></li>
+<li><a href="#35-creating-body-function-and-main-function">3.5 Creating Body function and Main function</a></li>
+</ul>
+</li>
+<li><a href="#4-summary">4. Summary</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      
     </div>
   </div>
 </div>
 
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
+<div class="menu-container">
+  <i class="remixicon-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
       
-        
-          <a href="/" class="menu purple-link">
-            Home
-          </a>
-        
+        <a href="/" class="menu" style="animation-delay: 0s">
+          Home
+        </a>
       
-        
-          <a href="/archives" class="menu purple-link">
-            Archives
-          </a>
-        
+    
       
-        
-          <a href="/tags" class="menu purple-link">
-            Tags
-          </a>
-        
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          Archives
+        </a>
       
-        
-          <a href="/post/about" class="menu purple-link">
-            About
-          </a>
-        
+    
       
-    </div>
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          Tags
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          About
+        </a>
+      
+    
   </div>
-</transition>
-
-
-      <div class="content-container">
-        <div class="post-detail">
-          
-            <div class="feature-container" style="background-image: url('https://cdn.wallpaperhub.app/cloudcache/4/6/b/1/0/4/46b104f678c41bff84412bcae61d001cd4770de4.jpg')">
-            </div>
-          
-          <h2 class="post-title">K-means  by Python</h2>
-          <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2019-08-07</span>
-            
-              <span>
-                <i class="icon-pricetags-outline"></i>
-                
-                  <a href="https://cauliyang.github.io/tag/o4B5pUlIC/">
-                    Machine-Learning
-                    
-                      ，
-                    
-                  </a>
-                
-                  <a href="https://cauliyang.github.io/tag/2jIKZKAWZ/">
-                    Python
-                    
-                  </a>
-                
-              </span>
-            
-          </div>
-          <div class="post-content">
-            <p>本篇文章，详细记录如何使用<strong>Python</strong>进行<strong>K-means</strong>，分别用两种方法实现，并记录如何选取K值，并进行可视化评估结果。</p>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="https://cauliyang.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">K-means  by Python</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-08-07 / 14 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://cdn.wallpaperhub.app/cloudcache/4/6/b/1/0/4/46b104f678c41bff84412bcae61d001cd4770de4.jpg" alt="">
+        
+        <div class="post-content yue">
+          <p>本篇文章，详细记录如何使用<strong>Python</strong>进行<strong>K-means</strong>，分别用两种方法实现，并记录如何选取K值，并进行可视化评估结果。</p>
 <!-- more --> 
 <style>
 img{
@@ -553,86 +557,172 @@ def main():
 <p>本篇文章详细记录两种方式实现<strong>K-means</strong>方法，并且记录如何选取<strong>K</strong>值，如何评估聚类质量。本文最终涉及的代码都会在<a href="https://github.com/cauliyang/Python_book_practice/blob/master/effective_python_practice.ipynb"><strong>Jupyter notebook</strong></a>找到,并且使用<a href="https://github.com/cauliyang/work/tree/master/001_k_mean">脚本程序</a></p>
 <p>谢谢观看，欢迎交流！😎</p>
 
-          </div>
         </div>
 
         
-          <div class="next-post">
-            <a class="purple-link" href="https://cauliyang.github.io/post/pca-by-python-2/">
-              <h3 class="post-title">
-                下一篇：PCA by Python 
-              </h3>
-            </a>
-          </div>
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://cauliyang.github.io/tag/o4B5pUlIC/">
+            <span class="flex-auto">Machine-Learning</span>
+          </a>
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://cauliyang.github.io/tag/2jIKZKAWZ/">
+            <span class="flex-auto">Python</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
           
-      </div>
+            <div class="prev-post">
+              <a href="https://cauliyang.github.io/post/vcftools-1/">
+                <h3 class="post-title">
+                  <i class="remixicon-arrow-left-line"></i>
+                  Vcftools  Manual
+                </h3>
+              </a>
+            </div>
+          
 
-      
+          
+            <div class="next-post">
+              <a href="https://cauliyang.github.io/post/pca-by-python-2/">
+                <h3 class="post-title">
+                  PCA by Python 
+                  <i class="remixicon-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
         
-          <div id="gitalk-container"></div>
-        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
-        
-      
+<div id="gitalk-container"></div>
 
-      <div class="site-footer">
-  <div class="slogan">Cherish time, just like cherishing your eyes.</div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://cauliyang.github.io/atom.xml" target="_blank">RSS</a>
-</div>
+<script>
 
+  var gitalk = new Gitalk({
+    clientID: 'dfb1ac2fcbca6a2c77ad',
+    clientSecret: 'ffba352fef69134f25f13c27e2e0225bf8a605b8',
+    repo: 'cauliyang.github.io',
+    owner: 'cauliyang',
+    admin: ['cauliyang'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
 
-    </div>
-    <script type="application/javascript">
-
-hljs.initHighlightingOnLoad()
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+  gitalk.render('gitalk-container')
 
 </script>
 
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="https://cauliyang.github.io/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
 
 
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
   
-    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-    <script>
-
-      var gitalk = new Gitalk({
-        clientID: 'dfb1ac2fcbca6a2c77ad',
-        clientSecret: 'ffba352fef69134f25f13c27e2e0225bf8a605b8',
-        repo: 'cauliyang.github.io',
-        owner: 'cauliyang',
-        admin: ['cauliyang'],
-        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-        distractionFreeMode: false  // Facebook-like distraction free mode
-      })
-
-      gitalk.render('gitalk-container')
-
-    </script>
-  
-
-  
-
-
-
-
   </body>
 </html>
