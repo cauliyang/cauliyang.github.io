@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Bin map  | Vince&#39;s Tree Hole </title>
+<title>About  | Vince&#39;s Tree Hole </title>
 <meta name="description" content="Cherish time, just like cherishing your eyes." />
 <link rel="shortcut icon" href="https://cauliyang.github.io/favicon.ico?v=1586916686040">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -73,50 +73,23 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              Bin map 
+              About 
             </h2>
             <div class="post-info">
               <span>
-                2019-09-09
+                2019-01-25
               </span>
               <span>
-                2 min read
+                1 min read
               </span>
-              
-                <a href="https://cauliyang.github.io/tag/SUXw49Pf-/" class="post-tag">
-                  # Bioinformatics
-                </a>
               
             </div>
             
-              <img class="post-feature-image" src="https://mgo.azureedge.net/cloudcache/9/7/1/9/9/0/971990446e84db30f5f2e7e72caeb40bbf2eb5dc.jpg" alt="">
+              <img class="post-feature-image" src="https://cdn.wallpaperhub.app/cloudcache/1/b/0/1/a/6/1b01a62ac13ad7028ff3d08b08477d5d3327ce33.jpg" alt="">
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p><strong>本文记录芯片数据如何筛选，以及使用bin map方法构建遗传图谱。</strong></p>
-<!-- more -->
-<p>芯片数据的筛选大致分为以下步骤：</p>
-<ol>
-<li>
-<p><strong>标记QC</strong></p>
-<p>1.1	计算标记的检出率，保留&gt;80%，删除缺失率大于20%的标记<br>
-<strong>可以适当调整阈值根据自己的数据量</strong></p>
-<p>1.2	计算标记的杂合率（如果杂合率很高的情况下，这个SNP可能还是有问题的），但是杂合率的评判标准依据不同群体有所不同，如F2或BC1群体，标记杂合率普遍在40-60%之间，但RIL群体或DH群体就会低很多，可以针对自己的群体，设置合适的阈值</p>
-<p>1.3	删除双亲为杂合且是缺失的标记</p>
-<p>1.4	计算双亲的无多态性，删除双亲没有多态性的标记</p>
-<p>1.5 计算标记的MAF，保留MAF&gt;0.05</p>
-<p>1.6 群体内家系基因型根据两亲本更改为 A B H <strong>( 缺失不变）</strong></p>
-<p>1.7 删除多拷贝SNP，注释信息中chr hit number&gt;1的标记，这个一般针对那些非常差的标记，<strong>可以忽略此步骤</strong></p>
-</li>
-<li>
-<p><strong>样本QC</strong></p>
-<p>2.1	确定标记后，用剩下的标记进行样本质控，计算每个材料的缺失率和杂合率，然后对材料进行筛选</p>
-</li>
-<li>
-<p><strong>卡方测验</strong></p>
-<p>3.1 进行卡方测验，计算标记的分离比，删除严重偏分离的标记，这一步也可以在JoinMap，rqtl,AsMap中操作。</p>
-</li>
-</ol>
+                <p>My name is Yangyang Li , I would like to take advantage of mathematics and programming to change the world and detect the secrets of life, welcome everybody to communicate with me!  🤓</p>
 
               </div>
               <div class="toc-container">
@@ -126,15 +99,6 @@
           </article>
         </div>
 
-        
-          <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://cauliyang.github.io/post/vcftools-1/">
-              <h3 class="post-title">
-                Vcftools  Manual
-              </h3>
-            </a>
-          </div>
         
 
         

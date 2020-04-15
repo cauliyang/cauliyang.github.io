@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cauliyang.github.io</id>
     <title>Vince&apos;s Tree Hole </title>
-    <updated>2020-04-15T01:45:00.991Z</updated>
+    <updated>2020-04-15T02:12:05.447Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cauliyang.github.io"/>
     <link rel="self" href="https://cauliyang.github.io/atom.xml"/>
@@ -1106,6 +1106,15 @@ plt.show()
 <h1 id="ideas">Ideas</h1>
 <p>This blog is used as a public note to record my learning process. I also hope to help others~.</p>
 <p>If you have an infringement problem, then you can contact me. if it is true ,I will delete it immediately.</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[About ]]></title>
+        <id>https://cauliyang.github.io/post/about/</id>
+        <link href="https://cauliyang.github.io/post/about/">
+        </link>
+        <updated>2019-01-25T11:09:48.000Z</updated>
+        <content type="html"><![CDATA[<p>My name is Yangyang Li , I would like to take advantage of mathematics and programming to change the world and detect the secrets of life, welcome everybody to communicate with me!  🤓</p>
 ]]></content>
     </entry>
 </feed>

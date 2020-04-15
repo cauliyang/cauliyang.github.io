@@ -2,116 +2,102 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Vince&#39;s Tree Hole </title>
+<title>Vcftools  Manual | Vince&#39;s Tree Hole </title>
 <meta name="description" content="Cherish time, just like cherishing your eyes." />
-<link rel="shortcut icon" href="https://cauliyang.github.io/favicon.ico?v=1586915089501">
+<link rel="shortcut icon" href="https://cauliyang.github.io/favicon.ico?v=1586916686040">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-
 <link rel="stylesheet" href="https://cauliyang.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Vince&#39;s Tree Hole  - Atom Feed" href="https://cauliyang.github.io/atom.xml">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
   </head>
   <body>
-    <div id="app" class="main px-4 flex flex-col lg:flex-row">
-      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
-  <div class="lg:sticky top-0">
-    <div class="sidebar-content">
-      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
-        <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
-        <a href="https://cauliyang.github.io">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://cauliyang.github.io/images/avatar.png?v=1586915089501" alt="">
-        </a>
-        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Vince&#39;s Tree Hole </h1>
-      </div>
-      
-        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
-          <p class="my-4 text-gray-600 font-light hidden lg:block">
-            文章目录
-          </p>
-          <div class="toc-container hidden lg:block">
-            <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#1-%E6%96%87%E4%BB%B6%E7%9A%84%E8%AF%BB%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA">1. 文件的读入和输出</a></li>
-<li><a href="#2vcftools-%E5%AF%B9snp%E6%95%B0%E6%8D%AE%E8%BF%87%E6%BB%A4">2.vcftools 对snp数据过滤</a></li>
-<li><a href="#3vcftools-%E5%9C%A8%E7%BE%A4%E4%BD%93%E9%81%97%E4%BC%A0%E5%AD%A6%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8">3.Vcftools 在群体遗传学中的应用</a>
-<ul>
-<li><a href="#31-fst%E8%AE%A1%E7%AE%97">3.1 Fst计算</a></li>
-<li><a href="#32-%E6%A0%B8%E8%8B%B7%E9%85%B8%E5%A4%9A%E6%80%81%E6%80%A7%E7%BB%9F%E8%AE%A1">3.2 核苷酸多态性统计</a></li>
-<li><a href="#33-tajimas-d%E8%AE%A1%E7%AE%97">3.3 Tajima's D计算</a></li>
-<li><a href="#34-ld%E7%AD%89%E5%85%B6%E4%BB%96%E7%BB%9F%E8%AE%A1%E5%8F%82%E6%95%B0">3.4 LD等其他统计参数</a></li>
-</ul>
-</li>
-<li><a href="#4%E5%85%B6%E4%BB%96">4.其他</a>
-<ul>
-<li><a href="#41-%E6%AF%94%E8%BE%83%E4%B8%A4%E4%B8%AAvcf%E6%96%87%E4%BB%B6">4.1 比较两个vcf文件</a></li>
-<li><a href="#42-vcf%E8%BD%AC%E5%8C%96plink">4.2 VCF转化plink</a></li>
-<li><a href="#43-%E5%85%B6%E4%BB%96%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2">4.3 其他格式转换</a></li>
-</ul>
-</li>
-<li><a href="#5%E6%80%BB%E7%BB%93">5.总结</a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      
-    </div>
-  </div>
-</div>
-
-<div class="menu-container">
-  <i class="remixicon-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
-  <div>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://cauliyang.github.io">
+  <img class="avatar" src="https://cauliyang.github.io/images/avatar.png?v=1586916686040" alt="">
+  </a>
+  <h1 class="site-title">
+    Vince&#39;s Tree Hole 
+  </h1>
+  <p class="site-description">
+    Cherish time, just like cherishing your eyes.
+  </p>
+  <div class="menu-container">
     
       
-        <a href="/" class="menu" style="animation-delay: 0s">
+        <a href="/" class="menu">
           Home
         </a>
       
     
       
-        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+        <a href="/archives" class="menu">
           Archives
         </a>
       
     
       
-        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+        <a href="/tags" class="menu">
           Tags
         </a>
       
     
       
-        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+        <a href="/post/about" class="menu">
           About
         </a>
       
     
   </div>
-  <div class="site-footer">
-    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
-    <a class="rss" href="https://cauliyang.github.io/atom.xml" target="_blank">RSS</a>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
   </div>
 </div>
-<div class="mask" onclick="closeMenu()">
-</div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">Vcftools  Manual</h1>
-        <div class="text-sm text-gray-700 lg:my-8">
-          2019-08-20 / 6 min read
-        </div>
-        
-          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://mgo.azureedge.net/cloudcache/0/2/a/c/0/3/02ac03eaf4099407eaf881c3133063b4134b18c9.jpg" alt="">
-        
-        <div class="post-content yue">
-          <p>整理并记录处理VCf文件格式的工具<strong>vcftools</strong>的使用方法，主要用于自己使用。<strong>（侵权，立即删。😊）</strong></p>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Vcftools  Manual
+            </h2>
+            <div class="post-info">
+              <span>
+                2019-08-20
+              </span>
+              <span>
+                6 min read
+              </span>
+              
+                <a href="https://cauliyang.github.io/tag/SUXw49Pf-/" class="post-tag">
+                  # Bioinformatics
+                </a>
+              
+                <a href="https://cauliyang.github.io/tag/sEW192Upq/" class="post-tag">
+                  # Bio-software
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://mgo.azureedge.net/cloudcache/0/2/a/c/0/3/02ac03eaf4099407eaf881c3133063b4134b18c9.jpg" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>整理并记录处理VCf文件格式的工具<strong>vcftools</strong>的使用方法，主要用于自己使用。<strong>（侵权，立即删。😊）</strong></p>
 <!-- more -->
 <h2 id="1-文件的读入和输出">1. 文件的读入和输出</h2>
 <table>
@@ -370,42 +356,48 @@
 <h2 id="5总结">5.总结</h2>
 <p>本文旨在学习和整理用到的大部分vcftools方法，如果有所纰漏欢迎指正！😊</p>
 
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#1-%E6%96%87%E4%BB%B6%E7%9A%84%E8%AF%BB%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA">1. 文件的读入和输出</a></li>
+<li><a href="#2vcftools-%E5%AF%B9snp%E6%95%B0%E6%8D%AE%E8%BF%87%E6%BB%A4">2.vcftools 对snp数据过滤</a></li>
+<li><a href="#3vcftools-%E5%9C%A8%E7%BE%A4%E4%BD%93%E9%81%97%E4%BC%A0%E5%AD%A6%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8">3.Vcftools 在群体遗传学中的应用</a>
+<ul>
+<li><a href="#31-fst%E8%AE%A1%E7%AE%97">3.1 Fst计算</a></li>
+<li><a href="#32-%E6%A0%B8%E8%8B%B7%E9%85%B8%E5%A4%9A%E6%80%81%E6%80%A7%E7%BB%9F%E8%AE%A1">3.2 核苷酸多态性统计</a></li>
+<li><a href="#33-tajimas-d%E8%AE%A1%E7%AE%97">3.3 Tajima's D计算</a></li>
+<li><a href="#34-ld%E7%AD%89%E5%85%B6%E4%BB%96%E7%BB%9F%E8%AE%A1%E5%8F%82%E6%95%B0">3.4 LD等其他统计参数</a></li>
+</ul>
+</li>
+<li><a href="#4%E5%85%B6%E4%BB%96">4.其他</a>
+<ul>
+<li><a href="#41-%E6%AF%94%E8%BE%83%E4%B8%A4%E4%B8%AAvcf%E6%96%87%E4%BB%B6">4.1 比较两个vcf文件</a></li>
+<li><a href="#42-vcf%E8%BD%AC%E5%8C%96plink">4.2 VCF转化plink</a></li>
+<li><a href="#43-%E5%85%B6%E4%BB%96%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2">4.3 其他格式转换</a></li>
+</ul>
+</li>
+<li><a href="#5%E6%80%BB%E7%BB%93">5.总结</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
         </div>
 
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://cauliyang.github.io/tag/SUXw49Pf-/">
-            <span class="flex-auto">Bioinformatics</span>
-          </a>
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://cauliyang.github.io/post/k-means-cluster-by-python/">
+              <h3 class="post-title">
+                K-means  by Python
+              </h3>
+            </a>
+          </div>
         
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://cauliyang.github.io/tag/sEW192Upq/">
-            <span class="flex-auto">Bio-software</span>
-          </a>
-        
-
-
-        <div class="flex justify-between py-8">
-          
-            <div class="prev-post">
-              <a href="https://cauliyang.github.io/post/xin-pian-shu-ju-gou-jian-yi-chuan-lian-suo-tu-biao-ji-shai-xuan-liu-cheng/">
-                <h3 class="post-title">
-                  <i class="remixicon-arrow-left-line"></i>
-                  Bin map 
-                </h3>
-              </a>
-            </div>
-          
-
-          
-            <div class="next-post">
-              <a href="https://cauliyang.github.io/post/k-means-cluster-by-python/">
-                <h3 class="post-title">
-                  K-means  by Python
-                  <i class="remixicon-arrow-right-line"></i>
-                </h3>
-              </a>
-            </div>
-          
-        </div>
 
         
           
@@ -435,107 +427,54 @@
           
         
 
-      </div>
-    </div>
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://cauliyang.github.io/atom.xml" target="_blank">RSS</a>
+</div>
 
-    <script src="https://cauliyang.github.io/media/prism.js"></script>  
 <script>
+  hljs.initHighlightingOnLoad()
 
-Prism.highlightAll()
+  let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
 
-let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+  // This should probably be throttled.
+  // Especially because it triggers during smooth scrolling.
+  // https://lodash.com/docs/4.17.10#throttle
+  // You could do like...
+  // window.addEventListener("scroll", () => {
+  //    _.throttle(doThatStuff, 100);
+  // });
+  // Only not doing it here to keep this Pen dependency-free.
 
-// This should probably be throttled.
-// Especially because it triggers during smooth scrolling.
-// https://lodash.com/docs/4.17.10#throttle
-// You could do like...
-// window.addEventListener("scroll", () => {
-//    _.throttle(doThatStuff, 100);
-// });
-// Only not doing it here to keep this Pen dependency-free.
+  window.addEventListener("scroll", event => {
+    let fromTop = window.scrollY;
 
-window.addEventListener("scroll", event => {
-  let fromTop = window.scrollY;
-
-  mainNavLinks.forEach((link, index) => {
-    let section = document.getElementById(decodeURI(link.hash).substring(1));
-    let nextSection = null
-    if (mainNavLinks[index + 1]) {
-      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-    }
-    if (section.offsetTop <= fromTop) {
-      if (nextSection) {
-        if (nextSection.offsetTop > fromTop) {
-          link.classList.add("current");
+    mainNavLinks.forEach((link, index) => {
+      let section = document.getElementById(decodeURI(link.hash).substring(1));
+      let nextSection = null
+      if (mainNavLinks[index + 1]) {
+        nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+      }
+      console.log('section.offsetHeight', section.offsetHeight);
+      if (section.offsetTop <= fromTop) {
+        if (nextSection) {
+          if (nextSection.offsetTop > fromTop) {
+            link.classList.add("current");
+          } else {
+            link.classList.remove("current");    
+          }
         } else {
-          link.classList.remove("current");    
+          link.classList.add("current");
         }
       } else {
-        link.classList.add("current");
+        link.classList.remove("current");
       }
-    } else {
-      link.classList.remove("current");
-    }
-  });
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
-
-  if ("IntersectionObserver" in window) {
-    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          let lazyImage = entry.target
-          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
-          lazyImage.classList.remove("lazy")
-          lazyImageObserver.unobserve(lazyImage)
-        }
-      });
     });
+  });
 
-    lazyImages.forEach(function(lazyImage) {
-      lazyImageObserver.observe(lazyImage)
-    })
-  } else {
-    // Possibly fall back to a more compatible method here
-  }
-});
-
-const menuContainer = document.querySelector('.menu-container')
-const menus = document.querySelectorAll('.menu-container .menu')
-const mask = document.querySelector('.mask')
-const contentWrapper = document.querySelector('.content-wrapper')
-const latestArticle = document.querySelector('.latest-article')
-const readMore = document.querySelector('.read-more')
-const indexPage = document.querySelector('.index-page')
-
-const isHome = location.pathname === '/'
-if (latestArticle) {
-  latestArticle.style.display = isHome ? 'block' : 'none'
-  readMore.style.display = isHome ? 'block' : 'none'
-  indexPage.style.display = isHome ? 'none' : 'block'
-}
-
-const openMenu = () => {
-  menuContainer.classList.add('open')
-  menus.forEach(menu => {
-    menu.classList.add('animated', 'fadeInLeft')
-  })
-  mask.classList.add('open')
-  contentWrapper.classList.add('is-second')
-}
-
-const closeMenu = () => {
-  menuContainer.classList.remove('open')
-  menus.forEach(menu => {
-    menu.classList.remove('animated', 'fadeInLeft')
-  })
-  mask.classList.remove('open')
-  contentWrapper.classList.remove('is-second')
-}
 </script>
-  
+
+      </div>
+    </div>
   </body>
 </html>
