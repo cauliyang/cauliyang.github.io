@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cauliyang.github.io</id>
     <title>Vince&apos;s Tree Hole </title>
-    <updated>2020-04-15T03:08:25.936Z</updated>
+    <updated>2020-04-15T14:02:54.452Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cauliyang.github.io"/>
     <link rel="self" href="https://cauliyang.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2020, Vince&apos;s Tree Hole </rights>
     <entry>
         <title type="html"><![CDATA[T-SNE by Python]]></title>
-        <id>https://cauliyang.github.io/post/t-sne-by-python/</id>
-        <link href="https://cauliyang.github.io/post/t-sne-by-python/">
+        <id>https://cauliyang.github.io/t-sne-by-python/</id>
+        <link href="https://cauliyang.github.io/t-sne-by-python/">
         </link>
         <updated>2019-10-03T14:11:09.000Z</updated>
         <summary type="html"><![CDATA[<p><strong>This note records T-SNE by Python and  the  differences between  PCA and T-SNE</strong></p>
@@ -25,8 +25,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Bin map ]]></title>
-        <id>https://cauliyang.github.io/post/xin-pian-shu-ju-gou-jian-yi-chuan-lian-suo-tu-biao-ji-shai-xuan-liu-cheng/</id>
-        <link href="https://cauliyang.github.io/post/xin-pian-shu-ju-gou-jian-yi-chuan-lian-suo-tu-biao-ji-shai-xuan-liu-cheng/">
+        <id>https://cauliyang.github.io/xin-pian-shu-ju-gou-jian-yi-chuan-lian-suo-tu-biao-ji-shai-xuan-liu-cheng/</id>
+        <link href="https://cauliyang.github.io/xin-pian-shu-ju-gou-jian-yi-chuan-lian-suo-tu-biao-ji-shai-xuan-liu-cheng/">
         </link>
         <updated>2019-09-09T01:06:33.000Z</updated>
         <summary type="html"><![CDATA[<p><strong>本文记录芯片数据如何筛选，以及使用bin map方法构建遗传图谱。</strong></p>
@@ -59,8 +59,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Vcftools  Manual]]></title>
-        <id>https://cauliyang.github.io/post/vcftools-1/</id>
-        <link href="https://cauliyang.github.io/post/vcftools-1/">
+        <id>https://cauliyang.github.io/vcftools-1/</id>
+        <link href="https://cauliyang.github.io/vcftools-1/">
         </link>
         <updated>2019-08-20T04:54:06.000Z</updated>
         <summary type="html"><![CDATA[<p>整理并记录处理VCf文件格式的工具<strong>vcftools</strong>的使用方法，主要用于自己使用。<strong>（侵权，立即删。😊）</strong></p>
@@ -327,8 +327,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[K-means  by Python]]></title>
-        <id>https://cauliyang.github.io/post/k-means-cluster-by-python/</id>
-        <link href="https://cauliyang.github.io/post/k-means-cluster-by-python/">
+        <id>https://cauliyang.github.io/k-means-cluster-by-python/</id>
+        <link href="https://cauliyang.github.io/k-means-cluster-by-python/">
         </link>
         <updated>2019-08-07T14:09:35.000Z</updated>
         <summary type="html"><![CDATA[<p>本篇文章，详细记录如何使用<strong>Python</strong>进行<strong>K-means</strong>，分别用两种方法实现，并记录如何选取K值，并进行可视化评估结果。</p>
@@ -777,8 +777,8 @@ def main():
     </entry>
     <entry>
         <title type="html"><![CDATA[PCA by Python ]]></title>
-        <id>https://cauliyang.github.io/post/pca-by-python-2/</id>
-        <link href="https://cauliyang.github.io/post/pca-by-python-2/">
+        <id>https://cauliyang.github.io/pca-by-python-2/</id>
+        <link href="https://cauliyang.github.io/pca-by-python-2/">
         </link>
         <updated>2019-07-19T14:07:56.000Z</updated>
         <summary type="html"><![CDATA[<p><strong>This article documents two methods of PCA analysis using Python, and visualizes 2-dimensional results.</strong></p>
@@ -1095,8 +1095,8 @@ plt.show()
     </entry>
     <entry>
         <title type="html"><![CDATA[Blog Ideas ]]></title>
-        <id>https://cauliyang.github.io/post/bo-ke-xiang-fa/</id>
-        <link href="https://cauliyang.github.io/post/bo-ke-xiang-fa/">
+        <id>https://cauliyang.github.io/bo-ke-xiang-fa/</id>
+        <link href="https://cauliyang.github.io/bo-ke-xiang-fa/">
         </link>
         <updated>2019-05-09T00:46:16.000Z</updated>
         <summary type="html"><![CDATA[<p>This Blog record learning process, welcome everyone to communicate with me!😊</p>
@@ -1110,8 +1110,8 @@ plt.show()
     </entry>
     <entry>
         <title type="html"><![CDATA[About ]]></title>
-        <id>https://cauliyang.github.io/post/about/</id>
-        <link href="https://cauliyang.github.io/post/about/">
+        <id>https://cauliyang.github.io/about/</id>
+        <link href="https://cauliyang.github.io/about/">
         </link>
         <updated>2019-01-25T11:09:48.000Z</updated>
         <content type="html"><![CDATA[<p>My name is Yangyang Li , I would like to take advantage of mathematics and programming to change the world and detect the secrets of life, welcome everybody to communicate with me!  🤓</p>

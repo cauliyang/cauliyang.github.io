@@ -1,0 +1,775 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>K-means  by Python | Vince&#39;s Tree Hole </title>
+<meta name="description" content="Cherish time, just like cherishing your eyes." />
+<link rel="shortcut icon" href="https://cauliyang.github.io/favicon.ico">
+<link rel="stylesheet" href="https://cauliyang.github.io/styles/main.css">
+
+<script src="https://cauliyang.github.io/media/js/jquery.min.js"></script>
+<script src="https://cauliyang.github.io/media/js/masonry.pkgd.min.js"></script>
+<script src="https://cauliyang.github.io/media/js/aos.js"></script>
+<script src="https://cauliyang.github.io/media/js/pace.min.js"></script>
+<script src="https://cauliyang.github.io/media/js/view-image.min.js"></script>
+<script src="https://cauliyang.github.io/media/js/jquery.magnific-popup.min.js"></script>
+<script src="https://cauliyang.github.io/media/js/functions.js"></script>
+    <meta name="referrer" content="never">
+    <meta name="description" content="本篇文章，详细记录如何使用Python进行K-means，分别用两种方法实现，并记录如何选取K值，并进行可视化评估结果。
+ 
+
+img{
+    width: 80%;
+    padding-left: 10%;
+}
+
+1.K-means..." />
+    <meta name="keywords" content="Machine-Learning,Python" />
+    <script src="https://cauliyang.github.io/media/js/waterfall.min.js"></script>
+    <script src="https://cauliyang.github.io/media/js/prism.min.js"></script>
+  </head>
+  <body>
+            <header id="header" class="grid-container">
+        <!-- start: .menu-wrapper -->
+        <div class="menu-mobile"> 
+          <i class="fa fa-reorder"></i>
+        </div>
+        <div class="menu-wrapper">
+          <div class="">
+            <div class="logo">
+              <a href="https://cauliyang.github.io"><img src="" alt=""></a>
+            </div>
+            <!-- start: .main-nav -->
+
+            <nav class="main-nav grid-container grid-parent">
+              <ul id="menu-header" class="menu gradient-effect">
+                <li class=""><a href="https://cauliyang.github.io" class="menu">首页</a></li>
+                
+                  <li class="" >
+                    <a href="/" class="menu">
+                      Home
+                    </a>
+                  </li>
+                
+                  <li class="" >
+                    <a href="/archives" class="menu">
+                      Archives
+                    </a>
+                  </li>
+                
+                  <li class="" >
+                    <a href="/tags" class="menu">
+                      Tags
+                    </a>
+                  </li>
+                
+                  <li class="" >
+                    <a href="/post/about" class="menu">
+                      About
+                    </a>
+                  </li>
+                
+                <li class="search-menu-item hide-on-mobile hide-on-tablet"><a href="#search-lightbox" class="lightbox mfp-inline"><i class="fa fa-search-line"></i></a></li>
+              </ul>
+            </nav>
+            <a href="#search-lightbox" class="lightbox epcl-search-button mfp-inline hide-on-tablet hide-on-desktop"><i class="fa fa-search-line"></i></a>
+            <!-- end: .main-nav -->
+            <div class="clear"></div>
+            <div class="border hide-on-tablet hide-on-mobile"></div>
+          </div>    
+          <div class="clear"></div>
+        </div>
+        <!-- end: .menu-wrapper -->
+        <div class="clear"></div>
+      </header>
+      <div class="hide-on-mobile hide-on-tablet hide-on-desktop">
+        <div id="search-lightbox" class="grid-container grid-small grid-parent mfp-hide">
+          <div class="search-wrapper section">
+            <form id="gridea-search-form" data-update="1586959308050" action="/search/index.html" class="search-form" _lpchecked="1">
+              <input type="text" name="q" id="s" value="" class="search-field" placeholder="搜点啥..." aria-label="搜点啥..." required="">
+              <button type="submit" class="submit" aria-label="Submit">
+                <i class="fa fa-search-line"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
+
+        <div class="center content">
+          <div class="featured-image cover" style="background-image: url('https://cdn.wallpaperhub.app/cloudcache/4/6/b/1/0/4/46b104f678c41bff84412bcae61d001cd4770de4.jpg');">
+            <div class="meta top"> 
+              <time class="meta-info" style="float:left;" datetime="2019-08-07"><i class="fa fa-calendar"></i><span class="lately">8 个月前</span></time>
+              
+            </div>
+            <div class="info">
+              <div class="tags ">
+                
+                      <a href="https://cauliyang.github.io/o4B5pUlIC/" class="ctag ctag-0 ctag-o4B5pUlIC" aria-label="">Machine-Learning</a>
+                    
+                      <a href="https://cauliyang.github.io/2jIKZKAWZ/" class="ctag ctag-1 ctag-2jIKZKAWZ" aria-label="">Python</a>
+                    
+              </div>
+              <h1 class="title ularge white bold">K-means  by Python</h1>
+            </div>
+          </div>
+        </div>  
+
+        <div class="epcl-page-wrapper">
+          <div class="left-content grid-70 np-mobile">
+            <article class="main-article post">
+              <section class="post-content">
+                <div class="text">
+                  <p>本篇文章，详细记录如何使用<strong>Python</strong>进行<strong>K-means</strong>，分别用两种方法实现，并记录如何选取K值，并进行可视化评估结果。</p>
+<!-- more --> 
+<style>
+img{
+    width: 80%;
+    padding-left: 10%;
+}
+</style>
+<h2 id="1k-means概念介绍">1.<strong>K-means</strong>概念介绍</h2>
+<hr>
+<h3 id="11-基础概念">1.1 基础概念</h3>
+<p><strong>K-means</strong>是一种常用的无监督学习技术，用于在无法知道正确答案下发现数据中隐藏的结构，聚类的目标是在数据中找到自然分组，确保相同集群中元素比不同的集群中元素更加相似。<strong>K-means</strong>方法非常擅长识别球形数据，其缺点是必须指定集群数<strong>K</strong>。如果选择<strong>K</strong>值不当会造成分群效果不好，后文将会介绍两种方法用来评估<strong>K</strong>值及分群效果。并且本文采用两种方式实现<strong>K-means</strong></p>
+<ul>
+<li>
+<p>使用<strong>scikit-learn</strong>模块进行<strong>K-means</strong>聚类分析。</p>
+</li>
+<li>
+<p>从头手写<strong>K-means</strong>方法。</p>
+</li>
+</ul>
+<h3 id="12-算法原理">1.2 算法原理</h3>
+<ol>
+<li>随机在样本中选取<strong>K</strong>质心作为起始聚类的中心。</li>
+<li>将每个样本根据欧式距离分到最近的质心<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">μ</span></span></span></span>所在的群中。</li>
+<li>将所有样本分群后，重新计算以每个群的中心作为新的质心。</li>
+<li>重复2，3 两步，知道质心不再改变，或者达到用户自定义的阈值或最大迭代数。</li>
+</ol>
+<p><strong>欧式距离</strong>的计算方法为：</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><msup><mo>)</mo><mn>2</mn></msup><mo>=</mo><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><mo>(</mo><msub><mi>x</mi><mi>j</mi></msub><mo>−</mo><msub><mi>y</mi><mi>j</mi></msub><msup><mo>)</mo><mn>2</mn></msup><mo>=</mo><mi mathvariant="normal">∣</mi><mi mathvariant="normal">∣</mi><mi>x</mi><mo>−</mo><mi>y</mi><mi mathvariant="normal">∣</mi><msubsup><mi mathvariant="normal">∣</mi><mn>2</mn><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">d(x,y)^2 = \sum^{m}_{j = 1}(x_j  - y_j )^2 =  ||x - y||^{2}_{2}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1141079999999999em;vertical-align:-0.25em;"></span><span class="mord mathdefault">d</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.0651740000000007em;vertical-align:-1.4137769999999998em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6513970000000007em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.4137769999999998em;"><span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.150216em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord">∣</span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.1141079999999999em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord">∣</span><span class="mord"><span class="mord">∣</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-2.4530000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+<p>其中<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span></span></span></span>代表数据的纬度。</p>
+<p>基于欧式距离我们可以把分群的过程描述为一个优化的问题，是一种最小化<strong>群内误差平方和（SSE）<strong>的迭代方法也被称为</strong>群惯性</strong>。</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mi>S</mi><mi>E</mi><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><msup><mi>w</mi><mrow><mo>(</mo><mi>i</mi><mo separator="true">,</mo><mi>j</mi><mo>)</mo></mrow></msup><mi mathvariant="normal">∣</mi><mi mathvariant="normal">∣</mi><msup><mi>x</mi><mrow><mo>(</mo><mi>i</mi><mo>)</mo></mrow></msup><mo>−</mo><msup><mi>μ</mi><mrow><mo>(</mo><mi>i</mi><mo>)</mo></mrow></msup><mi mathvariant="normal">∣</mi><msubsup><mi mathvariant="normal">∣</mi><mn>2</mn><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">SSE = \sum^{n}_{i =1 } \sum^{k}_{j=1 } w^{(i,j)}||x^{(i)} - \mu^{(i)}||^{2}_{2} 
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.2498900000000006em;vertical-align:-1.4137769999999998em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6513970000000002em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.277669em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8361130000000006em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.4137769999999998em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathdefault mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mord">∣</span><span class="mord">∣</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathdefault mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.188em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault">μ</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathdefault mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mord">∣</span><span class="mord"><span class="mord">∣</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-2.4530000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+<p>其中 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span>代表样本索引 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span></span></span></span>代表分群索引</p>
+<h2 id="2使用scikit-learn实现k-means方法">2.使用<strong>scikit-learn</strong>实现<strong>K-means</strong>方法</h2>
+<hr>
+<h3 id="21-创建测试数据并实现算法">2.1 创建测试数据并实现算法</h3>
+<p>首先导入所需要的模块：</p>
+<pre><code class="language-python"># import module
+import numpy as np
+from matplotlib import cm
+from sklearn.datasets import make_blobs
+from sklearn.cluster import KMeans
+import matplotlib.pyplot as plt
+from sklearn.metrics import silhouette_samples
+</code></pre>
+<p>因为二维数据可是简单的绘制在笛卡尔坐标系上，所以生成二维测试数据进行测试：</p>
+<pre><code class="language-python"># creat tested data
+X, y = make_blobs(n_samples=150, # volume of data 
+                  n_features=2, # number of feature 
+                  centers=3, # number of centroid
+                  cluster_std=0.5,  # distribution of data 
+                  shuffle=True,
+                  random_state=0)
+</code></pre>
+<p>绘图查看原始数据：</p>
+<pre><code class="language-python"># plot tested data
+plt.figure()
+plt.scatter(X[:, 0], X[:, 1], c='white', marker='o', edgecolor='black', s=50)
+plt.grid()
+plt.show()
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://cauliyang.github.io/post-images/1572156791933.png" alt="" loading="lazy"></figure>
+<p>从图中可以看出创建的测试数据有明显的分群情况,当然在真实的数据当中原始数据可能没有这么理想。我们先在没有推理的情况下确定<strong>K</strong>的值为3。</p>
+<pre><code class="language-python"># k-means
+km = KMeans(n_clusters=3, # K value 
+            init='random',
+            n_init=10, # number of repeatation 
+            max_iter=300, 
+            tol=1e-4, 
+            random_state=0)
+# predict labels
+y_km = km.fit_predict(X)
+</code></pre>
+<p>我们进行可视化分群结果：</p>
+<pre><code class="language-python">#creating function of ploting graph for reusing 
+def plot_res(y_km, X, n_cluster):
+    # init colors and markers
+    colors = ['lightgreen', 'orange', 'lightblue'][:n_cluster]
+    markers = ['s', 'o', 'v'][:n_cluster]
+
+    # plot the cluster to comfirm the result of k-meams by sklearn
+    for i, (c, m) in enumerate(zip(colors, markers)):
+        plt.scatter(X[y_km == i, 0],
+                    X[y_km == i, 1],
+                    s=50,
+                    c=c,
+                    marker=m,
+                    edgecolor='black',
+                    label=f'cluster {i}')
+
+    # plot centroipd of  different clusters
+    plt.scatter(km.cluster_centers_[:, 0],
+                km.cluster_centers_[:, 1],
+                s=250,
+                marker='*',
+                c='red',
+                edgecolors='black',
+                label='centroids')
+    # plot lengend
+    plt.legend(scatterpoints=1)
+    # plot grid
+    plt.grid()
+    plt.show()
+
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="https://cauliyang.github.io/post-images/1572158215803.png" alt="" loading="lazy"></figure>
+<p>可以明显看到分群效果十分明显。不过其中还有许多问题：</p>
+<ol>
+<li>如何确实<strong>K</strong>值</li>
+<li>如何评估分群质量</li>
+</ol>
+<h3 id="22-如何选取k值">2.2 如何选取<strong>K</strong>值</h3>
+<p>下面介绍如何使用肘解法选取合适的<strong>K</strong>值，肘解法目的是找出SSE变化幅度最大的<strong>K</strong>值。使用<code>km.inertia_</code> 即可调出<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mi>S</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">SSE</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span></span></span></span>的值。</p>
+<pre><code class="language-python">
+distortions = []
+# test different  numbers of cluster  to  pick up the best K
+for i in range(1, 11):
+    km = KMeans(n_clusters=i,
+                init='k-means++',
+                n_init=10,
+                max_iter=300,
+                random_state=0)
+
+    km.fit(X)
+    distortions.append(km.inertia_)
+
+</code></pre>
+<p>测试1-11的<strong>K</strong>值选取，并进行可视化查看结果。</p>
+<pre><code class="language-python"># plot the tested result for the best K
+
+plt.plot(range(1, 11), distortions, marker='o')
+plt.xlabel('Number of clusters')
+plt.ylabel('Distortion')
+plt.show()
+</code></pre>
+<figure data-type="image" tabindex="3"><img src="https://cauliyang.github.io/post-images/1572160740933.png" alt="" loading="lazy"></figure>
+<p>从图中我们可以看出在<strong>K</strong>值为3的时候，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mi>S</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">SSE</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span></span></span></span>变化幅度最大，即可得知<strong>K</strong>为3是最优解。</p>
+<h3 id="23-如何评估分群的质量">2.3 如何评估分群的质量</h3>
+<p>评价聚类质量的一种方法是<strong>轮廓分析</strong>，他可以应用于其他聚类算法，度量其紧密程度。计算轮廓系数的步骤为：</p>
+<ol>
+<li>计算集群内聚度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>a</mi><mrow><mo>(</mo><mi>i</mi><mo>)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">a^{(i)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8879999999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8879999999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathdefault mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span></span></span></span>，即样本<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>x</mi><mrow><mo>(</mo><mi>i</mi><mo>)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">x^{(i)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8879999999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8879999999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathdefault mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span></span></span></span>于集群内所有其他点之间的平均距离。</li>
+<li>计算集群与最近集群的分离度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>b</mi><mrow><mo>(</mo><mi>i</mi><mo>)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">b^{(i)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8879999999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8879999999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathdefault mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span></span></span></span>,即样本<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>x</mi><mrow><mo>(</mo><mi>i</mi><mo>)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">x^{(i)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8879999999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8879999999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathdefault mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span></span></span></span>与最近集群内所有样本的平均距离。</li>
+<li>计算轮廓系数<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>s</mi><mrow><mo>(</mo><mi>i</mi><mo>)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">s^{(i)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8879999999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8879999999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathdefault mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span></span></span></span>，即集群内聚度与集群分离度之差，除以两者中较大的一个。</li>
+</ol>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>s</mi><mrow><mo>(</mo><mi>i</mi><mo>)</mo></mrow></msup><mo>=</mo><mfrac><mrow><msup><mi>b</mi><mrow><mo>(</mo><mi>i</mi><mo>)</mo></mrow></msup><mo>−</mo><msup><mi>a</mi><mrow><mo>(</mo><mi>i</mi><mo>)</mo></mrow></msup></mrow><mrow><mi>max</mi><mo>⁡</mo><mo>{</mo><mrow><msup><mi>b</mi><mrow><mo>(</mo><mi>i</mi><mo>)</mo></mrow></msup><mo separator="true">,</mo><msup><mi>a</mi><mrow><mo>(</mo><mi>i</mi><mo>)</mo></mrow></msup></mrow><mo>}</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">s^{(i)} = \frac{b^{(i)} - a^{(i)}}{\max \{{b^{(i)},a^{(i)}}\}}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.938em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathdefault mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.519em;vertical-align:-0.954em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.565em;"><span style="top:-2.2960000000000003em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mop">max</span><span class="mopen">{</span><span class="mord"><span class="mord"><span class="mord mathdefault">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.814em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathdefault mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.814em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathdefault mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span></span><span class="mclose">}</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8879999999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathdefault mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8879999999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathdefault mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.954em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p>轮廓系数的范围在-1到1之间，如果集群分离度和集群内聚度相等，即<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>b</mi><mrow><mo>(</mo><mi>i</mi><mo>)</mo></mrow></msup><mo>=</mo><msup><mi>a</mi><mrow><mo>(</mo><mi>i</mi><mo>)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">b^{(i)}=a^{(i)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8879999999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8879999999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathdefault mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8879999999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8879999999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathdefault mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span></span></span></span>。那么轮廓系数为0，如果<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>b</mi><mrow><mo>(</mo><mi>i</mi><mo>)</mo></mrow></msup><mo>&gt;</mo><mo>&gt;</mo><msup><mi>a</mi><mrow><mo>(</mo><mi>i</mi><mo>)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">b^{(i)} &gt;&gt; a^{(i)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9270999999999999em;vertical-align:-0.0391em;"></span><span class="mord"><span class="mord mathdefault">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8879999999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathdefault mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8879999999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8879999999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathdefault mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span></span></span></span> 则接近理想的轮廓系数 1 。</p>
+<p>可以使用<strong>scikit-learn</strong>中<strong>metric</strong>中的<strong>silhouette_samples</strong>计算样本的轮廓系数。也可以更方便的使用<strong>silhouette_scores</strong>直接计算所有样本的平均轮廓系数。下面显示<strong>K</strong>值基于3的分群结果。</p>
+<pre><code class="language-python"># we can use the graph of silhouette to evaluate  result
+km = KMeans(n_clusters=3,
+            init='k-means++',
+            n_init=10,
+            max_iter=10,
+            tol=1e-04,
+            random_state=0)
+y_km = km.fit_predict(X)
+</code></pre>
+<p>绘制轮廓图进行可视化，直观的查看群内轮廓系数。</p>
+<pre><code class="language-python"># difining fuction of plot-silhouette for reusing
+# plot the graph of silhouette
+def plot_sil(y_km, X):
+    cluster_lables = np.unique(y_km)
+    n_clusters = cluster_lables.shape[0]
+
+    # using function of silhouette in sklearn to get silhouete scores
+    silhouette_vals = silhouette_samples(X, y_km, metric='euclidean')
+
+    # plot the graph
+    y_ax_lower, y_ax_upper = 0, 0
+    yticks = []
+    for i, c in enumerate(cluster_lables):
+        # get values of  each cluster
+        c_silhouette_vals = silhouette_vals[y_km == c] 
+        c_silhouette_vals.sort()  # sort value for ploting
+        y_ax_upper += len(c_silhouette_vals)
+        color = cm.jet(float(i) / n_clusters)
+        plt.barh(range(y_ax_lower, y_ax_upper),
+                 c_silhouette_vals,
+                 height=1.0,
+                 edgecolor='none',
+                 color=color)
+        yticks.append((y_ax_lower + y_ax_upper) / 2)
+        y_ax_lower += len(c_silhouette_vals)
+
+    silhouette_avg = np.mean(silhouette_vals)  # get the label of yticks
+    plt.axvline(silhouette_avg, color='red',
+                linestyle='--')  # plot the avaerage of silhouette
+    plt.yticks(yticks, labels=cluster_lables)
+    plt.ylabel('Cluster')
+    plt.xlabel('Silhouette coefficient')
+    plt.show()
+
+</code></pre>
+<figure data-type="image" tabindex="4"><img src="https://cauliyang.github.io/post-images/1572162327225.png" alt="" loading="lazy"></figure>
+<p>从图中我们可以看出轮廓系数不接近于0，且接近于1表明我们的分群结果良好。且在图中轮廓系数的高度代表群内样本数量，如果样本数量相差太大，说明分群效果不是很好。图中虚线表示平均轮廓系数。</p>
+<p>为更好的理解轮廓系数的使用，将<strong>K</strong>值变为2，进行聚类。</p>
+<pre><code class="language-python">km = KMeans(
+    n_clusters=2,  # value of k has changed 
+    init='k-means++',
+    n_init=10,
+    max_iter=10,
+    tol=1e-04,
+    random_state=0)
+y_km = km.fit_predict(X)
+</code></pre>
+<p>使用上方作图函数，先观察分群效果。</p>
+<figure data-type="image" tabindex="5"><img src="https://cauliyang.github.io/post-images/1572162593247.png" alt="" loading="lazy"></figure>
+<p>从图中可以看出分群效果很差，可视化轮廓系数查看结果。</p>
+<figure data-type="image" tabindex="6"><img src="https://cauliyang.github.io/post-images/1572162888640.png" alt="" loading="lazy"></figure>
+<p>两个群的高度不一致表明分群效果不是很理想，且有的样本轮廓系数极低接近于0。表示分群有很大的问题，需要重新思考<strong>K</strong>值的选取。</p>
+<h2 id="3-k-means-from-scratch">3. K-means from scratch</h2>
+<p>我们根据算法原理使用<strong>Python</strong>一步步实现<strong>K-means</strong>，首先展示我们所用到的数据集，有关基因在不同条件下处理的表达数据，其中基因数量为样本数量，处理方式为纬度。并且设计为<strong>Terminal</strong>端使用。</p>
+<p>终端使用方法为：</p>
+<p><code>Usage : python k_mean.py k data max_it (cetroids)</code></p>
+<p>其中</p>
+<ul>
+<li>k_mean.py 为程序脚本</li>
+<li>k 为分群数量</li>
+<li>data 为原始数据文件</li>
+<li>max_it 为最大递归次数</li>
+<li>centroids 为初始的质心，用户可以选择提供或者不提供</li>
+</ul>
+<p>原始数据：</p>
+<table>
+<thead>
+<tr>
+<th>gene_expression</th>
+<th>treat_1</th>
+<th>treat_2</th>
+<th>...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>g_1</td>
+<td>0.2</td>
+<td>0.5</td>
+<td>...</td>
+</tr>
+<tr>
+<td>g_2</td>
+<td>1.4</td>
+<td>1.6</td>
+<td>...</td>
+</tr>
+<tr>
+<td>...</td>
+<td>4.2</td>
+<td>2.1</td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+<h3 id="31-get-parameters-from-terminal">3.1 Get parameters from terminal</h3>
+<p>导入所需的模块</p>
+<pre><code class="language-python"># import modules
+import sys
+import time
+import numpy as np
+from collections import Counter
+from operator import itemgetter
+</code></pre>
+<p>从终端获取用户传递参数：</p>
+<pre><code class="language-python"># defining function for getting parameters from terminal
+def get_argv():
+    '''
+    get the parameters entered by user and return the dictionary parameters
+    '''
+    # get parameters
+    argv_list = sys.argv
+    # init parameters
+    argv_name = (
+        'data',
+        'init_cetroids',
+        'gene_num',  # numbers of row 
+        'ndim',
+        'max_it',  # max numbers of  iter
+        'k')
+    #  determine whether user provide init-centroids according numbers of parameters
+    if len(argv_list) == 4:
+        # if not provide init-centroid
+        _, k, file, max_it = argv_list
+        # get information of file
+        argv_tuple = get_Cetroid(file, int(k)) + (int(max_it), int(k))
+    elif len(argv_list) == 5:
+        # if provide init-centroid
+        _, k, file, max_it, cetroid_file = argv_list
+        # get information
+        argv_tuple = get_Cetroid(
+            file, int(k), cetroid_file=cetroid_file) + (int(max_it), int(k))
+    elif len(argv_list) &lt; 4:
+        #  if numbers of parameters is less than  need parameters  then print help
+        print('''
+            -------------------------------------------------
+            Requirement : numpy 
+
+            Usage : python k_mean.py k data max_it (cetroids)
+
+            Result_file : kmeans.out
+
+            Contact : &lt;liyangyang&gt; &lt;yangyangli.vince@gmail.com&gt;
+
+            -------------------------------------------------
+
+            ''')
+        sys.exit(0)
+    # return dictionary parameters
+    return dict(zip(argv_name, argv_tuple))
+
+</code></pre>
+<h3 id="32-creating-function-of-report">3.2 Creating function of report</h3>
+<pre><code class="language-python"># difining  function of reporting summary 
+def summary(kw, tim, kmeanout='kmeans.out'):
+    '''
+    Create a summary function, count recursive times, run time, etc.。
+    '''
+
+    # statistics for each Cluster data
+    def print_cluster(kmean=kmeanout):
+        # evaluate data
+        counter = Counter(np.loadtxt(kmean, dtype=int)[:, 1])
+        # produce report
+        for clu, num in counter.most_common():
+            print(f'    Cluster_{clu} : {num}')
+
+    # creat statistic header
+    print('{:-^40}\n'.format('Summary'))
+    # print statstic report of each cluster
+    print_cluster()
+    # print overall information
+    print(f'''
+    Max_iter_number : {kw['max_it']} 
+    Cluster_number  :{kw['k']} 
+    Time  : {tim:.2f}s 
+    Date  : {time.asctime()}''')
+    # creat statistic tial
+    print('{:-&lt;40}\n'.format('-'))
+</code></pre>
+<h3 id="33-calculating-euclidean-distance">3.3 Calculating Euclidean distance</h3>
+<pre><code class="language-python"># defining function to calculate Euclidean distance
+def eucl_Distance(init_cetroids, piece_data):
+    ''' 
+    Calculate the Euclidean distance between each data and the centroid
+    '''
+    distance = np.sqrt(np.sum((init_cetroids - piece_data)**2, axis=1))
+    # return euclidean distance
+    return distance
+
+</code></pre>
+<h3 id="34-getting-centroid-information-and-recursive-function">3.4 Getting centroid information and recursive function</h3>
+<pre><code class="language-python">def get_Cetroid(file, k, cetroid_file=None):
+    ''' 
+    This function is used to get raw data file information: raw data, centroid, data volume, feature dimension
+    '''
+    # get content of  file
+    data = np.loadtxt(file)
+    # get information: data volume, feature dimension
+    gene_num, ndim = data.shape
+    # Determine whether the user provides a centroid, and  randomly if not provided
+    if not (cetroid_file):
+        # init centroid
+        init_cetroids = np.zeros((k, ndim))
+        # provied centroid randomly
+        for i in range(k):
+            index = int(np.random.uniform(0, gene_num))
+            init_cetroids[i, :] = data[index, :]
+    else:
+        # if users provide centroid
+        init_cetroids = np.loadtxt(cetroid_file)
+    # return information
+    return (data, init_cetroids, gene_num, ndim)
+
+
+    def iter_Cetroid(**argv):
+    '''
+    Iterative clustering results
+    '''
+    # get neccessary parameters
+    data, init_cetroids, gene_num, ndim, max_it, k = argv.values()
+    # init results
+    Result = np.zeros((gene_num, 2), dtype=int)
+    # grouping data according to Euclidean distance
+    for i in range(gene_num):
+        # get Euclidean distance
+        distance = eucl_Distance(init_cetroids, data[i, :])
+        # get the label of shortest distance
+        cluster = distance.argmin()
+        # grouping
+        Result[i, :] = np.array([i, cluster])
+    # verify that the results of the iteration are stable and return a new centroid
+    Handle, argv['init_cetroids'] = assert_Result(data, init_cetroids, Result,
+                                                  k)
+    # return informattion
+    return Result, Handle.all(), argv, max_it
+
+</code></pre>
+<h3 id="35-creating-body-function-and-main-function">3.5 Creating Body function and Main function</h3>
+<pre><code class="language-python">def run(arg_dict, it_num=0):
+    '''
+     the body of  k-means 
+    '''
+    # perform an iteration and verify that the results are stable
+    # then  calculate the new centroid to be returned in dictionary form
+    Result, handle, arg_dict, max_it = iter_Cetroid(**arg_dict)
+    # determine whether the  condition of end iteration is reached
+    if not (handle) and (it_num &lt; max_it):
+        # if not reach and the iteration continues
+        it_num += 1
+        # print numbers of iteration
+        print(f'...ing Iter Number :{it_num}')
+        # recursive iteration
+        run(arg_dict, it_num=it_num)
+    # if reach condition
+    else:
+        # change lable,like change the lables from  0,1,2 to 1,2,3
+        Result = Result + 1
+        count_1 = Counter(Result[:, 1])
+        # save result file
+        np.savetxt('kmeans.out', Result, fmt='%d')
+
+def main():
+    '''
+    the program main function, integrate workflow, and generate reports
+    '''
+    # get start time
+    TIC = time.time()
+    # get parameter through terminal
+    ARGV = get_argv()
+    # running the body function  of k-means
+    run(ARGV)
+    # get end time
+    TOC = time.time()
+    # generate report
+    summary(ARGV, TOC - TIC)
+</code></pre>
+<h2 id="4-summary">4. Summary</h2>
+<p>本篇文章详细记录两种方式实现<strong>K-means</strong>方法，并且记录如何选取<strong>K</strong>值，如何评估聚类质量。本文最终涉及的代码都会在<a href="https://github.com/cauliyang/Python_book_practice/blob/master/effective_python_practice.ipynb"><strong>Jupyter notebook</strong></a>找到,并且使用<a href="https://github.com/cauliyang/work/tree/master/001_k_mean">脚本程序</a></p>
+<p>谢谢观看，欢迎交流！😎</p>
+
+                </div>
+                <div class="clear"></div>
+              </section>
+            </article>
+            <div class="clear"></div>
+
+            <section class="related section">
+              
+              <article class="prev grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://mgo.azureedge.net/cloudcache/0/2/a/c/0/3/02ac03eaf4099407eaf881c3133063b4134b18c9.jpg');"></div>
+                 <a href="https://cauliyang.github.io/vcftools-1/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="2019-08-20">2019-08-20</time>
+                  <h4 class="title white no-margin">Vcftools  Manual</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="https://cauliyang.github.io/media/images/left-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+              
+              <article class="next grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://cdn.wallpaperhub.app/cloudcache/f/0/d/b/9/c/f0db9c64fe5c28eefba1ef95bb29342d27c337a0.jpg');"></div>
+                 <a href="https://cauliyang.github.io/pca-by-python-2/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="2019-07-19">2019-07-19</time>
+                  <h4 class="title white no-margin">PCA by Python </h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="https://cauliyang.github.io/media/images/right-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+
+                <div class="clear"></div>
+            </section>
+
+              <div class="clear"></div>
+              
+            
+              <div id="comments" class="bg-white hosted ">
+                
+                  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+<div class="clear"></div>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'dfb1ac2fcbca6a2c77ad',
+    clientSecret: 'ffba352fef69134f25f13c27e2e0225bf8a605b8',
+    repo: 'cauliyang.github.io',
+    owner: 'cauliyang',
+    admin: ['cauliyang'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+</script>
+
+                
+                
+              </div>
+            
+
+            </div>
+          </div>
+      </main>
+
+          <footer id="footer" class="grid-container">
+        <div class="widgets row gradient-effect">
+            <div class="default-sidebar border-effect">
+              <div class="grid-33 tablet-grid-50 mobile-grid-100">
+                <section id="tag_cloud-2" class="widget widget_epcl_posts_thumbs underline-effect">
+                  <h4 class="widget-title title white bordered">最新文章</h4>
+                  
+                  
+                  <article class="item post-0 post type-post status-publish format-standard has-post-thumbnail hentry">
+                    <a href="https://cauliyang.github.io/t-sne-by-python/" class="thumb hover-effect">
+                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://cdn.wallpaperhub.app/cloudcache/e/b/8/8/e/8/eb88e8152c75bd432ac8352a1c4cfd7ca7163955.jpg');"></span>
+                    </a>
+                    <div class="info gradient-effect">
+                      <time datetime="2019-10-03">2019-10-03</time>
+                      <h4 class="title usmall">
+                        <a href="https://cauliyang.github.io/t-sne-by-python/">T-SNE by Python</a>
+                      </h4>
+                    </div>
+                    <div class="clear"></div>
+                  </article>
+                  
+                  
+                  
+                  <article class="item post-1 post type-post status-publish format-standard has-post-thumbnail hentry">
+                    <a href="https://cauliyang.github.io/xin-pian-shu-ju-gou-jian-yi-chuan-lian-suo-tu-biao-ji-shai-xuan-liu-cheng/" class="thumb hover-effect">
+                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://mgo.azureedge.net/cloudcache/9/7/1/9/9/0/971990446e84db30f5f2e7e72caeb40bbf2eb5dc.jpg');"></span>
+                    </a>
+                    <div class="info gradient-effect">
+                      <time datetime="2019-09-09">2019-09-09</time>
+                      <h4 class="title usmall">
+                        <a href="https://cauliyang.github.io/xin-pian-shu-ju-gou-jian-yi-chuan-lian-suo-tu-biao-ji-shai-xuan-liu-cheng/">Bin map </a>
+                      </h4>
+                    </div>
+                    <div class="clear"></div>
+                  </article>
+                  
+                  
+                  
+                  <article class="item post-2 post type-post status-publish format-standard has-post-thumbnail hentry">
+                    <a href="https://cauliyang.github.io/vcftools-1/" class="thumb hover-effect">
+                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://mgo.azureedge.net/cloudcache/0/2/a/c/0/3/02ac03eaf4099407eaf881c3133063b4134b18c9.jpg');"></span>
+                    </a>
+                    <div class="info gradient-effect">
+                      <time datetime="2019-08-20">2019-08-20</time>
+                      <h4 class="title usmall">
+                        <a href="https://cauliyang.github.io/vcftools-1/">Vcftools  Manual</a>
+                      </h4>
+                    </div>
+                    <div class="clear"></div>
+                  </article>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  <div class="clear"></div>
+                </section>
+              </div>
+
+              <div class="grid-33 tablet-grid-50 mobile-grid-100">
+                <section id="tag_cloud-2" class="widget widget_tag_cloud underline-effect">
+                  <h4 class="widget-title title white bordered">标签云</h4>
+                  <div class="tagcloud">
+                    
+                      <a href="https://cauliyang.github.io/o4B5pUlIC/" class="ctag ctag-0 ctag-o4B5pUlIC" aria-label="">Machine-Learning</a>
+                    
+                      <a href="https://cauliyang.github.io/2jIKZKAWZ/" class="ctag ctag-1 ctag-2jIKZKAWZ" aria-label="">Python</a>
+                    
+                      <a href="https://cauliyang.github.io/SUXw49Pf-/" class="ctag ctag-2 ctag-SUXw49Pf-" aria-label="">Bioinformatics</a>
+                    
+                      <a href="https://cauliyang.github.io/sEW192Upq/" class="ctag ctag-3 ctag-sEW192Upq" aria-label="">Bio-software</a>
+                    
+                  </div>
+                  <div class="clear"></div>
+                </section>
+              </div>
+
+              <div class="grid-33 tablet-grid-50 mobile-grid-100">
+                <section id="epcl_about-2" class="widget widget_epcl_about underline-effect">
+                  <h4 class="widget-title title white bordered">关于我</h4>
+                  <div class="avatar">
+                    <a href="" class="translate-effect thumb"><span class="fullimage cover" style="background-image: url(https://cauliyang.github.io/images/avatar.png);"></span></a>
+                  </div>
+                  <div class="info">
+                    <h4 class="title small author-name gradient-effect no-margin"><a href="">Vince&#39;s Tree Hole </a></h4>
+                    <p class="founder">Cherish time, just like cherishing your eyes.</p>
+                    <div class="social">
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </div> 
+                  </div>
+                  <div class="clear"></div>
+                  </section>
+              </div>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="logo">
+          <a href="https://cauliyang.github.io"><img src="" alt=""></a>
+        </div>
+        <p class="published border-effect">
+          ©2019 共 7 篇文章
+          <br/>
+          Theme <a href="https://gridea.dev/" target="_blank">「breek」</a> Powered by <a href="https://gridea.dev/" target="_blank">「Gridea」</a>
+        </p>
+        
+        <a href="javascript:void(0)" id="back-to-top" class="epcl-button dark" style="display:none">
+          <i class="fa fa-arrow"></i>
+        </a>
+    </footer>
+    
+    <div class="clear"></div>
+
+        
+
+      
+    <script src="https://cauliyang.github.io/media/js/functions-post.js"></script>
+
+    </div>
+    <!-- end: #wrapper -->
+  </body>
+</html>
