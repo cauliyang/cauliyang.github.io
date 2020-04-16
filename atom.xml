@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cauliyang.github.io</id>
     <title>Vince&apos;s Tree Hole </title>
-    <updated>2020-04-16T15:35:19.869Z</updated>
+    <updated>2020-04-16T17:35:17.402Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cauliyang.github.io"/>
     <link rel="self" href="https://cauliyang.github.io/atom.xml"/>
@@ -11,12 +11,43 @@
     <icon>https://cauliyang.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Vince&apos;s Tree Hole </rights>
     <entry>
+        <title type="html"><![CDATA[Learning of Data Structure and Algorithm]]></title>
+        <id>https://cauliyang.github.io/cNegnaeIm/</id>
+        <link href="https://cauliyang.github.io/cNegnaeIm/">
+        </link>
+        <updated>2020-04-16T17:33:49.000Z</updated>
+        <summary type="html"><![CDATA[<p>本系列记录我学习北大陈斌老师的<a href="https://www.bilibili.com/video/BV1V7411M7YV">数据结构和算法</a>的过程。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>本系列记录我学习北大陈斌老师的<a href="https://www.bilibili.com/video/BV1V7411M7YV">数据结构和算法</a>的过程。</p>
+<!-- more -->
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[生活随想 ]]></title>
         <id>https://cauliyang.github.io/9jaKMB68a/</id>
         <link href="https://cauliyang.github.io/9jaKMB68a/">
         </link>
         <updated>2020-04-15T14:49:04.000Z</updated>
-        <content type="html"><![CDATA[<p>自从疫情开始以来，已足足在家3月有余。在家的生活状态和学校是完全不一样的，这篇文章用做总结并且计划后面的事情，用以勉励自己。</p>
+        <content type="html"><![CDATA[<p>自从疫情开始以来，已足足在家3月有余。在家的生活状态和学校是完全不一样的，这篇文章用做总结并且计划后面的事情，用以勉励自己。  现在是凌晨1点，在我费很大功夫才将我的博客域名调试好，未来5年我的blog的地址是 yangyangli.top，欢迎大家对我写的零零散散提出建议，我也同时修炼下写作的功底。 言归正传，未来不知道还要在家待多久，我目前心中有几个工作要攻克，下面我整理列出：</p>
+<ol>
+<li>首先我要完成我的毕业论文的写作工作，并且调整好插图和论文相应格式。</li>
+<li>其次我应该完成北大陈斌老师的<a href="https://www.bilibili.com/video/BV1V7411M7YV"><strong>数据结构和算法</strong></a>，为以后的科研和工作打下坚实的基础，并且在我的博客记录学习过程。</li>
+<li>保持运动，每天进行跑步和跳绳，并且开始调整作息时间，保证早睡早起。</li>
+</ol>
+<p>在未来一段时间，尽力将这些做好， 下面让我谈一些对生活和自我的反思。</p>
+<hr>
+<p>我发现每当我在家的时候，我对时间的把握和敏感度就变得很差，我始终在思考我在追寻什么，我是否走在一条正确的道路上，这3个月对我思想改变最大的方面当属对国家和政党的认识，在我上高中的时候，我有一个天天给我们宣传反对党和国家的语文老师，直到我大三的时候我还认为他说的很对，可见我这三年真的是不学无术，对这种问题和别人的煽动轻易就接受，并没有任何的调查和取证，不过他对我影响还是巨大的，我一直记得</p>
+<blockquote>
+<p>你崇拜一个人是因为不了解他</p>
+</blockquote>
+<p>我深以为然，因为还有一句话和其有异曲同工之妙</p>
+<blockquote>
+<p>枕边无美女，身边无伟人</p>
+</blockquote>
+<p>这使我每当遇到一个很厉害的人时候，不禁去想是什么成就了Ta，我可不可以掌握这种方法。但是如果未来我顺利去美国求学，我的立场又如何呢？我想我的思想出现了动摇，因为我在思考这个问题，这证明我的想法并不是一成不变的，我想去了解这个世界，多多看书是一个捷径，吸取别人的经验和看世界的方式，来寻找自己的内心中所追求的东西。</p>
+<hr>
+<p>这就是我胡思乱想的结果，我想到就写到哪，放飞自我，若干年回头看会不会别有一番风味呢？下面我想谈谈最近对自己年龄的思考，我是不是被网络裹挟对自己的年龄开始焦虑了呢？我是在挥霍我的青春吗？我该大胆的追寻心中的人和物吗？</p>
+<p>答案是不应该，我始终坚信目标如一，投入12分心血，即使路上需要我放弃一些东西。希望我坚持在我的博客下胡言乱语！ 这篇就写到这吧，我要休息了，晚安，如果你在看的话！ 😜</p>
 ]]></content>
     </entry>
     <entry>
