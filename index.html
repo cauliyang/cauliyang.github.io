@@ -1,735 +1,575 @@
-<html>
-  <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
 <title>Vince&#39;s Tree Hole </title>
-<meta name="description" content="Cherish time, just like cherishing your eyes." />
-<link rel="shortcut icon" href="https://cauliyang.github.io/favicon.ico">
-<link rel="stylesheet" href="https://cauliyang.github.io/styles/main.css">
+<meta name="description" content="Cherish time, just like cherishing your eyes.">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<script src="https://cauliyang.github.io/media/js/jquery.min.js"></script>
-<script src="https://cauliyang.github.io/media/js/masonry.pkgd.min.js"></script>
-<script src="https://cauliyang.github.io/media/js/aos.js"></script>
-<script src="https://cauliyang.github.io/media/js/pace.min.js"></script>
-<script src="https://cauliyang.github.io/media/js/view-image.min.js"></script>
-<script src="https://cauliyang.github.io/media/js/jquery.magnific-popup.min.js"></script>
-<script src="https://cauliyang.github.io/media/js/functions.js"></script>
-  </head>
-  <body>
-    <!-- start: #wrapper -->
-    <div class="wrapper">
-      
-      <header id="header" class="grid-container">
-  <!-- start: .menu-wrapper -->
-  <div class="menu-mobile">
-    <i class="fa fa-reorder"></i>
-  </div>
-  <div class="menu-wrapper">
-    <div class="">
-      <div class="logo">
-        <a href="https://cauliyang.github.io"><img src="/media/images/logoo.png" alt=""></a>
+<link type='text/css' rel='stylesheet' href='http://localhost:4000/styles/main.css' media='screen' />
+<link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css">
+<link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script type="text/javascript" src='http://localhost:4000/media/scripts/jquery.js'></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+</head>
+
+<body>
+
+    <div class="layout theme-dark">
+
+        <div class="layout-header">
+
+	<div class="layout-header-main">
+		<div class="container">
+			<div class="row justify-content-lg-center">
+				<div class="col-12 col-lg-9">
+
+					<div class="navbar">
+
+						<div class="logo">
+							<a href="http://localhost:4000">
+								<img class="logo"
+									src="http://localhost:4000/media/images/site_avatar.png?v=1594705569881"
+									alt="">
+							</a>
+						</div>
+
+						<div class="menu d-md-inline-block d-none">
+							<ul class="layout-navigation-list">
+								
+								<li class="layout-navigation-item"><a title="Main"
+										href="/">Main</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="Archives"
+										href="/archives">Archives</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="Tags"
+										href="/tags">Tags</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="Links"
+										href="/links">Links</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="About"
+										href="/about">About</a>
+								</li>
+								
+							</ul>
+						</div>
+
+						<div class="item d-md-inline-block d-none">
+							<div class="search-icon">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</div>
+						</div>
+
+
+
+						<div class="d-md-inline-block d-none">
+							<div class="search-lightbox">
+								<div class="search-body">
+
+									<form id="gridea-search-form" data-update="1594705569881" action="/search/" class="search-form">
+										<input type="text" name="q" id="s" value="" class="search-field" placeholder="请输入搜索关键词" aria-label="请输入搜索关键词" required="">
+										<button type="submit" class="submit" aria-label="Submit">
+											<i class="fa fa-search" aria-hidden="true"></i>
+										</button>
+									</form>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="nav d-md-none d-inline-block">
+							<div class="trigger">
+								<i class="fa fa-bars layout-btn-toggle" aria-hidden="true"></i>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+
+
+
+		</div>
+	</div>
+
+</div>
+        
+        <div class="layout-collapse d-md-none">
+	<div class="layout-collapse-main">
+		<ul class="layout-collapse-list">
+			
+			<li class="layout-collapse-item"><a title="Main" href="/">Main</a></li>
+			
+			<li class="layout-collapse-item"><a title="Archives" href="/archives">Archives</a></li>
+			
+			<li class="layout-collapse-item"><a title="Tags" href="/tags">Tags</a></li>
+			
+			<li class="layout-collapse-item"><a title="Links" href="/links">Links</a></li>
+			
+			<li class="layout-collapse-item"><a title="About" href="/about">About</a></li>
+			
+
+		</ul>
+	</div>
+</div>
+
+        <div class="layout-banner">
+  <div class="layout-banner-main">
+    <div class="container">
+      <div class="row justify-content-lg-center">
+        <div class="col-12 col-lg-9">
+          <div class="banner">
+            <div class="banner-list row">
+              <div class="item col-12 col-sm-9">
+                
+                
+                <div class="banner-card main">
+                  <a class="card-content" href="http://localhost:4000/about/" style="background-image: url('https://media.istockphoto.com/photos/aerial-view-of-crowd-connected-by-lines-picture-id1180187740')">
+                    <div class="mask"></div>
+                    <div class="title">
+                      <h3 class="card-title">about </h3>
+                    </div>
+                  </a>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+              </div>
+              <div class="col-12 col-sm-3">
+                <div class="row">
+                  
+                  
+                  
+                  
+                  <div class="item col-4 col-sm-12">
+                    <div class="banner-card">
+                      <a class="card-content" href="http://localhost:4000/52R07FPbs/"
+                        style="background-image: url('https://cdn.wallpaperhub.app/cloudcache/e/1/c/d/b/7/e1cdb707cd9cd8be1aa25ace74ab41522f2b6da0.jpg')">
+                        <div class="mask"></div>
+                        <div class="title">
+                          <h3 class="card-title">关于劝退的思考-01</h3>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="item col-4 col-sm-12">
+                    <div class="banner-card">
+                      <a class="card-content" href="http://localhost:4000/9jaKMB68a/"
+                        style="background-image: url('https://cdn.pixabay.com/photo/2020/04/13/12/09/fog-5038082_1280.jpg')">
+                        <div class="mask"></div>
+                        <div class="title">
+                          <h3 class="card-title">生活随想-居家反思</h3>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="item col-4 col-sm-12">
+                    <div class="banner-card">
+                      <a class="card-content" href="http://localhost:4000/t-sne-by-python/"
+                        style="background-image: url('https://cdn.wallpaperhub.app/cloudcache/e/b/8/8/e/8/eb88e8152c75bd432ac8352a1c4cfd7ca7163955.jpg')">
+                        <div class="mask"></div>
+                        <div class="title">
+                          <h3 class="card-title">T-SNE by Python</h3>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <!-- start: .main-nav -->
-
-      <nav class="main-nav grid-container grid-parent">
-        <ul id="menu-header" class="menu gradient-effect">
-          <li class="current-menu-item"><a href="https://cauliyang.github.io"
-              class="menu">首页</a></li>
-          
-          <li class="">
-            <a href="/archives" class="menu">
-              Archives
-            </a>
-          </li>
-          
-          <li class="">
-            <a href="/tags" class="menu">
-              Tags
-            </a>
-          </li>
-          
-          <li class="">
-            <a href="/movies" class="menu">
-              Movies
-            </a>
-          </li>
-          
-          <li class="">
-            <a href="/books" class="menu">
-              Books
-            </a>
-          </li>
-          
-          <li class="">
-            <a href="/post/about" class="menu">
-              About
-            </a>
-          </li>
-          
-          <li class="search-menu-item hide-on-mobile hide-on-tablet"><a href="#search-lightbox"
-              class="lightbox mfp-inline"><i class="fa fa-search-line"></i></a></li>
-        </ul>
-      </nav>
-      <a href="#search-lightbox" class="lightbox epcl-search-button mfp-inline hide-on-tablet hide-on-desktop"><i
-          class="fa fa-search-line"></i></a>
-      <!-- end: .main-nav -->
-      <div class="clear"></div>
-      <div class="border hide-on-tablet hide-on-mobile"></div>
-    </div>
-    <div class="clear"></div>
-  </div>
-  <!-- end: .menu-wrapper -->
-  <div class="clear"></div>
-</header>
-<div class="hide-on-mobile hide-on-tablet hide-on-desktop">
-  <div id="search-lightbox" class="grid-container grid-small grid-parent mfp-hide">
-    <div class="search-wrapper section">
-      <form id="gridea-search-form" data-update="1588691792723" action="/search/index.html" class="search-form"
-        _lpchecked="1">
-        <input type="text" name="q" id="s" value="" class="search-field" placeholder="搜点啥..." aria-label="搜点啥..."
-          required="">
-        <button type="submit" class="submit" aria-label="Submit">
-          <i class="fa fa-search-line"></i>
-        </button>
-      </form>
     </div>
   </div>
 </div>
 
-      <main id="home" class="main">
-        <div class="grid-container module-wrapper enable-masonry aos-init aos-animate" data-aos="fade-up">
-        <div class="row">
-          <div class="content-wrapper grid-posts content">
-                
-            <!-- start: .articles -->
+        <div class="layout-content">
+  <div class="layout-content-main">
+    <div class="container">
+      <div class="row justify-content-lg-center">
+        <div class="col-12 col-lg-9">
+          <div class="card-list">
             
-              
-              
-              <div class="articles columns-3">
-                
-                <article class="bgstyle grid-33 tablet-grid-50 mobile-grid-100 np-mobile post type-post status-publish format-standard has-post-thumbnail hentry" style="">
-                  <div class="article-wrapper  cover" style="background-image: url('https://cdn.wallpaperhub.app/cloudcache/e/1/c/d/b/7/e1cdb707cd9cd8be1aa25ace74ab41522f2b6da0.jpg');">
-                  <header>
-                    
-                      <div class="tags absolute">
-                        <a href="https://cauliyang.github.io/itd_hM5M3/" class="ctag ctag-0 ctag-itd_hM5M3">Life</a>
-                      </div>
-                    
-                    <div class="meta">
-                      <time datetime="2020-04-22"><i class="fa fa-calendar"></i><span class="lately">14 天前</span></time>
-                      <div class="clear"></div>
-                    </div>
-                    <h1 class="title main-title gradient-effect"><a href="https://cauliyang.github.io/52R07FPbs/">关于劝退的思考-01</a></h1>
-                  </header>
-                  <footer class="author-meta">
-                    <a href="" class="author" title="">
-                      <span class="author-image cover" style="background-image: url('https://cauliyang.github.io/images/avatar.png');"></span>
-                      <span class="author-name">Vince&#39;s Tree Hole </span>
-                    </a>
-                    
-                    <a href="https://cauliyang.github.io/52R07FPbs/#comments" class="comments meta-info alignright" title="">
-                      <span class="comment-count valine-comment-count" data-xid="/52R07FPbs/"> </span><i class="fa fa-comment"></i>
-                    </a>
-                    <div id="/52R07FPbs/" class="leancloud_visitors views-counter meta-info alignright" title=""><span class="leancloud-visitors-count" style="vertical-align: middle;"></span><i class="fa fa-leancloud"></i></div>
-                    
-                    <div class="clear"></div>
-                  </footer>
-                  <div class="overlay"></div>       
-                </div>
-              </article>
-                
-              
-              
-              
-              
-                
-              <article class="default grid-33 tablet-grid-50 mobile-grid-100 np-mobile post type-post status-publish format-standard has-post-thumbnail hentry">
-                <div class="article-wrapper">
-                  <header>
-                    <div class="post-format-image post-format-wrapper">
-                      <div class="featured-image">
-                        <a href="https://cauliyang.github.io/cNegnaeIm/" class="thumb hover-effect">
-                          <span class="fullimage cover" role="img" aria-label="" style="background-image: url('/media/images/gridea.jpg');"></span>
-                        </a>
-                        
-                      </div>
-                    </div>                    
-                    <div class="meta">
-                      <time datetime="2020-04-17"><i class="fa fa-calendar"></i><span class="lately">20 天前</span></time>
-                      <div class="clear"></div>
-                    </div>
-
-                    <h1 class="title main-title gradient-effect"><a href="https://cauliyang.github.io/cNegnaeIm/">Learning of Data Structure and Algorithm</a></h1>
-                  </header>
-
-                  <div class="post-excerpt">
-                      <p>本系列记录我学习北大陈斌老师的<a href="https://www.bilibili.com/video/BV1V7411M7YV">数据结构和算法</a>的过程。</p>
-
-                    <div class="clear"></div>
-                  </div>
-
-                  <footer class="author-meta">
-                    <a href="" class="author" title="">
-                      <span class="author-image cover" style="background-image: url('https://cauliyang.github.io/images/avatar.png');"></span>
-                      <span class="author-name">Vince&#39;s Tree Hole </span>
-                    </a>
-                    
-                    <a href="https://cauliyang.github.io/cNegnaeIm/#comments" class="comments meta-info alignright" title="">
-                      <span class="comment-count valine-comment-count" data-xid="/cNegnaeIm/"> </span><i class="fa fa-comment"></i>
-                    </a>
-                    <div id="/cNegnaeIm/" class="leancloud_visitors views-counter meta-info alignright" title=""><span class="leancloud-visitors-count" style="vertical-align: middle;"></span><i class="fa fa-leancloud"></i></div>
-                    
-                    <div class="clear"></div>
-                  </footer>
-                  <div class="border"></div>       
-                </div>
-              </article>
-                
-              
-              
-              
-              
-                
-                <article class="bgstyle grid-33 tablet-grid-50 mobile-grid-100 np-mobile post type-post status-publish format-standard has-post-thumbnail hentry" style="">
-                  <div class="article-wrapper  cover" style="background-image: url('https://cdn.pixabay.com/photo/2020/04/13/12/09/fog-5038082_1280.jpg');">
-                  <header>
-                    
-                      <div class="tags absolute">
-                        <a href="https://cauliyang.github.io/itd_hM5M3/" class="ctag ctag-2 ctag-itd_hM5M3">Life</a>
-                      </div>
-                    
-                    <div class="meta">
-                      <time datetime="2020-04-15"><i class="fa fa-calendar"></i><span class="lately">21 天前</span></time>
-                      <div class="clear"></div>
-                    </div>
-                    <h1 class="title main-title gradient-effect"><a href="https://cauliyang.github.io/9jaKMB68a/">生活随想-居家反思</a></h1>
-                  </header>
-                  <footer class="author-meta">
-                    <a href="" class="author" title="">
-                      <span class="author-image cover" style="background-image: url('https://cauliyang.github.io/images/avatar.png');"></span>
-                      <span class="author-name">Vince&#39;s Tree Hole </span>
-                    </a>
-                    
-                    <a href="https://cauliyang.github.io/9jaKMB68a/#comments" class="comments meta-info alignright" title="">
-                      <span class="comment-count valine-comment-count" data-xid="/9jaKMB68a/"> </span><i class="fa fa-comment"></i>
-                    </a>
-                    <div id="/9jaKMB68a/" class="leancloud_visitors views-counter meta-info alignright" title=""><span class="leancloud-visitors-count" style="vertical-align: middle;"></span><i class="fa fa-leancloud"></i></div>
-                    
-                    <div class="clear"></div>
-                  </footer>
-                  <div class="overlay"></div>       
-                </div>
-              </article>
-                
-              
-              
-              
-              
-                
-              <article class="default grid-33 tablet-grid-50 mobile-grid-100 np-mobile post type-post status-publish format-standard has-post-thumbnail hentry">
-                <div class="article-wrapper">
-                  <header>
-                    <div class="post-format-image post-format-wrapper">
-                      <div class="featured-image">
-                        <a href="https://cauliyang.github.io/t-sne-by-python/" class="thumb hover-effect">
-                          <span class="fullimage cover" role="img" aria-label="" style="background-image: url('https://cdn.wallpaperhub.app/cloudcache/e/b/8/8/e/8/eb88e8152c75bd432ac8352a1c4cfd7ca7163955.jpg');"></span>
-                        </a>
-                        
-                        <div class="tags absolute">
-                          <a href="https://cauliyang.github.io/o4B5pUlIC/" class="ctag ctag-3 ctag-o4B5pUlIC">Machine-Learning</a>
-                        </div>
-                        
-                      </div>
-                    </div>                    
-                    <div class="meta">
-                      <time datetime="2019-10-03"><i class="fa fa-calendar"></i><span class="lately">7 个月前</span></time>
-                      <div class="clear"></div>
-                    </div>
-
-                    <h1 class="title main-title gradient-effect"><a href="https://cauliyang.github.io/t-sne-by-python/">T-SNE by Python</a></h1>
-                  </header>
-
-                  <div class="post-excerpt">
-                      <p><strong>This note records T-SNE by Python and  the  differences between  PCA and T-SNE</strong></p>
-
-                    <div class="clear"></div>
-                  </div>
-
-                  <footer class="author-meta">
-                    <a href="" class="author" title="">
-                      <span class="author-image cover" style="background-image: url('https://cauliyang.github.io/images/avatar.png');"></span>
-                      <span class="author-name">Vince&#39;s Tree Hole </span>
-                    </a>
-                    
-                    <a href="https://cauliyang.github.io/t-sne-by-python/#comments" class="comments meta-info alignright" title="">
-                      <span class="comment-count valine-comment-count" data-xid="/t-sne-by-python/"> </span><i class="fa fa-comment"></i>
-                    </a>
-                    <div id="/t-sne-by-python/" class="leancloud_visitors views-counter meta-info alignright" title=""><span class="leancloud-visitors-count" style="vertical-align: middle;"></span><i class="fa fa-leancloud"></i></div>
-                    
-                    <div class="clear"></div>
-                  </footer>
-                  <div class="border"></div>       
-                </div>
-              </article>
-                
-              
-              
-              
-              
-                
-              <article class="default grid-33 tablet-grid-50 mobile-grid-100 np-mobile post type-post status-publish format-standard has-post-thumbnail hentry">
-                <div class="article-wrapper">
-                  <header>
-                    <div class="post-format-image post-format-wrapper">
-                      <div class="featured-image">
-                        <a href="https://cauliyang.github.io/xin-pian-shu-ju-gou-jian-yi-chuan-lian-suo-tu-biao-ji-shai-xuan-liu-cheng/" class="thumb hover-effect">
-                          <span class="fullimage cover" role="img" aria-label="" style="background-image: url('https://mgo.azureedge.net/cloudcache/9/7/1/9/9/0/971990446e84db30f5f2e7e72caeb40bbf2eb5dc.jpg');"></span>
-                        </a>
-                        
-                        <div class="tags absolute">
-                          <a href="https://cauliyang.github.io/SUXw49Pf-/" class="ctag ctag-4 ctag-SUXw49Pf-">Bioinformatics</a>
-                        </div>
-                        
-                      </div>
-                    </div>                    
-                    <div class="meta">
-                      <time datetime="2019-09-09"><i class="fa fa-calendar"></i><span class="lately">8 个月前</span></time>
-                      <div class="clear"></div>
-                    </div>
-
-                    <h1 class="title main-title gradient-effect"><a href="https://cauliyang.github.io/xin-pian-shu-ju-gou-jian-yi-chuan-lian-suo-tu-biao-ji-shai-xuan-liu-cheng/">Bin map </a></h1>
-                  </header>
-
-                  <div class="post-excerpt">
-                      <p><strong>本文记录芯片数据如何筛选，以及使用bin map方法构建遗传图谱。</strong></p>
-
-                    <div class="clear"></div>
-                  </div>
-
-                  <footer class="author-meta">
-                    <a href="" class="author" title="">
-                      <span class="author-image cover" style="background-image: url('https://cauliyang.github.io/images/avatar.png');"></span>
-                      <span class="author-name">Vince&#39;s Tree Hole </span>
-                    </a>
-                    
-                    <a href="https://cauliyang.github.io/xin-pian-shu-ju-gou-jian-yi-chuan-lian-suo-tu-biao-ji-shai-xuan-liu-cheng/#comments" class="comments meta-info alignright" title="">
-                      <span class="comment-count valine-comment-count" data-xid="/xin-pian-shu-ju-gou-jian-yi-chuan-lian-suo-tu-biao-ji-shai-xuan-liu-cheng/"> </span><i class="fa fa-comment"></i>
-                    </a>
-                    <div id="/xin-pian-shu-ju-gou-jian-yi-chuan-lian-suo-tu-biao-ji-shai-xuan-liu-cheng/" class="leancloud_visitors views-counter meta-info alignright" title=""><span class="leancloud-visitors-count" style="vertical-align: middle;"></span><i class="fa fa-leancloud"></i></div>
-                    
-                    <div class="clear"></div>
-                  </footer>
-                  <div class="border"></div>       
-                </div>
-              </article>
-                
-              
-              
-              
-              
-                
-              <article class="default grid-33 tablet-grid-50 mobile-grid-100 np-mobile post type-post status-publish format-standard has-post-thumbnail hentry">
-                <div class="article-wrapper">
-                  <header>
-                    <div class="post-format-image post-format-wrapper">
-                      <div class="featured-image">
-                        <a href="https://cauliyang.github.io/vcftools-1/" class="thumb hover-effect">
-                          <span class="fullimage cover" role="img" aria-label="" style="background-image: url('https://mgo.azureedge.net/cloudcache/0/2/a/c/0/3/02ac03eaf4099407eaf881c3133063b4134b18c9.jpg');"></span>
-                        </a>
-                        
-                        <div class="tags absolute">
-                          <a href="https://cauliyang.github.io/SUXw49Pf-/" class="ctag ctag-5 ctag-SUXw49Pf-">Bioinformatics</a>
-                        </div>
-                        
-                      </div>
-                    </div>                    
-                    <div class="meta">
-                      <time datetime="2019-08-20"><i class="fa fa-calendar"></i><span class="lately">9 个月前</span></time>
-                      <div class="clear"></div>
-                    </div>
-
-                    <h1 class="title main-title gradient-effect"><a href="https://cauliyang.github.io/vcftools-1/">Vcftools  Manual</a></h1>
-                  </header>
-
-                  <div class="post-excerpt">
-                      <p>整理并记录处理VCf文件格式的工具<strong>vcftools</strong>的使用方法，主要用于自己使用。<strong>（侵权，立即删。😊）</strong></p>
-
-                    <div class="clear"></div>
-                  </div>
-
-                  <footer class="author-meta">
-                    <a href="" class="author" title="">
-                      <span class="author-image cover" style="background-image: url('https://cauliyang.github.io/images/avatar.png');"></span>
-                      <span class="author-name">Vince&#39;s Tree Hole </span>
-                    </a>
-                    
-                    <a href="https://cauliyang.github.io/vcftools-1/#comments" class="comments meta-info alignright" title="">
-                      <span class="comment-count valine-comment-count" data-xid="/vcftools-1/"> </span><i class="fa fa-comment"></i>
-                    </a>
-                    <div id="/vcftools-1/" class="leancloud_visitors views-counter meta-info alignright" title=""><span class="leancloud-visitors-count" style="vertical-align: middle;"></span><i class="fa fa-leancloud"></i></div>
-                    
-                    <div class="clear"></div>
-                  </footer>
-                  <div class="border"></div>       
-                </div>
-              </article>
-                
-              
-              
-              
-              
-                
-              <article class="default grid-33 tablet-grid-50 mobile-grid-100 np-mobile post type-post status-publish format-standard has-post-thumbnail hentry">
-                <div class="article-wrapper">
-                  <header>
-                    <div class="post-format-image post-format-wrapper">
-                      <div class="featured-image">
-                        <a href="https://cauliyang.github.io/k-means-cluster-by-python/" class="thumb hover-effect">
-                          <span class="fullimage cover" role="img" aria-label="" style="background-image: url('https://cdn.wallpaperhub.app/cloudcache/4/6/b/1/0/4/46b104f678c41bff84412bcae61d001cd4770de4.jpg');"></span>
-                        </a>
-                        
-                        <div class="tags absolute">
-                          <a href="https://cauliyang.github.io/o4B5pUlIC/" class="ctag ctag-6 ctag-o4B5pUlIC">Machine-Learning</a>
-                        </div>
-                        
-                      </div>
-                    </div>                    
-                    <div class="meta">
-                      <time datetime="2019-08-07"><i class="fa fa-calendar"></i><span class="lately">9 个月前</span></time>
-                      <div class="clear"></div>
-                    </div>
-
-                    <h1 class="title main-title gradient-effect"><a href="https://cauliyang.github.io/k-means-cluster-by-python/">K-means  by Python</a></h1>
-                  </header>
-
-                  <div class="post-excerpt">
-                      <p>本篇文章，详细记录如何使用<strong>Python</strong>进行<strong>K-means</strong>，分别用两种方法实现，并记录如何选取K值，并进行可视化评估结果。</p>
-
-                    <div class="clear"></div>
-                  </div>
-
-                  <footer class="author-meta">
-                    <a href="" class="author" title="">
-                      <span class="author-image cover" style="background-image: url('https://cauliyang.github.io/images/avatar.png');"></span>
-                      <span class="author-name">Vince&#39;s Tree Hole </span>
-                    </a>
-                    
-                    <a href="https://cauliyang.github.io/k-means-cluster-by-python/#comments" class="comments meta-info alignright" title="">
-                      <span class="comment-count valine-comment-count" data-xid="/k-means-cluster-by-python/"> </span><i class="fa fa-comment"></i>
-                    </a>
-                    <div id="/k-means-cluster-by-python/" class="leancloud_visitors views-counter meta-info alignright" title=""><span class="leancloud-visitors-count" style="vertical-align: middle;"></span><i class="fa fa-leancloud"></i></div>
-                    
-                    <div class="clear"></div>
-                  </footer>
-                  <div class="border"></div>       
-                </div>
-              </article>
-                
-              
-              
-              
-              
-                
-              <article class="default grid-33 tablet-grid-50 mobile-grid-100 np-mobile post type-post status-publish format-standard has-post-thumbnail hentry">
-                <div class="article-wrapper">
-                  <header>
-                    <div class="post-format-image post-format-wrapper">
-                      <div class="featured-image">
-                        <a href="https://cauliyang.github.io/pca-by-python-2/" class="thumb hover-effect">
-                          <span class="fullimage cover" role="img" aria-label="" style="background-image: url('https://cdn.wallpaperhub.app/cloudcache/f/0/d/b/9/c/f0db9c64fe5c28eefba1ef95bb29342d27c337a0.jpg');"></span>
-                        </a>
-                        
-                        <div class="tags absolute">
-                          <a href="https://cauliyang.github.io/o4B5pUlIC/" class="ctag ctag-7 ctag-o4B5pUlIC">Machine-Learning</a>
-                        </div>
-                        
-                      </div>
-                    </div>                    
-                    <div class="meta">
-                      <time datetime="2019-07-19"><i class="fa fa-calendar"></i><span class="lately">10 个月前</span></time>
-                      <div class="clear"></div>
-                    </div>
-
-                    <h1 class="title main-title gradient-effect"><a href="https://cauliyang.github.io/pca-by-python-2/">PCA by Python </a></h1>
-                  </header>
-
-                  <div class="post-excerpt">
-                      <p><strong>This article documents two methods of PCA analysis using Python, and visualizes 2-dimensional results.</strong></p>
-
-                    <div class="clear"></div>
-                  </div>
-
-                  <footer class="author-meta">
-                    <a href="" class="author" title="">
-                      <span class="author-image cover" style="background-image: url('https://cauliyang.github.io/images/avatar.png');"></span>
-                      <span class="author-name">Vince&#39;s Tree Hole </span>
-                    </a>
-                    
-                    <a href="https://cauliyang.github.io/pca-by-python-2/#comments" class="comments meta-info alignright" title="">
-                      <span class="comment-count valine-comment-count" data-xid="/pca-by-python-2/"> </span><i class="fa fa-comment"></i>
-                    </a>
-                    <div id="/pca-by-python-2/" class="leancloud_visitors views-counter meta-info alignright" title=""><span class="leancloud-visitors-count" style="vertical-align: middle;"></span><i class="fa fa-leancloud"></i></div>
-                    
-                    <div class="clear"></div>
-                  </footer>
-                  <div class="border"></div>       
-                </div>
-              </article>
-                
-              
-              
-              
-              
-                
-              <article class="default grid-33 tablet-grid-50 mobile-grid-100 np-mobile post type-post status-publish format-standard has-post-thumbnail hentry">
-                <div class="article-wrapper">
-                  <header>
-                    <div class="post-format-image post-format-wrapper">
-                      <div class="featured-image">
-                        <a href="https://cauliyang.github.io/bo-ke-xiang-fa/" class="thumb hover-effect">
-                          <span class="fullimage cover" role="img" aria-label="" style="background-image: url('https://mgo.azureedge.net/cloudcache/7/4/2/8/2/7/7428279d2244b5e9076795ddec048f6eca4450cd.jpg');"></span>
-                        </a>
-                        
-                      </div>
-                    </div>                    
-                    <div class="meta">
-                      <time datetime="2019-05-09"><i class="fa fa-calendar"></i><span class="lately">1 年前</span></time>
-                      <div class="clear"></div>
-                    </div>
-
-                    <h1 class="title main-title gradient-effect"><a href="https://cauliyang.github.io/bo-ke-xiang-fa/">Blog Ideas </a></h1>
-                  </header>
-
-                  <div class="post-excerpt">
-                      <p>This Blog record learning process, welcome everyone to communicate with me!😊</p>
-
-                    <div class="clear"></div>
-                  </div>
-
-                  <footer class="author-meta">
-                    <a href="" class="author" title="">
-                      <span class="author-image cover" style="background-image: url('https://cauliyang.github.io/images/avatar.png');"></span>
-                      <span class="author-name">Vince&#39;s Tree Hole </span>
-                    </a>
-                    
-                    <a href="https://cauliyang.github.io/bo-ke-xiang-fa/#comments" class="comments meta-info alignright" title="">
-                      <span class="comment-count valine-comment-count" data-xid="/bo-ke-xiang-fa/"> </span><i class="fa fa-comment"></i>
-                    </a>
-                    <div id="/bo-ke-xiang-fa/" class="leancloud_visitors views-counter meta-info alignright" title=""><span class="leancloud-visitors-count" style="vertical-align: middle;"></span><i class="fa fa-leancloud"></i></div>
-                    
-                    <div class="clear"></div>
-                  </footer>
-                  <div class="border"></div>       
-                </div>
-              </article>
-                
-              
-              
-              
-              
-                
-                <article class="bgstyle grid-33 tablet-grid-50 mobile-grid-100 np-mobile post type-post status-publish format-standard has-post-thumbnail hentry" style="">
-                  <div class="article-wrapper  cover" style="background-image: url('https://cdn.wallpaperhub.app/cloudcache/1/b/0/1/a/6/1b01a62ac13ad7028ff3d08b08477d5d3327ce33.jpg');">
-                  <header>
-                    
-                    <div class="meta">
-                      <time datetime="2019-01-25"><i class="fa fa-calendar"></i><span class="lately">1 年前</span></time>
-                      <div class="clear"></div>
-                    </div>
-                    <h1 class="title main-title gradient-effect"><a href="https://cauliyang.github.io/about/">About </a></h1>
-                  </header>
-                  <footer class="author-meta">
-                    <a href="" class="author" title="">
-                      <span class="author-image cover" style="background-image: url('https://cauliyang.github.io/images/avatar.png');"></span>
-                      <span class="author-name">Vince&#39;s Tree Hole </span>
-                    </a>
-                    
-                    <a href="https://cauliyang.github.io/about/#comments" class="comments meta-info alignright" title="">
-                      <span class="comment-count valine-comment-count" data-xid="/about/"> </span><i class="fa fa-comment"></i>
-                    </a>
-                    <div id="/about/" class="leancloud_visitors views-counter meta-info alignright" title=""><span class="leancloud-visitors-count" style="vertical-align: middle;"></span><i class="fa fa-leancloud"></i></div>
-                    
-                    <div class="clear"></div>
-                  </footer>
-                  <div class="overlay"></div>       
-                </div>
-              </article>
-                
-              
-              
-              <div class="clear"></div>
-              <div class="separator last hide-on-tablet hide-on-mobile"></div>
-            </div>
-            <!-- end: .articles -->
             
-                        <div class="epcl-pagination section">
-              <div class="nav">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <article class="card">
+              <div class="card-item row">
                 
+                <div class="card-content col-8 col-lg-9">
+                  <div class="card-body">
+                    <div class="header">
+                      <a class="title" href="http://localhost:4000/xin-pian-shu-ju-gou-jian-yi-chuan-lian-suo-tu-biao-ji-shai-xuan-liu-cheng/">
+                        <h3>Bin map </h3>
+                      </a>
+                    </div>
+                    <div class="inner d-none d-sm-block">
+                      <div class="abstract">
+                        <p><strong>本文记录芯片数据如何筛选，以及使用bin map方法构建遗传图谱。</strong></p>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="item">
+                      
+                      <a href="http://localhost:4000/SUXw49Pf-/" class="tag" data-title="Bioinformatics">
+                        Bioinformatics
+                      </a>
+                      
+                    </div>
+                    <div class="item">2019-09-09</div>
+                  </div>
+                </div>
+                <div class="card-thumb col-4 col-lg-3">
+                  <div class="thumb">
+                    <a href="http://localhost:4000/xin-pian-shu-ju-gou-jian-yi-chuan-lian-suo-tu-biao-ji-shai-xuan-liu-cheng/" style="background-image: url('https://mgo.azureedge.net/cloudcache/9/7/1/9/9/0/971990446e84db30f5f2e7e72caeb40bbf2eb5dc.jpg')"></a>
+                  </div>
+                </div>
                 
               </div>
-            </div>
+            </article>
+            
+            
+            <article class="card">
+              <div class="card-item row">
+                
+                <div class="card-content col-8 col-lg-9">
+                  <div class="card-body">
+                    <div class="header">
+                      <a class="title" href="http://localhost:4000/vcftools-1/">
+                        <h3>Vcftools  Manual</h3>
+                      </a>
+                    </div>
+                    <div class="inner d-none d-sm-block">
+                      <div class="abstract">
+                        <p>整理并记录处理VCf文件格式的工具<strong>vcftools</strong>的使用方法，主要用于自己使用。<strong>（侵权，立即删。😊）</strong></p>
 
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="item">
+                      
+                      <a href="http://localhost:4000/SUXw49Pf-/" class="tag" data-title="Bioinformatics">
+                        Bioinformatics
+                      </a>
+                      
+                      <a href="http://localhost:4000/sEW192Upq/" class="tag" data-title="Bio-software">
+                        Bio-software
+                      </a>
+                      
+                    </div>
+                    <div class="item">2019-08-20</div>
+                  </div>
+                </div>
+                <div class="card-thumb col-4 col-lg-3">
+                  <div class="thumb">
+                    <a href="http://localhost:4000/vcftools-1/" style="background-image: url('https://mgo.azureedge.net/cloudcache/0/2/a/c/0/3/02ac03eaf4099407eaf881c3133063b4134b18c9.jpg')"></a>
+                  </div>
+                </div>
+                
+              </div>
+            </article>
+            
+            
+            <article class="card">
+              <div class="card-item row">
+                
+                <div class="card-content col-8 col-lg-9">
+                  <div class="card-body">
+                    <div class="header">
+                      <a class="title" href="http://localhost:4000/k-means-cluster-by-python/">
+                        <h3>K-means  by Python</h3>
+                      </a>
+                    </div>
+                    <div class="inner d-none d-sm-block">
+                      <div class="abstract">
+                        <p>本篇文章，详细记录如何使用<strong>Python</strong>进行<strong>K-means</strong>，分别用两种方法实现，并记录如何选取K值，并进行可视化评估结果。</p>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="item">
+                      
+                      <a href="http://localhost:4000/o4B5pUlIC/" class="tag" data-title="Machine-Learning">
+                        Machine-Learning
+                      </a>
+                      
+                      <a href="http://localhost:4000/2jIKZKAWZ/" class="tag" data-title="Python">
+                        Python
+                      </a>
+                      
+                    </div>
+                    <div class="item">2019-08-07</div>
+                  </div>
+                </div>
+                <div class="card-thumb col-4 col-lg-3">
+                  <div class="thumb">
+                    <a href="http://localhost:4000/k-means-cluster-by-python/" style="background-image: url('https://cdn.wallpaperhub.app/cloudcache/4/6/b/1/0/4/46b104f678c41bff84412bcae61d001cd4770de4.jpg')"></a>
+                  </div>
+                </div>
+                
+              </div>
+            </article>
+            
+            
+            <article class="card">
+              <div class="card-item row">
+                
+                <div class="card-content col-8 col-lg-9">
+                  <div class="card-body">
+                    <div class="header">
+                      <a class="title" href="http://localhost:4000/pca-by-python-2/">
+                        <h3>PCA by Python </h3>
+                      </a>
+                    </div>
+                    <div class="inner d-none d-sm-block">
+                      <div class="abstract">
+                        <p><strong>This article documents two methods of PCA analysis using Python, and visualizes 2-dimensional results.</strong></p>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="item">
+                      
+                      <a href="http://localhost:4000/o4B5pUlIC/" class="tag" data-title="Machine-Learning">
+                        Machine-Learning
+                      </a>
+                      
+                      <a href="http://localhost:4000/2jIKZKAWZ/" class="tag" data-title="Python">
+                        Python
+                      </a>
+                      
+                    </div>
+                    <div class="item">2019-07-19</div>
+                  </div>
+                </div>
+                <div class="card-thumb col-4 col-lg-3">
+                  <div class="thumb">
+                    <a href="http://localhost:4000/pca-by-python-2/" style="background-image: url('https://cdn.wallpaperhub.app/cloudcache/f/0/d/b/9/c/f0db9c64fe5c28eefba1ef95bb29342d27c337a0.jpg')"></a>
+                  </div>
+                </div>
+                
+              </div>
+            </article>
+            
+            
+            <article class="card">
+              <div class="card-item row">
+                
+                <div class="card-content col-8 col-lg-9">
+                  <div class="card-body">
+                    <div class="header">
+                      <a class="title" href="http://localhost:4000/bo-ke-xiang-fa/">
+                        <h3>Blog Ideas </h3>
+                      </a>
+                    </div>
+                    <div class="inner d-none d-sm-block">
+                      <div class="abstract">
+                        <p>This Blog record learning process, welcome everyone to communicate with me!😊</p>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="item">
+                      
+                    </div>
+                    <div class="item">2019-05-09</div>
+                  </div>
+                </div>
+                <div class="card-thumb col-4 col-lg-3">
+                  <div class="thumb">
+                    <a href="http://localhost:4000/bo-ke-xiang-fa/" style="background-image: url('https://mgo.azureedge.net/cloudcache/7/4/2/8/2/7/7428279d2244b5e9076795ddec048f6eca4450cd.jpg')"></a>
+                  </div>
+                </div>
+                
+              </div>
+            </article>
+            
             
           </div>
-          </div>
+
+          
+
         </div>
-      </main>
-
-        <footer id="footer" class="grid-container">
-        <div class="widgets row gradient-effect">
-            <div class="default-sidebar border-effect">
-              <div class="grid-33 tablet-grid-50 mobile-grid-100">
-                <section id="tag_cloud-2" class="widget widget_epcl_posts_thumbs underline-effect">
-                  <h4 class="widget-title title white bordered">最新文章</h4>
-                  
-                  
-                  <article class="item post-0 post type-post status-publish format-standard has-post-thumbnail hentry">
-                    <a href="https://cauliyang.github.io/52R07FPbs/" class="thumb hover-effect">
-                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://cdn.wallpaperhub.app/cloudcache/e/1/c/d/b/7/e1cdb707cd9cd8be1aa25ace74ab41522f2b6da0.jpg');"></span>
-                    </a>
-                    <div class="info gradient-effect">
-                      <time datetime="2020-04-22">2020-04-22</time>
-                      <h4 class="title usmall">
-                        <a href="https://cauliyang.github.io/52R07FPbs/">关于劝退的思考-01</a>
-                      </h4>
-                    </div>
-                    <div class="clear"></div>
-                  </article>
-                  
-                  
-                  
-                  <article class="item post-1 post type-post status-publish format-standard has-post-thumbnail hentry">
-                    <a href="https://cauliyang.github.io/cNegnaeIm/" class="thumb hover-effect">
-                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('/media/images/gridea.jpg');"></span>
-                    </a>
-                    <div class="info gradient-effect">
-                      <time datetime="2020-04-17">2020-04-17</time>
-                      <h4 class="title usmall">
-                        <a href="https://cauliyang.github.io/cNegnaeIm/">Learning of Data Structure and Algorithm</a>
-                      </h4>
-                    </div>
-                    <div class="clear"></div>
-                  </article>
-                  
-                  
-                  
-                  <article class="item post-2 post type-post status-publish format-standard has-post-thumbnail hentry">
-                    <a href="https://cauliyang.github.io/9jaKMB68a/" class="thumb hover-effect">
-                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://cdn.pixabay.com/photo/2020/04/13/12/09/fog-5038082_1280.jpg');"></span>
-                    </a>
-                    <div class="info gradient-effect">
-                      <time datetime="2020-04-15">2020-04-15</time>
-                      <h4 class="title usmall">
-                        <a href="https://cauliyang.github.io/9jaKMB68a/">生活随想-居家反思</a>
-                      </h4>
-                    </div>
-                    <div class="clear"></div>
-                  </article>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  <div class="clear"></div>
-                </section>
-              </div>
-
-              <div class="grid-33 tablet-grid-50 mobile-grid-100">
-                <section id="tag_cloud-2" class="widget widget_tag_cloud underline-effect">
-                  <h4 class="widget-title title white bordered">标签云</h4>
-                  <div class="tagcloud">
-                    
-                      <a href="https://cauliyang.github.io/itd_hM5M3/" class="ctag ctag-0 ctag-itd_hM5M3" aria-label="">Life</a>
-                    
-                      <a href="https://cauliyang.github.io/o4B5pUlIC/" class="ctag ctag-1 ctag-o4B5pUlIC" aria-label="">Machine-Learning</a>
-                    
-                      <a href="https://cauliyang.github.io/2jIKZKAWZ/" class="ctag ctag-2 ctag-2jIKZKAWZ" aria-label="">Python</a>
-                    
-                      <a href="https://cauliyang.github.io/SUXw49Pf-/" class="ctag ctag-3 ctag-SUXw49Pf-" aria-label="">Bioinformatics</a>
-                    
-                      <a href="https://cauliyang.github.io/sEW192Upq/" class="ctag ctag-4 ctag-sEW192Upq" aria-label="">Bio-software</a>
-                    
-                  </div>
-                  <div class="clear"></div>
-                </section>
-              </div>
-
-              <div class="grid-33 tablet-grid-50 mobile-grid-100">
-                <section id="epcl_about-2" class="widget widget_epcl_about underline-effect">
-                  <h4 class="widget-title title white bordered">关于我</h4>
-                  <div class="avatar">
-                    <a href="" class="translate-effect thumb"><span class="fullimage cover" style="background-image: url(https://cauliyang.github.io/images/avatar.png);"></span></a>
-                  </div>
-                  <div class="info">
-                    <h4 class="title small author-name gradient-effect no-margin"><a href="">Vince&#39;s Tree Hole </a></h4>
-                    <p class="founder">Cherish time, just like cherishing your eyes.</p>
-                    <div class="social">
-                      
-                          
-                            <a href="https://github.com/cauliyang" class="translate-effect" target="_blank"><i class="fa fa-github"></i></a>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </div> 
-                  </div>
-                  <div class="clear"></div>
-                  </section>
-              </div>
-
-            </div>
-            <div class="clear"></div>
-        </div>
-
-        <div class="logo">
-          <a href="https://cauliyang.github.io"><img src="/media/images/gridea.png" alt=""></a>
-        </div>
-        <p class="published border-effect">
-          ©2019 共 10 篇文章
-          <br/>
-          Theme <a href="https://gridea.dev/" target="_blank">「breek」</a> Powered by <a href="https://gridea.dev/" target="_blank">「Gridea」</a>
-        </p>
-        
-        <a href="javascript:void(0)" id="back-to-top" class="epcl-button dark" style="display:none">
-          <i class="fa fa-arrow"></i>
-        </a>
-    </footer>
-    
-    <div class="clear"></div>
-
-        
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
-<script type="text/javascript" src="https://cdn.staticfile.org/valine/1.3.10/Valine.Pure.min.js"></script>
-<script>
-    new Valine({
-        el: '#comments',
-        appId: 'zPwvEFPIxLCJK1MShFnaJ3tx-gzGzoHsz' ,
-        appKey: '6d46XrT8xrLcdytkO4A8dWec',
-        pageSize: 30,
-        placeholder: '既然来了，那就留个痕迹吧~',
-        visitor: true // 阅读量统计
-    })
-</script>
-    
-
+      </div>
     </div>
-    <!-- end: #wrapper -->
-  </body>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  //点击加载更多
+  jQuery(document).ready(function ($) {
+    //点击下一页的链接(即那个a标签)
+    $(' .btn-paginator').click(function () {
+      $this = $(this);
+      $this.addClass('loading').text('正在加载'); //给a标签加载一个loading的class属性，用来添加加载效果
+      var href = $this.attr('href'); //获取下一页的链接地址
+      if (href != undefined) { //如果地址存在
+        $.ajax({ //发起ajax请求
+          url: href,
+          //请求的地址就是下一页的链接
+          type: 'get',
+          //请求类型是get
+          error: function (request) {
+            //如果发生错误怎么处理
+          },
+          success: function (data) { //请求成功
+            $this.removeClass('loading').text('加载更多'); //移除loading属性
+            var $res = $(data).find('.card'); //从数据中挑出文章数据，请根据实际情况更改
+            $('.card-list').append($res.fadeIn(
+              500)); //将数据加载加进posts-loop的标签中。
+            var newhref = $(data).find('.btn-paginator').attr('href'); //找出新的下一页链接
+            if (newhref != undefined) {
+              $('.btn-paginator').attr('href', newhref);
+            } else {
+              $('.btn-paginator').remove(); //如果没有下一页了，隐藏
+            }
+          }
+        });
+      }
+      return false;
+    });
+  });
+</script>
+
+        	<div class="layout-footer">
+
+		<div class="container">
+			<div class="row justify-content-lg-center">
+				<div class="col-12 col-lg-9">
+					<div class="footer">
+						<div class="row">
+							<div class="col-12 col-md-9">
+								<div class="footer-copy">
+									
+									<span>© 20180520 </span>
+									<a href="http://localhost:4000" title="Vince&#39;s Tree Hole ">Vince&#39;s Tree Hole </a>
+									<span class="px-2">⋅</span>
+									
+									Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+									<div class="footer-icp d-none d-sm-inline-block">
+										<span class="px-2">⋅</span>
+										
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3 d-none d-md-block">
+								<div class="footer-links">
+									
+									
+									
+									
+									<span class="footer-links-item">
+										<a href="https://github.com/cauliyang/work" target="_blank">
+											<i class="fa fa-github" aria-hidden="true"></i>
+										</a>
+									</span>
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									<span class="footer-links-item">
+										<a href="982966845" target="_blank">
+											<i class="fa fa-qq" aria-hidden="true"></i>
+										</a>
+									</span>
+									
+									
+									
+									
+									
+									<span class="footer-links-item">
+										<a href="Wazyy99999" target="_blank">
+											<i class="fa fa-weixin" aria-hidden="true"></i>
+										</a>
+									</span>
+									
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src='http://localhost:4000/media/scripts/main.js'></script>
+	
+	<script>
+		var _hmt = _hmt || [];
+		(function () {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?&lt;script&gt; var _hmt = _hmt || []; (function() {   var hm = document.createElement(&#34;script&#34;);   hm.src = &#34;https://hm.baidu.com/hm.js?61076bb58f6646f4cb4418fb28f1569c&#34;;   var s = document.getElementsByTagName(&#34;script&#34;)[0];    s.parentNode.insertBefore(hm, s); })(); &lt;/script&gt;";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+	
+    </div>
+</body>
+
 </html>

@@ -1,143 +1,162 @@
-<html>
-  <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>K-means  by Python | Vince&#39;s Tree Hole </title>
-<meta name="description" content="Cherish time, just like cherishing your eyes." />
-<link rel="shortcut icon" href="https://cauliyang.github.io/favicon.ico">
-<link rel="stylesheet" href="https://cauliyang.github.io/styles/main.css">
+<!DOCTYPE html>
+<html lang="zh-CN">
 
-<script src="https://cauliyang.github.io/media/js/jquery.min.js"></script>
-<script src="https://cauliyang.github.io/media/js/masonry.pkgd.min.js"></script>
-<script src="https://cauliyang.github.io/media/js/aos.js"></script>
-<script src="https://cauliyang.github.io/media/js/pace.min.js"></script>
-<script src="https://cauliyang.github.io/media/js/view-image.min.js"></script>
-<script src="https://cauliyang.github.io/media/js/jquery.magnific-popup.min.js"></script>
-<script src="https://cauliyang.github.io/media/js/functions.js"></script>
-    <meta name="referrer" content="never">
-    <meta name="description" content="本篇文章，详细记录如何使用Python进行K-means，分别用两种方法实现，并记录如何选取K值，并进行可视化评估结果。
- 
+<head>
+  <meta charset="UTF-8" />
+<title>K-means  by Python - Vince&#39;s Tree Hole </title>
+<meta name="description" content="Cherish time, just like cherishing your eyes.">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-img{
-    width: 80%;
-    padding-left: 10%;
-}
+<link type='text/css' rel='stylesheet' href='http://localhost:4000/styles/main.css' media='screen' />
+<link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css">
+<link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-1.K-means..." />
-    <meta name="keywords" content="Machine-Learning,Python" />
-    <script src="https://cauliyang.github.io/media/js/waterfall.min.js"></script>
-    <script src="https://cauliyang.github.io/media/js/prism.min.js"></script>
-  </head>
-  <body>
-      <header id="header" class="grid-container">
-  <!-- start: .menu-wrapper -->
-  <div class="menu-mobile">
-    <i class="fa fa-reorder"></i>
-  </div>
-  <div class="menu-wrapper">
-    <div class="">
-      <div class="logo">
-        <a href="https://cauliyang.github.io"><img src="/media/images/logoo.png" alt=""></a>
-      </div>
-      <!-- start: .main-nav -->
+<script type="text/javascript" src='http://localhost:4000/media/scripts/jquery.js'></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
 
-      <nav class="main-nav grid-container grid-parent">
-        <ul id="menu-header" class="menu gradient-effect">
-          <li class=""><a href="https://cauliyang.github.io"
-              class="menu">首页</a></li>
-          
-          <li class="">
-            <a href="/archives" class="menu">
-              Archives
-            </a>
-          </li>
-          
-          <li class="">
-            <a href="/tags" class="menu">
-              Tags
-            </a>
-          </li>
-          
-          <li class="">
-            <a href="/movies" class="menu">
-              Movies
-            </a>
-          </li>
-          
-          <li class="">
-            <a href="/books" class="menu">
-              Books
-            </a>
-          </li>
-          
-          <li class="">
-            <a href="/post/about" class="menu">
-              About
-            </a>
-          </li>
-          
-          <li class="search-menu-item hide-on-mobile hide-on-tablet"><a href="#search-lightbox"
-              class="lightbox mfp-inline"><i class="fa fa-search-line"></i></a></li>
-        </ul>
-      </nav>
-      <a href="#search-lightbox" class="lightbox epcl-search-button mfp-inline hide-on-tablet hide-on-desktop"><i
-          class="fa fa-search-line"></i></a>
-      <!-- end: .main-nav -->
-      <div class="clear"></div>
-      <div class="border hide-on-tablet hide-on-mobile"></div>
-    </div>
-    <div class="clear"></div>
-  </div>
-  <!-- end: .menu-wrapper -->
-  <div class="clear"></div>
-</header>
-<div class="hide-on-mobile hide-on-tablet hide-on-desktop">
-  <div id="search-lightbox" class="grid-container grid-small grid-parent mfp-hide">
-    <div class="search-wrapper section">
-      <form id="gridea-search-form" data-update="1588691792723" action="/search/index.html" class="search-form"
-        _lpchecked="1">
-        <input type="text" name="q" id="s" value="" class="search-field" placeholder="搜点啥..." aria-label="搜点啥..."
-          required="">
-        <button type="submit" class="submit" aria-label="Submit">
-          <i class="fa fa-search-line"></i>
-        </button>
-      </form>
-    </div>
-  </div>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+</head>
+
+<body>
+  <div class="layout theme-dark">
+    <div class="layout-header">
+
+	<div class="layout-header-main">
+		<div class="container">
+			<div class="row justify-content-lg-center">
+				<div class="col-12 col-lg-9">
+
+					<div class="navbar">
+
+						<div class="logo">
+							<a href="http://localhost:4000">
+								<img class="logo"
+									src="http://localhost:4000/media/images/site_avatar.png?v=1594705569881"
+									alt="">
+							</a>
+						</div>
+
+						<div class="menu d-md-inline-block d-none">
+							<ul class="layout-navigation-list">
+								
+								<li class="layout-navigation-item"><a title="Main"
+										href="/">Main</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="Archives"
+										href="/archives">Archives</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="Tags"
+										href="/tags">Tags</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="Links"
+										href="/links">Links</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="About"
+										href="/about">About</a>
+								</li>
+								
+							</ul>
+						</div>
+
+						<div class="item d-md-inline-block d-none">
+							<div class="search-icon">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</div>
+						</div>
+
+
+
+						<div class="d-md-inline-block d-none">
+							<div class="search-lightbox">
+								<div class="search-body">
+
+									<form id="gridea-search-form" data-update="1594705569881" action="/search/" class="search-form">
+										<input type="text" name="q" id="s" value="" class="search-field" placeholder="请输入搜索关键词" aria-label="请输入搜索关键词" required="">
+										<button type="submit" class="submit" aria-label="Submit">
+											<i class="fa fa-search" aria-hidden="true"></i>
+										</button>
+									</form>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="nav d-md-none d-inline-block">
+							<div class="trigger">
+								<i class="fa fa-bars layout-btn-toggle" aria-hidden="true"></i>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+
+
+
+		</div>
+	</div>
+
+</div>
+    <div class="layout-collapse d-md-none">
+	<div class="layout-collapse-main">
+		<ul class="layout-collapse-list">
+			
+			<li class="layout-collapse-item"><a title="Main" href="/">Main</a></li>
+			
+			<li class="layout-collapse-item"><a title="Archives" href="/archives">Archives</a></li>
+			
+			<li class="layout-collapse-item"><a title="Tags" href="/tags">Tags</a></li>
+			
+			<li class="layout-collapse-item"><a title="Links" href="/links">Links</a></li>
+			
+			<li class="layout-collapse-item"><a title="About" href="/about">About</a></li>
+			
+
+		</ul>
+	</div>
 </div>
 
-      <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
+    <div class="layout-content">
+      <div class="layout-content-main">
+        <div class="container">
+          <div class="row justify-content-lg-center">
+            <div class="col-12 col-lg-9">
+              <div class="layout-post">
+                <div class="layout-post-body">
+                  <div class="row">
 
-        <div class="center content">
-          <div class="featured-image cover" style="background-image: url('https://cdn.wallpaperhub.app/cloudcache/4/6/b/1/0/4/46b104f678c41bff84412bcae61d001cd4770de4.jpg');">
-            <div class="meta top"> 
-              <time class="meta-info" style="float:left;" datetime="2019-08-07"><i class="fa fa-calendar"></i><span class="lately">9 个月前</span></time>
-              
-              <a href="https://cauliyang.github.io/k-means-cluster-by-python/#comments" class="comments meta-info" title="">
-                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/k-means-cluster-by-python/"> </span>
-              </a>
-              <span id="/k-means-cluster-by-python/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
-              
-            </div>
-            <div class="info">
-              <div class="tags ">
-                
-                      <a href="https://cauliyang.github.io/o4B5pUlIC/" class="ctag ctag-0 ctag-o4B5pUlIC" aria-label="">Machine-Learning</a>
-                    
-                      <a href="https://cauliyang.github.io/2jIKZKAWZ/" class="ctag ctag-1 ctag-2jIKZKAWZ" aria-label="">Python</a>
-                    
-              </div>
-              <h1 class="title ularge white bold">K-means  by Python</h1>
-            </div>
-          </div>
-        </div>  
-
-        <div class="epcl-page-wrapper">
-          <div class="left-content grid-70 np-mobile">
-            <article class="main-article post">
-              <section class="post-content">
-                <div class="text">
-                  <p>本篇文章，详细记录如何使用<strong>Python</strong>进行<strong>K-means</strong>，分别用两种方法实现，并记录如何选取K值，并进行可视化评估结果。</p>
+                    <div class="col-12 col-lg-10">
+                      <div class="layout-post-main m-right m-md-right">
+                        <div class="layout-post-header">
+                          <h1 class="layout-post-title">K-means  by Python</h1>
+                          <div class="layout-post-meta">
+                            <div class="item">
+                               <a href="http://localhost:4000/o4B5pUlIC/" class="post--keyword"
+                                data-title="Machine-Learning" data-type="post_tag" data-term-id="39">Machine-Learning</a>
+                               <a href="http://localhost:4000/2jIKZKAWZ/" class="post--keyword"
+                                data-title="Python" data-type="post_tag" data-term-id="39">Python</a>
+                              
+                            </div>
+                            <div class="item">
+                              <span>2019-08-07</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="layout-post-content">
+                          <div class="layout-post-item">
+                            
+                            <p class="with-img"><img src="https://cdn.wallpaperhub.app/cloudcache/4/6/b/1/0/4/46b104f678c41bff84412bcae61d001cd4770de4.jpg"
+                                class="attachment-full size-full wp-post-image" alt="K-means  by Python" /></p>
+                            
+                            <p>本篇文章，详细记录如何使用<strong>Python</strong>进行<strong>K-means</strong>，分别用两种方法实现，并记录如何选取K值，并进行可视化评估结果。</p>
 <!-- more --> 
 <style>
 img{
@@ -200,7 +219,7 @@ plt.scatter(X[:, 0], X[:, 1], c='white', marker='o', edgecolor='black', s=50)
 plt.grid()
 plt.show()
 </code></pre>
-<figure data-type="image" tabindex="1"><img src="https://cauliyang.github.io/post-images/1572156791933.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="http://localhost:4000/post-images/1572156791933.png" alt="" loading="lazy"></figure>
 <p>从图中可以看出创建的测试数据有明显的分群情况,当然在真实的数据当中原始数据可能没有这么理想。我们先在没有推理的情况下确定<strong>K</strong>的值为3。</p>
 <pre><code class="language-python"># k-means
 km = KMeans(n_clusters=3, # K value 
@@ -244,7 +263,7 @@ def plot_res(y_km, X, n_cluster):
     plt.show()
 
 </code></pre>
-<figure data-type="image" tabindex="2"><img src="https://cauliyang.github.io/post-images/1572158215803.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="http://localhost:4000/post-images/1572158215803.png" alt="" loading="lazy"></figure>
 <p>可以明显看到分群效果十分明显。不过其中还有许多问题：</p>
 <ol>
 <li>如何确实<strong>K</strong>值</li>
@@ -274,7 +293,7 @@ plt.xlabel('Number of clusters')
 plt.ylabel('Distortion')
 plt.show()
 </code></pre>
-<figure data-type="image" tabindex="3"><img src="https://cauliyang.github.io/post-images/1572160740933.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="http://localhost:4000/post-images/1572160740933.png" alt="" loading="lazy"></figure>
 <p>从图中我们可以看出在<strong>K</strong>值为3的时候，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mi>S</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">SSE</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span></span></span></span>变化幅度最大，即可得知<strong>K</strong>为3是最优解。</p>
 <h3 id="23-如何评估分群的质量">2.3 如何评估分群的质量</h3>
 <p>评价聚类质量的一种方法是<strong>轮廓分析</strong>，他可以应用于其他聚类算法，度量其紧密程度。计算轮廓系数的步骤为：</p>
@@ -332,7 +351,7 @@ def plot_sil(y_km, X):
     plt.show()
 
 </code></pre>
-<figure data-type="image" tabindex="4"><img src="https://cauliyang.github.io/post-images/1572162327225.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="http://localhost:4000/post-images/1572162327225.png" alt="" loading="lazy"></figure>
 <p>从图中我们可以看出轮廓系数不接近于0，且接近于1表明我们的分群结果良好。且在图中轮廓系数的高度代表群内样本数量，如果样本数量相差太大，说明分群效果不是很好。图中虚线表示平均轮廓系数。</p>
 <p>为更好的理解轮廓系数的使用，将<strong>K</strong>值变为2，进行聚类。</p>
 <pre><code class="language-python">km = KMeans(
@@ -345,9 +364,9 @@ def plot_sil(y_km, X):
 y_km = km.fit_predict(X)
 </code></pre>
 <p>使用上方作图函数，先观察分群效果。</p>
-<figure data-type="image" tabindex="5"><img src="https://cauliyang.github.io/post-images/1572162593247.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="http://localhost:4000/post-images/1572162593247.png" alt="" loading="lazy"></figure>
 <p>从图中可以看出分群效果很差，可视化轮廓系数查看结果。</p>
-<figure data-type="image" tabindex="6"><img src="https://cauliyang.github.io/post-images/1572162888640.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="http://localhost:4000/post-images/1572162888640.png" alt="" loading="lazy"></figure>
 <p>两个群的高度不一致表明分群效果不是很理想，且有的样本轮廓系数极低接近于0。表示分群有很大的问题，需要重新思考<strong>K</strong>值的选取。</p>
 <h2 id="3-k-means-from-scratch">3. K-means from scratch</h2>
 <p>我们根据算法原理使用<strong>Python</strong>一步步实现<strong>K-means</strong>，首先展示我们所用到的数据集，有关基因在不同条件下处理的表达数据，其中基因数量为样本数量，处理方式为纬度。并且设计为<strong>Terminal</strong>端使用。</p>
@@ -578,237 +597,237 @@ def main():
 <p>本篇文章详细记录两种方式实现<strong>K-means</strong>方法，并且记录如何选取<strong>K</strong>值，如何评估聚类质量。本文最终涉及的代码都会在<a href="https://github.com/cauliyang/Python_book_practice/blob/master/effective_python_practice.ipynb"><strong>Jupyter notebook</strong></a>找到,并且使用<a href="https://github.com/cauliyang/work/tree/master/001_k_mean">脚本程序</a></p>
 <p>谢谢观看，欢迎交流！😎</p>
 
-                </div>
-                <div class="clear"></div>
-              </section>
-            </article>
-            <div class="clear"></div>
+                          </div>
+                        </div>
+                        <div class="layout-post-social">
+                          <div class="item reader">
+                            <div id="/post/k-means-cluster-by-python/" class="leancloud-visitors view"
+                              data-flag-title="K-means  by Python">
+                              <span class="post-meta-item-text">阅读 </span>
+                              <span class="leancloud-visitors-count"></span>
+                            </div>
+                          </div>
+                        </div>
 
-            <section class="related section">
-              
-              <article class="prev grid-50 tablet-grid-50 grid-parent">
-                <div class="thumb cover lazy loaded" style="background-image: url('https://mgo.azureedge.net/cloudcache/0/2/a/c/0/3/02ac03eaf4099407eaf881c3133063b4134b18c9.jpg');"></div>
-                 <a href="https://cauliyang.github.io/vcftools-1/" class="full-link"></a>
-                 <div class="info">
-                  <time datetime="2019-08-20">2019-08-20</time>
-                  <h4 class="title white no-margin">Vcftools  Manual</h4>
-                </div>
-                 <span class="epcl-button red">
-                  <img src="https://cauliyang.github.io/media/images/left-arrow.svg" width="15" alt="Left Arrow">
-                </span>
-                <div class="overlay"></div>
-              </article>
-              
-              
-              <article class="next grid-50 tablet-grid-50 grid-parent">
-                <div class="thumb cover lazy loaded" style="background-image: url('https://cdn.wallpaperhub.app/cloudcache/f/0/d/b/9/c/f0db9c64fe5c28eefba1ef95bb29342d27c337a0.jpg');"></div>
-                 <a href="https://cauliyang.github.io/pca-by-python-2/" class="full-link"></a>
-                 <div class="info">
-                  <time datetime="2019-07-19">2019-07-19</time>
-                  <h4 class="title white no-margin">PCA by Python </h4>
-                </div>
-                 <span class="epcl-button red">
-                  <img src="https://cauliyang.github.io/media/images/right-arrow.svg" width="15" alt="Left Arrow">
-                </span>
-                <div class="overlay"></div>
-              </article>
-              
+                        <div class="layout-post-navigation">
+                          <div class="navigation-list">
+                            
+                            <div class="post-card row">
+                              
+                              <div class="card-content col-8 col-md-9">
+                                <div class="card-body">
+                                  <div class="header">
+                                    <a href="http://localhost:4000/vcftools-1/" class="title">
+                                      <h4>Vcftools  Manual</h4>
+                                    </a>
+                                  </div>
+                                  <div class="inner d-none d-sm-block">
+                                    <div class="abstract">
+                                      <p>整理并记录处理VCf文件格式的工具<strong>vcftools</strong>的使用方法，主要用于自己使用。<strong>（侵权，立即删。😊）</strong></p>
 
-                <div class="clear"></div>
-            </section>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-footer">
+                                  <div class="item"><span>上一篇</span></div>
+                                  <div class="item">2019-08-20</div>
+                                </div>
+                              </div>
+                              <div class="card-thumb col-4 col-md-3">
+                                <div class="thumb">
+                                  <a href="http://localhost:4000/vcftools-1/"
+                                    style="background-image: url('https://mgo.azureedge.net/cloudcache/0/2/a/c/0/3/02ac03eaf4099407eaf881c3133063b4134b18c9.jpg');"></a>
+                                </div>
+                              </div>
+                              
+                            </div>
 
-              <div class="clear"></div>
-              
-            
-              <div id="comments" class="bg-white hosted ">
-                
-                  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+                            <div class="post-card row">
+                              
+                              <div class="card-content col-8 col-md-9">
+                                <div class="card-body">
+                                  <div class="header">
+                                    <a href="http://localhost:4000/pca-by-python-2/" class="title">
+                                      <h4>PCA by Python </h4>
+                                    </a>
+                                  </div>
+                                  <div class="inner d-none d-sm-block">
+                                    <div class="abstract">
+                                      <p><strong>This article documents two methods of PCA analysis using Python, and visualizes 2-dimensional results.</strong></p>
 
-<div id="gitalk-container"></div>
-<div class="clear"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-footer">
+                                  <div class="item"><span>下一篇</span></div>
+                                  <div class="item">2019-07-19</div>
+                                </div>
+                              </div>
+                              <div class="card-thumb col-4 col-md-3">
+                                <div class="thumb">
+                                  <a href="http://localhost:4000/pca-by-python-2/"
+                                    style="background-image: url('https://cdn.wallpaperhub.app/cloudcache/f/0/d/b/9/c/f0db9c64fe5c28eefba1ef95bb29342d27c337a0.jpg');"></a>
+                                </div>
+                              </div>
+                              
+                            </div>
+
+                            
+                          </div>
+                        </div>
+
+                        <div class="layout-comments"></div>
+                        
+                        <script type="text/javascript" src='http://localhost:4000/media/scripts/zan.js'></script>
+<script type="text/javascript" src='http://localhost:4000/media/scripts/av-min.js'></script>
+<script type="text/javascript" src='http://localhost:4000/media/scripts/Valine.min.js'></script>
 
 <script>
-  var gitalk = new Gitalk({
-    clientID: 'dfb1ac2fcbca6a2c77ad',
-    clientSecret: 'ffba352fef69134f25f13c27e2e0225bf8a605b8',
-    repo: 'cauliyang.github.io',
-    owner: 'cauliyang',
-    admin: ['cauliyang'],
-    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
+  var valine = new Valine();
+  valine.init({
+    el: '.layout-comments',
+    appId: 'zPwvEFPIxLCJK1MShFnaJ3tx-gzGzoHsz',
+    appKey: '6d46XrT8xrLcdytkO4A8dWec',
+    notify: false,
+    verify: false,
+    visitor: true,
+    avatar: 'mp',
+    placeholder: '加入讨论...'
   })
-
-  gitalk.render('gitalk-container')
 </script>
+                        
+                      </div>
+                    </div>
 
-                
-                
+                    <div class="col-12 col-lg-2 d-none d-lg-block">
+                      <div class="layout-post-sidebar">
+                        <div class="layout-sidebar-item">
+                          <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#1k-means%E6%A6%82%E5%BF%B5%E4%BB%8B%E7%BB%8D">1.<strong>K-means</strong>概念介绍</a>
+<ul>
+<li><a href="#11-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5">1.1 基础概念</a></li>
+<li><a href="#12-%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86">1.2 算法原理</a></li>
+</ul>
+</li>
+<li><a href="#2%E4%BD%BF%E7%94%A8scikit-learn%E5%AE%9E%E7%8E%B0k-means%E6%96%B9%E6%B3%95">2.使用<strong>scikit-learn</strong>实现<strong>K-means</strong>方法</a>
+<ul>
+<li><a href="#21-%E5%88%9B%E5%BB%BA%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE%E5%B9%B6%E5%AE%9E%E7%8E%B0%E7%AE%97%E6%B3%95">2.1 创建测试数据并实现算法</a></li>
+<li><a href="#22-%E5%A6%82%E4%BD%95%E9%80%89%E5%8F%96k%E5%80%BC">2.2 如何选取<strong>K</strong>值</a></li>
+<li><a href="#23-%E5%A6%82%E4%BD%95%E8%AF%84%E4%BC%B0%E5%88%86%E7%BE%A4%E7%9A%84%E8%B4%A8%E9%87%8F">2.3 如何评估分群的质量</a></li>
+</ul>
+</li>
+<li><a href="#3-k-means-from-scratch">3. K-means from scratch</a>
+<ul>
+<li><a href="#31-get-parameters-from-terminal">3.1 Get parameters from terminal</a></li>
+<li><a href="#32-creating-function-of-report">3.2 Creating function of report</a></li>
+<li><a href="#33-calculating-euclidean-distance">3.3 Calculating Euclidean distance</a></li>
+<li><a href="#34-getting-centroid-information-and-recursive-function">3.4 Getting centroid information and recursive function</a></li>
+<li><a href="#35-creating-body-function-and-main-function">3.5 Creating Body function and Main function</a></li>
+</ul>
+</li>
+<li><a href="#4-summary">4. Summary</a></li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            
-
             </div>
           </div>
-      </main>
-
-          <footer id="footer" class="grid-container">
-        <div class="widgets row gradient-effect">
-            <div class="default-sidebar border-effect">
-              <div class="grid-33 tablet-grid-50 mobile-grid-100">
-                <section id="tag_cloud-2" class="widget widget_epcl_posts_thumbs underline-effect">
-                  <h4 class="widget-title title white bordered">最新文章</h4>
-                  
-                  
-                  <article class="item post-0 post type-post status-publish format-standard has-post-thumbnail hentry">
-                    <a href="https://cauliyang.github.io/52R07FPbs/" class="thumb hover-effect">
-                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://cdn.wallpaperhub.app/cloudcache/e/1/c/d/b/7/e1cdb707cd9cd8be1aa25ace74ab41522f2b6da0.jpg');"></span>
-                    </a>
-                    <div class="info gradient-effect">
-                      <time datetime="2020-04-22">2020-04-22</time>
-                      <h4 class="title usmall">
-                        <a href="https://cauliyang.github.io/52R07FPbs/">关于劝退的思考-01</a>
-                      </h4>
-                    </div>
-                    <div class="clear"></div>
-                  </article>
-                  
-                  
-                  
-                  <article class="item post-1 post type-post status-publish format-standard has-post-thumbnail hentry">
-                    <a href="https://cauliyang.github.io/cNegnaeIm/" class="thumb hover-effect">
-                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('/media/images/gridea.jpg');"></span>
-                    </a>
-                    <div class="info gradient-effect">
-                      <time datetime="2020-04-17">2020-04-17</time>
-                      <h4 class="title usmall">
-                        <a href="https://cauliyang.github.io/cNegnaeIm/">Learning of Data Structure and Algorithm</a>
-                      </h4>
-                    </div>
-                    <div class="clear"></div>
-                  </article>
-                  
-                  
-                  
-                  <article class="item post-2 post type-post status-publish format-standard has-post-thumbnail hentry">
-                    <a href="https://cauliyang.github.io/9jaKMB68a/" class="thumb hover-effect">
-                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://cdn.pixabay.com/photo/2020/04/13/12/09/fog-5038082_1280.jpg');"></span>
-                    </a>
-                    <div class="info gradient-effect">
-                      <time datetime="2020-04-15">2020-04-15</time>
-                      <h4 class="title usmall">
-                        <a href="https://cauliyang.github.io/9jaKMB68a/">生活随想-居家反思</a>
-                      </h4>
-                    </div>
-                    <div class="clear"></div>
-                  </article>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  <div class="clear"></div>
-                </section>
-              </div>
-
-              <div class="grid-33 tablet-grid-50 mobile-grid-100">
-                <section id="tag_cloud-2" class="widget widget_tag_cloud underline-effect">
-                  <h4 class="widget-title title white bordered">标签云</h4>
-                  <div class="tagcloud">
-                    
-                      <a href="https://cauliyang.github.io/itd_hM5M3/" class="ctag ctag-0 ctag-itd_hM5M3" aria-label="">Life</a>
-                    
-                      <a href="https://cauliyang.github.io/o4B5pUlIC/" class="ctag ctag-1 ctag-o4B5pUlIC" aria-label="">Machine-Learning</a>
-                    
-                      <a href="https://cauliyang.github.io/2jIKZKAWZ/" class="ctag ctag-2 ctag-2jIKZKAWZ" aria-label="">Python</a>
-                    
-                      <a href="https://cauliyang.github.io/SUXw49Pf-/" class="ctag ctag-3 ctag-SUXw49Pf-" aria-label="">Bioinformatics</a>
-                    
-                      <a href="https://cauliyang.github.io/sEW192Upq/" class="ctag ctag-4 ctag-sEW192Upq" aria-label="">Bio-software</a>
-                    
-                  </div>
-                  <div class="clear"></div>
-                </section>
-              </div>
-
-              <div class="grid-33 tablet-grid-50 mobile-grid-100">
-                <section id="epcl_about-2" class="widget widget_epcl_about underline-effect">
-                  <h4 class="widget-title title white bordered">关于我</h4>
-                  <div class="avatar">
-                    <a href="" class="translate-effect thumb"><span class="fullimage cover" style="background-image: url(https://cauliyang.github.io/images/avatar.png);"></span></a>
-                  </div>
-                  <div class="info">
-                    <h4 class="title small author-name gradient-effect no-margin"><a href="">Vince&#39;s Tree Hole </a></h4>
-                    <p class="founder">Cherish time, just like cherishing your eyes.</p>
-                    <div class="social">
-                      
-                          
-                            <a href="https://github.com/cauliyang" class="translate-effect" target="_blank"><i class="fa fa-github"></i></a>
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                        
-                      
-                    </div> 
-                  </div>
-                  <div class="clear"></div>
-                  </section>
-              </div>
-
-            </div>
-            <div class="clear"></div>
         </div>
-
-        <div class="logo">
-          <a href="https://cauliyang.github.io"><img src="/media/images/gridea.png" alt=""></a>
-        </div>
-        <p class="published border-effect">
-          ©2019 共 10 篇文章
-          <br/>
-          Theme <a href="https://gridea.dev/" target="_blank">「breek」</a> Powered by <a href="https://gridea.dev/" target="_blank">「Gridea」</a>
-        </p>
-        
-        <a href="javascript:void(0)" id="back-to-top" class="epcl-button dark" style="display:none">
-          <i class="fa fa-arrow"></i>
-        </a>
-    </footer>
-    
-    <div class="clear"></div>
-
-        
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
-<script type="text/javascript" src="https://cdn.staticfile.org/valine/1.3.10/Valine.Pure.min.js"></script>
-<script>
-    new Valine({
-        el: '#comments',
-        appId: 'zPwvEFPIxLCJK1MShFnaJ3tx-gzGzoHsz' ,
-        appKey: '6d46XrT8xrLcdytkO4A8dWec',
-        pageSize: 30,
-        placeholder: '既然来了，那就留个痕迹吧~',
-        visitor: true // 阅读量统计
-    })
-</script>
-    
-
-      
-    <script src="https://cauliyang.github.io/media/js/functions-post.js"></script>
-
+      </div>
     </div>
-    <!-- end: #wrapper -->
-  </body>
+
+    <div class="layout-totop d-none"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
+
+    	<div class="layout-footer">
+
+		<div class="container">
+			<div class="row justify-content-lg-center">
+				<div class="col-12 col-lg-9">
+					<div class="footer">
+						<div class="row">
+							<div class="col-12 col-md-9">
+								<div class="footer-copy">
+									
+									<span>© 20180520 </span>
+									<a href="http://localhost:4000" title="Vince&#39;s Tree Hole ">Vince&#39;s Tree Hole </a>
+									<span class="px-2">⋅</span>
+									
+									Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+									<div class="footer-icp d-none d-sm-inline-block">
+										<span class="px-2">⋅</span>
+										
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3 d-none d-md-block">
+								<div class="footer-links">
+									
+									
+									
+									
+									<span class="footer-links-item">
+										<a href="https://github.com/cauliyang/work" target="_blank">
+											<i class="fa fa-github" aria-hidden="true"></i>
+										</a>
+									</span>
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									<span class="footer-links-item">
+										<a href="982966845" target="_blank">
+											<i class="fa fa-qq" aria-hidden="true"></i>
+										</a>
+									</span>
+									
+									
+									
+									
+									
+									<span class="footer-links-item">
+										<a href="Wazyy99999" target="_blank">
+											<i class="fa fa-weixin" aria-hidden="true"></i>
+										</a>
+									</span>
+									
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src='http://localhost:4000/media/scripts/main.js'></script>
+	
+	<script>
+		var _hmt = _hmt || [];
+		(function () {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?&lt;script&gt; var _hmt = _hmt || []; (function() {   var hm = document.createElement(&#34;script&#34;);   hm.src = &#34;https://hm.baidu.com/hm.js?61076bb58f6646f4cb4418fb28f1569c&#34;;   var s = document.getElementsByTagName(&#34;script&#34;)[0];    s.parentNode.insertBefore(hm, s); })(); &lt;/script&gt;";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+	
+
+  </div>
+</body>
+
 </html>
