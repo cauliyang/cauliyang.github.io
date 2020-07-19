@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cauliyang.github.io</id>
     <title>Vince&apos;s Tree Hole </title>
-    <updated>2020-07-14T05:58:33.528Z</updated>
+    <updated>2020-07-19T18:21:55.032Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cauliyang.github.io"/>
     <link rel="self" href="https://cauliyang.github.io/atom.xml"/>
@@ -11,14 +11,35 @@
     <icon>https://cauliyang.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Vince&apos;s Tree Hole </rights>
     <entry>
-        <title type="html"><![CDATA[关于劝退的思考-01]]></title>
+        <title type="html"><![CDATA[links]]></title>
+        <id>https://cauliyang.github.io/links/</id>
+        <link href="https://cauliyang.github.io/links/">
+        </link>
+        <updated>2020-07-19T16:59:45.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[生活随想-居家反思-2]]></title>
+        <id>https://cauliyang.github.io/p1BBR66pq/</id>
+        <link href="https://cauliyang.github.io/p1BBR66pq/">
+        </link>
+        <updated>2020-05-06T16:59:20.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于劝退的思考-1]]></title>
         <id>https://cauliyang.github.io/52R07FPbs/</id>
         <link href="https://cauliyang.github.io/52R07FPbs/">
         </link>
         <updated>2020-04-22T12:28:33.000Z</updated>
     </entry>
     <entry>
-        <title type="html"><![CDATA[生活随想-居家反思]]></title>
+        <title type="html"><![CDATA[学习进程与规划]]></title>
+        <id>https://cauliyang.github.io/cNegnaeIm/</id>
+        <link href="https://cauliyang.github.io/cNegnaeIm/">
+        </link>
+        <updated>2020-04-16T17:33:49.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[生活随想-居家反思-1]]></title>
         <id>https://cauliyang.github.io/9jaKMB68a/</id>
         <link href="https://cauliyang.github.io/9jaKMB68a/">
         </link>
@@ -78,23 +99,5 @@
 ]]></summary>
         <content type="html"><![CDATA[<p><strong>This article documents two methods of PCA analysis using Python, and visualizes 2-dimensional results.</strong></p>
 ]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Blog Ideas ]]></title>
-        <id>https://cauliyang.github.io/bo-ke-xiang-fa/</id>
-        <link href="https://cauliyang.github.io/bo-ke-xiang-fa/">
-        </link>
-        <updated>2019-05-09T00:46:16.000Z</updated>
-        <summary type="html"><![CDATA[<p>This Blog record learning process, welcome everyone to communicate with me!😊</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>This Blog record learning process, welcome everyone to communicate with me!😊</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[about ]]></title>
-        <id>https://cauliyang.github.io/about/</id>
-        <link href="https://cauliyang.github.io/about/">
-        </link>
-        <updated>2019-01-25T11:09:48.000Z</updated>
     </entry>
 </feed>
