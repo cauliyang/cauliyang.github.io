@@ -2174,7 +2174,9 @@ body {
     }
     .head-top-line {
       background: #000;
-    }
+    }.pace .pace-activity {
+        background: #000 !important;
+      }
     .brand {
       background: #000000fe;
     }
@@ -2192,15 +2194,15 @@ body {
     }.box-shadow-wrapper {
       box-shadow: none !important;
     }body {
-      cursor: default;
+      cursor: url('https://cdn.jsdelivr.net/gh/cauliyang/cauliyang.github.io@0.0.7/media/curs/pointer.cur.cur'), default;
     }a {
-      cursor: pointer;
+      cursor: url('https://cdn.jsdelivr.net/gh/cauliyang/cauliyang.github.io@0.0.7/media/curs/link.cur.cur'), pointer !important;
     }input, textarea, code {
-      cursor: text;
+      cursor: url('https://cdn.jsdelivr.net/gh/cauliyang/cauliyang.github.io@0.0.7/media/curs/text.cur.cur'), text !important;
     }code > span.copy-code {
-      cursor: pointer;
+      cursor: url('https://cdn.jsdelivr.net/gh/cauliyang/cauliyang.github.io@0.0.7/media/curs/pin.cur.cur'), text !important;
     }.post img {
-      cursor: zoom-in;
+      cursor: url('https://cdn.jsdelivr.net/gh/cauliyang/cauliyang.github.io@0.0.7/media/curs/dgn1.cur.cur'), zoom-in !important;
     }.post img {
-      cursor: zoom-out;
+      cursor: url('https://cdn.jsdelivr.net/gh/cauliyang/cauliyang.github.io@0.0.7/media/curs/dgn2.cur.cur'), zoom-out !important;
     }
