@@ -2194,7 +2194,7 @@ body {
     }.box-shadow-wrapper {
       box-shadow: none !important;
     }body {
-      cursor: url('https://cdn.jsdelivr.net/gh/cauliyang/cauliyang.github.io@0.0.7/media/curs/pointer.cur.cur'), default;
+      cursor: url('https://cdn.jsdelivr.net/gh/cauliyang/cauliyang.github.io@0.0.7/media/curs/default_normal.cur.cur'), default;
     }a {
       cursor: url('https://cdn.jsdelivr.net/gh/cauliyang/cauliyang.github.io@0.0.7/media/curs/link.cur.cur'), pointer !important;
     }input, textarea, code {
