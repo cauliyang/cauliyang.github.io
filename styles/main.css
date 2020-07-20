@@ -2194,15 +2194,15 @@ body {
     }.box-shadow-wrapper {
       box-shadow: none !important;
     }body {
-      cursor: url('https://cdn.jsdelivr.net/gh/cauliyang/cauliyang.github.io@0.0.7/media/curs/default_normal.cur.cur'), default;
+      cursor: url('https://cdn.jsdelivr.net/gh/cauliyang/cauliyang.github.io@0.0.8/media/curs/default_normal.cur.cur'), default;
     }a {
-      cursor: url('https://cdn.jsdelivr.net/gh/cauliyang/cauliyang.github.io@0.0.7/media/curs/link.cur.cur'), pointer !important;
+      cursor: url('https://cdn.jsdelivr.net/gh/cauliyang/cauliyang.github.io@0.0.8/media/curs/link.cur.cur'), pointer !important;
     }input, textarea, code {
-      cursor: url('https://cdn.jsdelivr.net/gh/cauliyang/cauliyang.github.io@0.0.7/media/curs/text.cur.cur'), text !important;
+      cursor: url('https://cdn.jsdelivr.net/gh/cauliyang/cauliyang.github.io@0.0.8/media/curs/text.cur.cur'), text !important;
     }code > span.copy-code {
-      cursor: url('https://cdn.jsdelivr.net/gh/cauliyang/cauliyang.github.io@0.0.7/media/curs/pin.cur.cur'), text !important;
+      cursor: url('https://cdn.jsdelivr.net/gh/cauliyang/cauliyang.github.io@0.0.8/media/curs/pin.cur.cur'), text !important;
     }.post img {
-      cursor: url('https://cdn.jsdelivr.net/gh/cauliyang/cauliyang.github.io@0.0.7/media/curs/dgn1.cur.cur'), zoom-in !important;
+      cursor: url('https://cdn.jsdelivr.net/gh/cauliyang/cauliyang.github.io@0.0.8/media/curs/dgn1.cur.cur'), zoom-in !important;
     }.post img {
-      cursor: url('https://cdn.jsdelivr.net/gh/cauliyang/cauliyang.github.io@0.0.7/media/curs/dgn2.cur.cur'), zoom-out !important;
+      cursor: url('https://cdn.jsdelivr.net/gh/cauliyang/cauliyang.github.io@0.0.8/media/curs/dgn2.cur.cur'), zoom-out !important;
     }
