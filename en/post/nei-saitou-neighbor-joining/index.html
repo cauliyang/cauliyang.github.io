@@ -1,0 +1,2150 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.1.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Yangyang Li" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="one of my homework that requires me to implement Nei-Saitou Neighbor Joining algorithm to construct phylogenetic tree, as well as evaluating the bootstrap cconfidence" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://cauliyang.github.io/en/post/nei-saitou-neighbor-joining/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#4caf50" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.ccba2897a1a48cb1043d0c84d800233a.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/en/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_2.png" />
+
+  <link rel="canonical" href="https://cauliyang.github.io/en/post/nei-saitou-neighbor-joining/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="My Life" />
+  <meta property="og:url" content="https://cauliyang.github.io/en/post/nei-saitou-neighbor-joining/" />
+  <meta property="og:title" content="Nei Saitou Neighbor Joining | My Life" />
+  <meta property="og:description" content="one of my homework that requires me to implement Nei-Saitou Neighbor Joining algorithm to construct phylogenetic tree, as well as evaluating the bootstrap cconfidence" /><meta property="og:image" content="https://cauliyang.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" />
+    <meta property="twitter:image" content="https://cauliyang.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2021-04-03T11:15:00&#43;08:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-04-03T11:15:00&#43;08:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Nei Saitou Neighbor Joining | My Life</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="4ede16af810c079832a45e2a9fa4b887" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.82a2df885514d7a8250a5a85f0335ab9.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/en/">My Life</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/en/">My Life</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/en/#about"><span>Biography</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/en/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/en/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/en/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/en/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/en/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/en/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          Posts
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/en/post/"><i class="fas fa-arrow-left pr-1"></i>Posts</a></li>
+      </ul>
+
+      
+      
+
+
+  <li class="active"><a href="/en/post/nei-saitou-neighbor-joining/">Nei Saitou Neighbor Joining</a></li>
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#background">Background</a></li>
+    <li><a href="#neighbor-joining-algorithm">Neighbor Joining Algorithm</a></li>
+    <li><a href="#implementation">Implementation</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+  
+
+  <li class="breadcrumb-item">
+    <a href="/en/">
+      
+        Home
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/en/post/">
+      
+        Posts
+      
+    </a>
+  </li>
+
+
+      <li class="breadcrumb-item active" aria-current="page">
+        Nei Saitou Neighbor Joining
+      </li>
+    </ol>
+  </nav>
+
+
+          
+
+          <h1>Nei Saitou Neighbor Joining</h1>
+
+          <div class="article-style">
+            <h2 id="background">Background</h2>
+<p>Before diving into code, the description of NJ algorithm can be found in <img src="1605172209524.png" alt="This Link">, where first column indicates parent node, and second column is its children node, the last column is the value of edge.</p>
+<h2 id="neighbor-joining-algorithm">Neighbor Joining Algorithm</h2>
+<p>The Neighbor-joining Algorithm Given a distance matrix d compute an unrooted tree topology complete with edge lengths that tries to preserve the additive property: $d_ {i,m} + d_{j,m} − d_{i,j} = 2d_{k,m}$ where $k$ is the ﬁrst node on both routes from $i$ and $j$ to $m$.</p>
+<ol>
+<li>Let the set of clusters be called $L$ and initially $i → C_i; ∀i$ that is $| C_i | = 1$ and $L = C_1 , C_2 , . . . C_N$.</li>
+<li>$d_{i,j}$ is the distance from the initial distance matrix.</li>
+<li>Compute “normalized distance matrix” $D_{i,j}$ for all $i, j$ such that
+$$D_{i,j} = d_{i,j} − (r_i + r_j ) \ where\ r_i = \frac{1}{|L|-2} \sum_{z \in L} d_{i,z}$$
+This subtracts the average distance to all other nodes than the pair involved. **Note: this is not where we use the distance identity.**</li>
+<li>Use normalized distance to ﬁnd $(i, j) = argmin D_{i,j}; C_i,C_j \in L$</li>
+<li>Merge $C_i ∪ C_j → C_k$ where $k$ is a new cluster number.</li>
+<li>Mark old clusters as used so that eﬀectively: $L ← L − C_i − C_j$</li>
+<li>Compute a new unnormalized distance matrix including the new cluster $k$ and excluding $i, j$.
+$$d_{k,z} = d_{z,k} = (d_{i,z} + d_{j,,z} − d_{i,j} ) for all z ∈ L 2$$
+This uses the additivity of the distances to compute the distance to the new cluster from each other node.</li>
+<li>Compute the length of the edges from $k$ to $i$ and $j$. Even though $C_k$has assumed the role of both $C_i$ and $C_j$  you still need the edge length to $i$ and $j$ from $k$ in order to “draw” the tree.
+$$edge_{i,k} = (d_{i,j} + r_i − r_j)$$
+$$edge_{j,k} = (d_{i,j} + r_j − r_i)$$</li>
+<li>Deﬁne height $h_k = d_{i,j} /2$ where $h_k$ is the height of node that is the ancestor to all in $C_k$ . When drawing the tree $h_k$ is the height above the baseline (where all the leaves are).</li>
+<li>$L ← L ∪ C_k$</li>
+<li>While there is more than two clusters left go to step 3</li>
+<li>Finally, join the remaining two clusters with:
+$$edge_{j,k} = d_{i,j} $$</li>
+</ol>
+<p><strong>Implementation Notes Consider this part of the computation:</strong>
+$$D_{i,j} = d_{i,j} − (r_i + r_j ) \ where \ r_i =  \frac{1}{|L|-2} \sum_{z \in L}d_{i,z}$$
+The values of r_z can be computed once each time we want to compute matrix $D$. This saves a vast amount of time. Furthermore, since $D_{i,j}$ is only used to ﬁnd the argmin of $D_{i,j}$ we actually don’t have to save array $D$; we only need to ﬁnd the argmin of it. So ﬁrst compute all the r and then combine the argmin step with the computation of $D_{i,j}$</p>
+<h2 id="implementation">Implementation</h2>
+<p>I write code contained comments, and it is about 1000 lines that consumes me two whole days. Now let me show my code with rich comments. If you have any questions or recommendation, I am very glad to communicate with you! Please feel free to reach me.</p>
+<pre><code class="language-python"># -*- coding: UTF-8 -*-
+# Time 20201109
+'''
+This code integrate bootstrap, geting edge_file and tree_file
+
+USAGE: python -i fa_file -d out_distance_matrix -e out_edge -t out_tree -b number_bootstrap
+'''
+# import needed library
+import argparse
+import logging
+import random
+import time
+from collections import defaultdict, namedtuple
+
+import pandas as pd
+
+
+class Timer:
+    &quot;&quot;&quot;[construct  Timer to show working time of tasks]
+    &quot;&quot;&quot;
+    def __init__(self, func=time.perf_counter):
+        &quot;&quot;&quot;[init values]
+
+        Args:
+            func : Defaults to time.perf_counter.
+        &quot;&quot;&quot;
+        self.elapsed = 0.0
+
+        self._func = func
+
+        self._start = None
+
+    def start(self):
+        &quot;&quot;&quot;[start a task]
+
+        Raises:
+            RuntimeError:[if task has started then raise error]
+        &quot;&quot;&quot;
+
+        if self._start is not None:
+            raise RuntimeError('Already started')
+
+        self._start = self._func()
+
+    def stop(self):
+        &quot;&quot;&quot;[end a task]
+
+        Raises:
+            RuntimeError[if task has not started then raise error]
+        &quot;&quot;&quot;
+        if self._start is None:
+            raise RuntimeError('Not started')
+
+        end = self._func()
+
+        self.elapsed += end - self._start
+
+        self._start = None
+
+    def reset(self):
+        &quot;&quot;&quot;[reset the working time]
+        &quot;&quot;&quot;
+        self.elapsed = 0
+
+    def running(self):
+        &quot;&quot;&quot;[check if task is running]
+
+        Returns:
+            bool
+        &quot;&quot;&quot;
+
+        return self._start is not None
+
+    def __enter__(self):
+        &quot;&quot;&quot;[function used to address 'with text']
+        &quot;&quot;&quot;
+
+        self.start()
+
+        return self
+
+    def __exit__(self, *args):
+        &quot;&quot;&quot;[function used to address 'with text']
+        &quot;&quot;&quot;
+
+        self.stop()
+
+
+class TreeNode:
+    &quot;&quot;&quot;[class of tree node]
+
+    &quot;&quot;&quot;
+    def __init__(self, key=None):
+        &quot;&quot;&quot;[init values of tree node]
+
+        Args:
+            key ([str, float], optional): [node_label, edge]. Defaults to None.
+
+            self.index: node_index
+        &quot;&quot;&quot;
+        self.left, self.right = None, None
+
+        self.key = key
+
+        self.parent, self.index = None, None
+
+        self.LIST = []
+
+    def insert_left_children(self, left_object):
+        &quot;&quot;&quot;[insert left children]
+
+        Args:
+            left_object ([str, float]): [node_label, edge]
+        &quot;&quot;&quot;
+        # create a new node
+        temp = TreeNode(left_object)
+        # if left children exist
+        if self.left:
+
+            temp.left = self.left
+
+            self.left = temp
+        # if left children does not exist
+        else:
+            self.left = temp
+
+    def insert_right_children(self, right_object):
+        &quot;&quot;&quot;[insert right children]
+
+        Args:
+            right_object ([str, float]): [node_label, edge]
+        &quot;&quot;&quot;
+        # create a new node
+        temp = TreeNode(right_object)
+        # if right childern exist
+        if self.right:
+
+            temp.right = self.right
+
+            self.right = temp
+        # if right children does not exist
+        else:
+            self.right = temp
+
+    def isRoot(self):
+        &quot;&quot;&quot;[check if the node is Root node]
+
+        Returns:
+            [bool]: [if node is Root return True]
+        &quot;&quot;&quot;
+
+        handle = False
+
+        if self.key[0] == 'root':
+
+            handle = True
+
+        return handle
+
+    def isLeaf(self):
+        &quot;&quot;&quot;[check if the node is Leaf node]
+
+        Returns:
+            [bool]: [if the node is Leaf return True]
+        &quot;&quot;&quot;
+
+        handle = False
+
+        if not self.left and not self.right:
+
+            handle = True
+
+        return handle
+
+    def catch_leaf(self):
+        &quot;&quot;&quot;[show the partion list of leafs below the node, and mainly used to debug]
+
+        Returns:
+            [list]: [a list contained all leaf below the node]
+        &quot;&quot;&quot;
+
+        LIST = []
+
+        # check if the node is leaf
+        if self.isLeaf():
+
+            LIST.append(self.index)
+
+        if self.left:
+
+            LIST.extend(self.left.catch_leaf())
+
+        if self.right:
+
+            LIST.extend(self.right.catch_leaf())
+
+        return LIST
+
+    def postorder(self):
+        &quot;&quot;&quot;[tree traversal with postorder, and mainly used to debug]
+        &quot;&quot;&quot;
+        if self.left:
+
+            self.left.postorder()
+
+        if self.right:
+
+            self.right.postorder()
+
+        print(self.key)
+
+
+def get_parser() -&gt; dict:
+    &quot;&quot;&quot;[function used to parse parameters from command line and set log]
+
+    Returns:
+        [dict]: [return a dict stored parameters]
+    &quot;&quot;&quot;
+    # set logging
+    logging.basicConfig(level=logging.DEBUG,
+                        format='%(levelname)s:%(asctime)s:%(message)s')
+
+    # set parser
+    parser = argparse.ArgumentParser(
+        prog='PROG',
+        description='Program designed to condcut NJ ',
+        formatter_class=argparse.MetavarTypeHelpFormatter)
+
+    # add parameter for input of fa file
+    parser.add_argument('-i',
+                        '--input',
+                        help='The input file (fasta format)',
+                        required=True,
+                        type=str)
+
+    # add parameter for outout of edge file
+    parser.add_argument(
+        '-e',
+        '--edge',
+        help='The output file of edges matrix. Default: edges.txt',
+        default='edges.txt',
+        type=str)
+
+    # add parameter for output of tree file
+    parser.add_argument(
+        '-t',
+        '--tree',
+        help='The output file of newick tree. Default: tree.txt',
+        default='tree.txt',
+        type=str)
+
+    # add parameter for output of distance matrix
+    parser.add_argument(
+        '-d',
+        '--distance',
+        help=
+        'The output file of distance matrix. Default: genetic_distance.txt',
+        default='genetic_distance.txt',
+        type=str)
+
+    # add parametr for number of boostrap; Default: not conduct bootstrap
+    parser.add_argument(
+        '-b',
+        '--bootstrap',
+        help=&quot;The number of boostrap. Result will be stored in 'bootstrap.txt'&quot;,
+        default=None,
+        type=int)
+
+    # get parameters
+    args = parser.parse_args()
+
+    return args
+
+
+##############################################
+#CELL FOR GETING GENETIC DISTANCE MATRIX
+##############################################
+
+
+def read_input(input: str) -&gt; dict:
+    &quot;&quot;&quot;[read input of fa file and return a dict whose value is nametuple stored information]
+
+    Args:
+        input (str): [fasta file]
+
+    Returns:
+        dict: [seq_label: (seq,index )]
+    &quot;&quot;&quot;
+    #  create namedtuple to store information
+    seqs, seq = {}, namedtuple('info', ['seq', 'index'])
+
+    # open file as a list
+    content = open(input).readlines()
+
+    # init index of sequence
+    read_index = 1
+
+    # read seq into the dict
+    for index, line in enumerate(content):
+        # check header
+        if line.startswith('&gt;'):
+
+            seqs[line.strip('&gt;\n')] = seq(content[index + 1].strip(),
+                                          read_index)
+            read_index += 1
+
+    return seqs
+
+
+def genetic_distance(seq1: str, seq2: str) -&gt; float:
+    &quot;&quot;&quot;[calculate genetic distance of seq1 and seqw]
+
+    Args:
+        seq1 (str): [sequences of seq1]
+        seq2 (str): [sequences of seq2]
+
+    Returns:
+        float: [genetic distance]
+    &quot;&quot;&quot;
+    # get length of sequences
+    length = len(seq1)
+
+    # init mismatch
+    mismatch = 0
+
+    # begin to calculate
+    for s1, s2 in zip(seq1, seq2):
+
+        if s1 != s2:
+
+            mismatch += 1
+
+    return mismatch / length
+
+
+def fetch_distance(seq1_index: str, seq2_index: str,
+                   matrix: dict) -&gt; float or None:
+    &quot;&quot;&quot;[fetch distance from distance matrix in case comupute pair distance repeatly]
+
+    Args:
+        seq1_index (str): [seq1 label]
+        seq2_index (str): [seq2 label]
+        matrix (dict): [store distances that is calculated]
+
+    Returns:
+        float or None: [if distance has calculated return value otherwise None]
+    &quot;&quot;&quot;
+    # init value
+    distance = None
+
+    # check if the distance is already calculated
+    if (seq1_index, seq2_index) in matrix:
+
+        distance = matrix[(seq1_index, seq2_index)]
+
+    elif (seq2_index, seq1_index) in matrix:
+
+        distance = matrix[(seq2_index, seq1_index)]
+
+    return distance
+
+
+def get_distance_matrix(seqs: dict, out: str) -&gt; dict:
+    &quot;&quot;&quot;[write distance matrix to file]
+
+    Args:
+        seqs (dict): [store infomation of seqs like {seq_label: (seq:, index:)}]
+        out (str): [the name of genetic distance file]
+
+    Returns:
+        dict: [{(seq1_label,seq2_label):genetic_distance}]
+    &quot;&quot;&quot;
+    # open new file
+    out_put = open(out, 'w')
+
+    # init dict
+    distance_map = {}
+
+    # write header
+    header = '\t'.join(seqs.keys())
+    out_put.write(f'\t{header}\n')
+
+    # begin to calculate distance and write to file
+    for seq1_label, seq1_info in seqs.items():
+        # init list to store distance of every line
+        line = []
+
+        for seq2_label, seq2_info in seqs.items():
+            # check if the distance is already computed
+            distance = fetch_distance(seq1_label, seq2_label, distance_map)
+
+            if not distance:
+                # if not exist then calculate it and store
+                distance = genetic_distance(seq1_info.seq, seq2_info.seq)
+
+                distance_map[(seq1_label, seq2_label)] = distance
+
+            line.append(distance)
+        # write every line
+        line = '\t'.join([str(element) for element in line])
+        out_put.write(f'{seq1_label}\t{line}\n')
+
+    out_put.close()
+
+    return distance_map
+
+
+##############################################
+#                            NJ ALGORITHM
+##############################################
+
+
+def cacl_sum_distance(taxa: str, leaf_set: set,
+                      distance_matrix: dict) -&gt; float:
+    &quot;&quot;&quot;[calculate sum distance of node away from other nodes]
+
+    Args:
+        taxa ([str]): [label for one node]
+        leaf_set ([set]): [a set store current nodes needed to be merged]
+        distance_matrix ([dict]): [{(seq1_label,seq2_label):genetic_distance}]
+
+    Returns:
+        [float]: [sum distance of node away from others]
+    &quot;&quot;&quot;
+    # init value
+    result = 0
+    # calculate sum distance
+    for other_taxa in leaf_set - set([taxa]):
+        # fectch genetic distance
+        result += fetch_distance(taxa, other_taxa, distance_matrix)
+
+    return result
+
+
+def find_qmin(leaf_set: set, distance_matrix: dict) -&gt; dict:
+    &quot;&quot;&quot;[ calculate min q_value and get information]
+
+    Args:
+        leaf_set ([set]): [current nodes needed to be merged]
+        distance_matrix ([dict]): [dict stored genetic distance of current nodes]
+
+    Returns:
+        [dict]:  [value, combination,taxa1_sum, taxa2_sum]
+    &quot;&quot;&quot;
+    # init dict
+    qmin = {
+        'combination': None,  # combination of node for merging
+        'q_value': None,  # min Q value
+        'taxa1_sum': None,  # sum distance of node away from others
+        'taxa2_sum': None
+    }
+
+    # calculate  Q value every combinatin of nodes
+    for combination, distance in distance_matrix.items():
+
+        taxa1, taxa2 = combination
+        # calculate sum distance of node away from others
+        taxa1_sum, taxa2_sum = cacl_sum_distance(
+            taxa1, leaf_set,
+            distance_matrix), cacl_sum_distance(taxa2, leaf_set,
+                                                distance_matrix)
+        # get Q value
+        value = (len(leaf_set) - 2) * distance - taxa1_sum - taxa2_sum
+        # compare Q value
+        if not qmin['q_value']:
+            # if Q value does not exist then store related information
+            qmin['q_value'], qmin['combination'], qmin['taxa1_sum'], qmin[
+                'taxa2_sum'] = value, combination, taxa1_sum, taxa2_sum
+        # if Q value exist then compare to choose minimun value
+        else:
+            if value &lt; qmin['q_value']:
+
+                qmin['q_value'], qmin['combination'], qmin['taxa1_sum'], qmin[
+                    'taxa2_sum'] = value, combination, taxa1_sum, taxa2_sum
+
+    return qmin
+
+
+def help_nj(leaf_set: set, distance_matrix: dict):
+    &quot;&quot;&quot;[helper function to conduct neighbor joining]
+
+    Args:
+        leaf_set ([set]): [current nodes needed to be merged]
+        distance_matrix ([dict]): [store pair distance of current nodes]
+
+    Returns:
+        TREEDICT: a dict stored node that has been merged in binary tree format
+        final_leaf_set: final twos node after finshing NJ
+        final_matrix:  genetic distances of final two nodes
+    &quot;&quot;&quot;
+    # init dict to store nodes that has been merged in format of Binary Tree
+    TREEDICT = {}
+
+    def neighbor_joining(leaf_set: set, distance_matrix: dict):
+        &quot;&quot;&quot;[implementation of neighbors joining]
+
+        Args:
+            leaf_set ([set]): [current nodes needed to be merged]
+            distance_matrix ([dict]): [store genetic distance of current nodes]
+        &quot;&quot;&quot;
+        # get nonlocal value
+        nonlocal TREEDICT
+
+        # the rule to end the recursion
+        if len(leaf_set) &lt; 3:
+
+            return (leaf_set, distance_matrix)
+        # enter recursion
+        else:
+            # find min Q value
+            qmin_info = find_qmin(leaf_set, distance_matrix)
+            # get nodes needed to be merged
+            taxa1, taxa2 = qmin_info['combination']
+            # edge from taxa1 to new node
+            edge_taxa1_node = 0.5 * distance_matrix[
+                qmin_info['combination']] + (qmin_info['taxa1_sum'] -
+                                             qmin_info['taxa2_sum']) / (
+                                                 2 * (len(leaf_set) - 2))
+            # edge from taxa1 to new node
+            edge_taxa2_node = distance_matrix[
+                qmin_info['combination']] - edge_taxa1_node
+
+            # init dict to update genetic matrix
+            matrix = {}
+            # create label for new node
+            new_node = f'{taxa1}_{taxa2}'
+            # calculate distance from new node to other nodes
+            for node in leaf_set - set(qmin_info['combination']):
+                # store in new genetic matrix with information of old genetic matrix
+                matrix[(
+                    new_node,
+                    node)] = (fetch_distance(taxa1, node, distance_matrix) +
+                              fetch_distance(taxa2, node, distance_matrix) -
+                              distance_matrix[(taxa1, taxa2)]) * 0.5
+
+            # store genetic distances of other nodes in new genetic matrix
+            for combination, distance in distance_matrix.items():
+
+                if (taxa1 not in combination) and (taxa2 not in combination):
+
+                    matrix[combination] = distance
+
+            # store phylogenetic nodes that has been merged in Binary Tree format
+            # creat a tree node that linked two merged nodes in Binary Tree
+
+            # if one of merged nodes has been in Binary Tree then add edges
+            # taxa1 is always regarded as left children
+            if taxa1 in TREEDICT:
+
+                left = TREEDICT.pop(taxa1)
+                left.key[1] = edge_taxa1_node
+
+            # if one of merged nodes is not stored in Binary Tree
+            else:
+                # create a Tree node and store its label and edge
+                left = TreeNode([taxa1, edge_taxa1_node])
+
+            # taxa2 is same with taxa1
+            # taxa2 is always regarded as right children
+            if taxa2 in TREEDICT:
+
+                right = TREEDICT.pop(taxa2)
+                right.key[1] = edge_taxa2_node
+
+            else:
+
+                right = TreeNode([taxa2, edge_taxa2_node])
+
+            # create a new_node linked two merged nodes in Binary Tree
+            # the new_node has no edge
+            internal_node = TreeNode([new_node, None])
+            # add paraent information for two merged nodes
+            left.parent, right.parent = internal_node, internal_node
+            # link two merged nodes as children in Binary Tree
+            internal_node.left, internal_node.right = left, right
+            # add new node to dict
+            TREEDICT[new_node] = internal_node
+            # update genetic distance matrix
+            distance_matrix = matrix
+            # update current phylogenetic nodes needed to be merged
+            leaf_set -= set(qmin_info['combination'])
+            leaf_set.add(new_node)
+
+            return neighbor_joining(leaf_set, distance_matrix)
+
+    # begin to compute until two phylogenetic nodes left
+    final_leaf_set, final_matrix = neighbor_joining(leaf_set, distance_matrix)
+
+    return TREEDICT, final_leaf_set, final_matrix
+
+
+##############################################
+#               PREORDER TREE AND ADD INDEX
+##############################################
+
+
+def my_tree(TREEDICT: dict, final_distance_matrix: dict, seqs: dict):
+    &quot;&quot;&quot;   function to create Binary tree but it has fake root
+            because phylogenetic node has three childern
+            hence create a fake node as root to get a Binary Tree
+            all following behaivors related Binar Tree usually consider this situation
+
+            for binary_tree.key:
+
+            key[0] -&gt; label ; key[1] -&gt; edge
+
+    Args:
+        TREEDICT ([dict]): [store information of binary tree ]
+        final_distance_matrix ([dict]): [distance of final two nodes]
+        seqs ([dict]): [store information of seqs]
+
+    Returns:
+        [binary tree]: [binary tree with fake root]
+    &quot;&quot;&quot;
+    # 'merged node' means nodes have been changed as binary tree
+    # init value to find if node is 'merged node'  in final two nodes after NJ
+    last_node_label = None
+    last_node_edges = None
+
+    for index, value in final_distance_matrix.items():
+
+        # get edge
+        last_node_edges = value
+
+        # check if node is 'merged node'
+        for label in index:
+            # if not
+            if label in seqs:
+                # get label
+                last_node_label = label
+
+    # create a fake root with label 'root'
+    fake_root = TreeNode(('root', ' '))
+    # get node label of final two nodes after NJ
+    current_node_index = list(TREEDICT.keys())
+    # if final two nodes are merged node
+    if not last_node_label:
+
+        # add last edge to right childern of fake root
+        # because the left childern of fake root is &quot;TRUE root&quot;, which has three childerns
+        # the right childern of fake root is linked to left children of it in real
+        # so the edge indictes the distance between left childern and right childern
+        # even though right childern is linked to fake root in binary_tree
+        TREEDICT[current_node_index[1]].key[1] = last_node_edges
+
+        # create tree structure
+        fake_root.left = TREEDICT[current_node_index[0]]
+        fake_root.right = TREEDICT[current_node_index[1]]
+
+    # if one of final two nodes is merged node
+    else:
+
+        # set node that is not merged node as tree structure
+        right_node = TreeNode([last_node_label, last_node_edges])
+
+        # set one of final two nodes, a merged node, as left childern of fake root
+        fake_root.left = TREEDICT[current_node_index[0]]
+
+        # add right childern
+        fake_root.right = right_node
+
+    return fake_root
+
+
+def help_edge_matrix(tree, seqs: dict, edge_file: str):
+    &quot;&quot;&quot;[help function to do preorder traversal in order to get edge file]
+
+    Args:
+        tree ([Binary Tree])
+        seqs (dict): [store information about label, seq, and index of seqs]
+        edge_file (str): [output of edge]
+
+    Returns:
+        [Binary Tree]: [Binary Tree whose internal node has index]
+    &quot;&quot;&quot;
+    # init index for internal node
+    N = len(seqs) + 1
+    # open new file
+    EDGE_FILE = open(edge_file, 'w')  # changes
+
+    def edge_matrix(tree):
+        # get nonlocal value
+        nonlocal N
+        # preorder tree
+        if tree:
+            # index of fake root is None
+            if tree.isRoot():
+
+                tree.index = None
+            # tree.key[0] is label of node
+            # if it not in seqs then it is internal node
+            elif (tree.key[0] not in seqs):
+                # set index for internal node
+                tree.index = N
+                N += 1
+
+            else:
+                # get index of leaf node
+                tree.index = seqs[tree.key[0]].index
+            # write information of parent and chilren
+            # left and right childern of fake root have no parent : None
+            if tree.parent:
+
+                EDGE_FILE.write(
+                    f'{tree.parent.index}\t{tree.index}\t{tree.key[1]}\n')
+            edge_matrix(tree.left)
+            edge_matrix(tree.right)
+
+    edge_matrix(tree)
+
+    # add the TRUE ROOT and its children
+    EDGE_FILE.write(
+        f'{tree.left.index}\t{tree.right.index}\t{tree.right.key[1]}\n')
+
+    EDGE_FILE.close()
+    return tree
+
+
+##############################################
+#                         POSTORDER TREE
+# WARNING: MUST CONDUCT AFTER PREODER
+##############################################
+
+
+def help_newick_parse(tree, tree_file: str):
+    &quot;&quot;&quot;[help function to do postorder traversal in order to get tree file]
+
+    Args:
+        tree ([Binary Tree])
+        tree_file (str): [output of tree]
+    &quot;&quot;&quot;
+    # open tree file
+    TREE_FILE = open(tree_file, 'w')
+    # get true root lable (left children of fake root)
+    true_root_label = tree.left.key[0]
+
+    def newick_parse(tree):
+        # get nonlocal value
+        nonlocal true_root_label
+        # postorder tree
+        if tree:
+
+            left = newick_parse(tree.left)
+            right = newick_parse(tree.right)
+            # if node is internal node
+            if left and right:
+                # check if node is true node
+                if tree.key[0] == true_root_label:
+                    # not add '( )' so as to have three childern finally
+                    return f'{left},{right}'
+                # check if node is root
+                elif tree.isRoot():
+                    # add '()' finally
+                    return f'({left},{right})'
+                # if node is internal node
+                else:
+                    return f'({left},{right}):{tree.key[1]}'
+            # if node is leaf node
+            else:
+                return f'{tree.key[0]}:{tree.key[1]}'
+
+    newick = newick_parse(tree)
+
+    TREE_FILE.write(f'{newick};')
+
+    TREE_FILE.close()
+
+
+##############################################
+#                         BOOTSTRAP
+##############################################
+
+
+def bootstrap(original_seqs: dict):
+    &quot;&quot;&quot;[bootstrap original seqs and return bootstrap sample and bootstrap seqs]
+
+    Args:
+        original_seqs ([dict]): [original seqs]
+
+    Returns:
+        tree_root_with_node_index: bootstrap sample whose node has index
+        seqs_bootstrap : bootstrap seqs contained information like index, label, and sequences
+    &quot;&quot;&quot;
+    # change data structure in oder to use pandas:
+    #               0 1 2  (column_number)
+    #label 1
+    #label 2
+    #...
+    seqs_pd = {
+        index: list(value.seq)
+        for index, value in original_seqs.items()
+    }
+    df = pd.DataFrame(seqs_pd).T
+
+    # using random to resample
+    df_bootstrap = df.loc[:, random.choices(range(df.shape[1]), k=df.shape[1])]
+
+    # get bootstrap information
+    seqs_bootstrap = original_seqs.copy()
+    # change sequences to bootstrap sequences
+    for index, value in df_bootstrap.iterrows():
+        seqs_bootstrap[index] = seqs_bootstrap[index]._replace(
+            seq=''.join(value.values))
+
+    # get nodes needed to be coudcted NJ
+    leaf_set = set(seqs_bootstrap.keys())
+    # calculate genetic_distance for bootstrap samples
+    distance_map = {}
+    for seq1_label, seq1_info in seqs_bootstrap.items():
+
+        for seq2_label, seq2_info in seqs_bootstrap.items():
+
+            if seq1_label != seq2_label:
+
+                distance = fetch_distance(seq1_label, seq2_label, distance_map)
+
+                if not distance:
+
+                    distance = genetic_distance(seq1_info.seq, seq2_info.seq)
+
+                    distance_map[(seq1_label, seq2_label)] = distance
+    # conduct NJ
+    TREEDICT, _, final_distance_matrix = help_nj(leaf_set, distance_map)
+    # construct binary_tree
+    # get edge file for  last bootstrap (NOT USED)
+    tree_root = my_tree(TREEDICT, final_distance_matrix, seqs_bootstrap)
+    tree_root_with_node_index = help_edge_matrix(tree_root, seqs_bootstrap,
+                                                 'last_bootstrap.edge')
+    return tree_root_with_node_index, seqs_bootstrap
+
+
+def help_find_partion(tree) -&gt; dict:
+    &quot;&quot;&quot;[function to partion list for internal nodes in a binary tree]
+
+    Args:
+        tree ([binary_tree]): [binary_tree with fake root]
+
+    Returns:
+        [dict]: [node_index: partion list]
+    &quot;&quot;&quot;
+    # init dict to store index and its partion list
+    internal_node_partion = defaultdict(list)
+
+    # postorder traversal to find leafs for every internal node
+    def find_partion(tree):
+
+        LIST = []
+        # begin
+        if tree:
+
+            left = find_partion(tree.left)
+            right = find_partion(tree.right)
+
+            if tree.isLeaf():
+
+                LIST.append(tree.index)
+
+            else:
+                # flatten list
+                LIST.extend([*left, *right])
+
+                internal_node_partion[tree.index].extend(
+                    sorted([*left, *right]))
+
+            return LIST
+
+    # change partion list of fake root to true root
+    find_partion(tree)
+    internal_node_partion[tree.left.index] = internal_node_partion.pop(
+        tree.index)
+
+    return internal_node_partion
+
+
+def get_bootstrap_value(bootstrap_number: int,
+                        original_seqs: dict,
+                        original_tree,
+                        bootstrap_file: str = 'bootstrap.txt'):
+    &quot;&quot;&quot;[function to integrate relation methods to get bootstrap values for original tree]
+
+    Args:
+        bootstrap_number (int): [number for bootstrap. default = None]
+        original_seqs (dict): [information of original sequences]
+        original_tree ([type]): [binary tree of original sequences]
+        bootstrap_file (str): [output of bootstrap]
+    &quot;&quot;&quot;
+    # init list to store bootstrap value for every internal node
+    internal_node_bootstrap_value = [0] * (len(original_seqs) - 2)
+    # get partion list of every internal node in original tree
+    original_partion_dict = help_find_partion(original_tree)
+    # init list to store dict contained bootstrap_partion and its node_index
+    bootstrap_partion_list = []
+    # begin to bootstrap and consruct binary tree
+
+    for number in range(bootstrap_number):
+        logging.info(f'BOOTSTRAP NUMBER : {number+1}')
+        bootstrap_tree, _ = bootstrap(original_seqs)
+        bootstrap_partion_list.append(help_find_partion(bootstrap_tree))
+
+    # compare partion list to update bootstrap value
+    for internal_node_index, partion_conent in original_partion_dict.items():
+
+        for bootstrap_partion in bootstrap_partion_list:
+
+            if partion_conent in bootstrap_partion.values():
+
+                internal_node_bootstrap_value[internal_node_index -
+                                              len(original_seqs) - 1] += 1
+    # change format for the bootstrap values
+    result = [
+        f'{value/bootstrap_number}\n'
+        for value in internal_node_bootstrap_value
+    ]
+    # write to file
+    with open(bootstrap_file, 'w') as file:
+        file.writelines(result)
+
+
+##############################################
+#                                  MAIN
+##############################################
+
+
+def worker(args: dict):
+    &quot;&quot;&quot;[function to integrate all above method to conduct NJ and output tree and edge file]
+
+    Args:
+        args ([dict]): [parameters getting from command line]
+
+    Returns:
+        tree_root_with_index : binary tree whose node has index
+        seq : information of sequences
+    &quot;&quot;&quot;
+    # read fa file and parse it
+    seqs = read_input(args.input)
+    # get labels of sequences
+    leaf_set = set(seqs.keys())
+    # get pair genetic distance
+    distance_matrix = get_distance_matrix(seqs, args.distance)
+    # delete distances between same sequences
+    distance_matrix = {
+        item: value
+        for item, value in distance_matrix.items() if value != 0
+    }
+    # get TREEDICT and distance of final two nodes
+    TREEDICT, _, final_distance_matrix = help_nj(leaf_set, distance_matrix)
+    # construct binary tree REMEMBER it has fake root
+    # left childern of fake root is regarded as true root
+    tree_root = my_tree(TREEDICT, final_distance_matrix, seqs)
+    # get edge file and add index for every node in binary tree
+    tree_root_with_index = help_edge_matrix(tree_root, seqs, args.edge)
+    # get tree file REMEMBER it must conduct after getting edge files
+    # because it need index of node
+    help_newick_parse(tree_root_with_index, args.tree)
+
+    return tree_root_with_index, seqs
+
+
+def main():
+    args = get_parser()
+
+    with Timer() as t:
+        logging.info(f'Neighbor Joining begin.......')
+        tree_root_with_index, seqs = worker(args)
+
+    logging.info(f'Neighbor Joining  DONE : TIME {t.elapsed:.2f}s\n')
+
+    if args.bootstrap:
+        with Timer() as t:
+            get_bootstrap_value(args.bootstrap, seqs, tree_root_with_index)
+        logging.info(f'BOOTSTRAP IS DONE : TIME {t.elapsed:.2f}s\n')
+    else:
+        logging.info(f'BOOTSTRAP IS NOT DONE')
+
+    logging.info(f'EDGE_FILE : {args.edge}')
+    logging.info(f'TREE_FILE :  {args.tree}')
+    logging.info(f'DISTANCE_FILE: {args.distance}')
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+
+</code></pre>
+<p><strong>Thanks for your reading! Hopefully helpful!</strong></p>
+
+          </div>
+
+          
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/en/tag/algorithm/">Algorithm</a>
+  
+</div>
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/en/post/getting-started/" rel="prev">Welcome to Wowchemy, the website builder for Hugo</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Apr 3, 2021</p>
+
+          
+
+
+
+
+
+          
+
+
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+
+  
+
+  
+
+  <p class="powered-by">
+    © 2020 Yangyang Li. All Rights Reserved.
+  </p>
+
+  
+  
+
+
+
+
+
+  
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    This website is licensed under CC BY-NC-ND 4.0
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.4/mermaid.min.js" integrity="sha512-as1BF4+iHZ3BVO6LLDQ7zrbvTXM+c/1iZ1qII/c3c4L8Rn5tHLpFUtpaEtBNS92f+xGsCzsD7b62XP3XYap6oA==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/c&#43;&#43;.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/java.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/go.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.f722080e3339eab234747b51f20c5862.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Test | My Life</title>
+    <link>https://cauliyang.github.io/en/category/test/</link>
+      <atom:link href="https://cauliyang.github.io/en/category/test/index.xml" rel="self" type="application/rss+xml" />
+    <description>Test</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2020 Yangyang Li. All Rights Reserved.</copyright><lastBuildDate>Fri, 02 Apr 2021 14:45:20 +0800</lastBuildDate>
+    <image>
+      <url>https://cauliyang.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Test</title>
+      <link>https://cauliyang.github.io/en/category/test/</link>
+    </image>
+    
+    <item>
+      <title>My New Blog</title>
+      <link>https://cauliyang.github.io/en/post/my-new-blog/</link>
+      <pubDate>Fri, 02 Apr 2021 14:45:20 +0800</pubDate>
+      <guid>https://cauliyang.github.io/en/post/my-new-blog/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

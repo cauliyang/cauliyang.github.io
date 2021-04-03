@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Final Project | My Life</title>
+    <link>https://cauliyang.github.io/en/tag/final-project/</link>
+      <atom:link href="https://cauliyang.github.io/en/tag/final-project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Final Project</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2020 Yangyang Li. All Rights Reserved.</copyright><lastBuildDate>Sat, 03 Apr 2021 10:04:04 +0800</lastBuildDate>
+    <image>
+      <url>https://cauliyang.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Final Project</title>
+      <link>https://cauliyang.github.io/en/tag/final-project/</link>
+    </image>
+    
+    <item>
+      <title>Spring2021 Project</title>
+      <link>https://cauliyang.github.io/en/talk/spring2021-project/</link>
+      <pubDate>Sat, 03 Apr 2021 10:04:04 +0800</pubDate>
+      <guid>https://cauliyang.github.io/en/talk/spring2021-project/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

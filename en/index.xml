@@ -1,0 +1,1407 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My Life</title>
+    <link>https://cauliyang.github.io/en/</link>
+      <atom:link href="https://cauliyang.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+    <description>My Life</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2020 Yangyang Li. All Rights Reserved.</copyright><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://cauliyang.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>My Life</title>
+      <link>https://cauliyang.github.io/en/</link>
+    </image>
+    
+    <item>
+      <title>Python basics</title>
+      <link>https://cauliyang.github.io/en/courses/example/python/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://cauliyang.github.io/en/courses/example/python/</guid>
+      <description>&lt;p&gt;Build a foundation in Python.&lt;/p&gt;
+&lt;p&gt;
+  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
+&lt;h2 id=&#34;learn&#34;&gt;Learn&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/rfscVS0vtbw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;quiz&#34;&gt;Quiz&lt;/h2&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
+  &lt;summary&gt;What is the difference between lists and tuples?&lt;/summary&gt;
+  &lt;p&gt;&lt;p&gt;Lists&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Lists are mutable - they can be changed&lt;/li&gt;
+&lt;li&gt;Slower than tuples&lt;/li&gt;
+&lt;li&gt;Syntax: &lt;code&gt;a_list = [1, 2.0, &#39;Hello world&#39;]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Tuples&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tuples are immutable - they can&amp;rsquo;t be changed&lt;/li&gt;
+&lt;li&gt;Tuples are faster than lists&lt;/li&gt;
+&lt;li&gt;Syntax: &lt;code&gt;a_tuple = (1, 2.0, &#39;Hello world&#39;)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+&lt;/details&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-3&#34;&gt;
+  &lt;summary&gt;Is Python case-sensitive?&lt;/summary&gt;
+  &lt;p&gt;Yes&lt;/p&gt;
+&lt;/details&gt;</description>
+    </item>
+    
+    <item>
+      <title>Visualization</title>
+      <link>https://cauliyang.github.io/en/courses/example/visualization/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://cauliyang.github.io/en/courses/example/visualization/</guid>
+      <description>&lt;p&gt;Learn how to visualize data with Plotly.&lt;/p&gt;
+&lt;p&gt;
+  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
+&lt;h2 id=&#34;learn&#34;&gt;Learn&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/hSPmj7mK6ng&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;quiz&#34;&gt;Quiz&lt;/h2&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
+  &lt;summary&gt;When is a heatmap useful?&lt;/summary&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-3&#34;&gt;
+  &lt;summary&gt;Write Plotly code to render a bar chart&lt;/summary&gt;
+  &lt;p&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import plotly.express as px
+data_canada = px.data.gapminder().query(&amp;quot;country == &#39;Canada&#39;&amp;quot;)
+fig = px.bar(data_canada, x=&#39;year&#39;, y=&#39;pop&#39;)
+fig.show()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/p&gt;
+&lt;/details&gt;</description>
+    </item>
+    
+    <item>
+      <title>Statistics</title>
+      <link>https://cauliyang.github.io/en/courses/example/stats/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://cauliyang.github.io/en/courses/example/stats/</guid>
+      <description>&lt;p&gt;Introduction to statistics for data science.&lt;/p&gt;
+&lt;p&gt;
+  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
+&lt;h2 id=&#34;learn&#34;&gt;Learn&lt;/h2&gt;
+&lt;p&gt;The general form of the &lt;strong&gt;normal&lt;/strong&gt; probability density function is:&lt;/p&gt;
+&lt;p&gt;$$
+f(x) = \frac{1}{\sigma \sqrt{2\pi} } e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}
+$$&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    The parameter $\mu$ is the mean or expectation of the distribution.
+$\sigma$ is its standard deviation.
+The variance of the distribution is $\sigma^{2}$.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;quiz&#34;&gt;Quiz&lt;/h2&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
+  &lt;summary&gt;What is the parameter $\mu$?&lt;/summary&gt;
+  &lt;p&gt;The parameter $\mu$ is the mean or expectation of the distribution.&lt;/p&gt;
+&lt;/details&gt;</description>
+    </item>
+    
+    <item>
+      <title>Example Talk</title>
+      <link>https://cauliyang.github.io/en/talk/example-talk/</link>
+      <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
+      <guid>https://cauliyang.github.io/en/talk/example-talk/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Wowchemy&amp;rsquo;s &lt;a href=&#34;https://wowchemy.com/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Slides&lt;/em&gt;&lt;/a&gt; feature and link using &lt;code&gt;slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Upload&lt;/strong&gt; an existing slide deck to &lt;code&gt;static/&lt;/code&gt; and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Further event details, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;page elements&lt;/a&gt; such as image galleries, can be added to the body of this page.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Nei Saitou Neighbor Joining</title>
+      <link>https://cauliyang.github.io/en/post/nei-saitou-neighbor-joining/</link>
+      <pubDate>Sat, 03 Apr 2021 11:15:00 +0800</pubDate>
+      <guid>https://cauliyang.github.io/en/post/nei-saitou-neighbor-joining/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;Before diving into code, the description of NJ algorithm can be found in &lt;img src=&#34;1605172209524.png&#34; alt=&#34;This Link&#34;&gt;, where first column indicates parent node, and second column is its children node, the last column is the value of edge.&lt;/p&gt;
+&lt;h2 id=&#34;neighbor-joining-algorithm&#34;&gt;Neighbor Joining Algorithm&lt;/h2&gt;
+&lt;p&gt;The Neighbor-joining Algorithm Given a distance matrix d compute an unrooted tree topology complete with edge lengths that tries to preserve the additive property: $d_ {i,m} + d_{j,m} − d_{i,j} = 2d_{k,m}$ where $k$ is the ﬁrst node on both routes from $i$ and $j$ to $m$.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Let the set of clusters be called $L$ and initially $i → C_i; ∀i$ that is $| C_i | = 1$ and $L = C_1 , C_2 , . . . C_N$.&lt;/li&gt;
+&lt;li&gt;$d_{i,j}$ is the distance from the initial distance matrix.&lt;/li&gt;
+&lt;li&gt;Compute “normalized distance matrix” $D_{i,j}$ for all $i, j$ such that
+$$D_{i,j} = d_{i,j} − (r_i + r_j ) \ where\ r_i = \frac{1}{|L|-2} \sum_{z \in L} d_{i,z}$$
+This subtracts the average distance to all other nodes than the pair involved. **Note: this is not where we use the distance identity.**&lt;/li&gt;
+&lt;li&gt;Use normalized distance to ﬁnd $(i, j) = argmin D_{i,j}; C_i,C_j \in L$&lt;/li&gt;
+&lt;li&gt;Merge $C_i ∪ C_j → C_k$ where $k$ is a new cluster number.&lt;/li&gt;
+&lt;li&gt;Mark old clusters as used so that eﬀectively: $L ← L − C_i − C_j$&lt;/li&gt;
+&lt;li&gt;Compute a new unnormalized distance matrix including the new cluster $k$ and excluding $i, j$.
+$$d_{k,z} = d_{z,k} = (d_{i,z} + d_{j,,z} − d_{i,j} ) for all z ∈ L 2$$
+This uses the additivity of the distances to compute the distance to the new cluster from each other node.&lt;/li&gt;
+&lt;li&gt;Compute the length of the edges from $k$ to $i$ and $j$. Even though $C_k$has assumed the role of both $C_i$ and $C_j$  you still need the edge length to $i$ and $j$ from $k$ in order to “draw” the tree.
+$$edge_{i,k} = (d_{i,j} + r_i − r_j)$$
+$$edge_{j,k} = (d_{i,j} + r_j − r_i)$$&lt;/li&gt;
+&lt;li&gt;Deﬁne height $h_k = d_{i,j} /2$ where $h_k$ is the height of node that is the ancestor to all in $C_k$ . When drawing the tree $h_k$ is the height above the baseline (where all the leaves are).&lt;/li&gt;
+&lt;li&gt;$L ← L ∪ C_k$&lt;/li&gt;
+&lt;li&gt;While there is more than two clusters left go to step 3&lt;/li&gt;
+&lt;li&gt;Finally, join the remaining two clusters with:
+$$edge_{j,k} = d_{i,j} $$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Implementation Notes Consider this part of the computation:&lt;/strong&gt;
+$$D_{i,j} = d_{i,j} − (r_i + r_j ) \ where \ r_i =  \frac{1}{|L|-2} \sum_{z \in L}d_{i,z}$$
+The values of r_z can be computed once each time we want to compute matrix $D$. This saves a vast amount of time. Furthermore, since $D_{i,j}$ is only used to ﬁnd the argmin of $D_{i,j}$ we actually don’t have to save array $D$; we only need to ﬁnd the argmin of it. So ﬁrst compute all the r and then combine the argmin step with the computation of $D_{i,j}$&lt;/p&gt;
+&lt;h2 id=&#34;implementation&#34;&gt;Implementation&lt;/h2&gt;
+&lt;p&gt;I write code contained comments, and it is about 1000 lines that consumes me two whole days. Now let me show my code with rich comments. If you have any questions or recommendation, I am very glad to communicate with you! Please feel free to reach me.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# -*- coding: UTF-8 -*-
+# Time 20201109
+&#39;&#39;&#39;
+This code integrate bootstrap, geting edge_file and tree_file
+
+USAGE: python -i fa_file -d out_distance_matrix -e out_edge -t out_tree -b number_bootstrap
+&#39;&#39;&#39;
+# import needed library
+import argparse
+import logging
+import random
+import time
+from collections import defaultdict, namedtuple
+
+import pandas as pd
+
+
+class Timer:
+    &amp;quot;&amp;quot;&amp;quot;[construct  Timer to show working time of tasks]
+    &amp;quot;&amp;quot;&amp;quot;
+    def __init__(self, func=time.perf_counter):
+        &amp;quot;&amp;quot;&amp;quot;[init values]
+
+        Args:
+            func : Defaults to time.perf_counter.
+        &amp;quot;&amp;quot;&amp;quot;
+        self.elapsed = 0.0
+
+        self._func = func
+
+        self._start = None
+
+    def start(self):
+        &amp;quot;&amp;quot;&amp;quot;[start a task]
+
+        Raises:
+            RuntimeError:[if task has started then raise error]
+        &amp;quot;&amp;quot;&amp;quot;
+
+        if self._start is not None:
+            raise RuntimeError(&#39;Already started&#39;)
+
+        self._start = self._func()
+
+    def stop(self):
+        &amp;quot;&amp;quot;&amp;quot;[end a task]
+
+        Raises:
+            RuntimeError[if task has not started then raise error]
+        &amp;quot;&amp;quot;&amp;quot;
+        if self._start is None:
+            raise RuntimeError(&#39;Not started&#39;)
+
+        end = self._func()
+
+        self.elapsed += end - self._start
+
+        self._start = None
+
+    def reset(self):
+        &amp;quot;&amp;quot;&amp;quot;[reset the working time]
+        &amp;quot;&amp;quot;&amp;quot;
+        self.elapsed = 0
+
+    def running(self):
+        &amp;quot;&amp;quot;&amp;quot;[check if task is running]
+
+        Returns:
+            bool
+        &amp;quot;&amp;quot;&amp;quot;
+
+        return self._start is not None
+
+    def __enter__(self):
+        &amp;quot;&amp;quot;&amp;quot;[function used to address &#39;with text&#39;]
+        &amp;quot;&amp;quot;&amp;quot;
+
+        self.start()
+
+        return self
+
+    def __exit__(self, *args):
+        &amp;quot;&amp;quot;&amp;quot;[function used to address &#39;with text&#39;]
+        &amp;quot;&amp;quot;&amp;quot;
+
+        self.stop()
+
+
+class TreeNode:
+    &amp;quot;&amp;quot;&amp;quot;[class of tree node]
+
+    &amp;quot;&amp;quot;&amp;quot;
+    def __init__(self, key=None):
+        &amp;quot;&amp;quot;&amp;quot;[init values of tree node]
+
+        Args:
+            key ([str, float], optional): [node_label, edge]. Defaults to None.
+
+            self.index: node_index
+        &amp;quot;&amp;quot;&amp;quot;
+        self.left, self.right = None, None
+
+        self.key = key
+
+        self.parent, self.index = None, None
+
+        self.LIST = []
+
+    def insert_left_children(self, left_object):
+        &amp;quot;&amp;quot;&amp;quot;[insert left children]
+
+        Args:
+            left_object ([str, float]): [node_label, edge]
+        &amp;quot;&amp;quot;&amp;quot;
+        # create a new node
+        temp = TreeNode(left_object)
+        # if left children exist
+        if self.left:
+
+            temp.left = self.left
+
+            self.left = temp
+        # if left children does not exist
+        else:
+            self.left = temp
+
+    def insert_right_children(self, right_object):
+        &amp;quot;&amp;quot;&amp;quot;[insert right children]
+
+        Args:
+            right_object ([str, float]): [node_label, edge]
+        &amp;quot;&amp;quot;&amp;quot;
+        # create a new node
+        temp = TreeNode(right_object)
+        # if right childern exist
+        if self.right:
+
+            temp.right = self.right
+
+            self.right = temp
+        # if right children does not exist
+        else:
+            self.right = temp
+
+    def isRoot(self):
+        &amp;quot;&amp;quot;&amp;quot;[check if the node is Root node]
+
+        Returns:
+            [bool]: [if node is Root return True]
+        &amp;quot;&amp;quot;&amp;quot;
+
+        handle = False
+
+        if self.key[0] == &#39;root&#39;:
+
+            handle = True
+
+        return handle
+
+    def isLeaf(self):
+        &amp;quot;&amp;quot;&amp;quot;[check if the node is Leaf node]
+
+        Returns:
+            [bool]: [if the node is Leaf return True]
+        &amp;quot;&amp;quot;&amp;quot;
+
+        handle = False
+
+        if not self.left and not self.right:
+
+            handle = True
+
+        return handle
+
+    def catch_leaf(self):
+        &amp;quot;&amp;quot;&amp;quot;[show the partion list of leafs below the node, and mainly used to debug]
+
+        Returns:
+            [list]: [a list contained all leaf below the node]
+        &amp;quot;&amp;quot;&amp;quot;
+
+        LIST = []
+
+        # check if the node is leaf
+        if self.isLeaf():
+
+            LIST.append(self.index)
+
+        if self.left:
+
+            LIST.extend(self.left.catch_leaf())
+
+        if self.right:
+
+            LIST.extend(self.right.catch_leaf())
+
+        return LIST
+
+    def postorder(self):
+        &amp;quot;&amp;quot;&amp;quot;[tree traversal with postorder, and mainly used to debug]
+        &amp;quot;&amp;quot;&amp;quot;
+        if self.left:
+
+            self.left.postorder()
+
+        if self.right:
+
+            self.right.postorder()
+
+        print(self.key)
+
+
+def get_parser() -&amp;gt; dict:
+    &amp;quot;&amp;quot;&amp;quot;[function used to parse parameters from command line and set log]
+
+    Returns:
+        [dict]: [return a dict stored parameters]
+    &amp;quot;&amp;quot;&amp;quot;
+    # set logging
+    logging.basicConfig(level=logging.DEBUG,
+                        format=&#39;%(levelname)s:%(asctime)s:%(message)s&#39;)
+
+    # set parser
+    parser = argparse.ArgumentParser(
+        prog=&#39;PROG&#39;,
+        description=&#39;Program designed to condcut NJ &#39;,
+        formatter_class=argparse.MetavarTypeHelpFormatter)
+
+    # add parameter for input of fa file
+    parser.add_argument(&#39;-i&#39;,
+                        &#39;--input&#39;,
+                        help=&#39;The input file (fasta format)&#39;,
+                        required=True,
+                        type=str)
+
+    # add parameter for outout of edge file
+    parser.add_argument(
+        &#39;-e&#39;,
+        &#39;--edge&#39;,
+        help=&#39;The output file of edges matrix. Default: edges.txt&#39;,
+        default=&#39;edges.txt&#39;,
+        type=str)
+
+    # add parameter for output of tree file
+    parser.add_argument(
+        &#39;-t&#39;,
+        &#39;--tree&#39;,
+        help=&#39;The output file of newick tree. Default: tree.txt&#39;,
+        default=&#39;tree.txt&#39;,
+        type=str)
+
+    # add parameter for output of distance matrix
+    parser.add_argument(
+        &#39;-d&#39;,
+        &#39;--distance&#39;,
+        help=
+        &#39;The output file of distance matrix. Default: genetic_distance.txt&#39;,
+        default=&#39;genetic_distance.txt&#39;,
+        type=str)
+
+    # add parametr for number of boostrap; Default: not conduct bootstrap
+    parser.add_argument(
+        &#39;-b&#39;,
+        &#39;--bootstrap&#39;,
+        help=&amp;quot;The number of boostrap. Result will be stored in &#39;bootstrap.txt&#39;&amp;quot;,
+        default=None,
+        type=int)
+
+    # get parameters
+    args = parser.parse_args()
+
+    return args
+
+
+##############################################
+#CELL FOR GETING GENETIC DISTANCE MATRIX
+##############################################
+
+
+def read_input(input: str) -&amp;gt; dict:
+    &amp;quot;&amp;quot;&amp;quot;[read input of fa file and return a dict whose value is nametuple stored information]
+
+    Args:
+        input (str): [fasta file]
+
+    Returns:
+        dict: [seq_label: (seq,index )]
+    &amp;quot;&amp;quot;&amp;quot;
+    #  create namedtuple to store information
+    seqs, seq = {}, namedtuple(&#39;info&#39;, [&#39;seq&#39;, &#39;index&#39;])
+
+    # open file as a list
+    content = open(input).readlines()
+
+    # init index of sequence
+    read_index = 1
+
+    # read seq into the dict
+    for index, line in enumerate(content):
+        # check header
+        if line.startswith(&#39;&amp;gt;&#39;):
+
+            seqs[line.strip(&#39;&amp;gt;\n&#39;)] = seq(content[index + 1].strip(),
+                                          read_index)
+            read_index += 1
+
+    return seqs
+
+
+def genetic_distance(seq1: str, seq2: str) -&amp;gt; float:
+    &amp;quot;&amp;quot;&amp;quot;[calculate genetic distance of seq1 and seqw]
+
+    Args:
+        seq1 (str): [sequences of seq1]
+        seq2 (str): [sequences of seq2]
+
+    Returns:
+        float: [genetic distance]
+    &amp;quot;&amp;quot;&amp;quot;
+    # get length of sequences
+    length = len(seq1)
+
+    # init mismatch
+    mismatch = 0
+
+    # begin to calculate
+    for s1, s2 in zip(seq1, seq2):
+
+        if s1 != s2:
+
+            mismatch += 1
+
+    return mismatch / length
+
+
+def fetch_distance(seq1_index: str, seq2_index: str,
+                   matrix: dict) -&amp;gt; float or None:
+    &amp;quot;&amp;quot;&amp;quot;[fetch distance from distance matrix in case comupute pair distance repeatly]
+
+    Args:
+        seq1_index (str): [seq1 label]
+        seq2_index (str): [seq2 label]
+        matrix (dict): [store distances that is calculated]
+
+    Returns:
+        float or None: [if distance has calculated return value otherwise None]
+    &amp;quot;&amp;quot;&amp;quot;
+    # init value
+    distance = None
+
+    # check if the distance is already calculated
+    if (seq1_index, seq2_index) in matrix:
+
+        distance = matrix[(seq1_index, seq2_index)]
+
+    elif (seq2_index, seq1_index) in matrix:
+
+        distance = matrix[(seq2_index, seq1_index)]
+
+    return distance
+
+
+def get_distance_matrix(seqs: dict, out: str) -&amp;gt; dict:
+    &amp;quot;&amp;quot;&amp;quot;[write distance matrix to file]
+
+    Args:
+        seqs (dict): [store infomation of seqs like {seq_label: (seq:, index:)}]
+        out (str): [the name of genetic distance file]
+
+    Returns:
+        dict: [{(seq1_label,seq2_label):genetic_distance}]
+    &amp;quot;&amp;quot;&amp;quot;
+    # open new file
+    out_put = open(out, &#39;w&#39;)
+
+    # init dict
+    distance_map = {}
+
+    # write header
+    header = &#39;\t&#39;.join(seqs.keys())
+    out_put.write(f&#39;\t{header}\n&#39;)
+
+    # begin to calculate distance and write to file
+    for seq1_label, seq1_info in seqs.items():
+        # init list to store distance of every line
+        line = []
+
+        for seq2_label, seq2_info in seqs.items():
+            # check if the distance is already computed
+            distance = fetch_distance(seq1_label, seq2_label, distance_map)
+
+            if not distance:
+                # if not exist then calculate it and store
+                distance = genetic_distance(seq1_info.seq, seq2_info.seq)
+
+                distance_map[(seq1_label, seq2_label)] = distance
+
+            line.append(distance)
+        # write every line
+        line = &#39;\t&#39;.join([str(element) for element in line])
+        out_put.write(f&#39;{seq1_label}\t{line}\n&#39;)
+
+    out_put.close()
+
+    return distance_map
+
+
+##############################################
+#                            NJ ALGORITHM
+##############################################
+
+
+def cacl_sum_distance(taxa: str, leaf_set: set,
+                      distance_matrix: dict) -&amp;gt; float:
+    &amp;quot;&amp;quot;&amp;quot;[calculate sum distance of node away from other nodes]
+
+    Args:
+        taxa ([str]): [label for one node]
+        leaf_set ([set]): [a set store current nodes needed to be merged]
+        distance_matrix ([dict]): [{(seq1_label,seq2_label):genetic_distance}]
+
+    Returns:
+        [float]: [sum distance of node away from others]
+    &amp;quot;&amp;quot;&amp;quot;
+    # init value
+    result = 0
+    # calculate sum distance
+    for other_taxa in leaf_set - set([taxa]):
+        # fectch genetic distance
+        result += fetch_distance(taxa, other_taxa, distance_matrix)
+
+    return result
+
+
+def find_qmin(leaf_set: set, distance_matrix: dict) -&amp;gt; dict:
+    &amp;quot;&amp;quot;&amp;quot;[ calculate min q_value and get information]
+
+    Args:
+        leaf_set ([set]): [current nodes needed to be merged]
+        distance_matrix ([dict]): [dict stored genetic distance of current nodes]
+
+    Returns:
+        [dict]:  [value, combination,taxa1_sum, taxa2_sum]
+    &amp;quot;&amp;quot;&amp;quot;
+    # init dict
+    qmin = {
+        &#39;combination&#39;: None,  # combination of node for merging
+        &#39;q_value&#39;: None,  # min Q value
+        &#39;taxa1_sum&#39;: None,  # sum distance of node away from others
+        &#39;taxa2_sum&#39;: None
+    }
+
+    # calculate  Q value every combinatin of nodes
+    for combination, distance in distance_matrix.items():
+
+        taxa1, taxa2 = combination
+        # calculate sum distance of node away from others
+        taxa1_sum, taxa2_sum = cacl_sum_distance(
+            taxa1, leaf_set,
+            distance_matrix), cacl_sum_distance(taxa2, leaf_set,
+                                                distance_matrix)
+        # get Q value
+        value = (len(leaf_set) - 2) * distance - taxa1_sum - taxa2_sum
+        # compare Q value
+        if not qmin[&#39;q_value&#39;]:
+            # if Q value does not exist then store related information
+            qmin[&#39;q_value&#39;], qmin[&#39;combination&#39;], qmin[&#39;taxa1_sum&#39;], qmin[
+                &#39;taxa2_sum&#39;] = value, combination, taxa1_sum, taxa2_sum
+        # if Q value exist then compare to choose minimun value
+        else:
+            if value &amp;lt; qmin[&#39;q_value&#39;]:
+
+                qmin[&#39;q_value&#39;], qmin[&#39;combination&#39;], qmin[&#39;taxa1_sum&#39;], qmin[
+                    &#39;taxa2_sum&#39;] = value, combination, taxa1_sum, taxa2_sum
+
+    return qmin
+
+
+def help_nj(leaf_set: set, distance_matrix: dict):
+    &amp;quot;&amp;quot;&amp;quot;[helper function to conduct neighbor joining]
+
+    Args:
+        leaf_set ([set]): [current nodes needed to be merged]
+        distance_matrix ([dict]): [store pair distance of current nodes]
+
+    Returns:
+        TREEDICT: a dict stored node that has been merged in binary tree format
+        final_leaf_set: final twos node after finshing NJ
+        final_matrix:  genetic distances of final two nodes
+    &amp;quot;&amp;quot;&amp;quot;
+    # init dict to store nodes that has been merged in format of Binary Tree
+    TREEDICT = {}
+
+    def neighbor_joining(leaf_set: set, distance_matrix: dict):
+        &amp;quot;&amp;quot;&amp;quot;[implementation of neighbors joining]
+
+        Args:
+            leaf_set ([set]): [current nodes needed to be merged]
+            distance_matrix ([dict]): [store genetic distance of current nodes]
+        &amp;quot;&amp;quot;&amp;quot;
+        # get nonlocal value
+        nonlocal TREEDICT
+
+        # the rule to end the recursion
+        if len(leaf_set) &amp;lt; 3:
+
+            return (leaf_set, distance_matrix)
+        # enter recursion
+        else:
+            # find min Q value
+            qmin_info = find_qmin(leaf_set, distance_matrix)
+            # get nodes needed to be merged
+            taxa1, taxa2 = qmin_info[&#39;combination&#39;]
+            # edge from taxa1 to new node
+            edge_taxa1_node = 0.5 * distance_matrix[
+                qmin_info[&#39;combination&#39;]] + (qmin_info[&#39;taxa1_sum&#39;] -
+                                             qmin_info[&#39;taxa2_sum&#39;]) / (
+                                                 2 * (len(leaf_set) - 2))
+            # edge from taxa1 to new node
+            edge_taxa2_node = distance_matrix[
+                qmin_info[&#39;combination&#39;]] - edge_taxa1_node
+
+            # init dict to update genetic matrix
+            matrix = {}
+            # create label for new node
+            new_node = f&#39;{taxa1}_{taxa2}&#39;
+            # calculate distance from new node to other nodes
+            for node in leaf_set - set(qmin_info[&#39;combination&#39;]):
+                # store in new genetic matrix with information of old genetic matrix
+                matrix[(
+                    new_node,
+                    node)] = (fetch_distance(taxa1, node, distance_matrix) +
+                              fetch_distance(taxa2, node, distance_matrix) -
+                              distance_matrix[(taxa1, taxa2)]) * 0.5
+
+            # store genetic distances of other nodes in new genetic matrix
+            for combination, distance in distance_matrix.items():
+
+                if (taxa1 not in combination) and (taxa2 not in combination):
+
+                    matrix[combination] = distance
+
+            # store phylogenetic nodes that has been merged in Binary Tree format
+            # creat a tree node that linked two merged nodes in Binary Tree
+
+            # if one of merged nodes has been in Binary Tree then add edges
+            # taxa1 is always regarded as left children
+            if taxa1 in TREEDICT:
+
+                left = TREEDICT.pop(taxa1)
+                left.key[1] = edge_taxa1_node
+
+            # if one of merged nodes is not stored in Binary Tree
+            else:
+                # create a Tree node and store its label and edge
+                left = TreeNode([taxa1, edge_taxa1_node])
+
+            # taxa2 is same with taxa1
+            # taxa2 is always regarded as right children
+            if taxa2 in TREEDICT:
+
+                right = TREEDICT.pop(taxa2)
+                right.key[1] = edge_taxa2_node
+
+            else:
+
+                right = TreeNode([taxa2, edge_taxa2_node])
+
+            # create a new_node linked two merged nodes in Binary Tree
+            # the new_node has no edge
+            internal_node = TreeNode([new_node, None])
+            # add paraent information for two merged nodes
+            left.parent, right.parent = internal_node, internal_node
+            # link two merged nodes as children in Binary Tree
+            internal_node.left, internal_node.right = left, right
+            # add new node to dict
+            TREEDICT[new_node] = internal_node
+            # update genetic distance matrix
+            distance_matrix = matrix
+            # update current phylogenetic nodes needed to be merged
+            leaf_set -= set(qmin_info[&#39;combination&#39;])
+            leaf_set.add(new_node)
+
+            return neighbor_joining(leaf_set, distance_matrix)
+
+    # begin to compute until two phylogenetic nodes left
+    final_leaf_set, final_matrix = neighbor_joining(leaf_set, distance_matrix)
+
+    return TREEDICT, final_leaf_set, final_matrix
+
+
+##############################################
+#               PREORDER TREE AND ADD INDEX
+##############################################
+
+
+def my_tree(TREEDICT: dict, final_distance_matrix: dict, seqs: dict):
+    &amp;quot;&amp;quot;&amp;quot;   function to create Binary tree but it has fake root
+            because phylogenetic node has three childern
+            hence create a fake node as root to get a Binary Tree
+            all following behaivors related Binar Tree usually consider this situation
+
+            for binary_tree.key:
+
+            key[0] -&amp;gt; label ; key[1] -&amp;gt; edge
+
+    Args:
+        TREEDICT ([dict]): [store information of binary tree ]
+        final_distance_matrix ([dict]): [distance of final two nodes]
+        seqs ([dict]): [store information of seqs]
+
+    Returns:
+        [binary tree]: [binary tree with fake root]
+    &amp;quot;&amp;quot;&amp;quot;
+    # &#39;merged node&#39; means nodes have been changed as binary tree
+    # init value to find if node is &#39;merged node&#39;  in final two nodes after NJ
+    last_node_label = None
+    last_node_edges = None
+
+    for index, value in final_distance_matrix.items():
+
+        # get edge
+        last_node_edges = value
+
+        # check if node is &#39;merged node&#39;
+        for label in index:
+            # if not
+            if label in seqs:
+                # get label
+                last_node_label = label
+
+    # create a fake root with label &#39;root&#39;
+    fake_root = TreeNode((&#39;root&#39;, &#39; &#39;))
+    # get node label of final two nodes after NJ
+    current_node_index = list(TREEDICT.keys())
+    # if final two nodes are merged node
+    if not last_node_label:
+
+        # add last edge to right childern of fake root
+        # because the left childern of fake root is &amp;quot;TRUE root&amp;quot;, which has three childerns
+        # the right childern of fake root is linked to left children of it in real
+        # so the edge indictes the distance between left childern and right childern
+        # even though right childern is linked to fake root in binary_tree
+        TREEDICT[current_node_index[1]].key[1] = last_node_edges
+
+        # create tree structure
+        fake_root.left = TREEDICT[current_node_index[0]]
+        fake_root.right = TREEDICT[current_node_index[1]]
+
+    # if one of final two nodes is merged node
+    else:
+
+        # set node that is not merged node as tree structure
+        right_node = TreeNode([last_node_label, last_node_edges])
+
+        # set one of final two nodes, a merged node, as left childern of fake root
+        fake_root.left = TREEDICT[current_node_index[0]]
+
+        # add right childern
+        fake_root.right = right_node
+
+    return fake_root
+
+
+def help_edge_matrix(tree, seqs: dict, edge_file: str):
+    &amp;quot;&amp;quot;&amp;quot;[help function to do preorder traversal in order to get edge file]
+
+    Args:
+        tree ([Binary Tree])
+        seqs (dict): [store information about label, seq, and index of seqs]
+        edge_file (str): [output of edge]
+
+    Returns:
+        [Binary Tree]: [Binary Tree whose internal node has index]
+    &amp;quot;&amp;quot;&amp;quot;
+    # init index for internal node
+    N = len(seqs) + 1
+    # open new file
+    EDGE_FILE = open(edge_file, &#39;w&#39;)  # changes
+
+    def edge_matrix(tree):
+        # get nonlocal value
+        nonlocal N
+        # preorder tree
+        if tree:
+            # index of fake root is None
+            if tree.isRoot():
+
+                tree.index = None
+            # tree.key[0] is label of node
+            # if it not in seqs then it is internal node
+            elif (tree.key[0] not in seqs):
+                # set index for internal node
+                tree.index = N
+                N += 1
+
+            else:
+                # get index of leaf node
+                tree.index = seqs[tree.key[0]].index
+            # write information of parent and chilren
+            # left and right childern of fake root have no parent : None
+            if tree.parent:
+
+                EDGE_FILE.write(
+                    f&#39;{tree.parent.index}\t{tree.index}\t{tree.key[1]}\n&#39;)
+            edge_matrix(tree.left)
+            edge_matrix(tree.right)
+
+    edge_matrix(tree)
+
+    # add the TRUE ROOT and its children
+    EDGE_FILE.write(
+        f&#39;{tree.left.index}\t{tree.right.index}\t{tree.right.key[1]}\n&#39;)
+
+    EDGE_FILE.close()
+    return tree
+
+
+##############################################
+#                         POSTORDER TREE
+# WARNING: MUST CONDUCT AFTER PREODER
+##############################################
+
+
+def help_newick_parse(tree, tree_file: str):
+    &amp;quot;&amp;quot;&amp;quot;[help function to do postorder traversal in order to get tree file]
+
+    Args:
+        tree ([Binary Tree])
+        tree_file (str): [output of tree]
+    &amp;quot;&amp;quot;&amp;quot;
+    # open tree file
+    TREE_FILE = open(tree_file, &#39;w&#39;)
+    # get true root lable (left children of fake root)
+    true_root_label = tree.left.key[0]
+
+    def newick_parse(tree):
+        # get nonlocal value
+        nonlocal true_root_label
+        # postorder tree
+        if tree:
+
+            left = newick_parse(tree.left)
+            right = newick_parse(tree.right)
+            # if node is internal node
+            if left and right:
+                # check if node is true node
+                if tree.key[0] == true_root_label:
+                    # not add &#39;( )&#39; so as to have three childern finally
+                    return f&#39;{left},{right}&#39;
+                # check if node is root
+                elif tree.isRoot():
+                    # add &#39;()&#39; finally
+                    return f&#39;({left},{right})&#39;
+                # if node is internal node
+                else:
+                    return f&#39;({left},{right}):{tree.key[1]}&#39;
+            # if node is leaf node
+            else:
+                return f&#39;{tree.key[0]}:{tree.key[1]}&#39;
+
+    newick = newick_parse(tree)
+
+    TREE_FILE.write(f&#39;{newick};&#39;)
+
+    TREE_FILE.close()
+
+
+##############################################
+#                         BOOTSTRAP
+##############################################
+
+
+def bootstrap(original_seqs: dict):
+    &amp;quot;&amp;quot;&amp;quot;[bootstrap original seqs and return bootstrap sample and bootstrap seqs]
+
+    Args:
+        original_seqs ([dict]): [original seqs]
+
+    Returns:
+        tree_root_with_node_index: bootstrap sample whose node has index
+        seqs_bootstrap : bootstrap seqs contained information like index, label, and sequences
+    &amp;quot;&amp;quot;&amp;quot;
+    # change data structure in oder to use pandas:
+    #               0 1 2  (column_number)
+    #label 1
+    #label 2
+    #...
+    seqs_pd = {
+        index: list(value.seq)
+        for index, value in original_seqs.items()
+    }
+    df = pd.DataFrame(seqs_pd).T
+
+    # using random to resample
+    df_bootstrap = df.loc[:, random.choices(range(df.shape[1]), k=df.shape[1])]
+
+    # get bootstrap information
+    seqs_bootstrap = original_seqs.copy()
+    # change sequences to bootstrap sequences
+    for index, value in df_bootstrap.iterrows():
+        seqs_bootstrap[index] = seqs_bootstrap[index]._replace(
+            seq=&#39;&#39;.join(value.values))
+
+    # get nodes needed to be coudcted NJ
+    leaf_set = set(seqs_bootstrap.keys())
+    # calculate genetic_distance for bootstrap samples
+    distance_map = {}
+    for seq1_label, seq1_info in seqs_bootstrap.items():
+
+        for seq2_label, seq2_info in seqs_bootstrap.items():
+
+            if seq1_label != seq2_label:
+
+                distance = fetch_distance(seq1_label, seq2_label, distance_map)
+
+                if not distance:
+
+                    distance = genetic_distance(seq1_info.seq, seq2_info.seq)
+
+                    distance_map[(seq1_label, seq2_label)] = distance
+    # conduct NJ
+    TREEDICT, _, final_distance_matrix = help_nj(leaf_set, distance_map)
+    # construct binary_tree
+    # get edge file for  last bootstrap (NOT USED)
+    tree_root = my_tree(TREEDICT, final_distance_matrix, seqs_bootstrap)
+    tree_root_with_node_index = help_edge_matrix(tree_root, seqs_bootstrap,
+                                                 &#39;last_bootstrap.edge&#39;)
+    return tree_root_with_node_index, seqs_bootstrap
+
+
+def help_find_partion(tree) -&amp;gt; dict:
+    &amp;quot;&amp;quot;&amp;quot;[function to partion list for internal nodes in a binary tree]
+
+    Args:
+        tree ([binary_tree]): [binary_tree with fake root]
+
+    Returns:
+        [dict]: [node_index: partion list]
+    &amp;quot;&amp;quot;&amp;quot;
+    # init dict to store index and its partion list
+    internal_node_partion = defaultdict(list)
+
+    # postorder traversal to find leafs for every internal node
+    def find_partion(tree):
+
+        LIST = []
+        # begin
+        if tree:
+
+            left = find_partion(tree.left)
+            right = find_partion(tree.right)
+
+            if tree.isLeaf():
+
+                LIST.append(tree.index)
+
+            else:
+                # flatten list
+                LIST.extend([*left, *right])
+
+                internal_node_partion[tree.index].extend(
+                    sorted([*left, *right]))
+
+            return LIST
+
+    # change partion list of fake root to true root
+    find_partion(tree)
+    internal_node_partion[tree.left.index] = internal_node_partion.pop(
+        tree.index)
+
+    return internal_node_partion
+
+
+def get_bootstrap_value(bootstrap_number: int,
+                        original_seqs: dict,
+                        original_tree,
+                        bootstrap_file: str = &#39;bootstrap.txt&#39;):
+    &amp;quot;&amp;quot;&amp;quot;[function to integrate relation methods to get bootstrap values for original tree]
+
+    Args:
+        bootstrap_number (int): [number for bootstrap. default = None]
+        original_seqs (dict): [information of original sequences]
+        original_tree ([type]): [binary tree of original sequences]
+        bootstrap_file (str): [output of bootstrap]
+    &amp;quot;&amp;quot;&amp;quot;
+    # init list to store bootstrap value for every internal node
+    internal_node_bootstrap_value = [0] * (len(original_seqs) - 2)
+    # get partion list of every internal node in original tree
+    original_partion_dict = help_find_partion(original_tree)
+    # init list to store dict contained bootstrap_partion and its node_index
+    bootstrap_partion_list = []
+    # begin to bootstrap and consruct binary tree
+
+    for number in range(bootstrap_number):
+        logging.info(f&#39;BOOTSTRAP NUMBER : {number+1}&#39;)
+        bootstrap_tree, _ = bootstrap(original_seqs)
+        bootstrap_partion_list.append(help_find_partion(bootstrap_tree))
+
+    # compare partion list to update bootstrap value
+    for internal_node_index, partion_conent in original_partion_dict.items():
+
+        for bootstrap_partion in bootstrap_partion_list:
+
+            if partion_conent in bootstrap_partion.values():
+
+                internal_node_bootstrap_value[internal_node_index -
+                                              len(original_seqs) - 1] += 1
+    # change format for the bootstrap values
+    result = [
+        f&#39;{value/bootstrap_number}\n&#39;
+        for value in internal_node_bootstrap_value
+    ]
+    # write to file
+    with open(bootstrap_file, &#39;w&#39;) as file:
+        file.writelines(result)
+
+
+##############################################
+#                                  MAIN
+##############################################
+
+
+def worker(args: dict):
+    &amp;quot;&amp;quot;&amp;quot;[function to integrate all above method to conduct NJ and output tree and edge file]
+
+    Args:
+        args ([dict]): [parameters getting from command line]
+
+    Returns:
+        tree_root_with_index : binary tree whose node has index
+        seq : information of sequences
+    &amp;quot;&amp;quot;&amp;quot;
+    # read fa file and parse it
+    seqs = read_input(args.input)
+    # get labels of sequences
+    leaf_set = set(seqs.keys())
+    # get pair genetic distance
+    distance_matrix = get_distance_matrix(seqs, args.distance)
+    # delete distances between same sequences
+    distance_matrix = {
+        item: value
+        for item, value in distance_matrix.items() if value != 0
+    }
+    # get TREEDICT and distance of final two nodes
+    TREEDICT, _, final_distance_matrix = help_nj(leaf_set, distance_matrix)
+    # construct binary tree REMEMBER it has fake root
+    # left childern of fake root is regarded as true root
+    tree_root = my_tree(TREEDICT, final_distance_matrix, seqs)
+    # get edge file and add index for every node in binary tree
+    tree_root_with_index = help_edge_matrix(tree_root, seqs, args.edge)
+    # get tree file REMEMBER it must conduct after getting edge files
+    # because it need index of node
+    help_newick_parse(tree_root_with_index, args.tree)
+
+    return tree_root_with_index, seqs
+
+
+def main():
+    args = get_parser()
+
+    with Timer() as t:
+        logging.info(f&#39;Neighbor Joining begin.......&#39;)
+        tree_root_with_index, seqs = worker(args)
+
+    logging.info(f&#39;Neighbor Joining  DONE : TIME {t.elapsed:.2f}s\n&#39;)
+
+    if args.bootstrap:
+        with Timer() as t:
+            get_bootstrap_value(args.bootstrap, seqs, tree_root_with_index)
+        logging.info(f&#39;BOOTSTRAP IS DONE : TIME {t.elapsed:.2f}s\n&#39;)
+    else:
+        logging.info(f&#39;BOOTSTRAP IS NOT DONE&#39;)
+
+    logging.info(f&#39;EDGE_FILE : {args.edge}&#39;)
+    logging.info(f&#39;TREE_FILE :  {args.tree}&#39;)
+    logging.info(f&#39;DISTANCE_FILE: {args.distance}&#39;)
+
+
+if __name__ == &amp;quot;__main__&amp;quot;:
+    main()
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Thanks for your reading! Hopefully helpful!&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Spring2021 Project</title>
+      <link>https://cauliyang.github.io/en/talk/spring2021-project/</link>
+      <pubDate>Sat, 03 Apr 2021 10:04:04 +0800</pubDate>
+      <guid>https://cauliyang.github.io/en/talk/spring2021-project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Welcome to Wowchemy, the website builder for Hugo</title>
+      <link>https://cauliyang.github.io/en/post/getting-started/</link>
+      <pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://cauliyang.github.io/en/post/getting-started/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;The Wowchemy website builder for Hugo, along with its starter templates, is designed for professional creators, educators, and teams/organizations - although it can be used to create any kind of site&lt;/li&gt;
+&lt;li&gt;The template can be modified and customised to suit your needs. It&amp;rsquo;s a good platform for anyone looking to take control of their data and online identity whilst having the convenience to start off with a &lt;strong&gt;no-code solution (write in Markdown and customize with YAML parameters)&lt;/strong&gt; and having &lt;strong&gt;flexibility to later add even deeper personalization with HTML and CSS&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;You can work with all your favourite tools and apps with hundreds of plugins and integrations to speed up your workflows, interact with your readers, and much more&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-the-template-is-mobile-first-with-a-responsive-design-to-ensure-that-your-site-looks-stunning-on-every-device&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/wowchemy/wowchemy-hugo-modules/master/academic.png&#34; alt=&#34;The template is mobile first with a responsive design to ensure that your site looks stunning on every device.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      The template is mobile first with a responsive design to ensure that your site looks stunning on every device.
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;get-started&#34;&gt;Get Started&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;👉 &lt;a href=&#34;https://wowchemy.com/templates/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Create a new site&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📚 &lt;a href=&#34;https://wowchemy.com/docs/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Personalize your site&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💬 &lt;a href=&#34;https://discord.gg/z8wNYzb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chat with the &lt;strong&gt;Wowchemy community&lt;/strong&gt;&lt;/a&gt; or &lt;a href=&#34;https://discourse.gohugo.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Hugo community&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🐦 Twitter: &lt;a href=&#34;https://twitter.com/wowchemy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@wowchemy&lt;/a&gt; &lt;a href=&#34;https://twitter.com/GeorgeCushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@GeorgeCushen&lt;/a&gt; &lt;a href=&#34;https://twitter.com/search?q=%28%23MadeWithWowchemy%20OR%20%23MadeWithAcademic%29&amp;amp;src=typed_query&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#MadeWithWowchemy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💡 &lt;a href=&#34;https://github.com/wowchemy/wowchemy-hugo-modules/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Request a &lt;strong&gt;feature&lt;/strong&gt; or report a &lt;strong&gt;bug&lt;/strong&gt; for &lt;em&gt;Wowchemy&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;⬆️ &lt;strong&gt;Updating Wowchemy?&lt;/strong&gt; View the &lt;a href=&#34;https://wowchemy.com/docs/guide/update/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Update Guide&lt;/a&gt; and &lt;a href=&#34;https://wowchemy.com/updates/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Release Notes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;crowd-funded-open-source-software&#34;&gt;Crowd-funded open-source software&lt;/h2&gt;
+&lt;p&gt;To help us develop this template and software sustainably under the MIT license, we ask all individuals and businesses that use it to help support its ongoing maintenance and development via sponsorship.&lt;/p&gt;
+&lt;h3 id=&#34;-click-here-to-become-a-sponsor-and-help-support-wowchemys-future-httpswowchemycomplans&#34;&gt;&lt;a href=&#34;https://wowchemy.com/plans/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;❤️ Click here to become a sponsor and help support Wowchemy&amp;rsquo;s future ❤️&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;As a token of appreciation for sponsoring, you can &lt;strong&gt;unlock &lt;a href=&#34;https://wowchemy.com/plans/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;these&lt;/a&gt; awesome rewards and extra features 🦄✨&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ecosystem&#34;&gt;Ecosystem&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/wowchemy/hugo-academic-cli&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo Academic CLI&lt;/a&gt;:&lt;/strong&gt; Automatically import publications from BibTeX&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;inspiration&#34;&gt;Inspiration&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Check out the latest &lt;strong&gt;demo&lt;/strong&gt;&lt;/a&gt; of what you&amp;rsquo;ll get in less than 10 minutes, or &lt;a href=&#34;https://wowchemy.com/user-stories/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;view the &lt;strong&gt;showcase&lt;/strong&gt;&lt;/a&gt; of personal, project, and business sites.&lt;/p&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Page builder&lt;/strong&gt; - Create &lt;em&gt;anything&lt;/em&gt; with &lt;a href=&#34;https://wowchemy.com/docs/page-builder/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;widgets&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;elements&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Edit any type of content&lt;/strong&gt; - Blog posts, publications, talks, slides, projects, and more!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Create content&lt;/strong&gt; in &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/a&gt;, &lt;a href=&#34;https://wowchemy.com/docs/import/jupyter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jupyter&lt;/strong&gt;&lt;/a&gt;, or &lt;a href=&#34;https://wowchemy.com/docs/install-locally/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Plugin System&lt;/strong&gt; - Fully customizable &lt;a href=&#34;https://wowchemy.com/docs/customization/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;color&lt;/strong&gt; and &lt;strong&gt;font themes&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Display Code and Math&lt;/strong&gt; - Code highlighting and &lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LaTeX math&lt;/a&gt; supported&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integrations&lt;/strong&gt; - &lt;a href=&#34;https://analytics.google.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Analytics&lt;/a&gt;, &lt;a href=&#34;https://disqus.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Disqus commenting&lt;/a&gt;, Maps, Contact Forms, and more!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Beautiful Site&lt;/strong&gt; - Simple and refreshing one page design&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Industry-Leading SEO&lt;/strong&gt; - Help get your website found on search engines and social media&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Media Galleries&lt;/strong&gt; - Display your images and videos with captions in a customizable gallery&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mobile Friendly&lt;/strong&gt; - Look amazing on every screen with a mobile friendly version of your site&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-language&lt;/strong&gt; - 34+ language packs including English, 中文, and Português&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-user&lt;/strong&gt; - Each author gets their own profile page&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Privacy Pack&lt;/strong&gt; - Assists with GDPR&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stand Out&lt;/strong&gt; - Bring your site to life with animation, parallax backgrounds, and scroll effects&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;One-Click Deployment&lt;/strong&gt; - No servers. No databases. Only files.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
+&lt;p&gt;Wowchemy and its templates come with &lt;strong&gt;automatic day (light) and night (dark) mode&lt;/strong&gt; built-in. Alternatively, visitors can choose their preferred mode - click the moon icon in the top right of the &lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Demo&lt;/a&gt; to see it in action! Day/night mode can also be disabled by the site admin in &lt;code&gt;params.toml&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://wowchemy.com/docs/customization&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Choose a stunning &lt;strong&gt;theme&lt;/strong&gt; and &lt;strong&gt;font&lt;/strong&gt;&lt;/a&gt; for your site. Themes are fully customizable.&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;p&gt;Copyright 2016-present &lt;a href=&#34;https://georgecushen.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;George Cushen&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Released under the &lt;a href=&#34;https://github.com/wowchemy/wowchemy-hugo-modules/blob/master/LICENSE.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Slides</title>
+      <link>https://cauliyang.github.io/en/slides/example/</link>
+      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://cauliyang.github.io/en/slides/example/</guid>
+      <description>&lt;h1 id=&#34;create-slides-in-markdown-with-wowchemy&#34;&gt;Create slides in Markdown with Wowchemy&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://wowchemy.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wowchemy&lt;/a&gt; | &lt;a href=&#34;https://owchemy.com/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Efficiently write slides in Markdown&lt;/li&gt;
+&lt;li&gt;3-in-1: Create, Present, and Publish your slides&lt;/li&gt;
+&lt;li&gt;Supports speaker notes&lt;/li&gt;
+&lt;li&gt;Mobile friendly slides&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;controls&#34;&gt;Controls&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Next: &lt;code&gt;Right Arrow&lt;/code&gt; or &lt;code&gt;Space&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Previous: &lt;code&gt;Left Arrow&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Start: &lt;code&gt;Home&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Finish: &lt;code&gt;End&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Overview: &lt;code&gt;Esc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Speaker notes: &lt;code&gt;S&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Fullscreen: &lt;code&gt;F&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Zoom: &lt;code&gt;Alt + Click&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hakimel/reveal.js#pdf-export&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PDF Export&lt;/a&gt;: &lt;code&gt;E&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;code-highlighting&#34;&gt;Code Highlighting&lt;/h2&gt;
+&lt;p&gt;Inline code: &lt;code&gt;variable&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Code block:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;porridge = &amp;quot;blueberry&amp;quot;
+if porridge == &amp;quot;blueberry&amp;quot;:
+    print(&amp;quot;Eating...&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
+&lt;p&gt;In-line math: $x + y = z$&lt;/p&gt;
+&lt;p&gt;Block math:&lt;/p&gt;
+&lt;p&gt;$$
+f\left( x \right) = ;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;fragments&#34;&gt;Fragments&lt;/h2&gt;
+&lt;p&gt;Make content appear incrementally&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{{% fragment %}} One {{% /fragment %}}
+{{% fragment %}} **Two** {{% /fragment %}}
+{{% fragment %}} Three {{% /fragment %}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Press &lt;code&gt;Space&lt;/code&gt; to play!&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;fragment &#34; &gt;
+One
+&lt;/span&gt;
+&lt;span class=&#34;fragment &#34; &gt;
+&lt;strong&gt;Two&lt;/strong&gt;
+&lt;/span&gt;
+&lt;span class=&#34;fragment &#34; &gt;
+Three
+&lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;A fragment can accept two optional parameters:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;class&lt;/code&gt;: use a custom style (requires definition in custom CSS)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;weight&lt;/code&gt;: sets the order in which a fragment appears&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;speaker-notes&#34;&gt;Speaker Notes&lt;/h2&gt;
+&lt;p&gt;Add speaker notes to your presentation&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{% speaker_note %}}
+- Only the speaker can read these notes
+- Press `S` key to view
+{{% /speaker_note %}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Press the &lt;code&gt;S&lt;/code&gt; key to view the speaker notes!&lt;/p&gt;
+&lt;aside class=&#34;notes&#34;&gt;
+  &lt;ul&gt;
+&lt;li&gt;Only the speaker can read these notes&lt;/li&gt;
+&lt;li&gt;Press &lt;code&gt;S&lt;/code&gt; key to view&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/aside&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;black: Black background, white text, blue links (default)&lt;/li&gt;
+&lt;li&gt;white: White background, black text, blue links&lt;/li&gt;
+&lt;li&gt;league: Gray background, white text, blue links&lt;/li&gt;
+&lt;li&gt;beige: Beige background, dark text, brown links&lt;/li&gt;
+&lt;li&gt;sky: Blue background, thin dark text, blue links&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;night: Black background, thick white text, orange links&lt;/li&gt;
+&lt;li&gt;serif: Cappuccino background, gray text, brown links&lt;/li&gt;
+&lt;li&gt;simple: White background, black text, blue links&lt;/li&gt;
+&lt;li&gt;solarized: Cream-colored background, dark green text, blue links&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+
+&lt;section data-noprocess data-shortcode-slide
+  
+      
+      data-background-image=&#34;/media/boards.jpg&#34;
+  &gt;
+
+&lt;h2 id=&#34;custom-slide&#34;&gt;Custom Slide&lt;/h2&gt;
+&lt;p&gt;Customize the slide style and background&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{&amp;lt; slide background-image=&amp;quot;/media/boards.jpg&amp;quot; &amp;gt;}}
+{{&amp;lt; slide background-color=&amp;quot;#0000FF&amp;quot; &amp;gt;}}
+{{&amp;lt; slide class=&amp;quot;my-style&amp;quot; &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;custom-css-example&#34;&gt;Custom CSS Example&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s make headers navy colored.&lt;/p&gt;
+&lt;p&gt;Create &lt;code&gt;assets/css/reveal_custom.css&lt;/code&gt; with:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.reveal section h1,
+.reveal section h2,
+.reveal section h3 {
+  color: navy;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/wowchemy/wowchemy-hugo-modules/discussions&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://wowchemy.com/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Example Project</title>
+      <link>https://cauliyang.github.io/en/project/example/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>https://cauliyang.github.io/en/project/example/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An example conference paper</title>
+      <link>https://cauliyang.github.io/en/publication/example/</link>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      <guid>https://cauliyang.github.io/en/publication/example/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code, math, and images&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://cauliyang.github.io/en/admin/config.yml</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://cauliyang.github.io/en/admin/config.yml</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
