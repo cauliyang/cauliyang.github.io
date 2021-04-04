@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories | My Life</title>
+    <title>Categories | My Academic</title>
     <link>https://cauliyang.github.io/en/categories/</link>
       <atom:link href="https://cauliyang.github.io/en/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2020 Yangyang Li. All Rights Reserved.</copyright><lastBuildDate>Fri, 02 Apr 2021 14:45:20 +0800</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2020 Yangyang Li. All Rights Reserved.</copyright><lastBuildDate>Sun, 04 Apr 2021 23:58:37 +0800</lastBuildDate>
     <image>
       <url>https://cauliyang.github.io/media/sharing.jpeg</url>
       <title>Categories</title>

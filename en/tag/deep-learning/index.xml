@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Deep Learning | My Life</title>
+    <title>Deep Learning | My Academic</title>
     <link>https://cauliyang.github.io/en/tag/deep-learning/</link>
       <atom:link href="https://cauliyang.github.io/en/tag/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     <description>Deep Learning</description>

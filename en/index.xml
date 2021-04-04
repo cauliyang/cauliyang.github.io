@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My Life</title>
+    <title>My Academic</title>
     <link>https://cauliyang.github.io/en/</link>
       <atom:link href="https://cauliyang.github.io/en/index.xml" rel="self" type="application/rss+xml" />
-    <description>My Life</description>
+    <description>My Academic</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2020 Yangyang Li. All Rights Reserved.</copyright><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
     <image>
       <url>https://cauliyang.github.io/media/sharing.jpeg</url>
-      <title>My Life</title>
+      <title>My Academic</title>
       <link>https://cauliyang.github.io/en/</link>
     </image>
     
@@ -128,12 +128,313 @@ The variance of the distribution is $\sigma^{2}$.
     </item>
     
     <item>
+      <title>PCA by Python</title>
+      <link>https://cauliyang.github.io/en/post/pca-by-python/</link>
+      <pubDate>Sun, 04 Apr 2021 23:58:37 +0800</pubDate>
+      <guid>https://cauliyang.github.io/en/post/pca-by-python/</guid>
+      <description>&lt;style&gt;
+img{
+    width: 70%;
+    padding-left: 1%;
+}
+&lt;/style&gt;
+&lt;h2 id=&#34;1-introduction&#34;&gt;1. Introduction&lt;/h2&gt;
+&lt;h3 id=&#34;11-whats-pca&#34;&gt;1.1 What&amp;rsquo;s PCA?&lt;/h3&gt;
+&lt;p&gt;When it comes to methods of reducing dimension, PCA that is an unsupervised linear transformation technique, must be not ignored. Moreover, if you want to know the subtle relationships among data set and reduce the computational complexity in downstream analysis, the PCA may be your best choice! Meanwhile, if you would like to present your data in a 2-dimension or 3-dimension coordinate system, and PCA would sweep your problems!&lt;/p&gt;
+&lt;p&gt;What is reducing dimension? I will show you an example as follows:&lt;/p&gt;
+&lt;p&gt;First, suppose you have a five-dimensional data set :&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Id&lt;/th&gt;
+&lt;th&gt;1-d&lt;/th&gt;
+&lt;th&gt;2-d&lt;/th&gt;
+&lt;th&gt;3-d&lt;/th&gt;
+&lt;th&gt;4-d&lt;/th&gt;
+&lt;th&gt;5-d&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;data-1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;data-2&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;..&lt;/td&gt;
+&lt;td&gt;..&lt;/td&gt;
+&lt;td&gt;..&lt;/td&gt;
+&lt;td&gt;..&lt;/td&gt;
+&lt;td&gt;..&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Then, you could pick up PC1 and PC2 after PCA to reduce dimension for plotting:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Id&lt;/th&gt;
+&lt;th&gt;PC1&lt;/th&gt;
+&lt;th&gt;PC2&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;data-1&lt;/td&gt;
+&lt;td&gt;0.3&lt;/td&gt;
+&lt;td&gt;0.6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;data-2&lt;/td&gt;
+&lt;td&gt;0.1&lt;/td&gt;
+&lt;td&gt;1.2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;..&lt;/td&gt;
+&lt;td&gt;..&lt;/td&gt;
+&lt;td&gt;..&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;PC1&lt;/strong&gt; and &lt;strong&gt;PC2&lt;/strong&gt; are the result obtained through data is projection on the unit vectors, which enable result to have the most biggest variance(means its distribution is wide) and to be irrelevant(covariance = 0).&lt;/p&gt;
+&lt;h3 id=&#34;12-algorithm&#34;&gt;1.2 Algorithm&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Normalize $d$ dimension raw data&lt;/li&gt;
+&lt;li&gt;Creat the covariance matrix&lt;/li&gt;
+&lt;li&gt;Calculate the eigenvalues of the covariance matrix and the corresponding eigenvectors&lt;/li&gt;
+&lt;li&gt;The eigenvectors are sorted in the matrix according to the corresponding feature value, and the first k rows are formed into a matrix $W$.($k&amp;laquo;d$)&lt;/li&gt;
+&lt;li&gt;$Y = xW$ is the result after reducing dimension to k dimension&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; There are two prerequisites for conducting PCA&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Raw data has no NA&lt;/li&gt;
+&lt;li&gt;The raw data should be normalized&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-pca-from-scratch&#34;&gt;2. PCA from scratch&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Importing necessary modules&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd 
+import numpy as np
+import matplotlib.pyplot as plt 
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Creating raw data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# get  data set 
+df_wine = pd.read_csv(
+    &#39;http://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data&#39;,
+    header=None,
+    engine=&#39;python&#39;)
+# check data
+df_wine.head()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1572760322010.png&#34; alt=&#34;Test&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Creating train and test data set&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# creat train and test data set 
+
+X, y = df_wine.iloc[:, 1:], df_wine.iloc[:, 0]
+
+x_train,x_test,y_train,y_test = \
+    train_test_split(X,y,test_size = 0.3 , 
+                    stratify= y,
+                    random_state = 0 )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Standardizing the features&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# create standard instance
+sc = StandardScaler()
+# standard data 
+x_train_std = sc.fit_transform(x_train)
+x_test_std = sc.fit_transform(x_test)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Creating the covariance matrix and Getting eigenvectors and eigenvalues&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;the calculation of the covariance matrix :
+$$\sigma_{jk} =  \frac{1}{n} \sum^{n}_{i=1}\bigg(x_{j}^{(i)} - \mu_j\bigg)\bigg(x_{k}^{(i)} - \mu_k\bigg)$$
+Then, using &lt;code&gt;numpy.cov&lt;/code&gt; and &lt;code&gt;numpy.linalg.eig&lt;/code&gt; to get the covariance matrix and eigenvectors respectively&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# calculate the covariance matrix 
+cov_mat = np.cov(x_train_std.T)
+# Getting eigenvectors and eigenvalues
+eigen_vals, eigen_vecs = np.linalg.eig(cov_mat)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; there are 13 eigenvectors totally, the number of eigenvalues might be not as same as the number of features sometimes.&lt;/p&gt;
+&lt;p&gt;Firstly, plotting the Variance interpretation ratio, which is obtained through eigenvalue $\lambda_j$ divided by the sum of all the eigenvalues:
+$$ \frac{\lambda_j}{\sum^d_{j=1}\lambda_j}$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# get sum of all the eigenvalues
+tot = sum(eigen_vals)
+# get variance interpretation ratio
+var_exp = [(i / tot) for i in sorted(eigen_vals, reverse=True)]
+cum_var_exp = np.cumsum(var_exp)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Besides, plotting the result to get in-depth understanding:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;plt.figure() # creat plot
+# creat bar plot
+plt.bar(
+    range(1, 14),
+    var_exp,
+    alpha=0.5,
+    label=&#39;individual explained variance&#39;,
+)
+# creat step plot 
+plt.step(range(1, 14),
+         cum_var_exp,
+         where=&#39;mid&#39;,
+         label=&#39;cumulative explained variance&#39;)
+# add label 
+plt.ylabel(&#39;Explained variance ratio&#39;)
+plt.xlabel(&#39;Principal component index&#39;)
+# add legend
+plt.legend(loc=&#39;best&#39;)
+# save picture
+plt.savefig(&#39;pca_index.png&#39;, format=&#39;png&#39;, bbox_inches=&#39;tight&#39;, dpi=300)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1572764173795.png&#34; alt=&#34;&#34;&gt;
+We can conclude that &lt;strong&gt;PC1&lt;/strong&gt; only takes account for about 40%. Furthermore, the sum of &lt;strong&gt;PC1&lt;/strong&gt; and &lt;strong&gt;PC2&lt;/strong&gt; have 60% variance.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Selecting the first &lt;strong&gt;k&lt;/strong&gt; values to form matrix $W$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# integrate eigenvalues  and eigenvectors 
+eigen_paris = [(np.abs(eigen_vals[i]), eigen_vecs[:, i])
+               for i in range(len(eigen_vals))]
+# sort according to eigenvalues 
+eigen_paris.sort(key=lambda x: x[0], reverse=True)
+# pick up the first 2 eigenvalues 
+w = np.hstack(
+    [eigen_paris[0][1][:, np.newaxis], eigen_paris[1][1][:, np.newaxis]])
+# check matrix x 
+w
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1572766213478.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Transforming raw data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# reduce dimension 
+x_train_pca = x_train_std.dot(w)
+# check resulted data 
+x_train_pca.shape
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;(124, 2)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Then plotting the result and putting the label in terms of original info, but keeping in mind PCA is unsupervised learning skill without labels&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# init colors and markers 
+colors = [&#39;r&#39;, &#39;b&#39;, &#39;g&#39;]
+markers = [&#39;s&#39;, &#39;x&#39;, &#39;o&#39;]
+# plot scatter
+for l, c, m in zip(np.unique(y_train), colors, markers):
+    plt.scatter(x_train_pca[y_train == l, 0],
+                x_train_pca[y_train == l, 1],
+                c=c,
+                label=1,
+                marker=m)
+# add label and legend 
+plt.xlabel(&#39;PC 1&#39;)
+plt.ylabel(&#39;PC 2&#39;)
+plt.legend(loc=&#39;lower left&#39;)
+plt.savefig(&#39;distribution.png&#39;, format=&#39;png&#39;, bbox_inches=&#39;tight&#39;, dpi=300)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1572766761786.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;3-pca-by--scikit-learn&#34;&gt;3. PCA by  scikit-learn&lt;/h2&gt;
+&lt;p&gt;we can  conduct PCA easily by &lt;strong&gt;sklearn&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Importing modules&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from sklearn.decomposition import PCA
+from matplotlib.colors import ListedColormap
+from sklearn.linear_model import LogisticRegression
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Defining  function of plot_decision_region&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;
+def plot_dicision_regions(X, y, classifier, resolution=0.02):
+    # init markers and colors 
+    markers = (&#39;s&#39;, &#39;x&#39;, &#39;o&#39;, &#39;^&#39;, &#39;v&#39;)
+    colors = (&#39;red&#39;, &#39;blue&#39;, &#39;lightgreen&#39;, &#39;gray&#39;, &#39;cyan&#39;)
+    cmap = ListedColormap(colors[:len(np.unique(y))])
+    # creat info for plot region
+    x1_min, x1_max = X[:, 0].min() - 1, X[:, 0].max() + 1
+    x2_min, x2_max = X[:, 1].min() - 1, X[:, 1].max() + 1
+    xx1, xx2 = np.meshgrid(np.arange(x1_min, x1_max, resolution),
+                           np.arange(x2_min, x2_max, resolution))
+    # test classifier&#39;s accurate 
+    z = classifier.predict(np.array([xx1.ravel(), xx2.ravel()]).T)
+    z = z.reshape(xx1.shape)
+    # plot desicion region 
+    plt.contourf(xx1, xx2, z, alpha=0.4, cmap=cmap)
+    # set x,y length
+    plt.xlim(xx1.min(), xx1.max())
+    plt.ylim(xx2.min(), xx2.max())
+    # plot result 
+    for idx, cl in enumerate(np.unique(y)):
+        plt.scatter(
+            x=X[y == cl, 0],
+            y=X[y == cl, 1],
+            alpha=0.6,
+            color=cmap(idx),
+            edgecolor=&#39;black&#39;,
+            marker=markers[idx],
+            label=cl,
+        )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;PCA by sklearn&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# creat pca instance 
+pca = PCA(n_components = 2 )
+# creat classifier instance 
+lr = LogisticRegression()
+# reduce dimension for  data set 
+x_train_pca = pca.fit_transform(x_train_std)
+x_test_pca  = pca.transform(x_test_std)
+# classify x_train_pca 
+lr.fit(x_train_pca,y_train)
+# plot dicision region
+plot_dicision_regions(x_train_pca,y_train,classifier=lr)
+# add info
+plt.xlabel(&#39;PC 1&#39;)
+plt.ylabel(&#39;PC 2&#39;)
+plt.legend(loc=&#39;lower left&#39;)
+plt.show()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1572767868782.png&#34; alt=&#34;&#34;&gt;
+We can see that the classifier&amp;rsquo;s accurate is excellent according to actual labels&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TIPS&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;You can set &lt;code&gt;n_components = None&lt;/code&gt;, and the result would retain all principle components. Moreover, you could call &lt;code&gt;explained_variance_ration_&lt;/code&gt; to use variance explanation ratio.&lt;/p&gt;
+&lt;h2 id=&#34;3-summary&#34;&gt;3. Summary&lt;/h2&gt;
+&lt;p&gt;All the above are the main content, welcome everybody communicates with me! 🤠&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reference book :&lt;/strong&gt; &lt;a href=&#34;https://www.amazon.com/dp/B0742K7HYF/ref=sr_1_1?__mk_zh_CN=%E4%BA%9A%E9%A9%AC%E9%80%8A%E7%BD%91%E7%AB%99&amp;amp;crid=27TEKOK8R4TOR&amp;amp;keywords=python&amp;#43;machine&amp;#43;learning&amp;#43;sebastian&amp;#43;raschka&amp;amp;qid=1572770147&amp;amp;s=digital-text&amp;amp;sprefix=python&amp;#43;machine&amp;#43;&amp;#43;learning&amp;#43;seb%2Cdigital-text%2C389&amp;amp;sr=1-1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python machine learning&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Nei Saitou Neighbor Joining</title>
       <link>https://cauliyang.github.io/en/post/nei-saitou-neighbor-joining/</link>
       <pubDate>Sat, 03 Apr 2021 11:15:00 +0800</pubDate>
       <guid>https://cauliyang.github.io/en/post/nei-saitou-neighbor-joining/</guid>
       <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
-&lt;p&gt;Before diving into code, the description of NJ algorithm can be found in &lt;img src=&#34;1605172209524.png&#34; alt=&#34;This Link&#34;&gt;, where first column indicates parent node, and second column is its children node, the last column is the value of edge.&lt;/p&gt;
+&lt;p&gt;Before diving into code, the description of NJ algorithm can be found in &lt;img src=&#34;https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1605172209524.png&#34; alt=&#34;This Link&#34;&gt;, where first column indicates parent node, and second column is its children node, the last column is the value of edge.&lt;/p&gt;
 &lt;h2 id=&#34;neighbor-joining-algorithm&#34;&gt;Neighbor Joining Algorithm&lt;/h2&gt;
 &lt;p&gt;The Neighbor-joining Algorithm Given a distance matrix d compute an unrooted tree topology complete with edge lengths that tries to preserve the additive property: $d_ {i,m} + d_{j,m} − d_{i,j} = 2d_{k,m}$ where $k$ is the ﬁrst node on both routes from $i$ and $j$ to $m$.&lt;/p&gt;
 &lt;ol&gt;
@@ -1155,83 +1456,6 @@ if __name__ == &amp;quot;__main__&amp;quot;:
       <pubDate>Sat, 03 Apr 2021 10:04:04 +0800</pubDate>
       <guid>https://cauliyang.github.io/en/talk/spring2021-project/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Welcome to Wowchemy, the website builder for Hugo</title>
-      <link>https://cauliyang.github.io/en/post/getting-started/</link>
-      <pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>https://cauliyang.github.io/en/post/getting-started/</guid>
-      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;The Wowchemy website builder for Hugo, along with its starter templates, is designed for professional creators, educators, and teams/organizations - although it can be used to create any kind of site&lt;/li&gt;
-&lt;li&gt;The template can be modified and customised to suit your needs. It&amp;rsquo;s a good platform for anyone looking to take control of their data and online identity whilst having the convenience to start off with a &lt;strong&gt;no-code solution (write in Markdown and customize with YAML parameters)&lt;/strong&gt; and having &lt;strong&gt;flexibility to later add even deeper personalization with HTML and CSS&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;You can work with all your favourite tools and apps with hundreds of plugins and integrations to speed up your workflows, interact with your readers, and much more&lt;/li&gt;
-&lt;/ol&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  id=&#34;figure-the-template-is-mobile-first-with-a-responsive-design-to-ensure-that-your-site-looks-stunning-on-every-device&#34;&gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/wowchemy/wowchemy-hugo-modules/master/academic.png&#34; alt=&#34;The template is mobile first with a responsive design to ensure that your site looks stunning on every device.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;figcaption&gt;
-      The template is mobile first with a responsive design to ensure that your site looks stunning on every device.
-    &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;get-started&#34;&gt;Get Started&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;👉 &lt;a href=&#34;https://wowchemy.com/templates/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Create a new site&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;📚 &lt;a href=&#34;https://wowchemy.com/docs/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Personalize your site&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;💬 &lt;a href=&#34;https://discord.gg/z8wNYzb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chat with the &lt;strong&gt;Wowchemy community&lt;/strong&gt;&lt;/a&gt; or &lt;a href=&#34;https://discourse.gohugo.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Hugo community&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;🐦 Twitter: &lt;a href=&#34;https://twitter.com/wowchemy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@wowchemy&lt;/a&gt; &lt;a href=&#34;https://twitter.com/GeorgeCushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@GeorgeCushen&lt;/a&gt; &lt;a href=&#34;https://twitter.com/search?q=%28%23MadeWithWowchemy%20OR%20%23MadeWithAcademic%29&amp;amp;src=typed_query&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#MadeWithWowchemy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;💡 &lt;a href=&#34;https://github.com/wowchemy/wowchemy-hugo-modules/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Request a &lt;strong&gt;feature&lt;/strong&gt; or report a &lt;strong&gt;bug&lt;/strong&gt; for &lt;em&gt;Wowchemy&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;⬆️ &lt;strong&gt;Updating Wowchemy?&lt;/strong&gt; View the &lt;a href=&#34;https://wowchemy.com/docs/guide/update/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Update Guide&lt;/a&gt; and &lt;a href=&#34;https://wowchemy.com/updates/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Release Notes&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;crowd-funded-open-source-software&#34;&gt;Crowd-funded open-source software&lt;/h2&gt;
-&lt;p&gt;To help us develop this template and software sustainably under the MIT license, we ask all individuals and businesses that use it to help support its ongoing maintenance and development via sponsorship.&lt;/p&gt;
-&lt;h3 id=&#34;-click-here-to-become-a-sponsor-and-help-support-wowchemys-future-httpswowchemycomplans&#34;&gt;&lt;a href=&#34;https://wowchemy.com/plans/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;❤️ Click here to become a sponsor and help support Wowchemy&amp;rsquo;s future ❤️&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;As a token of appreciation for sponsoring, you can &lt;strong&gt;unlock &lt;a href=&#34;https://wowchemy.com/plans/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;these&lt;/a&gt; awesome rewards and extra features 🦄✨&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;ecosystem&#34;&gt;Ecosystem&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/wowchemy/hugo-academic-cli&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo Academic CLI&lt;/a&gt;:&lt;/strong&gt; Automatically import publications from BibTeX&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;inspiration&#34;&gt;Inspiration&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Check out the latest &lt;strong&gt;demo&lt;/strong&gt;&lt;/a&gt; of what you&amp;rsquo;ll get in less than 10 minutes, or &lt;a href=&#34;https://wowchemy.com/user-stories/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;view the &lt;strong&gt;showcase&lt;/strong&gt;&lt;/a&gt; of personal, project, and business sites.&lt;/p&gt;
-&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Page builder&lt;/strong&gt; - Create &lt;em&gt;anything&lt;/em&gt; with &lt;a href=&#34;https://wowchemy.com/docs/page-builder/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;widgets&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;elements&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Edit any type of content&lt;/strong&gt; - Blog posts, publications, talks, slides, projects, and more!&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Create content&lt;/strong&gt; in &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/a&gt;, &lt;a href=&#34;https://wowchemy.com/docs/import/jupyter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jupyter&lt;/strong&gt;&lt;/a&gt;, or &lt;a href=&#34;https://wowchemy.com/docs/install-locally/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Plugin System&lt;/strong&gt; - Fully customizable &lt;a href=&#34;https://wowchemy.com/docs/customization/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;color&lt;/strong&gt; and &lt;strong&gt;font themes&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Display Code and Math&lt;/strong&gt; - Code highlighting and &lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LaTeX math&lt;/a&gt; supported&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Integrations&lt;/strong&gt; - &lt;a href=&#34;https://analytics.google.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Analytics&lt;/a&gt;, &lt;a href=&#34;https://disqus.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Disqus commenting&lt;/a&gt;, Maps, Contact Forms, and more!&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Beautiful Site&lt;/strong&gt; - Simple and refreshing one page design&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Industry-Leading SEO&lt;/strong&gt; - Help get your website found on search engines and social media&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Media Galleries&lt;/strong&gt; - Display your images and videos with captions in a customizable gallery&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Mobile Friendly&lt;/strong&gt; - Look amazing on every screen with a mobile friendly version of your site&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Multi-language&lt;/strong&gt; - 34+ language packs including English, 中文, and Português&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Multi-user&lt;/strong&gt; - Each author gets their own profile page&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Privacy Pack&lt;/strong&gt; - Assists with GDPR&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Stand Out&lt;/strong&gt; - Bring your site to life with animation, parallax backgrounds, and scroll effects&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;One-Click Deployment&lt;/strong&gt; - No servers. No databases. Only files.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
-&lt;p&gt;Wowchemy and its templates come with &lt;strong&gt;automatic day (light) and night (dark) mode&lt;/strong&gt; built-in. Alternatively, visitors can choose their preferred mode - click the moon icon in the top right of the &lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Demo&lt;/a&gt; to see it in action! Day/night mode can also be disabled by the site admin in &lt;code&gt;params.toml&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://wowchemy.com/docs/customization&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Choose a stunning &lt;strong&gt;theme&lt;/strong&gt; and &lt;strong&gt;font&lt;/strong&gt;&lt;/a&gt; for your site. Themes are fully customizable.&lt;/p&gt;
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
-&lt;p&gt;Copyright 2016-present &lt;a href=&#34;https://georgecushen.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;George Cushen&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Released under the &lt;a href=&#34;https://github.com/wowchemy/wowchemy-hugo-modules/blob/master/LICENSE.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
-</description>
     </item>
     
     <item>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Slides | My Life</title>
+    <title>Slides | My Academic</title>
     <link>https://cauliyang.github.io/en/slides/</link>
       <atom:link href="https://cauliyang.github.io/en/slides/index.xml" rel="self" type="application/rss+xml" />
     <description>Slides</description>
