@@ -52,8 +52,6 @@
 
   
   
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  
 
   
   
@@ -238,22 +236,55 @@
   
   
   
-    
-      
-      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
-    
-  
 
   
   
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.ccba2897a1a48cb1043d0c84d800233a.css" />
+  <link rel="stylesheet" href="/css/wowchemy.a8421fc8fb0f3970f3334351cee930e9.css" />
 
   
 
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-193681907-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-193681907-1', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
 
 
   
@@ -291,16 +322,18 @@
   
   
     
-    
   
   
-  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:card" content="summary_large_image" />
+  
+    <meta property="twitter:site" content="@yangyangliz5" />
+    <meta property="twitter:creator" content="@yangyangliz5" />
   
   <meta property="og:site_name" content="李阳" />
   <meta property="og:url" content="https://cauliyang.github.io/zh/project/" />
   <meta property="og:title" content="Projects | 李阳" />
-  <meta property="og:description" content="Site description in Chinese..." /><meta property="og:image" content="https://cauliyang.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" />
-    <meta property="twitter:image" content="https://cauliyang.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="zh-Hans" />
+  <meta property="og:description" content="Site description in Chinese..." /><meta property="og:image" content="https://cauliyang.github.io/media/sharing.jpeg" />
+    <meta property="twitter:image" content="https://cauliyang.github.io/media/sharing.jpeg" /><meta property="og:locale" content="zh-Hans" />
   
     
       <meta property="og:updated_time" content="2016-04-27T00:00:00&#43;00:00" />
@@ -333,7 +366,7 @@
   
   
   
-  <script src="/js/wowchemy-init.min.82a2df885514d7a8250a5a85f0335ab9.js"></script>
+  <script src="/js/wowchemy-init.min.226a9011996d125bf3fe4a5f22353a49.js"></script>
 
   
 
@@ -415,7 +448,7 @@
 
     
     
-    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
 
       
       <ul class="navbar-nav d-md-inline-flex">
@@ -998,11 +1031,10 @@
       
     
     
-    <script src="/zh/js/wowchemy.min.f46e99c72240b4a7807aae95ab56b981.js"></script>
+    <script src="/zh/js/wowchemy.min.522eb70afb0572dcb0f5f96298aded03.js"></script>
 
     
-
-
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 
 
