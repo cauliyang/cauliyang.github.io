@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags | 李阳</title>
+    <title>Tags | 我的学术生涯</title>
     <link>https://cauliyang.github.io/zh/tags/</link>
       <atom:link href="https://cauliyang.github.io/zh/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><copyright>© 2020 Yangyang Li. All Rights Reserved.</copyright><lastBuildDate>Sun, 13 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>zh-Hans</language><copyright>© 2020 Yangyang Li. All Rights Reserved.</copyright><lastBuildDate>Mon, 05 Apr 2021 12:54:10 +0800</lastBuildDate>
     <image>
       <url>https://cauliyang.github.io/media/sharing.jpeg</url>
       <title>Tags</title>

@@ -1,0 +1,1677 @@
+<!DOCTYPE html><html lang="zh-Hans" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.1.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Yangyang Li" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="本篇记录最近边学边做的一个无趣的小项目，用于帮助同窗提高工作效率" />
+
+  
+  <link rel="alternate" hreflang="zh-Hans" href="https://cauliyang.github.io/zh/post/face-recognition/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#4caf50" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.a8421fc8fb0f3970f3334351cee930e9.css" />
+
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-193681907-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-193681907-1', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/zh/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_2.png" />
+
+  <link rel="canonical" href="https://cauliyang.github.io/zh/post/face-recognition/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+    <meta property="twitter:site" content="@yangyangliz5" />
+    <meta property="twitter:creator" content="@yangyangliz5" />
+  
+  <meta property="og:site_name" content="我的学术生涯" />
+  <meta property="og:url" content="https://cauliyang.github.io/zh/post/face-recognition/" />
+  <meta property="og:title" content="Face Recognition | 我的学术生涯" />
+  <meta property="og:description" content="本篇记录最近边学边做的一个无趣的小项目，用于帮助同窗提高工作效率" /><meta property="og:image" content="https://cauliyang.github.io/media/sharing.jpeg" />
+    <meta property="twitter:image" content="https://cauliyang.github.io/media/sharing.jpeg" /><meta property="og:locale" content="zh-Hans" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2021-04-05T12:54:10&#43;08:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-04-05T12:54:10&#43;08:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://cauliyang.github.io/zh/post/face-recognition/"
+  },
+  "headline": "Face Recognition",
+  
+  "datePublished": "2021-04-05T12:54:10+08:00",
+  "dateModified": "2021-04-05T12:54:10+08:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Yangyang Li"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Yangyang Li; Ph.D; University of Minnesota",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://cauliyang.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "本篇记录最近边学边做的一个无趣的小项目，用于帮助同窗提高工作效率"
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Face Recognition | 我的学术生涯</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="939549da68bd186a9be8d59b1de335d7" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.226a9011996d125bf3fe4a5f22353a49.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>搜索</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="搜索..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="搜索...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/zh/">我的学术生涯</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="切换导航">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/zh/">我的学术生涯</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/zh/#about"><span>主页</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/zh/#posts"><span>文章</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/zh/#projects"><span>项目</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/zh/#talk"><span>演讲</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/zh/#featured"><span>论文</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/zh/courses/"><span>课程</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/zh/#contact"><span>联系我</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="搜索"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>浅色</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>深色</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>自动</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Face Recognition</h1>
+
+  
+  <p class="page-subtitle">实现在视频中识别特定人物并获取时间记录</p>
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span >
+      Yangyang Li</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Apr 5, 2021
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    3 分钟阅读时长
+  </span>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/zh/category/deep-learning/">Deep Learning</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <style>
+img{
+    width: 70%;
+    padding-left: 14%;
+    height: 50%
+}
+</style>
+<h2 id="1-准备工作">1. 准备工作</h2>
+<p>使用<strong>Python</strong>实现需求，环境需求比较严苛，所需要的主要依赖：</p>
+<p><strong>Requirements</strong></p>
+<ul>
+<li><strong>dlib</strong> 由C++编写，提供了和机器学习、数值计算、图模型算法、图像处理等领域相关的一系列功能</li>
+<li><strong>face-recognition</strong> 已经经过训练成熟的识别人脸的工具</li>
+<li><strong>imutils</strong> 用来操作系统文件和文件夹</li>
+<li><strong>Opencv</strong>是用来操作视频流，并将视频流转换格式</li>
+</ul>
+<h3 id="11-环境搭建">1.1 环境搭建</h3>
+<ol>
+<li>
+<p>通过pip进行安装，在使用pip进行安装时，应该注意切换到国内源进行下载，提高下载速度，下面分享一下当前国内的pip源：</p>
+<ul>
+<li>阿里云 <a href="https://mirrors.aliyun.com/pypi/simple/">https://mirrors.aliyun.com/pypi/simple/</a></li>
+<li>中国科技大学 <a href="https://pypi.mirrors.ustc.edu.cn/simple/">https://pypi.mirrors.ustc.edu.cn/simple/</a></li>
+<li>豆瓣 <a href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a></li>
+<li>清华大学 <a href="https://pypi.tuna.tsinghua.edu.cn/simple/">https://pypi.tuna.tsinghua.edu.cn/simple/</a></li>
+<li>中国科学技术大学 <a href="http://pypi.mirrors.ustc.edu.cn/simple/">http://pypi.mirrors.ustc.edu.cn/simple/</a></li>
+</ul>
+</li>
+<li>
+<p>通过Anaconda进行安装，但是需要注意的是在Anaconda的资源中并没有<strong>face-recognition</strong>，需要使用pip安装。在安装中可能遇到问题因此在此分享我的环境，分别在Windows和Mac环境下进行测试。</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>Mac 环境</p>
+<ul>
+<li>Python 3.8</li>
+<li>dlib 19.20.0</li>
+<li>cmake 3.18.0</li>
+<li>face-recognition 1.3.0</li>
+<li>imutils 0.5.3</li>
+</ul>
+</li>
+<li>
+<p>Windows 环境</p>
+<ul>
+<li>Python 3.6</li>
+<li>dlib 19.7.0</li>
+<li>cmake 3.18.0</li>
+<li>face-recognition 1.3.0</li>
+<li>imutils 0.5.3</li>
+</ul>
+</li>
+</ul>
+<p>在Windows 环境中安装<strong>dlib</strong>如果通过pip安装遇到问题，可以直接下载对应版本的<a href="https://pypi.org/simple/dlib/" target="_blank" rel="noopener"><strong>Whl</strong>文件</a>，使用<code>pip install dlib-19.7.0-cp36-cp36m-win_amd64.whl</code>命令进行安装。</p>
+<h2 id="2-素材展示">2. 素材展示</h2>
+<p>环境搭建完毕后，<strong>该项目的目的是捕捉人物在视频中出现并记录相应时间</strong>。首先让我们熟悉一下该小项目的测试素材：</p>
+<ul>
+<li>目标人物的照片</li>
+<li>存在目标人物的测试视频</li>
+</ul>
+<h3 id="21-目标人物的照片">2.1 目标人物的照片</h3>
+<p>1.<img src="https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1595310450018.png" alt=""></p>
+<p>2.<img src="https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1595310499443.png" alt=""></p>
+<p>在本项目的需求中只存在一个目人物，照片数量越多越好，数量在30-80之间就可以基本实现误差度较低的识别精度，但是需要注意的是照片中应只存在一人，且表情应该尽量丰富，照片不能过于单一。</p>
+<h3 id="22-测试视频">2.2 测试视频</h3>
+<p><img src="https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1595314710081.gif" alt=""></p>
+<h2 id="3-实现流程">3. 实现流程</h2>
+<p>在视频中实现特定人物的人脸识别，需要主要两个步骤：</p>
+<ol>
+<li>对素材中照片进行编码，将每一张照片转换为一个含有128个元素的1维数组</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1595315291836.png" alt=""></p>
+<ol start="2">
+<li>识别视频中对人脸，转换为数组与目标数组进行比对，确定是否匹配，完成识别。</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1595316395676.png" alt=""></p>
+<h3 id="31-编码照片">3.1 编码照片</h3>
+<pre><code class="language-python">
+# 导入模块
+from imutils import paths # 操作文件
+import face_recognition   # 识别人脸并编码
+import pickle  # 使用pickle文件形式储存节省空间
+import cv2     # 操作视频流
+
+# 获取照片
+print(&quot;[INFO] quantifying faces...&quot;)
+imagePaths = list(paths.list_images(&quot;./dataset&quot;)) # dataset为储存照片文件夹
+
+# 初始化储存所有照片编码
+knownEncodings = []
+
+# 遍历每张照片并编码
+for (i, imagePath) in enumerate(imagePaths):
+
+    print(&quot;[INFO] processing image {}/{}&quot;.format(i + 1, len(imagePaths)))
+
+    # 加载图片，转换为RGB模式
+    image = cv2.imread(imagePath)
+    rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
+    # 识别人脸并返回位置
+    boxes = face_recognition.face_locations(rgb,
+                                            model='hog' # model 可以选择 cnn 或 hog
+                                            )
+
+    # 编码照片并储存
+    encodings = face_recognition.face_encodings(rgb, boxes)
+    knownEncodings.append(encoding)
+
+# 写入照片的编码
+print(&quot;[INFO] serializing encodings...&quot;)
+data = {&quot;encodings.pickle&quot;: knownEncodings}
+with open('encoding_face.pickle', &quot;wb&quot;) as f:
+    f.write(pickle.dumps(data))
+
+</code></pre>
+<p>在编码照片时要注意模式的选择：</p>
+<ul>
+<li>
+<p>如果你有GPU，可以选择卷积神经网络（CNN），因为要消耗大量的计算力。</p>
+</li>
+<li>
+<p>如果你和我一样使用CPU，选择方向梯度直方图方法（HOG），大大地提高计算速度，处理30张照片大约消耗3-5分钟。</p>
+</li>
+</ul>
+<p>将所有照片编码完成后，结果文件可以在后续不同视频中一直使用，如果要添加更多照片进行检测，那么应该重新进行编码。此外还可以采用免费的GPU使用例如<a href="https://colab.research.google.com/" target="_blank" rel="noopener">Google Colab</a>和<a href="https://www.kaggle.com/" target="_blank" rel="noopener">Kaggle</a>。</p>
+<h3 id="32-视频识别">3.2 视频识别</h3>
+<p>采用<strong>Opencv</strong>处理视频流，一帧一帧进行操作。</p>
+<pre><code class="language-python">
+# 导入模块
+from imutils import paths
+import face_recognition
+import imutils
+import pickle
+import time
+import cv2
+import os
+
+# 设置全局变量，下文具体解释
+THRESHOLD = 0.5       
+FILTER_STANDARD = 0.6  
+FRAME_STEP = 20                 
+
+
+# 获取目标文件夹中视频文件，并判断格式
+def get_files():
+    return [
+        file for file in paths.list_files('./videos/')
+        if os.path.splitext(file)[1] in ['.mp4', '.avi', '.rmvb']
+    ]
+
+# 获取时间戳
+def get_time_stamp(stream):
+    '''
+    stream: 已读取的视频
+    '''
+    # 获取时间，单位为毫秒 1000毫秒 = 1秒
+    milliseconds = stream.get(cv2.CAP_PROP_POS_MSEC)
+    seconds = milliseconds // 1000
+    milliseconds = milliseconds % 1000
+    minutes = 0
+    hours = 0
+
+    if seconds &gt;= 60:
+        minutes = seconds // 60
+        seconds = seconds % 60
+
+    if minutes &gt;= 60:
+        hours = minutes // 60
+        minutes = minutes % 60
+    # 返回时间戳
+    return f'{int(hours)}:{int(minutes)}:{int(seconds)}'
+
+# 处理视频流
+def worker(file, data, display=1):
+    '''
+    file: 视频文件地址
+    data: 已经读取的编码文件
+    display: 是否实时展示视频处理过程 [0,1]，1为展示
+    '''
+    # 创建结果文件
+    new_file = open(f'{file}.txt', 'w')
+    # 初始化当前帧
+    current_frame = 0
+    # 显示正在处理视频文件
+    print(f&quot;[INFO] processing video {file}...&quot;)
+    # 读取视频
+    stream = cv2.VideoCapture(file)
+    
+    # 遍历视频中每一帧进行处理
+    grabbed = True
+    while grabbed:
+        # 获取一帧
+        (grabbed, frame) = stream.read()
+        # 判断是否跳帧
+        if current_frame % FRAME_STEP == 0:
+            # 转换为RGB模式并改变帧大小
+            rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            rgb = imutils.resize(frame, width=750)
+            # 获取缩放比例
+            r = frame.shape[1] / float(rgb.shape[1])
+            # 识别每一帧中的人脸 model 可以选择 hog 或 cnn
+            boxes = face_recognition.face_locations(rgb, model='hog')
+            # 对每一帧中人脸进行编码
+            encodings = face_recognition.face_encodings(rgb, boxes)
+            
+            # 初始化保存所识别人姓名
+            names = []
+
+            # 将每一帧中的所有被编码的人脸与目标进行比对
+            # 每一个 encoding 都是一张被编码的人脸
+            for encoding in encodings:
+                # 和目标所有被编码的照片进行比对
+                matches = face_recognition.compare_faces(data[&quot;encodings&quot;],
+                                                         encoding,
+                                                         tolerance=THRESHOLD)
+                # 初始化姓名
+                name = &quot;Unknown&quot;
+                # 获取视频中人脸匹配目标所有照片的比例
+                true_value = (sum(matches) / len(data['encodings']))
+                # 满足阈值则认定识别成功
+                if true_value &gt; FILTER_STANDARD:
+                    name = 'Identified'
+                names.append(name)
+
+            # 获取当前帧时间戳
+            time = get_time_stamp(stream)
+            # 标注每一帧中的人脸
+            for ((top, right, bottom, left), name) in zip(boxes, names):
+                # 计算人脸位置
+                top = int(top * r)
+                right = int(right * r)
+                bottom = int(bottom * r)
+                left = int(left * r)
+
+                # 绘出人脸位置
+                cv2.rectangle(frame, (left, top), (right, bottom),
+                    (0, 255, 0), 2)
+                # 添加每一人脸相应信息，主要有姓名和匹配目标照片比例
+                y = top - 15 if top - 15 &gt; 15 else top + 15
+                cv2.putText(frame, f'{name} {true_value:.2f}', (left, y), cv2.FONT_HERSHEY_SIMPLEX,
+                    0.75, (0, 255, 0), 2)
+                # 判断是否进行实时播放处理
+                if display &gt; 0:
+                    cv2.imshow(&quot;Frame&quot;, frame)
+                    key = cv2.waitKey(1) &amp; 0xFF
+
+                # 按键q退出处理
+                if key == ord(&quot;q&quot;):
+                    break
+
+            # 如果一帧中是否包好目标并写入相应信息
+            if 'Identified' in names:
+                new_file.write(f'Identified\t{time}\n')
+            else:
+                new_file.write(f'Unknown\t{time}\n')
+        # 处理下一帧
+        current_frame += 1
+
+    # 关闭视频
+    stream.release()
+
+
+def main(encoding_file):
+    data  = pickle.loads(open(encoding_file, &quot;rb&quot;).read())
+    for file in get_files():
+        worker(file,data=data)
+
+if __main__ == '__name__':
+    main('./encodings.pickle')
+</code></pre>
+<p>在视频实时处理过程：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1595322861164.gif" alt=""></p>
+<p>在视频处理过程中需要注意的是三个全局参数的选择:</p>
+<ul>
+<li><strong>THRESHOLD</strong> = 0.5           比较视频中人脸和目标人脸是否相同，默认为0.6，越小越严格</li>
+<li><strong>FILTER_STANDARD</strong> = 0.6  此阈值为视频中人脸匹配目标所有照片的比例，越大越严格</li>
+<li><strong>FRAME_STEP</strong> = 20           跳帧操作，加快视频处理时间，本视频中1S大约24帧，最好保证时间连续。</li>
+</ul>
+<p>其次仍需注意编码过程中方法的选择，CNN适合比较适合GPU计算。</p>
+<h3 id="33-结果文件">3.3 结果文件</h3>
+<p>将每一帧的处理结果写入文件当中，输出结果中有姓名和出现时间，后续可以对根据结果对视频进行处理。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1595323102132.png" alt=""></p>
+<h2 id="4-总结">4. 总结</h2>
+<h3 id="41-可以提高的地方">4.1 可以提高的地方</h3>
+<p>在整个实现过程中需要考虑对是硬件和软件的结合，最大程度地满足要达到的需求，在边学边做的过程当中，逐步摸索虽然初步解决了问题，但是还有很多可以改正和深挖的地方。</p>
+<p>首先本篇博客代码使用硬编码，这样好处是方便一些，但是不适合分享和复现，同时对文件结构有很高要求，我的文件结构如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1595323492839.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1595323499909.png" alt=""></p>
+<p>后续可以改为命令行获取参数，令代码更加灵活。其次可以修改代码使其能够同时处理多个视频。</p>
+<p>在全局参数的选择也存在些许问题，我并没有找到最适合的参数，可以从结果图片看出在识别的过程中存在错误，我认为有两种解决办法：</p>
+<ol>
+<li>增加目标编码照片数量，在实现当中使用大约40张照片，并且表情比较单一，如果后续可以丰富相应照片，就会避免错误的识别。</li>
+<li>修改参数，可以结合最大似然估计选择合适的参数。</li>
+</ol>
+<h3 id="42--收获">4.2  收获</h3>
+<p>在边学边做的过程中，了解视频与图片处理方法和概念。站在巨人的肩膀上，利用已经有的轮子实现。但是也不能沉浸于此，还是要增强统计相关的知识。</p>
+<p>最后，在此记录实现过程，便于后续参考。并且记录遇到问题以及解决办法。</p>
+<p>如果你看到这，就让我为你放一首歌吧，祝你生活愉快 ！ 😜</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="//music.163.com/outchain/player?type=2&id=536098119&auto=0&height=66"></iframe>
+<h3 id="参考链接">参考链接</h3>
+<ol>
+<li><a href="pyimagesearch.com/2018/06/18/face-recognition-with-opencv-python-and-deep-learning/"><strong>Pyimage</strong></a></li>
+</ol>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/zh/tag/computer-vision/">Computer Vision</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://cauliyang.github.io/zh/post/face-recognition/&amp;text=Face%20Recognition" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://cauliyang.github.io/zh/post/face-recognition/&amp;t=Face%20Recognition" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Face%20Recognition&amp;body=https://cauliyang.github.io/zh/post/face-recognition/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://cauliyang.github.io/zh/post/face-recognition/&amp;title=Face%20Recognition" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Face%20Recognition%20https://cauliyang.github.io/zh/post/face-recognition/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://cauliyang.github.io/zh/post/face-recognition/&amp;title=Face%20Recognition" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://cauliyang.github.io/"><img class="avatar mr-3 avatar-circle" src="/zh/authors/admin/avatar_hu043674fefa0f96a27ae70381f9c84e6f_39565_270x270_fill_q75_lanczos_center.jpeg" alt="Yangyang Li"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://cauliyang.github.io/">Yangyang Li</a></h5>
+      <h6 class="card-subtitle">Ph.D. of University of Minnesota</h6>
+      <p class="card-text">My research interests include deep learning, machine learning and bioinformatics.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/zh/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/GeorgeCushen" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ" target="_blank" rel="noopener">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/cauliyang" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+  
+
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="cauliyang/cauliyang.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+  
+
+  <p class="powered-by">
+    © 2020 Yangyang Li. All Rights Reserved.
+  </p>
+
+  
+  
+
+
+
+
+
+  
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    This website is licensed under CC BY-NC-ND 4.0
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      由<a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a>支持发布——免费<a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">开源</a>网站，为创作者赋能。
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">引用</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> 复制
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> 下载
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.4/mermaid.min.js" integrity="sha512-as1BF4+iHZ3BVO6LLDQ7zrbvTXM+c/1iZ1qII/c3c4L8Rn5tHLpFUtpaEtBNS92f+xGsCzsD7b62XP3XYap6oA==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/cpp.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/java.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/go.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/zh/js/wowchemy.min.522eb70afb0572dcb0f5f96298aded03.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>

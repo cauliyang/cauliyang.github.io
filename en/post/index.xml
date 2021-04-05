@@ -17,13 +17,7 @@
       <link>https://cauliyang.github.io/en/post/pca-by-python/</link>
       <pubDate>Sun, 04 Apr 2021 23:58:37 +0800</pubDate>
       <guid>https://cauliyang.github.io/en/post/pca-by-python/</guid>
-      <description>&lt;style&gt;
-img{
-    width: 70%;
-    padding-left: 1%;
-}
-&lt;/style&gt;
-&lt;h2 id=&#34;1-introduction&#34;&gt;1. Introduction&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;1-introduction&#34;&gt;1. Introduction&lt;/h2&gt;
 &lt;h3 id=&#34;11-whats-pca&#34;&gt;1.1 What&amp;rsquo;s PCA?&lt;/h3&gt;
 &lt;p&gt;When it comes to methods of reducing dimension, PCA that is an unsupervised linear transformation technique, must be not ignored. Moreover, if you want to know the subtle relationships among data set and reduce the computational complexity in downstream analysis, the PCA may be your best choice! Meanwhile, if you would like to present your data in a 2-dimension or 3-dimension coordinate system, and PCA would sweep your problems!&lt;/p&gt;
 &lt;p&gt;What is reducing dimension? I will show you an example as follows:&lt;/p&gt;
@@ -103,7 +97,7 @@ img{
 &lt;li&gt;Normalize $d$ dimension raw data&lt;/li&gt;
 &lt;li&gt;Creat the covariance matrix&lt;/li&gt;
 &lt;li&gt;Calculate the eigenvalues of the covariance matrix and the corresponding eigenvectors&lt;/li&gt;
-&lt;li&gt;The eigenvectors are sorted in the matrix according to the corresponding feature value, and the first k rows are formed into a matrix $W$.($k&amp;laquo;d$)&lt;/li&gt;
+&lt;li&gt;The eigenvectors are sorted in the matrix according to the corresponding feature value, and the first k rows are formed into a matrix $W$. ($k&amp;laquo;d$)&lt;/li&gt;
 &lt;li&gt;$Y = xW$ is the result after reducing dimension to k dimension&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; There are two prerequisites for conducting PCA&lt;/p&gt;
@@ -318,9 +312,20 @@ We can see that the classifier&amp;rsquo;s accurate is excellent according to ac
       <link>https://cauliyang.github.io/en/post/nei-saitou-neighbor-joining/</link>
       <pubDate>Sat, 03 Apr 2021 11:15:00 +0800</pubDate>
       <guid>https://cauliyang.github.io/en/post/nei-saitou-neighbor-joining/</guid>
-      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+      <description>&lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
+  &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
+  &lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#1-background&#34;&gt;1. Background&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#2-neighbor-joining-algorithm&#34;&gt;2. Neighbor Joining Algorithm&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#3-implementation&#34;&gt;3. Implementation&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/details&gt;
+
+&lt;h2 id=&#34;1-background&#34;&gt;1. Background&lt;/h2&gt;
 &lt;p&gt;Before diving into code, the description of NJ algorithm can be found in &lt;img src=&#34;https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1605172209524.png&#34; alt=&#34;This Link&#34;&gt;, where first column indicates parent node, and second column is its children node, the last column is the value of edge.&lt;/p&gt;
-&lt;h2 id=&#34;neighbor-joining-algorithm&#34;&gt;Neighbor Joining Algorithm&lt;/h2&gt;
+&lt;h2 id=&#34;2-neighbor-joining-algorithm&#34;&gt;2. Neighbor Joining Algorithm&lt;/h2&gt;
 &lt;p&gt;The Neighbor-joining Algorithm Given a distance matrix d compute an unrooted tree topology complete with edge lengths that tries to preserve the additive property: $d_ {i,m} + d_{j,m} − d_{i,j} = 2d_{k,m}$ where $k$ is the ﬁrst node on both routes from $i$ and $j$ to $m$.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Let the set of clusters be called $L$ and initially $i → C_i; ∀i$ that is $| C_i | = 1$ and $L = C_1 , C_2 , . . . C_N$.&lt;/li&gt;
@@ -346,7 +351,7 @@ $$edge_{j,k} = d_{i,j} $$&lt;/li&gt;
 &lt;p&gt;&lt;strong&gt;Implementation Notes Consider this part of the computation:&lt;/strong&gt;
 $$D_{i,j} = d_{i,j} − (r_i + r_j ) \ where \ r_i =  \frac{1}{|L|-2} \sum_{z \in L}d_{i,z}$$
 The values of r_z can be computed once each time we want to compute matrix $D$. This saves a vast amount of time. Furthermore, since $D_{i,j}$ is only used to ﬁnd the argmin of $D_{i,j}$ we actually don’t have to save array $D$; we only need to ﬁnd the argmin of it. So ﬁrst compute all the r and then combine the argmin step with the computation of $D_{i,j}$&lt;/p&gt;
-&lt;h2 id=&#34;implementation&#34;&gt;Implementation&lt;/h2&gt;
+&lt;h2 id=&#34;3-implementation&#34;&gt;3. Implementation&lt;/h2&gt;
 &lt;p&gt;I write code contained comments, and it is about 1000 lines that consumes me two whole days. Now let me show my code with rich comments. If you have any questions or recommendation, I am very glad to communicate with you! Please feel free to reach me.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# -*- coding: UTF-8 -*-
 # Time 20201109

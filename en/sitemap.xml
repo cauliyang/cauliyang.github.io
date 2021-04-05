@@ -2,60 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://cauliyang.github.io/en/courses/example/python/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://cauliyang.github.io/zh/courses/example/python/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cauliyang.github.io/en/courses/example/python/"
-                />
+    <loc>https://cauliyang.github.io/en/tag/course/</loc>
+    <lastmod>2021-04-20T10:04:04+08:00</lastmod>
   </url><url>
-    <loc>https://cauliyang.github.io/en/courses/example/visualization/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://cauliyang.github.io/zh/courses/example/visualization/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cauliyang.github.io/en/courses/example/visualization/"
-                />
-  </url><url>
-    <loc>https://cauliyang.github.io/en/courses/example/stats/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://cauliyang.github.io/zh/courses/example/stats/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cauliyang.github.io/en/courses/example/stats/"
-                />
-  </url><url>
-    <loc>https://cauliyang.github.io/en/talk/example-talk/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://cauliyang.github.io/zh/talk/example-talk/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cauliyang.github.io/en/talk/example-talk/"
-                />
+    <loc>https://cauliyang.github.io/en/talk/courses-presentations-on-spring2021/</loc>
+    <lastmod>2021-04-20T10:04:04+08:00</lastmod>
   </url><url>
     <loc>https://cauliyang.github.io/en/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <lastmod>2021-04-20T10:04:04+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -68,7 +22,7 @@
                 />
   </url><url>
     <loc>https://cauliyang.github.io/en/event/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <lastmod>2021-04-20T10:04:04+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -80,11 +34,21 @@
                 href="https://cauliyang.github.io/en/event/"
                 />
   </url><url>
-    <loc>https://cauliyang.github.io/en/category/algorithm/</loc>
-    <lastmod>2021-04-04T23:58:37+08:00</lastmod>
+    <loc>https://cauliyang.github.io/en/tags/</loc>
+    <lastmod>2021-04-20T10:04:04+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://cauliyang.github.io/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cauliyang.github.io/en/tags/"
+                />
   </url><url>
     <loc>https://cauliyang.github.io/en/categories/</loc>
-    <lastmod>2021-04-04T23:58:37+08:00</lastmod>
+    <lastmod>2021-04-05T16:23:49+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -95,6 +59,44 @@
                 hreflang="en"
                 href="https://cauliyang.github.io/en/categories/"
                 />
+  </url><url>
+    <loc>https://cauliyang.github.io/en/category/computational-biology/</loc>
+    <lastmod>2021-04-05T16:23:49+08:00</lastmod>
+  </url><url>
+    <loc>https://cauliyang.github.io/en/tag/deep-learning/</loc>
+    <lastmod>2021-04-05T16:23:49+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://cauliyang.github.io/zh/tag/deep-learning/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cauliyang.github.io/en/tag/deep-learning/"
+                />
+  </url><url>
+    <loc>https://cauliyang.github.io/en/tag/development/</loc>
+    <lastmod>2021-04-05T16:23:49+08:00</lastmod>
+  </url><url>
+    <loc>https://cauliyang.github.io/en/project/mining-cryptic-exon-using-deep-learning/</loc>
+    <lastmod>2021-04-05T16:23:49+08:00</lastmod>
+  </url><url>
+    <loc>https://cauliyang.github.io/en/project/</loc>
+    <lastmod>2021-04-05T16:23:49+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://cauliyang.github.io/zh/project/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cauliyang.github.io/en/project/"
+                />
+  </url><url>
+    <loc>https://cauliyang.github.io/en/category/algorithm/</loc>
+    <lastmod>2021-04-04T23:58:37+08:00</lastmod>
   </url><url>
     <loc>https://cauliyang.github.io/en/tag/machine-learning/</loc>
     <lastmod>2021-04-04T23:58:37+08:00</lastmod>
@@ -118,39 +120,14 @@
     <loc>https://cauliyang.github.io/en/tag/python/</loc>
     <lastmod>2021-04-04T23:58:37+08:00</lastmod>
   </url><url>
-    <loc>https://cauliyang.github.io/en/tags/</loc>
-    <lastmod>2021-04-04T23:58:37+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://cauliyang.github.io/zh/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cauliyang.github.io/en/tags/"
-                />
-  </url><url>
     <loc>https://cauliyang.github.io/en/tag/bioinformatics/</loc>
     <lastmod>2021-04-03T11:15:00+08:00</lastmod>
   </url><url>
     <loc>https://cauliyang.github.io/en/post/nei-saitou-neighbor-joining/</loc>
     <lastmod>2021-04-03T11:15:00+08:00</lastmod>
   </url><url>
-    <loc>https://cauliyang.github.io/en/tag/course/</loc>
-    <lastmod>2021-04-03T10:04:04+08:00</lastmod>
-  </url><url>
-    <loc>https://cauliyang.github.io/en/tag/final-project/</loc>
-    <lastmod>2021-04-03T10:04:04+08:00</lastmod>
-  </url><url>
-    <loc>https://cauliyang.github.io/en/talk/spring2021-project/</loc>
-    <lastmod>2021-04-03T10:04:04+08:00</lastmod>
-  </url><url>
-    <loc>https://cauliyang.github.io/en/tag/nonthing/</loc>
-    <lastmod>2021-04-02T14:45:20+08:00</lastmod>
-  </url><url>
-    <loc>https://cauliyang.github.io/en/category/test/</loc>
-    <lastmod>2021-04-02T14:45:20+08:00</lastmod>
+    <loc>https://cauliyang.github.io/en/courses/deep-learning-by-hungyilee/</loc>
+    <lastmod>2021-01-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cauliyang.github.io/en/courses/</loc>
     <lastmod>2021-01-24T00:00:00+00:00</lastmod>
@@ -163,19 +140,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://cauliyang.github.io/en/courses/"
-                />
-  </url><url>
-    <loc>https://cauliyang.github.io/en/courses/example/</loc>
-    <lastmod>2021-01-24T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://cauliyang.github.io/zh/courses/example/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cauliyang.github.io/en/courses/example/"
                 />
   </url><url>
     <loc>https://cauliyang.github.io/en/slides/</loc>
@@ -204,73 +168,19 @@
                 href="https://cauliyang.github.io/en/slides/example/"
                 />
   </url><url>
-    <loc>https://cauliyang.github.io/en/tag/deep-learning/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+    <loc>https://cauliyang.github.io/en/admin/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://cauliyang.github.io/zh/tag/deep-learning/"
+                href="https://cauliyang.github.io/zh/admin/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://cauliyang.github.io/en/tag/deep-learning/"
-                />
-  </url><url>
-    <loc>https://cauliyang.github.io/en/project/example/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://cauliyang.github.io/zh/project/example/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cauliyang.github.io/en/project/example/"
-                />
-  </url><url>
-    <loc>https://cauliyang.github.io/en/project/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://cauliyang.github.io/zh/project/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cauliyang.github.io/en/project/"
-                />
-  </url><url>
-    <loc>https://cauliyang.github.io/en/publication-type/1/</loc>
-    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://cauliyang.github.io/zh/publication-type/1/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cauliyang.github.io/en/publication-type/1/"
-                />
-  </url><url>
-    <loc>https://cauliyang.github.io/en/publication/example/</loc>
-    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://cauliyang.github.io/zh/publication/example/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cauliyang.github.io/en/publication/example/"
+                href="https://cauliyang.github.io/en/admin/"
                 />
   </url><url>
     <loc>https://cauliyang.github.io/en/publication_types/</loc>
-    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -283,7 +193,6 @@
                 />
   </url><url>
     <loc>https://cauliyang.github.io/en/publication/</loc>
-    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -293,18 +202,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://cauliyang.github.io/en/publication/"
-                />
-  </url><url>
-    <loc>https://cauliyang.github.io/en/admin/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://cauliyang.github.io/zh/admin/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cauliyang.github.io/en/admin/"
                 />
   </url>
 </urlset>

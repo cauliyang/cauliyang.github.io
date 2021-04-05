@@ -1,0 +1,1646 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.1.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Yangyang Li" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="This article records two methods of PCA analysis using Python, and visualizes 2-dimensional results." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://cauliyang.github.io/en/post/pca-by-python/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#4caf50" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.a8421fc8fb0f3970f3334351cee930e9.css" />
+
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-193681907-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-193681907-1', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/en/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_2.png" />
+
+  <link rel="canonical" href="https://cauliyang.github.io/en/post/pca-by-python/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+    <meta property="twitter:site" content="@yangyangliz5" />
+    <meta property="twitter:creator" content="@yangyangliz5" />
+  
+  <meta property="og:site_name" content="My Academic" />
+  <meta property="og:url" content="https://cauliyang.github.io/en/post/pca-by-python/" />
+  <meta property="og:title" content="PCA by Python | My Academic" />
+  <meta property="og:description" content="This article records two methods of PCA analysis using Python, and visualizes 2-dimensional results." /><meta property="og:image" content="https://cauliyang.github.io/en/post/pca-by-python/featured.jpeg" />
+    <meta property="twitter:image" content="https://cauliyang.github.io/en/post/pca-by-python/featured.jpeg" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2021-04-04T23:58:37&#43;08:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-04-04T23:58:37&#43;08:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://cauliyang.github.io/en/post/pca-by-python/"
+  },
+  "headline": "PCA by Python",
+  
+  "image": [
+    "https://cauliyang.github.io/en/post/pca-by-python/featured.jpeg"
+  ],
+  
+  "datePublished": "2021-04-04T23:58:37+08:00",
+  "dateModified": "2021-04-04T23:58:37+08:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Yangyang Li"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Yangyang Li; Ph.D; University of Minnesota",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://cauliyang.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "This article records two methods of PCA analysis using Python, and visualizes 2-dimensional results."
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>PCA by Python | My Academic</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="f685494be9b9b9a408deb3626809d865" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.226a9011996d125bf3fe4a5f22353a49.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/en/">My Academic</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/en/">My Academic</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/en/#about"><span>Biography</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/en/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/en/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/en/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/en/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/en/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/en/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>PCA by Python</h1>
+
+  
+  <p class="page-subtitle">Two method for implementing PCA algorithm</p>
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span >
+      Yangyang Li</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Apr 4, 2021
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    5 min read
+  </span>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/en/category/algorithm/">Algorithm </a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h2 id="1-introduction">1. Introduction</h2>
+<h3 id="11-whats-pca">1.1 What&rsquo;s PCA?</h3>
+<p>When it comes to methods of reducing dimension, PCA that is an unsupervised linear transformation technique, must be not ignored. Moreover, if you want to know the subtle relationships among data set and reduce the computational complexity in downstream analysis, the PCA may be your best choice! Meanwhile, if you would like to present your data in a 2-dimension or 3-dimension coordinate system, and PCA would sweep your problems!</p>
+<p>What is reducing dimension? I will show you an example as follows:</p>
+<p>First, suppose you have a five-dimensional data set :</p>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>1-d</th>
+<th>2-d</th>
+<th>3-d</th>
+<th>4-d</th>
+<th>5-d</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data-1</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td>data-2</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td>..</td>
+<td>..</td>
+<td>..</td>
+<td>..</td>
+<td>..</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Then, you could pick up PC1 and PC2 after PCA to reduce dimension for plotting:</p>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>PC1</th>
+<th>PC2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data-1</td>
+<td>0.3</td>
+<td>0.6</td>
+</tr>
+<tr>
+<td>data-2</td>
+<td>0.1</td>
+<td>1.2</td>
+</tr>
+<tr>
+<td>..</td>
+<td>..</td>
+<td>..</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PC1</strong> and <strong>PC2</strong> are the result obtained through data is projection on the unit vectors, which enable result to have the most biggest variance(means its distribution is wide) and to be irrelevant(covariance = 0).</p>
+<h3 id="12-algorithm">1.2 Algorithm</h3>
+<ol>
+<li>Normalize $d$ dimension raw data</li>
+<li>Creat the covariance matrix</li>
+<li>Calculate the eigenvalues of the covariance matrix and the corresponding eigenvectors</li>
+<li>The eigenvectors are sorted in the matrix according to the corresponding feature value, and the first k rows are formed into a matrix $W$. ($k&laquo;d$)</li>
+<li>$Y = xW$ is the result after reducing dimension to k dimension</li>
+</ol>
+<p><strong>Note:</strong> There are two prerequisites for conducting PCA</p>
+<ul>
+<li>Raw data has no NA</li>
+<li>The raw data should be normalized</li>
+</ul>
+<h2 id="2-pca-from-scratch">2. PCA from scratch</h2>
+<ul>
+<li>Importing necessary modules</li>
+</ul>
+<pre><code class="language-python">import pandas as pd 
+import numpy as np
+import matplotlib.pyplot as plt 
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+</code></pre>
+<ul>
+<li>Creating raw data</li>
+</ul>
+<pre><code class="language-python"># get  data set 
+df_wine = pd.read_csv(
+    'http://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data',
+    header=None,
+    engine='python')
+# check data
+df_wine.head()
+</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1572760322010.png" alt="Test"></p>
+<ul>
+<li>Creating train and test data set</li>
+</ul>
+<pre><code class="language-python"># creat train and test data set 
+
+X, y = df_wine.iloc[:, 1:], df_wine.iloc[:, 0]
+
+x_train,x_test,y_train,y_test = \
+    train_test_split(X,y,test_size = 0.3 , 
+                    stratify= y,
+                    random_state = 0 )
+</code></pre>
+<ul>
+<li>Standardizing the features</li>
+</ul>
+<pre><code class="language-python"># create standard instance
+sc = StandardScaler()
+# standard data 
+x_train_std = sc.fit_transform(x_train)
+x_test_std = sc.fit_transform(x_test)
+</code></pre>
+<ul>
+<li>Creating the covariance matrix and Getting eigenvectors and eigenvalues</li>
+</ul>
+<p>the calculation of the covariance matrix :
+$$\sigma_{jk} =  \frac{1}{n} \sum^{n}_{i=1}\bigg(x_{j}^{(i)} - \mu_j\bigg)\bigg(x_{k}^{(i)} - \mu_k\bigg)$$
+Then, using <code>numpy.cov</code> and <code>numpy.linalg.eig</code> to get the covariance matrix and eigenvectors respectively</p>
+<pre><code class="language-python"># calculate the covariance matrix 
+cov_mat = np.cov(x_train_std.T)
+# Getting eigenvectors and eigenvalues
+eigen_vals, eigen_vecs = np.linalg.eig(cov_mat)
+</code></pre>
+<p><strong>NOTE:</strong> there are 13 eigenvectors totally, the number of eigenvalues might be not as same as the number of features sometimes.</p>
+<p>Firstly, plotting the Variance interpretation ratio, which is obtained through eigenvalue $\lambda_j$ divided by the sum of all the eigenvalues:
+$$ \frac{\lambda_j}{\sum^d_{j=1}\lambda_j}$$</p>
+<pre><code class="language-python"># get sum of all the eigenvalues
+tot = sum(eigen_vals)
+# get variance interpretation ratio
+var_exp = [(i / tot) for i in sorted(eigen_vals, reverse=True)]
+cum_var_exp = np.cumsum(var_exp)
+</code></pre>
+<p>Besides, plotting the result to get in-depth understanding:</p>
+<pre><code class="language-python">plt.figure() # creat plot
+# creat bar plot
+plt.bar(
+    range(1, 14),
+    var_exp,
+    alpha=0.5,
+    label='individual explained variance',
+)
+# creat step plot 
+plt.step(range(1, 14),
+         cum_var_exp,
+         where='mid',
+         label='cumulative explained variance')
+# add label 
+plt.ylabel('Explained variance ratio')
+plt.xlabel('Principal component index')
+# add legend
+plt.legend(loc='best')
+# save picture
+plt.savefig('pca_index.png', format='png', bbox_inches='tight', dpi=300)
+</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1572764173795.png" alt="">
+We can conclude that <strong>PC1</strong> only takes account for about 40%. Furthermore, the sum of <strong>PC1</strong> and <strong>PC2</strong> have 60% variance.</p>
+<ul>
+<li>Selecting the first <strong>k</strong> values to form matrix $W$</li>
+</ul>
+<pre><code class="language-python"># integrate eigenvalues  and eigenvectors 
+eigen_paris = [(np.abs(eigen_vals[i]), eigen_vecs[:, i])
+               for i in range(len(eigen_vals))]
+# sort according to eigenvalues 
+eigen_paris.sort(key=lambda x: x[0], reverse=True)
+# pick up the first 2 eigenvalues 
+w = np.hstack(
+    [eigen_paris[0][1][:, np.newaxis], eigen_paris[1][1][:, np.newaxis]])
+# check matrix x 
+w
+</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1572766213478.png" alt=""></p>
+<ul>
+<li>Transforming raw data</li>
+</ul>
+<pre><code class="language-python"># reduce dimension 
+x_train_pca = x_train_std.dot(w)
+# check resulted data 
+x_train_pca.shape
+</code></pre>
+<p><code>(124, 2)</code></p>
+<p>Then plotting the result and putting the label in terms of original info, but keeping in mind PCA is unsupervised learning skill without labels</p>
+<pre><code class="language-python"># init colors and markers 
+colors = ['r', 'b', 'g']
+markers = ['s', 'x', 'o']
+# plot scatter
+for l, c, m in zip(np.unique(y_train), colors, markers):
+    plt.scatter(x_train_pca[y_train == l, 0],
+                x_train_pca[y_train == l, 1],
+                c=c,
+                label=1,
+                marker=m)
+# add label and legend 
+plt.xlabel('PC 1')
+plt.ylabel('PC 2')
+plt.legend(loc='lower left')
+plt.savefig('distribution.png', format='png', bbox_inches='tight', dpi=300)
+</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1572766761786.png" alt=""></p>
+<h2 id="3-pca-by--scikit-learn">3. PCA by  scikit-learn</h2>
+<p>we can  conduct PCA easily by <strong>sklearn</strong></p>
+<ul>
+<li>Importing modules</li>
+</ul>
+<pre><code class="language-python">from sklearn.decomposition import PCA
+from matplotlib.colors import ListedColormap
+from sklearn.linear_model import LogisticRegression
+</code></pre>
+<ul>
+<li>Defining  function of plot_decision_region</li>
+</ul>
+<pre><code class="language-python">
+def plot_dicision_regions(X, y, classifier, resolution=0.02):
+    # init markers and colors 
+    markers = ('s', 'x', 'o', '^', 'v')
+    colors = ('red', 'blue', 'lightgreen', 'gray', 'cyan')
+    cmap = ListedColormap(colors[:len(np.unique(y))])
+    # creat info for plot region
+    x1_min, x1_max = X[:, 0].min() - 1, X[:, 0].max() + 1
+    x2_min, x2_max = X[:, 1].min() - 1, X[:, 1].max() + 1
+    xx1, xx2 = np.meshgrid(np.arange(x1_min, x1_max, resolution),
+                           np.arange(x2_min, x2_max, resolution))
+    # test classifier's accurate 
+    z = classifier.predict(np.array([xx1.ravel(), xx2.ravel()]).T)
+    z = z.reshape(xx1.shape)
+    # plot desicion region 
+    plt.contourf(xx1, xx2, z, alpha=0.4, cmap=cmap)
+    # set x,y length
+    plt.xlim(xx1.min(), xx1.max())
+    plt.ylim(xx2.min(), xx2.max())
+    # plot result 
+    for idx, cl in enumerate(np.unique(y)):
+        plt.scatter(
+            x=X[y == cl, 0],
+            y=X[y == cl, 1],
+            alpha=0.6,
+            color=cmap(idx),
+            edgecolor='black',
+            marker=markers[idx],
+            label=cl,
+        )
+</code></pre>
+<ul>
+<li>PCA by sklearn</li>
+</ul>
+<pre><code class="language-python"># creat pca instance 
+pca = PCA(n_components = 2 )
+# creat classifier instance 
+lr = LogisticRegression()
+# reduce dimension for  data set 
+x_train_pca = pca.fit_transform(x_train_std)
+x_test_pca  = pca.transform(x_test_std)
+# classify x_train_pca 
+lr.fit(x_train_pca,y_train)
+# plot dicision region
+plot_dicision_regions(x_train_pca,y_train,classifier=lr)
+# add info
+plt.xlabel('PC 1')
+plt.ylabel('PC 2')
+plt.legend(loc='lower left')
+plt.show()
+</code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1572767868782.png" alt="">
+We can see that the classifier&rsquo;s accurate is excellent according to actual labels</p>
+<p><strong>TIPS</strong>:</p>
+<p>You can set <code>n_components = None</code>, and the result would retain all principle components. Moreover, you could call <code>explained_variance_ration_</code> to use variance explanation ratio.</p>
+<h2 id="3-summary">3. Summary</h2>
+<p>All the above are the main content, welcome everybody communicates with me! 🤠</p>
+<p><strong>Reference book :</strong> <a href="https://www.amazon.com/dp/B0742K7HYF/ref=sr_1_1?__mk_zh_CN=%E4%BA%9A%E9%A9%AC%E9%80%8A%E7%BD%91%E7%AB%99&amp;crid=27TEKOK8R4TOR&amp;keywords=python&#43;machine&#43;learning&#43;sebastian&#43;raschka&amp;qid=1572770147&amp;s=digital-text&amp;sprefix=python&#43;machine&#43;&#43;learning&#43;seb%2Cdigital-text%2C389&amp;sr=1-1" target="_blank" rel="noopener">Python machine learning</a></p>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/en/tag/python/">Python</a>
+  
+  <a class="badge badge-light" href="/en/tag/machine-learning/">Machine Learning</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://cauliyang.github.io/en/post/pca-by-python/&amp;text=PCA%20by%20Python" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://cauliyang.github.io/en/post/pca-by-python/&amp;t=PCA%20by%20Python" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=PCA%20by%20Python&amp;body=https://cauliyang.github.io/en/post/pca-by-python/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://cauliyang.github.io/en/post/pca-by-python/&amp;title=PCA%20by%20Python" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=PCA%20by%20Python%20https://cauliyang.github.io/en/post/pca-by-python/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://cauliyang.github.io/en/post/pca-by-python/&amp;title=PCA%20by%20Python" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://cauliyang.github.io/"><img class="avatar mr-3 avatar-circle" src="/en/authors/admin/avatar_hu043674fefa0f96a27ae70381f9c84e6f_39565_270x270_fill_q75_lanczos_center.jpeg" alt="Yangyang Li"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://cauliyang.github.io/">Yangyang Li</a></h5>
+      <h6 class="card-subtitle">Ph.D. of University of Minnesota</h6>
+      <p class="card-text">My research interests include deep learning, machine learning and bioinformatics.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/en/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/cauliyang" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/en/media/resume.pdf" >
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+  
+
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="cauliyang/cauliyang.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+  
+
+  <p class="powered-by">
+    © 2020 Yangyang Li. All Rights Reserved.
+  </p>
+
+  
+  
+
+
+
+
+
+  
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    This website is licensed under CC BY-NC-ND 4.0
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.4/mermaid.min.js" integrity="sha512-as1BF4+iHZ3BVO6LLDQ7zrbvTXM+c/1iZ1qII/c3c4L8Rn5tHLpFUtpaEtBNS92f+xGsCzsD7b62XP3XYap6oA==" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/cpp.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/java.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/go.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.0e658992b7d1443e1c3e2558e6ce08af.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</body>
+</html>

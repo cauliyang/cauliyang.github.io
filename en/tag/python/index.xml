@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python | My Academic</title>
+    <link>https://cauliyang.github.io/en/tag/python/</link>
+      <atom:link href="https://cauliyang.github.io/en/tag/python/index.xml" rel="self" type="application/rss+xml" />
+    <description>Python</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2020 Yangyang Li. All Rights Reserved.</copyright><lastBuildDate>Sun, 04 Apr 2021 23:58:37 +0800</lastBuildDate>
+    <image>
+      <url>https://cauliyang.github.io/media/sharing.jpeg</url>
+      <title>Python</title>
+      <link>https://cauliyang.github.io/en/tag/python/</link>
+    </image>
+    
+    <item>
+      <title>PCA by Python</title>
+      <link>https://cauliyang.github.io/en/post/pca-by-python/</link>
+      <pubDate>Sun, 04 Apr 2021 23:58:37 +0800</pubDate>
+      <guid>https://cauliyang.github.io/en/post/pca-by-python/</guid>
+      <description>&lt;h2 id=&#34;1-introduction&#34;&gt;1. Introduction&lt;/h2&gt;
+&lt;h3 id=&#34;11-whats-pca&#34;&gt;1.1 What&amp;rsquo;s PCA?&lt;/h3&gt;
+&lt;p&gt;When it comes to methods of reducing dimension, PCA that is an unsupervised linear transformation technique, must be not ignored. Moreover, if you want to know the subtle relationships among data set and reduce the computational complexity in downstream analysis, the PCA may be your best choice! Meanwhile, if you would like to present your data in a 2-dimension or 3-dimension coordinate system, and PCA would sweep your problems!&lt;/p&gt;
+&lt;p&gt;What is reducing dimension? I will show you an example as follows:&lt;/p&gt;
+&lt;p&gt;First, suppose you have a five-dimensional data set :&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Id&lt;/th&gt;
+&lt;th&gt;1-d&lt;/th&gt;
+&lt;th&gt;2-d&lt;/th&gt;
+&lt;th&gt;3-d&lt;/th&gt;
+&lt;th&gt;4-d&lt;/th&gt;
+&lt;th&gt;5-d&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;data-1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;data-2&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;..&lt;/td&gt;
+&lt;td&gt;..&lt;/td&gt;
+&lt;td&gt;..&lt;/td&gt;
+&lt;td&gt;..&lt;/td&gt;
+&lt;td&gt;..&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Then, you could pick up PC1 and PC2 after PCA to reduce dimension for plotting:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Id&lt;/th&gt;
+&lt;th&gt;PC1&lt;/th&gt;
+&lt;th&gt;PC2&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;data-1&lt;/td&gt;
+&lt;td&gt;0.3&lt;/td&gt;
+&lt;td&gt;0.6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;data-2&lt;/td&gt;
+&lt;td&gt;0.1&lt;/td&gt;
+&lt;td&gt;1.2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;..&lt;/td&gt;
+&lt;td&gt;..&lt;/td&gt;
+&lt;td&gt;..&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;PC1&lt;/strong&gt; and &lt;strong&gt;PC2&lt;/strong&gt; are the result obtained through data is projection on the unit vectors, which enable result to have the most biggest variance(means its distribution is wide) and to be irrelevant(covariance = 0).&lt;/p&gt;
+&lt;h3 id=&#34;12-algorithm&#34;&gt;1.2 Algorithm&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Normalize $d$ dimension raw data&lt;/li&gt;
+&lt;li&gt;Creat the covariance matrix&lt;/li&gt;
+&lt;li&gt;Calculate the eigenvalues of the covariance matrix and the corresponding eigenvectors&lt;/li&gt;
+&lt;li&gt;The eigenvectors are sorted in the matrix according to the corresponding feature value, and the first k rows are formed into a matrix $W$. ($k&amp;laquo;d$)&lt;/li&gt;
+&lt;li&gt;$Y = xW$ is the result after reducing dimension to k dimension&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; There are two prerequisites for conducting PCA&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Raw data has no NA&lt;/li&gt;
+&lt;li&gt;The raw data should be normalized&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-pca-from-scratch&#34;&gt;2. PCA from scratch&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Importing necessary modules&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd 
+import numpy as np
+import matplotlib.pyplot as plt 
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Creating raw data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# get  data set 
+df_wine = pd.read_csv(
+    &#39;http://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data&#39;,
+    header=None,
+    engine=&#39;python&#39;)
+# check data
+df_wine.head()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1572760322010.png&#34; alt=&#34;Test&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Creating train and test data set&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# creat train and test data set 
+
+X, y = df_wine.iloc[:, 1:], df_wine.iloc[:, 0]
+
+x_train,x_test,y_train,y_test = \
+    train_test_split(X,y,test_size = 0.3 , 
+                    stratify= y,
+                    random_state = 0 )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Standardizing the features&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# create standard instance
+sc = StandardScaler()
+# standard data 
+x_train_std = sc.fit_transform(x_train)
+x_test_std = sc.fit_transform(x_test)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Creating the covariance matrix and Getting eigenvectors and eigenvalues&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;the calculation of the covariance matrix :
+$$\sigma_{jk} =  \frac{1}{n} \sum^{n}_{i=1}\bigg(x_{j}^{(i)} - \mu_j\bigg)\bigg(x_{k}^{(i)} - \mu_k\bigg)$$
+Then, using &lt;code&gt;numpy.cov&lt;/code&gt; and &lt;code&gt;numpy.linalg.eig&lt;/code&gt; to get the covariance matrix and eigenvectors respectively&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# calculate the covariance matrix 
+cov_mat = np.cov(x_train_std.T)
+# Getting eigenvectors and eigenvalues
+eigen_vals, eigen_vecs = np.linalg.eig(cov_mat)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; there are 13 eigenvectors totally, the number of eigenvalues might be not as same as the number of features sometimes.&lt;/p&gt;
+&lt;p&gt;Firstly, plotting the Variance interpretation ratio, which is obtained through eigenvalue $\lambda_j$ divided by the sum of all the eigenvalues:
+$$ \frac{\lambda_j}{\sum^d_{j=1}\lambda_j}$$&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# get sum of all the eigenvalues
+tot = sum(eigen_vals)
+# get variance interpretation ratio
+var_exp = [(i / tot) for i in sorted(eigen_vals, reverse=True)]
+cum_var_exp = np.cumsum(var_exp)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Besides, plotting the result to get in-depth understanding:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;plt.figure() # creat plot
+# creat bar plot
+plt.bar(
+    range(1, 14),
+    var_exp,
+    alpha=0.5,
+    label=&#39;individual explained variance&#39;,
+)
+# creat step plot 
+plt.step(range(1, 14),
+         cum_var_exp,
+         where=&#39;mid&#39;,
+         label=&#39;cumulative explained variance&#39;)
+# add label 
+plt.ylabel(&#39;Explained variance ratio&#39;)
+plt.xlabel(&#39;Principal component index&#39;)
+# add legend
+plt.legend(loc=&#39;best&#39;)
+# save picture
+plt.savefig(&#39;pca_index.png&#39;, format=&#39;png&#39;, bbox_inches=&#39;tight&#39;, dpi=300)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1572764173795.png&#34; alt=&#34;&#34;&gt;
+We can conclude that &lt;strong&gt;PC1&lt;/strong&gt; only takes account for about 40%. Furthermore, the sum of &lt;strong&gt;PC1&lt;/strong&gt; and &lt;strong&gt;PC2&lt;/strong&gt; have 60% variance.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Selecting the first &lt;strong&gt;k&lt;/strong&gt; values to form matrix $W$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# integrate eigenvalues  and eigenvectors 
+eigen_paris = [(np.abs(eigen_vals[i]), eigen_vecs[:, i])
+               for i in range(len(eigen_vals))]
+# sort according to eigenvalues 
+eigen_paris.sort(key=lambda x: x[0], reverse=True)
+# pick up the first 2 eigenvalues 
+w = np.hstack(
+    [eigen_paris[0][1][:, np.newaxis], eigen_paris[1][1][:, np.newaxis]])
+# check matrix x 
+w
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1572766213478.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Transforming raw data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# reduce dimension 
+x_train_pca = x_train_std.dot(w)
+# check resulted data 
+x_train_pca.shape
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;(124, 2)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Then plotting the result and putting the label in terms of original info, but keeping in mind PCA is unsupervised learning skill without labels&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# init colors and markers 
+colors = [&#39;r&#39;, &#39;b&#39;, &#39;g&#39;]
+markers = [&#39;s&#39;, &#39;x&#39;, &#39;o&#39;]
+# plot scatter
+for l, c, m in zip(np.unique(y_train), colors, markers):
+    plt.scatter(x_train_pca[y_train == l, 0],
+                x_train_pca[y_train == l, 1],
+                c=c,
+                label=1,
+                marker=m)
+# add label and legend 
+plt.xlabel(&#39;PC 1&#39;)
+plt.ylabel(&#39;PC 2&#39;)
+plt.legend(loc=&#39;lower left&#39;)
+plt.savefig(&#39;distribution.png&#39;, format=&#39;png&#39;, bbox_inches=&#39;tight&#39;, dpi=300)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1572766761786.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;3-pca-by--scikit-learn&#34;&gt;3. PCA by  scikit-learn&lt;/h2&gt;
+&lt;p&gt;we can  conduct PCA easily by &lt;strong&gt;sklearn&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Importing modules&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from sklearn.decomposition import PCA
+from matplotlib.colors import ListedColormap
+from sklearn.linear_model import LogisticRegression
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Defining  function of plot_decision_region&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;
+def plot_dicision_regions(X, y, classifier, resolution=0.02):
+    # init markers and colors 
+    markers = (&#39;s&#39;, &#39;x&#39;, &#39;o&#39;, &#39;^&#39;, &#39;v&#39;)
+    colors = (&#39;red&#39;, &#39;blue&#39;, &#39;lightgreen&#39;, &#39;gray&#39;, &#39;cyan&#39;)
+    cmap = ListedColormap(colors[:len(np.unique(y))])
+    # creat info for plot region
+    x1_min, x1_max = X[:, 0].min() - 1, X[:, 0].max() + 1
+    x2_min, x2_max = X[:, 1].min() - 1, X[:, 1].max() + 1
+    xx1, xx2 = np.meshgrid(np.arange(x1_min, x1_max, resolution),
+                           np.arange(x2_min, x2_max, resolution))
+    # test classifier&#39;s accurate 
+    z = classifier.predict(np.array([xx1.ravel(), xx2.ravel()]).T)
+    z = z.reshape(xx1.shape)
+    # plot desicion region 
+    plt.contourf(xx1, xx2, z, alpha=0.4, cmap=cmap)
+    # set x,y length
+    plt.xlim(xx1.min(), xx1.max())
+    plt.ylim(xx2.min(), xx2.max())
+    # plot result 
+    for idx, cl in enumerate(np.unique(y)):
+        plt.scatter(
+            x=X[y == cl, 0],
+            y=X[y == cl, 1],
+            alpha=0.6,
+            color=cmap(idx),
+            edgecolor=&#39;black&#39;,
+            marker=markers[idx],
+            label=cl,
+        )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;PCA by sklearn&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# creat pca instance 
+pca = PCA(n_components = 2 )
+# creat classifier instance 
+lr = LogisticRegression()
+# reduce dimension for  data set 
+x_train_pca = pca.fit_transform(x_train_std)
+x_test_pca  = pca.transform(x_test_std)
+# classify x_train_pca 
+lr.fit(x_train_pca,y_train)
+# plot dicision region
+plot_dicision_regions(x_train_pca,y_train,classifier=lr)
+# add info
+plt.xlabel(&#39;PC 1&#39;)
+plt.ylabel(&#39;PC 2&#39;)
+plt.legend(loc=&#39;lower left&#39;)
+plt.show()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1572767868782.png&#34; alt=&#34;&#34;&gt;
+We can see that the classifier&amp;rsquo;s accurate is excellent according to actual labels&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TIPS&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;You can set &lt;code&gt;n_components = None&lt;/code&gt;, and the result would retain all principle components. Moreover, you could call &lt;code&gt;explained_variance_ration_&lt;/code&gt; to use variance explanation ratio.&lt;/p&gt;
+&lt;h2 id=&#34;3-summary&#34;&gt;3. Summary&lt;/h2&gt;
+&lt;p&gt;All the above are the main content, welcome everybody communicates with me! 🤠&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reference book :&lt;/strong&gt; &lt;a href=&#34;https://www.amazon.com/dp/B0742K7HYF/ref=sr_1_1?__mk_zh_CN=%E4%BA%9A%E9%A9%AC%E9%80%8A%E7%BD%91%E7%AB%99&amp;amp;crid=27TEKOK8R4TOR&amp;amp;keywords=python&amp;#43;machine&amp;#43;learning&amp;#43;sebastian&amp;#43;raschka&amp;amp;qid=1572770147&amp;amp;s=digital-text&amp;amp;sprefix=python&amp;#43;machine&amp;#43;&amp;#43;learning&amp;#43;seb%2Cdigital-text%2C389&amp;amp;sr=1-1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python machine learning&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
