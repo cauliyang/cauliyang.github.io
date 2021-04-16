@@ -17,7 +17,40 @@
       <link>https://cauliyang.github.io/zh/post/face-recognition/</link>
       <pubDate>Mon, 05 Apr 2021 12:54:10 +0800</pubDate>
       <guid>https://cauliyang.github.io/zh/post/face-recognition/</guid>
-      <description>&lt;style&gt;
+      <description>&lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
+  &lt;summary class=&#34;font-weight-bold&#34;&gt;目录&lt;/summary&gt;
+  &lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#1-准备工作&#34;&gt;1. 准备工作&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#11-环境搭建&#34;&gt;1.1 环境搭建&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#2-素材展示&#34;&gt;2. 素材展示&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#21-目标人物的照片&#34;&gt;2.1 目标人物的照片&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#22-测试视频&#34;&gt;2.2 测试视频&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#3-实现流程&#34;&gt;3. 实现流程&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#31-编码照片&#34;&gt;3.1 编码照片&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#32-视频识别&#34;&gt;3.2 视频识别&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#33-结果文件&#34;&gt;3.3 结果文件&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#4-总结&#34;&gt;4. 总结&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#41-可以提高的地方&#34;&gt;4.1 可以提高的地方&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#42--收获&#34;&gt;4.2  收获&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#参考链接&#34;&gt;参考链接&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/details&gt;
+
+&lt;style&gt;
 img{
     width: 70%;
     padding-left: 14%;

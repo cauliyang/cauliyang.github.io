@@ -17,7 +17,40 @@
       <link>https://cauliyang.github.io/zh/post/face-recognition/</link>
       <pubDate>Mon, 05 Apr 2021 12:54:10 +0800</pubDate>
       <guid>https://cauliyang.github.io/zh/post/face-recognition/</guid>
-      <description>&lt;style&gt;
+      <description>&lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
+  &lt;summary class=&#34;font-weight-bold&#34;&gt;目录&lt;/summary&gt;
+  &lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#1-准备工作&#34;&gt;1. 准备工作&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#11-环境搭建&#34;&gt;1.1 环境搭建&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#2-素材展示&#34;&gt;2. 素材展示&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#21-目标人物的照片&#34;&gt;2.1 目标人物的照片&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#22-测试视频&#34;&gt;2.2 测试视频&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#3-实现流程&#34;&gt;3. 实现流程&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#31-编码照片&#34;&gt;3.1 编码照片&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#32-视频识别&#34;&gt;3.2 视频识别&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#33-结果文件&#34;&gt;3.3 结果文件&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#4-总结&#34;&gt;4. 总结&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#41-可以提高的地方&#34;&gt;4.1 可以提高的地方&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#42--收获&#34;&gt;4.2  收获&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#参考链接&#34;&gt;参考链接&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/details&gt;
+
+&lt;style&gt;
 img{
     width: 70%;
     padding-left: 14%;
@@ -322,6 +355,465 @@ if __main__ == &#39;__name__&#39;:
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;pyimagesearch.com/2018/06/18/face-recognition-with-opencv-python-and-deep-learning/&#34;&gt;&lt;strong&gt;Pyimage&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Kmeans by Python</title>
+      <link>https://cauliyang.github.io/zh/post/kmeans-by-python/</link>
+      <pubDate>Mon, 05 Apr 2021 12:54:10 +0800</pubDate>
+      <guid>https://cauliyang.github.io/zh/post/kmeans-by-python/</guid>
+      <description>&lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
+  &lt;summary class=&#34;font-weight-bold&#34;&gt;目录&lt;/summary&gt;
+  &lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#1-k-means概念介绍&#34;&gt;1. &lt;strong&gt;K-means&lt;/strong&gt;概念介绍&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#11-基础概念&#34;&gt;1.1 基础概念&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#12-算法原理&#34;&gt;1.2 算法原理&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#2-使用scikit-learn实现k-means方法&#34;&gt;2. 使用&lt;strong&gt;scikit-learn&lt;/strong&gt;实现&lt;strong&gt;K-means&lt;/strong&gt;方法&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#21-创建测试数据并实现算法&#34;&gt;2.1 创建测试数据并实现算法&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#22-如何选取k值&#34;&gt;2.2 如何选取&lt;strong&gt;K&lt;/strong&gt;值&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#23-如何评估分群的质量&#34;&gt;2.3 如何评估分群的质量&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#3-k-means-from-scratch&#34;&gt;3. K-means from scratch&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#31-get-parameters-from-terminal&#34;&gt;3.1 Get parameters from terminal&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#32-creating-function-of-report&#34;&gt;3.2 Creating function of report&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#33-calculating-euclidean-distance&#34;&gt;3.3 Calculating Euclidean distance&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#34-getting-centroid-information-and-recursive-function&#34;&gt;3.4 Getting centroid information and recursive function&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#35-creating-body-function-and-main-function&#34;&gt;3.5 Creating Body function and Main function&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/details&gt;
+
+&lt;h2 id=&#34;1-k-means概念介绍&#34;&gt;1. &lt;strong&gt;K-means&lt;/strong&gt;概念介绍&lt;/h2&gt;
+&lt;h3 id=&#34;11-基础概念&#34;&gt;1.1 基础概念&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;K-means&lt;/strong&gt;是一种常用的无监督学习技术，用于在无法知道正确答案下发现数据中隐藏的结构，聚类的目标是在数据中找到自然分组，确保相同集群中元素比不同的集群中元素更加相似。&lt;strong&gt;K-means&lt;/strong&gt;方法非常擅长识别球形数据，其缺点是必须指定集群数&lt;strong&gt;K&lt;/strong&gt;。如果选择&lt;strong&gt;K&lt;/strong&gt;值不当会造成分群效果不好，后文将会介绍两种方法用来评估&lt;strong&gt;K&lt;/strong&gt;值及分群效果。并且本文采用两种方式实现&lt;strong&gt;K-means&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用&lt;strong&gt;scikit-learn&lt;/strong&gt;模块进行&lt;strong&gt;K-means&lt;/strong&gt;聚类分析。&lt;/li&gt;
+&lt;li&gt;从头手写&lt;strong&gt;K-means&lt;/strong&gt;方法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;12-算法原理&#34;&gt;1.2 算法原理&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;随机在样本中选取&lt;strong&gt;K&lt;/strong&gt;质心作为起始聚类的中心。&lt;/li&gt;
+&lt;li&gt;将每个样本根据欧式距离分到最近的质心$\mu$所在的群中。&lt;/li&gt;
+&lt;li&gt;将所有样本分群后，重新计算以每个群的中心作为新的质心。&lt;/li&gt;
+&lt;li&gt;重复2，3 两步，知道质心不再改变，或者达到用户自定义的阈值或最大迭代数。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;欧式距离&lt;/strong&gt;的计算方法为：&lt;/p&gt;
+&lt;p&gt;$$d(x,y)^2 = \sum^{m}_{j = 1}(x_j  - y_j )^2 = \left|x - y \right|^2_2$$&lt;/p&gt;
+&lt;p&gt;其中$j$代表数据的纬度。
+基于欧式距离我们可以把分群的过程描述为一个优化的问题，是一种最小化&lt;strong&gt;群内误差平方和（SSE）&lt;strong&gt;的迭代方法也被称为&lt;/strong&gt;群惯性&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;$$SSE = \sum^n_{i=1}\sum^k_{j=1} w^{(i,j)}\left|x^{(i)} - \mu^{(i)} \right|^2_2 $$&lt;/p&gt;
+&lt;p&gt;其中 $i$代表样本索引 $j$代表分群索引&lt;/p&gt;
+&lt;h2 id=&#34;2-使用scikit-learn实现k-means方法&#34;&gt;2. 使用&lt;strong&gt;scikit-learn&lt;/strong&gt;实现&lt;strong&gt;K-means&lt;/strong&gt;方法&lt;/h2&gt;
+&lt;h3 id=&#34;21-创建测试数据并实现算法&#34;&gt;2.1 创建测试数据并实现算法&lt;/h3&gt;
+&lt;p&gt;首先导入所需要的模块：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# import module
+import numpy as np
+from matplotlib import cm
+from sklearn.datasets import make_blobs
+from sklearn.cluster import KMeans
+import matplotlib.pyplot as plt
+from sklearn.metrics import silhouette_samples
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;因为二维数据可是简单的绘制在笛卡尔坐标系上，所以生成二维测试数据进行测试：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# creat tested data
+X, y = make_blobs(n_samples=150, # volume of data 
+                  n_features=2, # number of feature 
+                  centers=3, # number of centroid
+                  cluster_std=0.5,  # distribution of data 
+                  shuffle=True,
+                  random_state=0)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;绘图查看原始数据：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# plot tested data
+plt.figure()
+plt.scatter(X[:, 0], X[:, 1], c=&#39;white&#39;, marker=&#39;o&#39;, edgecolor=&#39;black&#39;, s=50)
+plt.grid()
+plt.show()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1572156791933.png&#34; alt=&#34;&#34;&gt;
+从图中可以看出创建的测试数据有明显的分群情况,当然在真实的数据当中原始数据可能没有这么理想。我们先在没有推理的情况下确定&lt;strong&gt;K&lt;/strong&gt;的值为3。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# k-means
+km = KMeans(n_clusters=3, # K value 
+            init=&#39;random&#39;,
+            n_init=10, # number of repeatation 
+            max_iter=300, 
+            tol=1e-4, 
+            random_state=0)
+# predict labels
+y_km = km.fit_predict(X)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;我们进行可视化分群结果：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;#creating function of ploting graph for reusing 
+def plot_res(y_km, X, n_cluster):
+    # init colors and markers
+    colors = [&#39;lightgreen&#39;, &#39;orange&#39;, &#39;lightblue&#39;][:n_cluster]
+    markers = [&#39;s&#39;, &#39;o&#39;, &#39;v&#39;][:n_cluster]
+
+    # plot the cluster to comfirm the result of k-meams by sklearn
+    for i, (c, m) in enumerate(zip(colors, markers)):
+        plt.scatter(X[y_km == i, 0],
+                    X[y_km == i, 1],
+                    s=50,
+                    c=c,
+                    marker=m,
+                    edgecolor=&#39;black&#39;,
+                    label=f&#39;cluster {i}&#39;)
+
+    # plot centroipd of  different clusters
+    plt.scatter(km.cluster_centers_[:, 0],
+                km.cluster_centers_[:, 1],
+                s=250,
+                marker=&#39;*&#39;,
+                c=&#39;red&#39;,
+                edgecolors=&#39;black&#39;,
+                label=&#39;centroids&#39;)
+    # plot lengend
+    plt.legend(scatterpoints=1)
+    # plot grid
+    plt.grid()
+    plt.show()
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1572158215803.png&#34; alt=&#34;&#34;&gt;
+可以明显看到分群效果十分明显。不过其中还有许多问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;如何确实&lt;strong&gt;K&lt;/strong&gt;值&lt;/li&gt;
+&lt;li&gt;如何评估分群质量&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;22-如何选取k值&#34;&gt;2.2 如何选取&lt;strong&gt;K&lt;/strong&gt;值&lt;/h3&gt;
+&lt;p&gt;下面介绍如何使用肘解法选取合适的&lt;strong&gt;K&lt;/strong&gt;值，肘解法目的是找出SSE变化幅度最大的&lt;strong&gt;K&lt;/strong&gt;值。使用&lt;code&gt;km.inertia_&lt;/code&gt; 即可调出$SSE$的值。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;
+distortions = []
+# test different  numbers of cluster  to  pick up the best K
+for i in range(1, 11):
+    km = KMeans(n_clusters=i,
+                init=&#39;k-means++&#39;,
+                n_init=10,
+                max_iter=300,
+                random_state=0)
+
+    km.fit(X)
+    distortions.append(km.inertia_)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;测试1-11的&lt;strong&gt;K&lt;/strong&gt;值选取，并进行可视化查看结果。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# plot the tested result for the best K
+
+plt.plot(range(1, 11), distortions, marker=&#39;o&#39;)
+plt.xlabel(&#39;Number of clusters&#39;)
+plt.ylabel(&#39;Distortion&#39;)
+plt.show()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1572160740933.png&#34; alt=&#34;&#34;&gt;
+从图中我们可以看出在&lt;strong&gt;K&lt;/strong&gt;值为3的时候，$SSE$变化幅度最大，即可得知&lt;strong&gt;K&lt;/strong&gt;为3是最优解。&lt;/p&gt;
+&lt;h3 id=&#34;23-如何评估分群的质量&#34;&gt;2.3 如何评估分群的质量&lt;/h3&gt;
+&lt;p&gt;评价聚类质量的一种方法是&lt;strong&gt;轮廓分析&lt;/strong&gt;，他可以应用于其他聚类算法，度量其紧密程度。计算轮廓系数的步骤为：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;计算集群内聚度$a^{(i)}$，即样本$x^{(i)}$于集群内所有其他点之间的平均距离。&lt;/li&gt;
+&lt;li&gt;计算集群与最近集群的分离度$b^{(i)}$,即样本$x^{(i)}$与最近集群内所有样本的平均距离。&lt;/li&gt;
+&lt;li&gt;计算轮廓系数$s^{(i)}$，即集群内聚度与集群分离度之差，除以两者中较大的一个。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$s^{(i)} = \frac{b^{(i)} - a^{(i)}}{\max \{{b^{(i)},a^{(i)}}\}}$$&lt;/p&gt;
+&lt;p&gt;轮廓系数的范围在-1到1之间，如果集群分离度和集群内聚度相等，即$b^{(i)}=a^{(i)}$。那么轮廓系数为0，如果$b^{(i)} &amp;raquo; a^{(i)}$ 则接近理想的轮廓系数 1 。&lt;/p&gt;
+&lt;p&gt;可以使用&lt;strong&gt;scikit-learn&lt;/strong&gt;中&lt;strong&gt;metric&lt;/strong&gt;中的&lt;strong&gt;silhouette_samples&lt;/strong&gt;计算样本的轮廓系数。也可以更方便的使用&lt;strong&gt;silhouette_scores&lt;/strong&gt;直接计算所有样本的平均轮廓系数。下面显示&lt;strong&gt;K&lt;/strong&gt;值基于3的分群结果。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# we can use the graph of silhouette to evaluate  result
+km = KMeans(n_clusters=3,
+            init=&#39;k-means++&#39;,
+            n_init=10,
+            max_iter=10,
+            tol=1e-04,
+            random_state=0)
+y_km = km.fit_predict(X)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;绘制轮廓图进行可视化，直观的查看群内轮廓系数。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# difining fuction of plot-silhouette for reusing
+# plot the graph of silhouette
+def plot_sil(y_km, X):
+    cluster_lables = np.unique(y_km)
+    n_clusters = cluster_lables.shape[0]
+
+    # using function of silhouette in sklearn to get silhouete scores
+    silhouette_vals = silhouette_samples(X, y_km, metric=&#39;euclidean&#39;)
+
+    # plot the graph
+    y_ax_lower, y_ax_upper = 0, 0
+    yticks = []
+    for i, c in enumerate(cluster_lables):
+        # get values of  each cluster
+        c_silhouette_vals = silhouette_vals[y_km == c] 
+        c_silhouette_vals.sort()  # sort value for ploting
+        y_ax_upper += len(c_silhouette_vals)
+        color = cm.jet(float(i) / n_clusters)
+        plt.barh(range(y_ax_lower, y_ax_upper),
+                 c_silhouette_vals,
+                 height=1.0,
+                 edgecolor=&#39;none&#39;,
+                 color=color)
+        yticks.append((y_ax_lower + y_ax_upper) / 2)
+        y_ax_lower += len(c_silhouette_vals)
+
+    silhouette_avg = np.mean(silhouette_vals)  # get the label of yticks
+    plt.axvline(silhouette_avg, color=&#39;red&#39;,
+                linestyle=&#39;--&#39;)  # plot the avaerage of silhouette
+    plt.yticks(yticks, labels=cluster_lables)
+    plt.ylabel(&#39;Cluster&#39;)
+    plt.xlabel(&#39;Silhouette coefficient&#39;)
+    plt.show()
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1572162327225.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;从图中我们可以看出轮廓系数不接近于0，且接近于1表明我们的分群结果良好。且在图中轮廓系数的高度代表群内样本数量，如果样本数量相差太大，说明分群效果不是很好。图中虚线表示平均轮廓系数。&lt;/p&gt;
+&lt;p&gt;为更好的理解轮廓系数的使用，将&lt;strong&gt;K&lt;/strong&gt;值变为2，进行聚类。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;km = KMeans(
+    n_clusters=2,  # value of k has changed 
+    init=&#39;k-means++&#39;,
+    n_init=10,
+    max_iter=10,
+    tol=1e-04,
+    random_state=0)
+y_km = km.fit_predict(X)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;使用上方作图函数，先观察分群效果。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cauliyang.github.io/post-images/1572162593247.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;从图中可以看出分群效果很差，可视化轮廓系数查看结果。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cauliyang.github.io/post-images/1572162888640.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;两个群的高度不一致表明分群效果不是很理想，且有的样本轮廓系数极低接近于0。表示分群有很大的问题，需要重新思考&lt;strong&gt;K&lt;/strong&gt;值的选取。&lt;/p&gt;
+&lt;h2 id=&#34;3-k-means-from-scratch&#34;&gt;3. K-means from scratch&lt;/h2&gt;
+&lt;p&gt;我们根据算法原理使用&lt;strong&gt;Python&lt;/strong&gt;一步步实现&lt;strong&gt;K-means&lt;/strong&gt;，首先展示我们所用到的数据集，有关基因在不同条件下处理的表达数据，其中基因数量为样本数量，处理方式为纬度。并且设计为&lt;strong&gt;Terminal&lt;/strong&gt;端使用。&lt;/p&gt;
+&lt;p&gt;终端使用方法为：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Usage : python k_mean.py k data max_it (cetroids)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;其中&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;k_mean.py 为程序脚本&lt;/li&gt;
+&lt;li&gt;k 为分群数量&lt;/li&gt;
+&lt;li&gt;data 为原始数据文件&lt;/li&gt;
+&lt;li&gt;max_it 为最大递归次数&lt;/li&gt;
+&lt;li&gt;centroids 为初始的质心，用户可以选择提供或者不提供&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;原始数据：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;gene_expression&lt;/th&gt;
+&lt;th&gt;treat_1&lt;/th&gt;
+&lt;th&gt;treat_2&lt;/th&gt;
+&lt;th&gt;&amp;hellip;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;g_1&lt;/td&gt;
+&lt;td&gt;0.2&lt;/td&gt;
+&lt;td&gt;0.5&lt;/td&gt;
+&lt;td&gt;&amp;hellip;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;g_2&lt;/td&gt;
+&lt;td&gt;1.4&lt;/td&gt;
+&lt;td&gt;1.6&lt;/td&gt;
+&lt;td&gt;&amp;hellip;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;hellip;&lt;/td&gt;
+&lt;td&gt;4.2&lt;/td&gt;
+&lt;td&gt;2.1&lt;/td&gt;
+&lt;td&gt;&amp;hellip;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;31-get-parameters-from-terminal&#34;&gt;3.1 Get parameters from terminal&lt;/h3&gt;
+&lt;p&gt;导入所需的模块&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# import modules
+import sys
+import time
+import numpy as np
+from collections import Counter
+from operator import itemgetter
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;从终端获取用户传递参数：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# defining function for getting parameters from terminal
+def get_argv():
+    &#39;&#39;&#39;
+    get the parameters entered by user and return the dictionary parameters
+    &#39;&#39;&#39;
+    # get parameters
+    argv_list = sys.argv
+    # init parameters
+    argv_name = (
+        &#39;data&#39;,
+        &#39;init_cetroids&#39;,
+        &#39;gene_num&#39;,  # numbers of row 
+        &#39;ndim&#39;,
+        &#39;max_it&#39;,  # max numbers of  iter
+        &#39;k&#39;)
+    #  determine whether user provide init-centroids according numbers of parameters
+    if len(argv_list) == 4:
+        # if not provide init-centroid
+        _, k, file, max_it = argv_list
+        # get information of file
+        argv_tuple = get_Cetroid(file, int(k)) + (int(max_it), int(k))
+    elif len(argv_list) == 5:
+        # if provide init-centroid
+        _, k, file, max_it, cetroid_file = argv_list
+        # get information
+        argv_tuple = get_Cetroid(
+            file, int(k), cetroid_file=cetroid_file) + (int(max_it), int(k))
+    elif len(argv_list) &amp;lt; 4:
+        #  if numbers of parameters is less than  need parameters  then print help
+        print(&#39;&#39;&#39;
+            -------------------------------------------------
+            Requirement : numpy 
+
+            Usage : python k_mean.py k data max_it (cetroids)
+
+            Result_file : kmeans.out
+
+            Contact : &amp;lt;liyangyang&amp;gt; &amp;lt;yangyangli.vince@gmail.com&amp;gt;
+
+            -------------------------------------------------
+
+            &#39;&#39;&#39;)
+        sys.exit(0)
+    # return dictionary parameters
+    return dict(zip(argv_name, argv_tuple))
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;32-creating-function-of-report&#34;&gt;3.2 Creating function of report&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# difining  function of reporting summary 
+def summary(kw, tim, kmeanout=&#39;kmeans.out&#39;):
+    &#39;&#39;&#39;
+    Create a summary function, count recursive times, run time, etc.。
+    &#39;&#39;&#39;
+
+    # statistics for each Cluster data
+    def print_cluster(kmean=kmeanout):
+        # evaluate data
+        counter = Counter(np.loadtxt(kmean, dtype=int)[:, 1])
+        # produce report
+        for clu, num in counter.most_common():
+            print(f&#39;    Cluster_{clu} : {num}&#39;)
+
+    # creat statistic header
+    print(&#39;{:-^40}\n&#39;.format(&#39;Summary&#39;))
+    # print statstic report of each cluster
+    print_cluster()
+    # print overall information
+    print(f&#39;&#39;&#39;
+    Max_iter_number : {kw[&#39;max_it&#39;]} 
+    Cluster_number  :{kw[&#39;k&#39;]} 
+    Time  : {tim:.2f}s 
+    Date  : {time.asctime()}&#39;&#39;&#39;)
+    # creat statistic tial
+    print(&#39;{:-&amp;lt;40}\n&#39;.format(&#39;-&#39;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;33-calculating-euclidean-distance&#34;&gt;3.3 Calculating Euclidean distance&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# defining function to calculate Euclidean distance
+def eucl_Distance(init_cetroids, piece_data):
+    &#39;&#39;&#39; 
+    Calculate the Euclidean distance between each data and the centroid
+    &#39;&#39;&#39;
+    distance = np.sqrt(np.sum((init_cetroids - piece_data)**2, axis=1))
+    # return euclidean distance
+    return distance
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;34-getting-centroid-information-and-recursive-function&#34;&gt;3.4 Getting centroid information and recursive function&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def get_Cetroid(file, k, cetroid_file=None):
+    &#39;&#39;&#39; 
+    This function is used to get raw data file information: raw data, centroid, data volume, feature dimension
+    &#39;&#39;&#39;
+    # get content of  file
+    data = np.loadtxt(file)
+    # get information: data volume, feature dimension
+    gene_num, ndim = data.shape
+    # Determine whether the user provides a centroid, and  randomly if not provided
+    if not (cetroid_file):
+        # init centroid
+        init_cetroids = np.zeros((k, ndim))
+        # provied centroid randomly
+        for i in range(k):
+            index = int(np.random.uniform(0, gene_num))
+            init_cetroids[i, :] = data[index, :]
+    else:
+        # if users provide centroid
+        init_cetroids = np.loadtxt(cetroid_file)
+    # return information
+    return (data, init_cetroids, gene_num, ndim)
+
+
+    def iter_Cetroid(**argv):
+    &#39;&#39;&#39;
+    Iterative clustering results
+    &#39;&#39;&#39;
+    # get neccessary parameters
+    data, init_cetroids, gene_num, ndim, max_it, k = argv.values()
+    # init results
+    Result = np.zeros((gene_num, 2), dtype=int)
+    # grouping data according to Euclidean distance
+    for i in range(gene_num):
+        # get Euclidean distance
+        distance = eucl_Distance(init_cetroids, data[i, :])
+        # get the label of shortest distance
+        cluster = distance.argmin()
+        # grouping
+        Result[i, :] = np.array([i, cluster])
+    # verify that the results of the iteration are stable and return a new centroid
+    Handle, argv[&#39;init_cetroids&#39;] = assert_Result(data, init_cetroids, Result,
+                                                  k)
+    # return informattion
+    return Result, Handle.all(), argv, max_it
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;35-creating-body-function-and-main-function&#34;&gt;3.5 Creating Body function and Main function&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def run(arg_dict, it_num=0):
+    &#39;&#39;&#39;
+     the body of  k-means 
+    &#39;&#39;&#39;
+    # perform an iteration and verify that the results are stable
+    # then  calculate the new centroid to be returned in dictionary form
+    Result, handle, arg_dict, max_it = iter_Cetroid(**arg_dict)
+    # determine whether the  condition of end iteration is reached
+    if not (handle) and (it_num &amp;lt; max_it):
+        # if not reach and the iteration continues
+        it_num += 1
+        # print numbers of iteration
+        print(f&#39;...ing Iter Number :{it_num}&#39;)
+        # recursive iteration
+        run(arg_dict, it_num=it_num)
+    # if reach condition
+    else:
+        # change lable,like change the lables from  0,1,2 to 1,2,3
+        Result = Result + 1
+        count_1 = Counter(Result[:, 1])
+        # save result file
+        np.savetxt(&#39;kmeans.out&#39;, Result, fmt=&#39;%d&#39;)
+
+def main():
+    &#39;&#39;&#39;
+    the program main function, integrate workflow, and generate reports
+    &#39;&#39;&#39;
+    # get start time
+    TIC = time.time()
+    # get parameter through terminal
+    ARGV = get_argv()
+    # running the body function  of k-means
+    run(ARGV)
+    # get end time
+    TOC = time.time()
+    # generate report
+    summary(ARGV, TOC - TIC)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;谢谢观看，欢迎交流！😎&lt;/p&gt;
 </description>
     </item>
     

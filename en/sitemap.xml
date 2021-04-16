@@ -97,6 +97,16 @@
   </url><url>
     <loc>https://cauliyang.github.io/en/category/algorithm/</loc>
     <lastmod>2021-04-04T23:58:37+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://cauliyang.github.io/zh/category/algorithm/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cauliyang.github.io/en/category/algorithm/"
+                />
   </url><url>
     <loc>https://cauliyang.github.io/en/tag/machine-learning/</loc>
     <lastmod>2021-04-04T23:58:37+08:00</lastmod>
@@ -119,6 +129,16 @@
   </url><url>
     <loc>https://cauliyang.github.io/en/tag/python/</loc>
     <lastmod>2021-04-04T23:58:37+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://cauliyang.github.io/zh/tag/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cauliyang.github.io/en/tag/python/"
+                />
   </url><url>
     <loc>https://cauliyang.github.io/en/tag/bioinformatics/</loc>
     <lastmod>2021-04-03T11:15:00+08:00</lastmod>

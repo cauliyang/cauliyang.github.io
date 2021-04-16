@@ -40,6 +40,19 @@
                 href="https://cauliyang.github.io/zh/"
                 />
   </url><url>
+    <loc>https://cauliyang.github.io/zh/category/algorithm/</loc>
+    <lastmod>2021-04-05T12:54:10+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cauliyang.github.io/en/category/algorithm/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://cauliyang.github.io/zh/category/algorithm/"
+                />
+  </url><url>
     <loc>https://cauliyang.github.io/zh/categories/</loc>
     <lastmod>2021-04-05T12:54:10+08:00</lastmod>
     <xhtml:link
@@ -62,6 +75,9 @@
     <loc>https://cauliyang.github.io/zh/post/face-recognition/</loc>
     <lastmod>2021-04-05T12:54:10+08:00</lastmod>
   </url><url>
+    <loc>https://cauliyang.github.io/zh/post/kmeans-by-python/</loc>
+    <lastmod>2021-04-05T12:54:10+08:00</lastmod>
+  </url><url>
     <loc>https://cauliyang.github.io/zh/post/</loc>
     <lastmod>2021-04-05T12:54:10+08:00</lastmod>
     <xhtml:link
@@ -73,6 +89,19 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://cauliyang.github.io/zh/post/"
+                />
+  </url><url>
+    <loc>https://cauliyang.github.io/zh/tag/python/</loc>
+    <lastmod>2021-04-05T12:54:10+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cauliyang.github.io/en/tag/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://cauliyang.github.io/zh/tag/python/"
                 />
   </url><url>
     <loc>https://cauliyang.github.io/zh/tags/</loc>
