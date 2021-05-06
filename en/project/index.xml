@@ -5,12 +5,83 @@
     <link>https://cauliyang.github.io/en/project/</link>
       <atom:link href="https://cauliyang.github.io/en/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2020 Yangyang Li. All Rights Reserved.</copyright><lastBuildDate>Mon, 05 Apr 2021 16:23:49 +0800</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2020 Yangyang Li. All Rights Reserved.</copyright><lastBuildDate>Sat, 17 Apr 2021 05:37:29 +0800</lastBuildDate>
     <image>
       <url>https://cauliyang.github.io/media/sharing.jpeg</url>
       <title>Projects</title>
       <link>https://cauliyang.github.io/en/project/</link>
     </image>
+    
+    <item>
+      <title>Tools Comparision</title>
+      <link>https://cauliyang.github.io/en/project/tools-comparision/</link>
+      <pubDate>Sat, 17 Apr 2021 05:37:29 +0800</pubDate>
+      <guid>https://cauliyang.github.io/en/project/tools-comparision/</guid>
+      <description>&lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
+  &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
+  &lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#1-project-description&#34;&gt;1. Project Description&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#2-program-plan&#34;&gt;2. Program Plan&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#21--installation-of-software&#34;&gt;2.1  Installation of Software&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#22-create-test-data&#34;&gt;2.2 Create Test Data&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#23-test-tools-for-simple-data&#34;&gt;2.3 Test Tools for simple data&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#24-construct-snakemake-workflow&#34;&gt;2.4 Construct Snakemake Workflow&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/details&gt;
+
+&lt;h2 id=&#34;1-project-description&#34;&gt;1. Project Description&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/20210417053027.png&#34; alt=&#34;&#34;&gt;
+The project aim to compare the performance for several kinds of tools used to dectect alternative splicing. The  tools are shown below:&lt;/p&gt;
+&lt;h2 id=&#34;2-program-plan&#34;&gt;2. Program Plan&lt;/h2&gt;
+&lt;h3 id=&#34;21--installation-of-software&#34;&gt;2.1  Installation of Software&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;http://hollywood.mit.edu/burgelab/miso/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MISO&lt;/a&gt; | &lt;a href=&#34;https://miso.readthedocs.io/en/fastmiso/#using-miso-on-a-cluster&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;http://rnaseq-mats.sourceforge.net/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rMATs&lt;/a&gt; | &lt;a href=&#34;https://github.com/Xinglab/rmats-turbo/blob/v4.1.1/README.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://majiq.biociphers.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MAJIQ&lt;/a&gt; | &lt;a href=&#34;https://biociphers.bitbucket.io/majiq/MAJIQ.html#builder&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://davidaknowles.github.io/leafcutter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LeafCutter&lt;/a&gt; | &lt;a href=&#34;https://davidaknowles.github.io/leafcutter/articles/Installation.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://github.com/ratschlab/spladder&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SplAdder&lt;/a&gt; | &lt;a href=&#34;https://spladder.readthedocs.io/en/latest/general.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://github.com/qqwang-berkeley/JUM&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jum&lt;/a&gt; | &lt;a href=&#34;https://github.com/qqwang-berkeley/JUM/wiki/A-Hitchhiker%27s-guide-to-JUM-%28version-2.0.2-%29&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://github.com/timbitz/Whippet.jl&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Whippet&lt;/a&gt; | &lt;a href=&#34;https://github.com/timbitz/Whippet.jl&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$\textbf{run_c.sh}$ records the usage and location of these tools.&lt;/p&gt;
+&lt;h3 id=&#34;22-create-test-data&#34;&gt;2.2 Create Test Data&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/biomedbigdata/ASimulatoR&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ASimulatoR&lt;/a&gt; is used to create benchmark data to evaluate the performance of the tools mentioned above.&lt;/p&gt;
+&lt;h3 id=&#34;23-test-tools-for-simple-data&#34;&gt;2.3 Test Tools for simple data&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;http://hollywood.mit.edu/burgelab/miso/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MISO&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;http://rnaseq-mats.sourceforge.net/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rMATs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://majiq.biociphers.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MAJIQ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://davidaknowles.github.io/leafcutter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LeafCutter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://github.com/ratschlab/spladder&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SplAdder&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://github.com/qqwang-berkeley/JUM&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jum&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://github.com/timbitz/Whippet.jl&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Whippet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;24-construct-snakemake-workflow&#34;&gt;2.4 Construct Snakemake Workflow&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/snakemake/snakemake-wrappers/blob/38ad23b0e4f58ce7dbd8d32612157f449ca02c62/docs/index.rst&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/snakemake-%E2%89%A55.7.0-brightgreen.svg?style=flat-square&#34; alt=&#34;Snakemake&#34;&gt;&lt;/a&gt; is used to construct workflow.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Creat simulated data&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Create Rna-align rule&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Create Run-tools rules
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;http://hollywood.mit.edu/burgelab/miso/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MISO&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;http://rnaseq-mats.sourceforge.net/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rMATs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://majiq.biociphers.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MAJIQ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://davidaknowles.github.io/leafcutter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LeafCutter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://github.com/ratschlab/spladder&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SplAdder&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://github.com/qqwang-berkeley/JUM&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jum&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; &lt;a href=&#34;https://github.com/timbitz/Whippet.jl&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Whippet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Create evaluation rules&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Create report rules&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Mining Cryptic Exon Using Deep Learning</title>

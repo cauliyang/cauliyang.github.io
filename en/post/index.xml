@@ -5,12 +5,20 @@
     <link>https://cauliyang.github.io/en/post/</link>
       <atom:link href="https://cauliyang.github.io/en/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2020 Yangyang Li. All Rights Reserved.</copyright><lastBuildDate>Sun, 04 Apr 2021 23:58:37 +0800</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2020 Yangyang Li. All Rights Reserved.</copyright><lastBuildDate>Sat, 17 Apr 2021 13:53:07 +0800</lastBuildDate>
     <image>
       <url>https://cauliyang.github.io/media/sharing.jpeg</url>
       <title>Posts</title>
       <link>https://cauliyang.github.io/en/post/</link>
     </image>
+    
+    <item>
+      <title>Get Personal Academic Site With Hugo</title>
+      <link>https://cauliyang.github.io/en/post/get-personal-academic-site-with-hugo/</link>
+      <pubDate>Sat, 17 Apr 2021 13:53:07 +0800</pubDate>
+      <guid>https://cauliyang.github.io/en/post/get-personal-academic-site-with-hugo/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>PCA by Python</title>
