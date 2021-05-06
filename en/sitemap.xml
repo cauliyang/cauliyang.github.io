@@ -47,22 +47,6 @@
                 href="https://cauliyang.github.io/en/tags/"
                 />
   </url><url>
-    <loc>https://cauliyang.github.io/en/post/get-personal-academic-site-with-hugo/</loc>
-    <lastmod>2021-04-17T13:53:07+08:00</lastmod>
-  </url><url>
-    <loc>https://cauliyang.github.io/en/post/</loc>
-    <lastmod>2021-04-17T13:53:07+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://cauliyang.github.io/zh/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cauliyang.github.io/en/post/"
-                />
-  </url><url>
     <loc>https://cauliyang.github.io/en/categories/</loc>
     <lastmod>2021-04-17T05:37:29+08:00</lastmod>
     <xhtml:link
@@ -132,6 +116,19 @@
   </url><url>
     <loc>https://cauliyang.github.io/en/post/pca-by-python/</loc>
     <lastmod>2021-04-04T23:58:37+08:00</lastmod>
+  </url><url>
+    <loc>https://cauliyang.github.io/en/post/</loc>
+    <lastmod>2021-04-04T23:58:37+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://cauliyang.github.io/zh/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cauliyang.github.io/en/post/"
+                />
   </url><url>
     <loc>https://cauliyang.github.io/en/tag/python/</loc>
     <lastmod>2021-04-04T23:58:37+08:00</lastmod>
