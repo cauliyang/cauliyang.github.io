@@ -54,7 +54,7 @@
   
   
   
-    <meta name="theme-color" content="#4caf50" />
+    <meta name="theme-color" content="#1565c0" />
   
 
   
@@ -240,7 +240,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.a8421fc8fb0f3970f3334351cee930e9.css" />
+  <link rel="stylesheet" href="/css/wowchemy.0da7fb6b6cacca3ebc45dc71bd070b0e.css" />
 
   
 
@@ -415,7 +415,7 @@
   
   
   
-  <script src="/js/wowchemy-init.min.226a9011996d125bf3fe4a5f22353a49.js"></script>
+  <script src="/js/wowchemy-init.min.f16be01fc8fb2b5885dd67ce942d1185.js"></script>
 
   
 
@@ -902,53 +902,30 @@
   <div class="article-container">
 
     <div class="article-style">
-      <h2 id="1-introduction">1. Introduction</h2>
+      <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+<!-- code_chunk_output -->
+<ul>
+<li><a href="#1-introduction">1. Introduction</a>
+<ul>
+<li><a href="#11-whats-pca">1.1 What&rsquo;s PCA?</a></li>
+<li><a href="#12-algorithm">1.2 Algorithm</a></li>
+</ul>
+</li>
+<li><a href="#2-pca-from-scratch">2. PCA from scratch</a></li>
+<li><a href="#3-pca-by--scikit-learn">3. PCA by  scikit-learn</a></li>
+<li><a href="#3-summary">3. Summary</a></li>
+</ul>
+<!-- /code_chunk_output -->
+<h2 id="1-introduction">1. Introduction</h2>
 <h3 id="11-whats-pca">1.1 What&rsquo;s PCA?</h3>
 <p>When it comes to methods of reducing dimension, PCA that is an unsupervised linear transformation technique, must be not ignored. Moreover, if you want to know the subtle relationships among data set and reduce the computational complexity in downstream analysis, the PCA may be your best choice! Meanwhile, if you would like to present your data in a 2-dimension or 3-dimension coordinate system, and PCA would sweep your problems!</p>
 <p>What is reducing dimension? I will show you an example as follows:</p>
 <p>First, suppose you have a five-dimensional data set :</p>
-<table>
-<thead>
-<tr>
-<th>Id</th>
-<th>1-d</th>
-<th>2-d</th>
-<th>3-d</th>
-<th>4-d</th>
-<th>5-d</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>data-1</td>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-<td>4</td>
-<td>5</td>
-<td></td>
-</tr>
-<tr>
-<td>data-2</td>
-<td>6</td>
-<td>7</td>
-<td>8</td>
-<td>9</td>
-<td>10</td>
-<td></td>
-</tr>
-<tr>
-<td>..</td>
-<td>..</td>
-<td>..</td>
-<td>..</td>
-<td>..</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<p>| Id     | 1-d | 2-d | 3-d | 4-d | 5-d |
+| &mdash;&mdash; | &mdash; | &mdash; | &mdash; | &mdash; | &mdash; |  |
+| data-1 | 1   | 2   | 3   | 4   | 5   |
+| data-2 | 6   | 7   | 8   | 9   | 10  |
+| ..     | ..  | ..  | ..  | ..  |</p>
 <p>Then, you could pick up PC1 and PC2 after PCA to reduce dimension for plotting:</p>
 <table>
 <thead>
@@ -1312,18 +1289,16 @@ We can see that the classifier&rsquo;s accurate is excellent according to actual
   
   
   
-    
-  
   
   
   <div class="media author-card content-widget-hr">
     
       
-      <a href="https://cauliyang.github.io/"><img class="avatar mr-3 avatar-circle" src="/en/authors/admin/avatar_hu043674fefa0f96a27ae70381f9c84e6f_39565_270x270_fill_q75_lanczos_center.jpeg" alt="Yangyang Li"></a>
+      <img class="avatar mr-3 avatar-circle" src="/en/authors/admin/avatar_hu043674fefa0f96a27ae70381f9c84e6f_39565_270x270_fill_q75_lanczos_center.jpeg" alt="Yangyang Li">
     
 
     <div class="media-body">
-      <h5 class="card-title"><a href="https://cauliyang.github.io/">Yangyang Li</a></h5>
+      <h5 class="card-title">Yangyang Li</h5>
       <h6 class="card-subtitle">Ph.D. of University of Minnesota</h6>
       <p class="card-text">My research interests include deep learning, machine learning and bioinformatics.</p>
       <ul class="network-icon" aria-hidden="true">
@@ -1634,10 +1609,10 @@ We can see that the classifier&rsquo;s accurate is excellent according to actual
       
     
     
-    <script src="/en/js/wowchemy.min.0e658992b7d1443e1c3e2558e6ce08af.js"></script>
+    <script src="/en/js/wowchemy.min.0c842af1bab156fdfbddaf7a6352b608.js"></script>
 
     
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 
 
 

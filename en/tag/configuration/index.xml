@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>configuration | My Academic</title>
+    <link>https://cauliyang.github.io/en/tag/configuration/</link>
+      <atom:link href="https://cauliyang.github.io/en/tag/configuration/index.xml" rel="self" type="application/rss+xml" />
+    <description>configuration</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2020 Yangyang Li. All Rights Reserved.</copyright><lastBuildDate>Thu, 10 Jun 2021 13:38:00 +0800</lastBuildDate>
+    <image>
+      <url>https://cauliyang.github.io/media/sharing.jpeg</url>
+      <title>configuration</title>
+      <link>https://cauliyang.github.io/en/tag/configuration/</link>
+    </image>
+    
+    <item>
+      <title>Cofiguration of My Mac</title>
+      <link>https://cauliyang.github.io/en/post/cofiguration-of-my-mac/</link>
+      <pubDate>Thu, 10 Jun 2021 13:38:00 +0800</pubDate>
+      <guid>https://cauliyang.github.io/en/post/cofiguration-of-my-mac/</guid>
+      <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    All configuration or dot files are store in the Github, you can click Icon above to check that.
+  &lt;/div&gt;
+&lt;/div&gt;
+ --&gt;
+&lt;!-- @import &#34;[TOC]&#34; {cmd=&#34;toc&#34; depthFrom=1 depthTo=6 orderedList=false} --&gt;
+&lt;!-- code_chunk_output --&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#1-applications-and-tools&#34;&gt;1. Applications and Tools&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#11-system-environment&#34;&gt;1.1 System Environment&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#2-editor&#34;&gt;2. Editor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#3-application&#34;&gt;3. Application&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- /code_chunk_output --&gt;
+&lt;h2 id=&#34;1-applications-and-tools&#34;&gt;1. Applications and Tools&lt;/h2&gt;
+&lt;p&gt;The first part will show the applications and tools I used for production, and every app or tool has a simple description. If you have an interest in a certain app, you can click the link I leave to get more information.&lt;/p&gt;
+&lt;h3 id=&#34;11-system-environment&#34;&gt;1.1 System Environment&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://brew.sh/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Homebrew&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Homebrew is an important tool for package manager in mac, which help you download and uninstall applications or tools efficiently. For detailed information, please click the link above to check that.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://iterm2.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;iterm2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;iTerm2 is a replacement for Terminal and the successor to iTerm. It works on Macs with macOS 10.14 or newer. iTerm2 brings the terminal into the modern age with features you never knew you always wanted. Also, iterm2 has integrated &lt;a href=&#34;https://github.com/tmux/tmux/wiki&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;tmux&lt;/a&gt;, you can try to use &lt;strong&gt;tmux&lt;/strong&gt;, which is a terminal multiplexer. It lets you switch easily between several programs in one terminal, detach them (they keep running in the background), and reattach them to a different terminal.&lt;/p&gt;
+&lt;p&gt;If you usually work on a remote server, it is a good idea to use &lt;strong&gt;tmux&lt;/strong&gt; in the remote server. That will help you keep the connection in case you lose control of the current shell in which you are working. There is a tip,  you can add &lt;code&gt;ssh -t user@hostname &amp;quot;tmux attach -t coding01 || tmux new -s coding01&amp;quot;&lt;/code&gt;. Then, you will connect the shell you have worked on last time when you log in to the remote server. If you never heard &lt;strong&gt;tmux&lt;/strong&gt;, you can click the link above to learn how to use it. I will also write a blog to show how I use &lt;strong&gt;tmux&lt;/strong&gt;, please check my blogs.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ohmyz.sh/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;zsh&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Zsh is an alternative to Bash, and it has more advanced features. Oh My Zsh is a delightful, open-source, community-driven framework for managing your Zsh configuration. It comes bundled with thousands of helpful functions, helpers, plugins, themes, and a few things that make you shout. The screenshot of my terminal is shown in the figure below.
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/20210610155159.png&#34; alt=&#34;gos&#34;&gt;&lt;/p&gt;
+&lt;p&gt;You can customize your own terminal, which will improve working efficiency. I use several useful plugins, you can learn how to config &lt;strong&gt;Oh my zsh&lt;/strong&gt; in &lt;font color=red size=5&gt;the blog&lt;/font&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://vimawesome.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vim&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Vim is an editor used in the terminal, and I almost use it every day. Vim is shipped with Mac OS, and you also install other vim-extended editors such as &lt;a href=&#34;&#34;&gt;neovim&lt;/a&gt; and &lt;a href=&#34;&#34;&gt;spacevim&lt;/a&gt;. For me, I usually use the basic Vim with a relatively simple configuration. The &lt;a href=&#34;https://github.com/amix/vimrc&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github-repo&lt;/a&gt; store basic and awesome configuration. You can choose what you like to make your vim fancier.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://git-scm.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;git&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Git is a free and open-source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. Also, Git a t tool used in the terminal to download and upload data or code to the [Github]. Similarly, Git is shipped with Mac OS so you may need to update that by &lt;code&gt;brew upgrade git&lt;/code&gt;. What is more, &lt;strong&gt;Oh my zsh&lt;/strong&gt; provides some alias and plugins, which help us to use git  easily.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.conda.io/en/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;conda&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Conda is a package, dependency, and environment management for any language such as &lt;em&gt;Python&lt;/em&gt;, &lt;em&gt;R&lt;/em&gt;, &lt;em&gt;Ruby&lt;/em&gt;, &lt;em&gt;C/C++&lt;/em&gt;, and more. Conda is an open-source package management system and environment management system that runs on Windows, macOS, and Linux. Conda quickly installs, runs, and updates packages and their dependencies. Conda easily creates, saves, loads, and switches between environments on your local computer. It was created for Python programs, but it can package and distribute software for any language.&lt;/p&gt;
+&lt;p&gt;In addition, I recommend that you use &lt;a href=&#34;https://mamba.readthedocs.io/en/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;mamba&lt;/a&gt; to wrap &lt;strong&gt;Conda&lt;/strong&gt; to accelerate running speed.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://tldr.sh/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;tldr&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The tldr pages are a community effort to simplify the beloved man pages with practical examples. You can get uasage clearly and quickly by using &lt;code&gt;tldr&lt;/code&gt; compared to &lt;code&gt;man&lt;/code&gt;. In mac, you can install that by &lt;code&gt;brew install tldr&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/20210610190712.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.geeksforgeeks.org/tree-command-unixlinux/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;tree&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;tree&lt;/strong&gt; is a recursive directory listing program that produces a depth-indented listing of files. With no arguments, tree lists the files in the current directory. When directory arguments are given, tree lists all the files or directories found in the given directories each in turn. Upon completion of listing all files and directories found, tree returns the total number of files. You can install that by &lt;code&gt;brew install tree&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/20210610190826.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://tldr.sh/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;tldr&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The TLDR pages are a community effort to simplify the beloved man pages with practical examples. You can get usage clearly and quickly by using &lt;code&gt;tldr&lt;/code&gt; compared to &lt;code&gt;man&lt;/code&gt;. In mac, you can install that by &lt;code&gt;brew install tldr&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/20210610190712.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.geeksforgeeks.org/tree-command-unixlinux/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;tree&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;tree&lt;/strong&gt; is a recursive directory listing program that produces a depth-indented listing of files. With no arguments, the tree lists the files in the current directory. When directory arguments are given, the tree lists all the files or directories found in the given directories each in turn. Upon completion of listing all files and directories found, the tree returns the total number of files. You can install that by &lt;code&gt;brew install tree&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/20210610190826.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2-editor&#34;&gt;2. Editor&lt;/h2&gt;
+&lt;p&gt;I will list the editors I used in different situations. If you have any other recommendations, please reach to me!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://code.visualstudio.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Vscode&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Vscode&lt;/em&gt; is an open-source editor, and I mainly use &lt;em&gt;Vscode&lt;/em&gt; to write &lt;em&gt;Markdown&lt;/em&gt;, &lt;em&gt;Latex&lt;/em&gt;, and &lt;em&gt;RST&lt;/em&gt;. Some simple modifications of the project for &lt;em&gt;Python&lt;/em&gt; and &lt;em&gt;C/C++&lt;/em&gt; will happen in &lt;em&gt;Vscode&lt;/em&gt;. There are lots of extensions to help you achieve your goals.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.jetbrains.com/pycharm/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;pycharm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Pycharm&lt;/em&gt; is my main editor when I develop tools or applications in &lt;em&gt;Python&lt;/em&gt;. I use &lt;em&gt;EDU&lt;/em&gt; email to apply for the professional version.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.jetbrains.com/clion/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CLion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;CLion&lt;/em&gt; is my &lt;em&gt;C/C++&lt;/em&gt; IDE, which includes many features like code generation, code quality assurance. I use &lt;em&gt;EDU&lt;/em&gt; email to apply for the professional version.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.kite.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Kite&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Kite&lt;/em&gt; adds AI-powered code completions to your code editor, giving developers superpowers. I use &lt;em&gt;Kite&lt;/em&gt; to empower &lt;em&gt;Vscode&lt;/em&gt;, &lt;em&gt;Pycharm&lt;/em&gt;, &lt;em&gt;Vim&lt;/em&gt;, and &lt;em&gt;CLion&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;3-application&#34;&gt;3. Application&lt;/h2&gt;
+&lt;p&gt;This part list variety of applications used for different goals. Every application has a simple description.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Alfred 4&lt;br&gt;
+A tool can give your different control and efficiency in mac.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Amphetamine&lt;/p&gt;
+&lt;p&gt;Amphetamine can prevent your device from sleeping.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CleanMyMac x
+CleanMyMac is used to remove garbage and uninstall applications.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Default Folder x&lt;br&gt;
+A tool can empower default finder.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Docker
+Docker is a tool to create a safe environment for development or production.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Chrome&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;IINA&lt;/p&gt;
+&lt;p&gt;A tool is used to play video.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Imagine&lt;/p&gt;
+&lt;p&gt;A tool is used to compress images.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;IRightMouse Pro&lt;/p&gt;
+&lt;p&gt;A tool is used to empower the right click of the mouse.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;LICEcap&lt;/p&gt;
+&lt;p&gt;A tool is used to create gifs.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Magnet&lt;/p&gt;
+&lt;p&gt;A tool is used to manage windows for different applications.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Office&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MonitorControl&lt;/p&gt;
+&lt;p&gt;A tool is used to manage brightness and sound for different monitors.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Monodraw&lt;/p&gt;
+&lt;p&gt;A tool is used to design fancy ASCII strings.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Mountain Duck&lt;/p&gt;
+&lt;p&gt;A tool is used to mount &lt;em&gt;Cloud&lt;/em&gt; or &lt;em&gt;Google Drive&lt;/em&gt; in local devices.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Paper&lt;/p&gt;
+&lt;p&gt;A tool is used to change the Desktop background.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PDF Expert&lt;/p&gt;
+&lt;p&gt;A tool is used to edit and read PDF.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PicGo&lt;/p&gt;
+&lt;p&gt;A tool is used to upload images to &lt;em&gt;Web service&lt;/em&gt; like &lt;em&gt;Github&lt;/em&gt;. It is beneficial for writing blogs.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pixel mator Pro&lt;/p&gt;
+&lt;p&gt;A tool is used to modify images.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;R Studio&lt;/p&gt;
+&lt;p&gt;An IDE for the R language.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SnippetsLab&lt;/p&gt;
+&lt;p&gt;A tool is used to keep code snippets.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Xcode&lt;/p&gt;
+&lt;p&gt;A tool is used for development.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;zoom&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;igv&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -17,53 +17,30 @@
       <link>https://cauliyang.github.io/en/post/pca-by-python/</link>
       <pubDate>Sun, 04 Apr 2021 23:58:37 +0800</pubDate>
       <guid>https://cauliyang.github.io/en/post/pca-by-python/</guid>
-      <description>&lt;h2 id=&#34;1-introduction&#34;&gt;1. Introduction&lt;/h2&gt;
+      <description>&lt;!-- @import &#34;[TOC]&#34; {cmd=&#34;toc&#34; depthFrom=1 depthTo=6 orderedList=false} --&gt;
+&lt;!-- code_chunk_output --&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#1-introduction&#34;&gt;1. Introduction&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#11-whats-pca&#34;&gt;1.1 What&amp;rsquo;s PCA?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#12-algorithm&#34;&gt;1.2 Algorithm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#2-pca-from-scratch&#34;&gt;2. PCA from scratch&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#3-pca-by--scikit-learn&#34;&gt;3. PCA by  scikit-learn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#3-summary&#34;&gt;3. Summary&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- /code_chunk_output --&gt;
+&lt;h2 id=&#34;1-introduction&#34;&gt;1. Introduction&lt;/h2&gt;
 &lt;h3 id=&#34;11-whats-pca&#34;&gt;1.1 What&amp;rsquo;s PCA?&lt;/h3&gt;
 &lt;p&gt;When it comes to methods of reducing dimension, PCA that is an unsupervised linear transformation technique, must be not ignored. Moreover, if you want to know the subtle relationships among data set and reduce the computational complexity in downstream analysis, the PCA may be your best choice! Meanwhile, if you would like to present your data in a 2-dimension or 3-dimension coordinate system, and PCA would sweep your problems!&lt;/p&gt;
 &lt;p&gt;What is reducing dimension? I will show you an example as follows:&lt;/p&gt;
 &lt;p&gt;First, suppose you have a five-dimensional data set :&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Id&lt;/th&gt;
-&lt;th&gt;1-d&lt;/th&gt;
-&lt;th&gt;2-d&lt;/th&gt;
-&lt;th&gt;3-d&lt;/th&gt;
-&lt;th&gt;4-d&lt;/th&gt;
-&lt;th&gt;5-d&lt;/th&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;data-1&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;4&lt;/td&gt;
-&lt;td&gt;5&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;data-2&lt;/td&gt;
-&lt;td&gt;6&lt;/td&gt;
-&lt;td&gt;7&lt;/td&gt;
-&lt;td&gt;8&lt;/td&gt;
-&lt;td&gt;9&lt;/td&gt;
-&lt;td&gt;10&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;..&lt;/td&gt;
-&lt;td&gt;..&lt;/td&gt;
-&lt;td&gt;..&lt;/td&gt;
-&lt;td&gt;..&lt;/td&gt;
-&lt;td&gt;..&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+&lt;p&gt;| Id     | 1-d | 2-d | 3-d | 4-d | 5-d |
+| &amp;mdash;&amp;mdash; | &amp;mdash; | &amp;mdash; | &amp;mdash; | &amp;mdash; | &amp;mdash; |  |
+| data-1 | 1   | 2   | 3   | 4   | 5   |
+| data-2 | 6   | 7   | 8   | 9   | 10  |
+| ..     | ..  | ..  | ..  | ..  |&lt;/p&gt;
 &lt;p&gt;Then, you could pick up PC1 and PC2 after PCA to reduce dimension for plotting:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;

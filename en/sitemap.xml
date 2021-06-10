@@ -2,14 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://cauliyang.github.io/en/tag/course/</loc>
-    <lastmod>2021-04-20T10:04:04+08:00</lastmod>
+    <loc>https://cauliyang.github.io/en/categories/</loc>
+    <lastmod>2021-06-10T13:38:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://cauliyang.github.io/zh/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cauliyang.github.io/en/categories/"
+                />
   </url><url>
-    <loc>https://cauliyang.github.io/en/talk/courses-presentations-on-spring2021/</loc>
-    <lastmod>2021-04-20T10:04:04+08:00</lastmod>
+    <loc>https://cauliyang.github.io/en/post/cofiguration-of-my-mac/</loc>
+    <lastmod>2021-06-10T13:38:00+08:00</lastmod>
+  </url><url>
+    <loc>https://cauliyang.github.io/en/tag/configuration/</loc>
+    <lastmod>2021-06-10T13:38:00+08:00</lastmod>
+  </url><url>
+    <loc>https://cauliyang.github.io/en/category/mac/</loc>
+    <lastmod>2021-06-10T13:38:00+08:00</lastmod>
   </url><url>
     <loc>https://cauliyang.github.io/en/</loc>
-    <lastmod>2021-04-20T10:04:04+08:00</lastmod>
+    <lastmod>2021-06-10T13:38:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -20,6 +36,38 @@
                 hreflang="en"
                 href="https://cauliyang.github.io/en/"
                 />
+  </url><url>
+    <loc>https://cauliyang.github.io/en/post/</loc>
+    <lastmod>2021-06-10T13:38:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://cauliyang.github.io/zh/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cauliyang.github.io/en/post/"
+                />
+  </url><url>
+    <loc>https://cauliyang.github.io/en/tags/</loc>
+    <lastmod>2021-06-10T13:38:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://cauliyang.github.io/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cauliyang.github.io/en/tags/"
+                />
+  </url><url>
+    <loc>https://cauliyang.github.io/en/tag/course/</loc>
+    <lastmod>2021-04-20T10:04:04+08:00</lastmod>
+  </url><url>
+    <loc>https://cauliyang.github.io/en/talk/courses-presentations-on-spring2021/</loc>
+    <lastmod>2021-04-20T10:04:04+08:00</lastmod>
   </url><url>
     <loc>https://cauliyang.github.io/en/event/</loc>
     <lastmod>2021-04-20T10:04:04+08:00</lastmod>
@@ -32,32 +80,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://cauliyang.github.io/en/event/"
-                />
-  </url><url>
-    <loc>https://cauliyang.github.io/en/tags/</loc>
-    <lastmod>2021-04-20T10:04:04+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://cauliyang.github.io/zh/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cauliyang.github.io/en/tags/"
-                />
-  </url><url>
-    <loc>https://cauliyang.github.io/en/categories/</loc>
-    <lastmod>2021-04-17T05:37:29+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://cauliyang.github.io/zh/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cauliyang.github.io/en/categories/"
                 />
   </url><url>
     <loc>https://cauliyang.github.io/en/category/computational-biology/</loc>
@@ -116,19 +138,6 @@
   </url><url>
     <loc>https://cauliyang.github.io/en/post/pca-by-python/</loc>
     <lastmod>2021-04-04T23:58:37+08:00</lastmod>
-  </url><url>
-    <loc>https://cauliyang.github.io/en/post/</loc>
-    <lastmod>2021-04-04T23:58:37+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://cauliyang.github.io/zh/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cauliyang.github.io/en/post/"
-                />
   </url><url>
     <loc>https://cauliyang.github.io/en/tag/python/</loc>
     <lastmod>2021-04-04T23:58:37+08:00</lastmod>
