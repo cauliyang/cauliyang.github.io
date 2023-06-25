@@ -45,5 +45,6 @@ server:
 # Formats the code, builds the website, and commits the changes
 commit: format build
     # Committing changes...
-    aic -a
+    git add .
+    aic
     # Changes committed.
