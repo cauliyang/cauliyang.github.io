@@ -1,6 +1,10 @@
 clean:
     find . -name 'themes' -prune -o -name '*DS*' -exec rm {} \;
 
+check-link:
+    lychee  --cache --suggest content
+
+
 update-theme:
     git submodule update --remote --rebase
 

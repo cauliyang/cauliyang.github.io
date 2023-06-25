@@ -174,4 +174,4 @@ with open("encoding_face.pickle", "wb") as f:
 
 ### 参考链接
 
-1. [**Pyimage**](www.pyimagesearch.com/2018/06/18/face-recognition-with-opencv-python-and-deep-learning/)
+1. [**Pyimage**](https://www.pyimagesearch.com/2018/06/18/face-recognition-with-opencv-python-and-deep-learning/)
