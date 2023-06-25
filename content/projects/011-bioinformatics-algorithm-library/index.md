@@ -5,7 +5,6 @@ tags: ["Bioinformatics", "C++", "Algorithm", "Data Structure"]
 date: 2022-09-26T13:07:28-05:00
 featured: false
 draft: false
-showHero: false
 ---
 
 The library is a collection of algorithms and data structures that are designed for modern C++ bioinformatics applications.

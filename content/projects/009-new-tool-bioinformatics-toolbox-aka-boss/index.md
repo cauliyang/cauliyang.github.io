@@ -5,7 +5,6 @@ tags: ["Bioinformatics", "Develop", "C++"]
 date: 2022-09-25T23:22:31-05:00
 featured: false
 draft: false
-showHero: false
 ---
 
 BOSS is a bioinformatics toolbox, which will contain efficient tools. It is written in modern C++ and is tested exhaustively. It is designed to be easy to use and time-efficient. BOSS is a free software and is distributed under the terms of the GNU General Public License V3.

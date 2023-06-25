@@ -11,6 +11,8 @@ draft: false
 
 ## 1. Introduction
 
+This article records two methods of PCA analysis using Python, and visualizes 2-dimensional results
+
 ### 1.1 What's PCA?
 
 When it comes to methods of reducing dimension, PCA that is an unsupervised linear transformation technique, must be not ignored.
@@ -38,11 +40,11 @@ Then, you could pick up PC1 and PC2 after PCA to reduce dimension for plotting:
 
 ## 1.2 Algorithm
 
-1. Normalize $d$ dimension raw data
+1. Normalize \\(d\\) dimension raw data
 2. Create the covariance matrix
 3. Calculate the eigenvalues of the covariance matrix and the corresponding eigenvectors
-4. The eigenvectors are sorted in the matrix according to the corresponding feature value, and the first k rows are formed into a matrix $W$. ($k\<\<d$)
-5. $Y = xW$ is the result after reducing dimension to k dimension
+4. The eigenvectors are sorted in the matrix according to the corresponding feature value, and the first k rows are formed into a matrix \\(W\\). (\\(k\<\<d\\))
+5. \\(Y = xW\\) is the result after reducing dimension to k dimension
 
 **Note:** There are two prerequisites for conducting PCA
 
@@ -102,7 +104,7 @@ x_test_std = sc.fit_transform(x_test)
 
 the calculation of the covariance matrix :
 
-$$\\sigma\_{jk} =  \\frac{1}{n} \\sum^{n}_{i=1}\\bigg(x_{j}^{(i)} - \\mu_j\\bigg)\\bigg(x\_{k}^{(i)} - \\mu_k\\bigg)$$
+$$ \sigma\_{jk} = \frac{1}{n} \sum^{n}\_{i=1}\bigg(x\_{j}^{(i)} - \mu_j\bigg)\bigg(x\_{k}^{(i)} - \mu_k\bigg) $$
 
 Then, using `numpy.cov` and `numpy.linalg.eig` to get the covariance matrix and eigenvectors respectively
 
@@ -115,8 +117,9 @@ eigen_vals, eigen_vecs = np.linalg.eig(cov_mat)
 
 **NOTE:** there are 13 eigenvectors totally, the number of eigenvalues might be not as same as the number of features sometimes.
 
-Firstly, plotting the Variance interpretation ratio, which is obtained through eigenvalue $\\lambda_j$ divided by the sum of all the eigenvalues:
-$$ \\frac{\\lambda*j}{\\sum^d*{j=1}\\lambda_j}$$
+Firstly, plotting the Variance interpretation ratio, which is obtained through eigenvalue \\(\lambda_j\\) divided by the sum of all the eigenvalues:
+
+$$ \frac{\lambda\*j}{\sum^d\_{j=1}\lambda_j} $$
 
 ```python
 # get sum of all the eigenvalues
@@ -151,7 +154,7 @@ plt.savefig("pca_index.png", format="png", bbox_inches="tight", dpi=300)
 ![](https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1572764173795.png)
 We can conclude that **PC1** only takes account for about 40%. Furthermore, the sum of **PC1** and **PC2** have 60% variance.
 
-- Selecting the first **k** values to form matrix $W$
+- Selecting the first **k** values to form matrix \\(W\\)
 
 ```python
 # integrate eigenvalues  and eigenvectors
