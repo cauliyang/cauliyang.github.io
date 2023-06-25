@@ -44,11 +44,11 @@ parent = "Series"
 pageRef = "pde"
 weight = 10
 
-# [[main]]
-# name = "example sub-menu 2"
-# parent = "Series"
-# pageRef = "posts"
-# weight = 20
+[[main]]
+name = "LaTex Typesetting"
+parent = "Series"
+pageRef = "latex"
+weight = 20
 
 # [[subnavigation]]
 # name = "An interesting topic"
