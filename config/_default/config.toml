@@ -63,3 +63,6 @@ applyFilter = true
 name = 'fragmentrefs'
 type = 'fragments'
 weight = 10
+
+[params]
+opengraph_io_api_key = "f255fea7-4264-4c54-beeb-afc7978d7bd6"

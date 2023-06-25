@@ -1,7 +1,8 @@
 ---
 title: PCA by Python
 description: This article records two methods of PCA analysis using Python, and visualizes 2-dimensional results.
-tags: ["Python", "Machine Learning"]
+tags: ["Machine Learning"]
+categories: ["Python"]
 date: 2021-04-04T23:58:37+08:00
 featured: false
 draft: false
