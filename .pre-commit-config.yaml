@@ -33,4 +33,3 @@ repos:
           - --ignore-words=.ltex/ltex.dictionary.en-US.txt
           - --skip=logs/**,data/**,*.ipynb,resources/**,static/**
           - -w
-          # - --ignore-words-list=abc,def

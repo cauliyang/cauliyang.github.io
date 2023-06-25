@@ -12,7 +12,7 @@ logo = "img/icon.png"
 # secondaryLogo = "img/icon.png"
 description = "Yangyang Li's blog about academic and development"
 # copyright = "Copy, _right?_ :thinking_face:"
-copyright = "2023 Yangyang Li"
+copyright = "2023 <a class='hover:underline hover:decoration-primary-400 hover:text-primary-500' href=https://yangyangli.top target=_blank rel='noopener noreferrer'>Yangyang Li</a>"
 
 [author]
 name = "Yangyang Li"
