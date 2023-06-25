@@ -1,11 +1,13 @@
 ---
 title: A Python Toolbox - Pybox
 description: A toolbox including a batch of useful commands for annoying tasks.
-tags: ["Develop", "Python"]
+tags: ["Develop"]
+categories: ["Python"]
 date: 2021-12-03T00:03:50-06:00
 featured: false
 draft: false
 # image: "https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/logo.png"
+heroStyle: thumbAndBackground
 ---
 
 ## 0. Changes
@@ -27,7 +29,7 @@ I also have plan to publish this library on [Conda] so that you can install it w
 
 ## 3. Usage
 
-```bash
+```shell
 $ pybox -h # show help
 Usage: pybox [options] <command>
 

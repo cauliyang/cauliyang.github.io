@@ -86,3 +86,9 @@ weight = 10
 name = "Categories"
 pageRef = "categories"
 weight = 20
+
+
+[[footer]]
+name = "RSS"
+url = "index.xml"
+weight = 30
