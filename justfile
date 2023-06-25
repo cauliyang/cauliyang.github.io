@@ -1,5 +1,5 @@
 clean:
-    find . -type f -name ".DS*" -exec rm {} \;
+    find . -name 'themes' -prune -o -name '*DS*' -exec rm {} \;
 
 update-theme:
     git submodule update --remote --rebase
