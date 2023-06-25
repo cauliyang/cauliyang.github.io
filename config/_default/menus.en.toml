@@ -97,5 +97,5 @@ weight = 20
 
 [[footer]]
 name = "RSS"
-url = "index.xml"
+url = "https://yangyangli.top/index.xml"
 weight = 30
