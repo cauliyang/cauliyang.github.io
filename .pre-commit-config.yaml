@@ -1,0 +1,55 @@
+default_language_version:
+  python: python3
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      # list of supported hooks: https://pre-commit.com/hooks.html
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-symlinks
+      - id: check-yaml
+      - id: debug-statements
+      - id: detect-private-key
+      - id: check-toml
+      - id: check-case-conflict
+      - id: check-added-large-files
+        args: [--maxkb=10000]
+  # yaml formatting
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v3.0.0-alpha.9-for-vscode
+    hooks:
+      - id: prettier
+        types: [yaml, markdown]
+
+  # # shell scripts linter
+  # - repo: https://github.com/shellcheck-py/shellcheck-py
+  #   rev: v0.8.0.4
+  #   hooks:
+  #     - id: shellcheck
+
+  #  md formatting
+  #
+  # - repo: https://github.com/executablebooks/mdformat
+  #   rev: 0.7.14
+  #   hooks:
+  #     - id: mdformat
+  #       args: ["--number"]
+  #       additional_dependencies:
+  #         - mdformat-gfm
+  #         - mdformat-tables
+  #         - mdformat_frontmatter
+  #         - mdformat-toc
+  #         - mdformat-black
+
+  # word spelling linter
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.2.5
+    hooks:
+      - id: codespell
+        args:
+          - --ignore-words=.ltex/ltex.dictionary.en-US.txt
+          - --skip=logs/**,data/**,*.ipynb,resources/**,static/**
+          - -w
+          # - --ignore-words-list=abc,def

@@ -1,0 +1,14 @@
+@font-face {
+    font-family: CascadiaCode;
+    src: url('/fonts/CascadiaCode.ttf');
+}
+
+
+@font-face {
+    font-family:  iosevka-regularf;
+    src: url('/fonts/iosevka-regular.ttf');
+}
+
+html {
+    font-family: CascadiaCode;
+}
