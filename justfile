@@ -16,5 +16,8 @@ update: update-precommit update-theme
 format:
     pre-commit run -a
 
-commit: format
+build:
+    hugo
+
+commit: format build
     aic -a
