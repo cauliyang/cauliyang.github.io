@@ -26,7 +26,7 @@ update-precommit:
 update: update-precommit update-theme
 
 # Formats the code using pre-commit
-format:
+format: clean
     # Formatting code...
     pre-commit run -a
     # Code formatting completed.

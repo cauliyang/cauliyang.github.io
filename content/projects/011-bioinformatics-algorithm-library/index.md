@@ -5,6 +5,7 @@ tags: ["Bioinformatics", "C++", "Algorithm", "Data Structure"]
 date: 2022-09-26T13:07:28-05:00
 featured: false
 draft: false
+showHero: false
 ---
 
 The library is a collection of algorithms and data structures that are designed for modern C++ bioinformatics applications.
@@ -21,5 +22,8 @@ The library will include efficient data structure and algorithm implemented by M
 - Hard to use wrongly
 - Testing extensively
 - Python bindings
+-
+
+{{< github repo="ylab-hi/BINARY" >}}
 
 The current project is developing and evolving, and changes will be made to the library as time goes on.
