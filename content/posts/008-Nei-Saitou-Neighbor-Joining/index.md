@@ -15,34 +15,38 @@ Before diving into code, the description of NJ algorithm can be found in ![This 
 
 ## 2. Neighbor Joining Algorithm
 
-The Neighbor-joining Algorithm Given a distance matrix d compute an uprooted tree topology complete with edge lengths that tries to preserve the additive property: $d\_{i,m} + d\_{j,m} − d\_{i,j} = 2d\_{k,m}$ where $k$ is the k-th node on both routes from $i$ and $j$ to $m$.
+The Neighbor-joining Algorithm Given a distance matrix d compute an uprooted tree topology complete with edge lengths that tries to preserve the additive property: \\(d\_{i,m} + d\_{j,m} − d\_{i,j} = 2d\_{k,m}\\),
+where \\(k\\) is the k-th node on both routes from \\(i\\) and \\(j\\) to \\(m\\).
 
-1.  Let the set of clusters be called $L$ and initially $i → C_i; ∀i$ that is $| C_i | = 1$ and $L = C_1 , C_2 , . . . C_N$.
-2.  $d\_{i,j}$ is the distance from the initial distance matrix.
-3.  Compute “normalized distance matrix” $D\_{i,j}$ for all $i, j$ such that
-    $$D\_{i,j} = d\_{i,j} − (r_i + r_j ) \\ where\\ r_i = \\frac{1}{|L|-2} \\sum\_{z \\in L} d\_{i,z}$$
+1.  Let the set of clusters be called \\(L\\) and initially \\(i → C_i; ∀i\\) that is \\(| C_i | = 1\\) and \\(L = C_1 , C_2, \cdots, C_N\\).
+2.  \\(d\_{i,j}\\) is the distance from the initial distance matrix.
+3.  Compute "normalized distance matrix" \\(D\_{i,j}\\) for all \\(i, j\\) such that
+    $$D\_{i,j} = d\_{i,j} − (r_i + r_j ) \\ where\\ r_i = \\frac{1}{|L| -2} \\sum\_{z \in L} d\_{i,z}$$
     This subtracts the average distance to all other nodes than the pair involved. **Note: this is not where we use the distance identity.**
-4.  Use normalized distance to $(i, j) = argmin D\_{i,j}; C_i,C_j \\in L$
-5.  Merge $C_i ∪ C_j → C_k$ where $k$ is a new cluster number.
-6.  Mark old clusters as used so that effectively: $L ← L − C_i − C_j$
-7.  Compute a new normalized distance matrix including the new cluster $k$ and excluding $i, j$.
-    $$d\_{k,z} = d\_{z,k} = (d\_{i,z} + d\_{j,,z} − d\_{i,j} ) for all z ∈ L 2$$
+4.  Use normalized distance to \\((i, j) = \argmin D\_{i,j} \\; C_i,C_j \in L \\)
+5.  Merge \\(C_i \cup C_j \rightarrow C_k\\) where \\(k\\) is a new cluster number.
+6.  Mark old clusters as used so that effectively: \\(L \leftarrow L − C_i − C_j\\)
+7.  Compute a new normalized distance matrix including the new cluster \\(k\\) and excluding \\(i, j\\).
+    \\(d\_{k,z} = d\_{z,k} = (d\_{i,z} + d\_{j,,z} − d\_{i,j} ) \\; \forall z ∈ L 2\\)
     This uses the additivity of the distances to compute the distance to the new cluster from each other node.
-8.  Compute the length of the edges from $k$ to $i$ and $j$. Even though $C_k$has assumed the role of both $C_i$ and $C_j$ you still need the edge length to $i$ and $j$ from $k$ in order to “draw” the tree.
+8.  Compute the length of the edges from \\(k\\) to \\(i\\) and \\(j\\).
+    Even though \\(C_k\\)has assumed the role of both \\(C_i\\) and \\(C_j\\) you still need the edge length to \\(i\\) and \\(j\\) from $k$ in order to “draw” the tree.
     $$edge\_{i,k} = (d\_{i,j} + r_i − r_j)$$
     $$edge\_{j,k} = (d\_{i,j} + r_j − r_i)$$
-9.  Define height $h_k = d\_{i,j} /2$ where $h_k$ is the height of node that is the ancestor to all in $C_k$. When drawing the tree $h_k$ is the height above the baseline (where all the leaves are).
-10. $L ← L ∪ C_k$
-11. While there is more than two clusters left go to step 3
-12. Finally, join the remaining two clusters with:
+9.  Define height \\(h_k = d\_{i,j} /2\\) where \\(h_k\\) is the height of node that is the ancestor to all in \\(C_k\\).
+    When drawing the tree $h_k$ is the height above the baseline (where all the leaves are).
+10. \\(L \leftarrow L \cup C_k\\) While there is more than two clusters left go to step 3
+11. Finally, join the remaining two clusters with:
     $$edge\_{j,k} = d\_{i,j} $$
 
 **Implementation Notes Consider this part of the computation:**
 $$D\_{i,j} = d\_{i,j} − (r_i + r_j ) \\ where \\ r_i =  \\frac{1}{|L|-2} \\sum\_{z \\in L}d\_{i,z}$$
-The values of r*z can be computed once each time we want to compute matrix $D$.
+The values of r\*z can be computed once each time we want to compute matrix
+\\(D\\).
 This saves a vast amount of time.
-Furthermore, since $D*{i,j}$ is only used to find the argmin of $D\_{i,j}$ we actually don’t have to save array $D$; we only need to find the argmin of it.
-So computing all the r and then combine the argmin step with the computation of $D\_{i,j}$
+Furthermore, since \\(D\_{i,j}\\) is only used to find the argmin of \\(D\_{i,j}\\) we actually don’t have to save array \\(D\\);
+we only need to find the argmin of it.
+So computing all the r and then combine the argmin step with the computation of \\(D\_{i,j}\\)
 
 ## 3. Implementation
 
