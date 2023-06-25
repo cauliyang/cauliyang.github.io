@@ -1,15 +1,13 @@
 ---
-title: "Documentation"
-description: "Learn how to use Blowfish and its features."
+title: "Posts"
 
-cascade:
-  showDate: false
-  showAuthor: false
-  invertPagination: true
+showDate: false
+showAuthor: false
+invertPagination: true
 ---
 
 {{< lead >}}
-Simple, yet powerful. Learn how to use Blowfish and its features.
+Life is in the code, whether DNA or binary.
 {{< /lead >}}
 
 ---

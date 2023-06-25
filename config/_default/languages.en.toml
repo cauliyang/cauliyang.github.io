@@ -8,18 +8,17 @@ displayName = "EN"
 isoCode = "en"
 rtl = false
 dateFormat = "2 January 2006"
-logo = "img/logo.png"
-# secondaryLogo = "img/secondary-logo.png"
+logo = "img/icon.png"
+# secondaryLogo = "img/icon.png"
 description = "Yangyang Li's blog about academic and development"
 # copyright = "Copy, _right?_ :thinking_face:"
 copyright = "2023 Yangyang Li"
 
 [author]
 name = "Yangyang Li"
-# image = "img/blowfish_logo.png"
 image = "img/self.jpg"
-headline = "PhD Candidate Northwestern U."
-bio = "A little bit about you"
+headline = "PhD Candidate @ <a class='hover:underline hover:decoration-primary-400 hover:text-primary-500' href=https://www.feinberg.northwestern.edu target=_blank rel='noopener noreferrer'>Northwestern University</a>"
+bio = "PhD Candidate at Northwestern University"
 links = [
     { email = "mailto:yangyang.li@Northwestern.edu" },
     { github = "https://github.com/cauliyang" },

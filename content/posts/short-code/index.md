@@ -5,9 +5,9 @@ date: 2023-06-24
 featured: false
 draft: false
 tags: ["macOS", "Development"]
-showAuthor: true
+showAuthor: false
 showAuthorsBadges: false
-showComments: true
+showComments: false
 ---
 
 ## Alert
