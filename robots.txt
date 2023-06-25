@@ -1,1 +1,3 @@
 User-agent: *
+Allow: /
+Sitemap: https://yangyangli.top/sitemap.xml
