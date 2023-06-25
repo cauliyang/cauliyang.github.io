@@ -4,7 +4,6 @@ description: showing all available short codes
 date: 2022-06-24
 featured: false
 draft: false
-tags: ["macOS", "Development"]
 showAuthor: false
 showAuthorsBadges: false
 showComments: false

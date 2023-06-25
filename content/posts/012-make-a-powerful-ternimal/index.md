@@ -1,7 +1,8 @@
 ---
 title: Make A Powerful Terminal Workspace
 description: Using Alacritty, Zellij, and Fish to empower the terminal
-tags: ["Tool", "macOS"]
+tags: ["Terminal"]
+categories: ["macOS"]
 date: 2022-12-15
 featured: false
 draft: false

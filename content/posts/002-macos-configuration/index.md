@@ -5,10 +5,9 @@ date: 2022-11-26
 lastmod: 2023-06-24
 featured: true
 draft: false
-tags: ["MacOS", "Development"]
-showAuthor: true
+tags: ["Development"]
+categories: ["macOS"]
 showAuthorsBadges: false
-showComments: true
 ---
 
 ## 0. Changes
