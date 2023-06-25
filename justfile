@@ -1,6 +1,9 @@
 clean:
     find . -name 'themes' -prune -o -name '*DS*' -exec rm {} \;
 
+server:
+    hugo server
+
 update-theme:
     git submodule update --remote --rebase
 
