@@ -18,28 +18,28 @@ weight = 10
 [[main]]
 name = "About"
 pageRef = "about"
-weight = 20
+weight = 30
 
 
 [[main]]
 name = "Resume"
 url = "/resume.pdf"
-weight = 30
+weight = 40
 
 
-# [[main]]
-# name = "Parent"
-# weight = 20
+[[main]]
+name = "Series"
+weight = 20
 
-# [[main]]
-# name = "example sub-menu 1"
-# parent = "Parent"
-# pageRef = "posts"
-# weight = 20
+[[main]]
+name = "Personal Development Environment"
+parent = "Series"
+pageRef = "pde"
+weight = 10
 
 # [[main]]
 # name = "example sub-menu 2"
-# parent = "Parent"
+# parent = "Series"
 # pageRef = "posts"
 # weight = 20
 

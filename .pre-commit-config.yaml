@@ -23,6 +23,12 @@ repos:
       - id: prettier
         types: [yaml, markdown]
 
+  - repo: https://github.com/tcort/markdown-link-check
+    rev: v3.11.2
+    hooks:
+      - id: markdown-link-check
+        args: [-q]
+
   # # shell scripts linter
   # - repo: https://github.com/shellcheck-py/shellcheck-py
   #   rev: v0.8.0.4

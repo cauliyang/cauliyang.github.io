@@ -22,7 +22,7 @@ defaultFeaturedImage = "img/ocean.jpg"   # used as default for featured images i
 
 highlightCurrentMenuArea = true
 smartTOC = true
-smartTOCHideUnfocusedChildren = false
+smartTOCHideUnfocusedChildren = true
 
 [header]
 layout = "fixed" # valid options: basic, fixed, fixed-fill, fixed-fill-blur
@@ -38,7 +38,7 @@ showScrollToTop = true
 layout = "background"            # valid options: page, profile, hero, card, background, custom
 homepageImage = "img/berend.jpg" # used in: hero, and card
 showRecent = true
-showRecentItems = 5
+showRecentItems = 15
 showMoreLink = true
 showMoreLinkDest = "/posts"
 cardView = true
@@ -72,6 +72,7 @@ showTaxonomies = true
 showAuthorsBadges = true
 showWordCount = true
 showSummary = true
+showComments = true
 sharingLinks = [
     "linkedin",
     "twitter",

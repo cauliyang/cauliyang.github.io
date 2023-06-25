@@ -367,7 +367,7 @@ You can find more information on how to use these options in the official docume
 
 If you're looking for a powerful and flexible way to manage windows on your Mac, you might want to consider using yabai, skhd, and sketchybar.
 These are a set of open-source utilities that provide advanced window management features, allowing you to control the layout, positioning, and sizing of windows with ease.
-I have [blog](/posts/014-macos-tiling-windows-management) to talk about how to use the tools.
+I have [blog]({{< ref "014-macos-tiling-windows-management" >}}) to talk about how to use the tools.
 
 {{< figure src="https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/iShot_2022-12-20_20.27.10.png" width=600 >}}
 
@@ -412,7 +412,7 @@ It's a powerful text editor that's highly customizable, with a strong focus on k
 Neovim is a great choice if you're looking for a lightweight, fast, and highly configurable editor.
 It's great for coding in a terminal, with a vast array of plugins available for customizing your workflow.
 However, it does have a steeper learning curve than some other editors.
-Neovim is my favorite tool and I have written a [blog](/posts/nvim-chapters/003-lunarvim) about personal developed environment.
+Neovim is my favorite tool and I have written a [blog]({{< ref "001-rust-noodles" >}}) about personal developed environment.
 
 - [VS Code]
 
@@ -495,7 +495,7 @@ My config files and installation commands are kept in GitHub.
 [homebrew]: https://brew.sh/
 [hyperfine]: https://github.com/sharkdp/hyperfine/
 [iina]: https://iina.io/
-[imagine]: https://www.electronjs.org/apps/imagine
+[imagine]: https://github.com/meowtec/Imagine
 [ishot]: https://apps.apple.com/cn/app/ishot-%E4%BC%98%E7%A7%80%E7%9A%84%E6%88%AA%E5%9B%BE%E5%BD%95%E5%B1%8F%E5%B7%A5%E5%85%B7/id1485844094?mt=12
 [iterm2]: https://iterm2.com
 [lunarvim]: https://github.com/LunarVim/LunarVim

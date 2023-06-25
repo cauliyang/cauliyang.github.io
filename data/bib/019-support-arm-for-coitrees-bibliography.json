@@ -1,0 +1,302 @@
+[
+    {
+        "DOI": "10.1093/bioinformatics/btq033",
+        "URL": "https://doi.org/10.1093/bioinformatics/btq033",
+        "author": [
+            {
+                "family": "Quinlan",
+                "given": "Aaron R."
+            },
+            {
+                "family": "Hall",
+                "given": "Ira M."
+            }
+        ],
+        "container-title": "Bioinformatics",
+        "id": "Quinlan2010",
+        "issue": "6",
+        "issued": {
+            "date-parts": [
+                [
+                    2010,
+                    1
+                ]
+            ]
+        },
+        "page": "841-842",
+        "publisher": "Oxford University Press (OUP)",
+        "title": "BEDTools: A flexible suite of utilities for comparing genomic features",
+        "title-short": "BEDTools",
+        "type": "article-journal",
+        "volume": "26"
+    },
+    {
+        "DOI": "10.1093/bioinformatics/btaa827",
+        "ISSN": "1367-4803",
+        "author": [
+            {
+                "family": "Li",
+                "given": "Heng"
+            },
+            {
+                "family": "Rong",
+                "given": "Jiazhen"
+            }
+        ],
+        "container-title": "Bioinformatics",
+        "id": "Li2021May",
+        "issue": "9",
+        "issued": {
+            "date-parts": [
+                [
+                    2021,
+                    5
+                ]
+            ]
+        },
+        "page": "1315-1316",
+        "publisher": "Oxford Academic",
+        "title": "Bedtk: finding interval overlap with implicit interval tree",
+        "type": "article-journal",
+        "volume": "37"
+    },
+    {
+        "DOI": "10.1093/bioinformatics/btz407",
+        "ISSN": "1367-4803",
+        "author": [
+            {
+                "family": "Feng",
+                "given": "Jianglin"
+            },
+            {
+                "family": "Ratan",
+                "given": "Aakrosh"
+            },
+            {
+                "family": "Sheffield",
+                "given": "Nathan C."
+            }
+        ],
+        "container-title": "Bioinformatics",
+        "id": "Feng2019Dec",
+        "issue": "23",
+        "issued": {
+            "date-parts": [
+                [
+                    2019,
+                    12
+                ]
+            ]
+        },
+        "page": "4907-4911",
+        "publisher": "Oxford Academic",
+        "title": "Augmented Interval List: a novel data structure for efficient genomic interval search",
+        "type": "article-journal",
+        "volume": "35"
+    },
+    {
+        "DOI": "10.1109/SFCS.2000.892128",
+        "ISBN": "978-0-7695-0850",
+        "ISSN": "0272-5428",
+        "author": [
+            {
+                "family": "Bender",
+                "given": "M. A."
+            },
+            {
+                "family": "Demaine",
+                "given": "E. D."
+            },
+            {
+                "family": "Farach-Colton",
+                "given": "M."
+            }
+        ],
+        "container-title": "Proceedings 41st Annual Symposium on Foundations of Computer Science",
+        "id": "Bender2000Nov",
+        "issued": {
+            "date-parts": [
+                [
+                    2000,
+                    11
+                ]
+            ]
+        },
+        "page": "399-409",
+        "publisher": "IEEE",
+        "title": "Cache-oblivious B-trees",
+        "type": "chapter"
+    },
+    {
+        "DOI": "10.1007/BF01683268",
+        "ISSN": "1433-0490",
+        "author": [
+            {
+                "dropping-particle": "van",
+                "family": "Emde Boas",
+                "given": "P."
+            },
+            {
+                "family": "Kaas",
+                "given": "R."
+            },
+            {
+                "family": "Zijlstra",
+                "given": "E."
+            }
+        ],
+        "container-title": "Math. Systems Theory",
+        "id": "vanEmdeBoas1976Dec",
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    1976,
+                    12
+                ]
+            ]
+        },
+        "page": "99-127",
+        "publisher": "Springer-Verlag",
+        "title": "Design and implementation of an efficient priority queue",
+        "type": "article-journal",
+        "volume": "10"
+    },
+    {
+        "DOI": "10.1016/0020-0190(77)90031-X",
+        "ISSN": "0020-0190",
+        "author": [
+            {
+                "dropping-particle": "van",
+                "family": "Emde Boas",
+                "given": "P."
+            }
+        ],
+        "container-title": "Inf. Process. Lett.",
+        "id": "vanEmdeBoas1977Jun",
+        "issue": "3",
+        "issued": {
+            "date-parts": [
+                [
+                    1977,
+                    6
+                ]
+            ]
+        },
+        "page": "80-82",
+        "publisher": "Elsevier",
+        "title": "Preserving order in a forest in less than logarithmic time and linear space",
+        "type": "article-journal",
+        "volume": "6"
+    },
+    {
+        "DOI": "10.1038/s41587-019-0054-x",
+        "ISSN": "1546-1696",
+        "author": [
+            {
+                "family": "Krusche",
+                "given": "Peter"
+            },
+            {
+                "family": "Trigg",
+                "given": "Len"
+            },
+            {
+                "family": "Boutros",
+                "given": "Paul C."
+            },
+            {
+                "family": "Mason",
+                "given": "Christopher E."
+            },
+            {
+                "family": "De La Vega",
+                "given": "Francisco M."
+            },
+            {
+                "family": "Moore",
+                "given": "Benjamin L."
+            },
+            {
+                "family": "Gonzalez-Porta",
+                "given": "Mar"
+            },
+            {
+                "family": "Eberle",
+                "given": "Michael A."
+            },
+            {
+                "family": "Tezak",
+                "given": "Zivana"
+            },
+            {
+                "family": "Lababidi",
+                "given": "Samir"
+            },
+            {
+                "family": "Truty",
+                "given": "Rebecca"
+            },
+            {
+                "family": "Asimenos",
+                "given": "George"
+            },
+            {
+                "family": "Funke",
+                "given": "Birgit"
+            },
+            {
+                "family": "Fleharty",
+                "given": "Mark"
+            },
+            {
+                "family": "Chapman",
+                "given": "Brad A."
+            },
+            {
+                "family": "Salit",
+                "given": "Marc"
+            },
+            {
+                "family": "Zook",
+                "given": "Justin M."
+            }
+        ],
+        "container-title": "Nat. Biotechnol.",
+        "id": "Krusche2019May",
+        "issued": {
+            "date-parts": [
+                [
+                    2019,
+                    5
+                ]
+            ]
+        },
+        "page": "555-560",
+        "publisher": "Nature Publishing Group",
+        "title": "Best practices for benchmarking germline small-variant calls in human genomes",
+        "type": "article-journal",
+        "volume": "37"
+    },
+    {
+        "URL": "https://github.com/sharkdp/hyperfine",
+        "author": [
+            {
+                "family": "Peter",
+                "given": "David"
+            }
+        ],
+        "id": "Peter2022",
+        "issued": {
+            "date-parts": [
+                [
+                    2022,
+                    9
+                ]
+            ]
+        },
+        "title": "hyperfine",
+        "type": "book",
+        "version": "1.15.0"
+    }
+]
