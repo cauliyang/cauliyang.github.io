@@ -189,7 +189,7 @@ This section contains some other useful information about how to build a profess
 [this repo]: https://github.com/DmytroLitvinov/awesome-flake8-extensions
 [a tutorial]: https://packaging.python.org/en/latest/tutorials/packaging-projects/#creating-the-package-files
 [poetry]: https://python-poetry.org/
-[shields.io]: https://shields.io/category/downloads
+[shields.io]: https://shields.io
 [pypi stats]: https://pypistats.org/search/%20pyboxes
 [for the badge]: https://forthebadge.com/
 [beautiful insights for your github repositories]: https://repobeats.axiom.co/

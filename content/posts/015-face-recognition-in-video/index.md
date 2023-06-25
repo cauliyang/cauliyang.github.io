@@ -4,7 +4,6 @@ tags: ["Deep Learning", "Computer Vision"]
 date: 2019-06-20
 featured: false
 draft: false
-# image: "https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/ishot_2022-12-20_20.27.10.png"
 ---
 
 ## 1. 准备工作
@@ -175,4 +174,4 @@ with open("encoding_face.pickle", "wb") as f:
 
 ### 参考链接
 
-1. [**Pyimage**](pyimagesearch.com/2018/06/18/face-recognition-with-opencv-python-and-deep-learning/)
+1. [**Pyimage**](www.pyimagesearch.com/2018/06/18/face-recognition-with-opencv-python-and-deep-learning/)

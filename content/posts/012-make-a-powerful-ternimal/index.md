@@ -65,7 +65,7 @@ I use a lot of powerful and fancy terminal applications and I have shared my set
 [zellij]: https://zellij.dev/documentation/introduction.html
 [alacritty]: https://github.com/alacritty/alacritty
 [fish]: https://fishshell.com/
-[fisher]: https://github.com/jorgebucaran/`fisher`
+[fisher]: https://github.com/jorgebucaran/fisher
 [my configuration]: https://github.com/cauliyang/dot-files/blob/main/.alacritty.yml
 [this issue]: https://github.com/alacritty/alacritty/issues/93
 [base 16]: https://github.com/chriskempson/base16

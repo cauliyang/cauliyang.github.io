@@ -288,7 +288,7 @@ draft: true
 [sample .pdf download | file examples download]: https://file-examples.com/index.php/sample-documents-download/sample-pdf-download/
 [scalene]: https://github.com/plasma-umass/scalene
 [semantic versioning 2.0.0]: https://semver.org/
-[shields.io: quality metadata badges for open source projects]: https://shields.io/category/downloads
+[shields.io: quality metadata badges for open source projects]: https://shields.io
 [simple icons]: https://simpleicons.org/
 [software licenses in plain english]: https://tldrlegal.com/
 [sourcegraph]: https://sourcegraph.com/search
@@ -300,7 +300,7 @@ draft: true
 [take your github repository to the next level 🚀️]: https://dev.to/eludadev/take-your-github-repository-to-the-next-level-17ge
 [top 10 open-source data science tools in 2022]: https://pub.towardsai.net/top-10-open-source-data-science-tools-in-2022-6126a7f1b61e
 [top 10 uncommon devops tools you should know]: https://faun.pub/top-10-uncommon-devops-tools-you-should-know-f4f4464ec7f3
-[understand how to write a good commit message]: Python%20project%20for%20development%2051e63c633311457bb606335759b2ea1a/Understand%20how%20to%20write%20a%20good%20commit%20message%20thro%202f500588c3d64d798c7704533c70d59e.md
+[understand how to write a good commit message]: https://faun.pub/top-10-uncommon-devops-tools-you-should-know-f4f4464ec7f3
 [useful python decorators for data scientists]: https://bytepawn.com/python-decorators-for-data-scientists.html
 [using git-flow to automate your git branching workflow]: https://jeffkreeftmeijer.com/git-flow/
 [w3 dummpy]: https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf

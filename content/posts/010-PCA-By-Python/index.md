@@ -262,7 +262,7 @@ x_train_pca = pca.fit_transform(x_train_std)
 x_test_pca = pca.transform(x_test_std)
 # classify x_train_pca
 lr.fit(x_train_pca, y_train)
-# plot dicision region
+# plot decision region
 plot_dicision_regions(x_train_pca, y_train, classifier=lr)
 # add info
 plt.xlabel("PC 1")
