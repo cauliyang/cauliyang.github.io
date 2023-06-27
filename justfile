@@ -1,3 +1,8 @@
+# Starts the Hugo server
+server:
+    # Starting Hugo server...
+    hugo server
+
 # Cleans all files named '*DS*' while ignoring the 'themes' directory
 clean:
     # Starting cleanup...
@@ -36,11 +41,6 @@ build:
     # Building website...
     hugo
     # Website build completed.
-
-# Starts the Hugo server
-server:
-    # Starting Hugo server...
-    hugo server
 
 # Formats the code, builds the website, and commits the changes
 commit: format build

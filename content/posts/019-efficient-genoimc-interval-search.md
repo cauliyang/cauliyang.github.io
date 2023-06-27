@@ -42,14 +42,14 @@ The evaluation task involves interval search problem that is fundamental to geno
 For benchmarking data, I will use stratification BED files from the Global Alliance for Genomics and Health (GA4GH) Benchmarking {{<cite  Krusche2019May  >}}.
 By comparing the effectiveness of COITree with neon instruction set against state-of-the-art tools, we can determine whether this approach can significantly enhance the speed and efficiency of genomic data analysis
 
-A genomic interval $r$ is defined by two coordinates that represent the start and end locations of a feature on a chromosome.
+A genomic interval \\(r\\) is defined by two coordinates that represent the start and end locations of a feature on a chromosome.
 The general interval search problem is defined as follows {{<cite   Feng2019Dec >}}.
 
-Given a set of $ N $ intervals in a $R = {r_1, r_2, \dots,r_N} \; for \; N \gg 1 $, and a query interval $ q $, find the subset of $ S $ of $ R $ that intersect q.
-If we define all intervals to be half-open, $ S $ can be represented as:
+Given a set of \\(N\\) intervals in a \\(R = {r_1, r_2, \dots,r_N} \; for \; N \gg 1 \\), and a query interval \\( q \\), find the subset of \\( S \\) of \\( R \\) that intersect \\(q\\).
+If we define all intervals to be half-open, \\( S \\) can be represented as:
 
 $$
-        S(q) = \{ r \in R | (r.start < q.end \wedge r.end > q.start)\}
+        S(q) = \\{ r \in  R \\;| \\; (r.start < q.end \wedge r.end > q.start)\\}
 $$
 
 I have implemented the optimized COITree in Rust.
