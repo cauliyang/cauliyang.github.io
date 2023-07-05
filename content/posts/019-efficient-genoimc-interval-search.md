@@ -5,7 +5,7 @@ tags: ["Rust", "Algorithm", "Bioinformatics"]
 date: 2023-03-12
 featured: false
 draft: false
-image: "https://raw.githubusercontent.com/lecepin/rust-logo/main/images/1660287876916.jpeg"
+# image: "https://raw.githubusercontent.com/lecepin/rust-logo/main/images/1660287876916.jpeg"
 bibFile: data/bib/019-support-arm-for-coitrees-bibliography.json
 ---
 
