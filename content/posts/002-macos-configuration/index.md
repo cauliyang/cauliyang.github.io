@@ -9,7 +9,7 @@ tags: ["Development"]
 categories: ["macOS"]
 ---
 
-## Todo
+## TODO
 
 2023-02-16:
 
@@ -61,7 +61,7 @@ As I have recently acquired a MacBook Pro M1 model, here is a list of the tools 
 
 ## 2. Package Manager
 
-### [Homebrew]
+### Homebrew
 
 If you're a macOS user looking to expand your software options beyond what's available in the App Store, Homebrew is an excellent solution.
 Homebrew is a free and open-source package manager that simplifies the process of installing software on your Mac.
@@ -107,9 +107,11 @@ This allows readers to learn more about the tools and potentially discover new r
 - [tmux] → [zellij]
 
 However, I still leave information about previous tools.
-I also write [another blog] to talk about how to move to new terminal setting.
+I also write another blog to talk about how to move to new terminal setting.
 
-### [Alacritty]
+{{< article link="/posts/012-make-a-powerful-ternimal/">}}
+
+### Alacritty
 
 [Alacritty] is a free and open-source terminal emulator that is designed to be both fast and lightweight.
 It's written in Rust, a high-performance programming language, and is available for multiple operating systems, including macOS, Linux, and Windows.
@@ -140,7 +142,7 @@ We can find more information on how to customize [Alacritty] on the official web
 Overall, [Alacritty] is an choice for users who want a fast and lightweight terminal emulator that's easy to use and customize.
 With its simple installation process and easy-to-use configuration options, it's a great alternative to other popular terminal emulators on macOS.
 
-### [Zellij]
+### Zellij
 
 [Zellij] is a free and open-source terminal workspace that allows us to create and manage multiple terminal sessions within a single window.
 Compared to [tmux], [zellij] provide more friendly interface.
@@ -162,7 +164,7 @@ Here, we can set things like the keybindings, color scheme, and other preference
 We can find more information on how to customize [Zellij] on the official website or in the documentation.
 With its simple installation process and easy-to-use configuration options, it's a great alternative to other popular terminal workspaces.
 
-### [Fish]
+### Fish
 
 {{< figure src="https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/iShot_2023-02-18_22.55.20.png" width=900 >}}
 
@@ -199,7 +201,7 @@ We can find more information on how to customize Fish on the official website or
 
 ## 4. Command Line Application
 
-### [Git]
+### Git
 
 **Git** is a free and open-source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 Also, Git a t tool used in the terminal to download and upload data or code to the _GitHub_.
@@ -211,7 +213,7 @@ Here's how to get started with [git] on macOS:
 brew install git
 ```
 
-### [Conda]
+### Conda
 
 **Conda** is a package, dependency, and environment management for any language such as _Python_, _R_, _Ruby_, _C/C++_, and more.
 Conda is an open-source package management system and environment management system that runs on Windows, macOS, and Linux.
@@ -240,7 +242,7 @@ Here's how to get started with [tree] on macOS:
 brew install tree
 ```
 
-### [cheat.sh]
+### cheat.sh
 
 [Cheat.sh] is a free and open-source web service that provides quick access to a wide range of cheat sheets and examples for various programming languages and command-line tools.
 It's designed to be fast, lightweight, and accessible from any device with an internet connection.
@@ -250,7 +252,7 @@ It's designed to be fast, lightweight, and accessible from any device with an in
 Cheat.sh is an excellent choice for users who want quick and easy access to cheat sheets and examples for various programming languages and command-line tools.
 With its simple and intuitive interface, it's a great resource for both beginners and experienced users alike.
 
-### [dust]
+### dust
 
 dust = du + rust. It like du but more intuitive.
 [Dust] is a free and open-source utility for analyzing disk usage.
@@ -268,7 +270,7 @@ brew install dust
 
 {{< figure src= "https://raw.githubusercontent.com/bootandy/dust/master/media/snap.png"  numbered="true" width="500" >}}
 
-### [hyperfine]
+### hyperfine
 
 Hyperfine is a free and open-source command-line benchmarking utility.
 It's designed to be fast, flexible, and easy to use, with a simple command-line interface that allows you to quickly measure the performance of your shell commands and scripts.
@@ -284,7 +286,7 @@ brew install hyperfine
 Hyperfine also provides several options for customizing the benchmarking process, such as specifying the number of runs, warmup iterations, and statistical confidence interval.
 You can find more information on how to use these options in the official documentation or by running "hyperfine --help" in the terminal.
 
-### [ouch]
+### ouch
 
 ouch stands for obvious unified compression helper, and it support tar, .zip, .gz, .xz, .lzma, .bz, .bz2, .lz4, .sz and .zst.
 `ouch decompress a.zip` for decompressing, `ouch cmopress one.txt two.txt archive.zip` for compression.
@@ -295,7 +297,7 @@ Here's how to get started with ouch:
 cargo install ouch
 ```
 
-### [topgrade]
+### topgrade
 
 Topgrade is a free and open-source utility for upgrading all your packages.
 It's designed to be fast, flexible, and easy to use, with a simple command-line interface that allows you to quickly upgrade your packages without worrying about dependencies or conflicts.
@@ -308,7 +310,7 @@ Here's how to get started with Topgrade:
 brew install topgrade
 ```
 
-### [imagemagick]
+### imagemagick
 
 {{< figure src="https://camo.githubusercontent.com/d108320692f0c676af0aee5c34be0f3cc854e7398a2691ffe54c5f289aff0d4b/68747470733a2f2f696d6167656d616769636b2e6f72672f696d6167652f77697a6172642e706e67" width=250 >}}
 
@@ -338,7 +340,7 @@ We can find a full list of ImageMagick commands and their descriptions in the of
 ImageMagick also provides a powerful and flexible API that we can use to integrate image processing functionality into our own programs and scripts.
 The API is available in several programming languages, including C, Perl, Python, and Ruby, and provides a wide range of functions for manipulating and converting images.
 
-### [youtobe-dl]
+### youtobe-dl
 
 [youtube-dl] is a free and open-source command-line utility for downloading videos from YouTube and other video sharing websites.
 It's designed to be fast, flexible, and easy to use, with a simple command-line interface that allows us to download videos with various options.
@@ -361,15 +363,17 @@ youtube-dl will automatically detect the best available format and quality for t
 In addition to downloading videos, youtube-dl provides a wide range of other options for customizing the download process, such as selecting a specific video format, downloading only the audio, downloading subtitles, and downloading entire playlists or channels.
 You can find more information on how to use these options in the official documentation or by running "youtube-dl --help" in the terminal.
 
-### [lsd]
+### lsd
 
 ## 5. Windows Management
 
 If you're looking for a powerful and flexible way to manage windows on Mac, you might want to consider using yabai, skhd, and sketchybar.
 These are a set of open-source utilities that provide advanced window management features, allowing to control the layout, positioning, and sizing of windows with ease.
-I have [blog]({{< ref "014-macos-tiling-windows-management" >}}) to talk about how to use the tools.
 
 {{< figure src="https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/iShot_2022-12-20_20.27.10.png" width=600 >}}
+
+I have [blog]({{< ref "014-macos-tiling-windows-management" >}}) to talk about how to use the tools.
+{{< article link="/posts/014-macos-tiling-windows-management/" >}}
 
 Here's how to get started:
 
@@ -403,7 +407,7 @@ When it comes to coding on macOS, we have a variety of options for text editors,
 Each editor has its own strengths and weaknesses, and choosing the right one will depend on personal preferences and needs.
 In this section, I'll introduce each editor and compare them to help to decide which one is right.
 
-### [Neovim]
+### Neovim
 
 [Neovim] is a fork of the popular text editor Vim, with the goal of modernizing and improving upon Vim's functionality.
 It's a powerful text editor that's highly customizable, with a strong focus on keyboard shortcuts and extensibili great choice
@@ -412,7 +416,7 @@ It's great for coding in a terminal, with a vast array of plugins available for 
 It does have a steeper learning curve than some other editors.
 Neovim is my favorite tool and I have written a [blog]({{< ref "001-rust-noodles" >}}) about personal developed environment.
 
-### [VS Code]
+### VS Code
 
 [VSCode] is a popular open-source text editor developed by Microsoft.
 It's built on top of the Electron framework and provides a modern, customizable user interface.
@@ -421,7 +425,7 @@ It supports a wide range of programming languages and has a vast collection of e
 [VSCode] is a great choice if you're looking for a powerful and user-friendly editor that supports a wide range of programming languages.
 It's a popular choice among developers for its ease of use, extensive plugin ecosystem, and powerful debugging features.
 
-### [JetBrains]
+### JetBrains
 
 JetBrains is a company that develops a variety of popular IDEs, including IntelliJ IDEA, [PyCharm], and [Clion].
 These IDEs provide a complete development environment, with powerful code editors, debugging tools, and support for a wide range of programming languages and frameworks.
@@ -533,7 +537,6 @@ My config files and installation commands are kept in GitHub.
 [zotero]: https://www.zotero.org/
 [zsh]: https://ohmyz.sh/
 [fisher]: https://github.com/jorgebucaran/fisher
-[another blog]: ../012-make-a-powerful-ternimal
 [ouch]: https://github.com/ouch-org/ouch
 [topgrade]: https://github.com/topgrade-rs/topgrade
 [imagemagick]: https://github.com/imagemagick/imagemagick

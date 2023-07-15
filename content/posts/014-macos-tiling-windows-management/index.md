@@ -18,8 +18,10 @@ As such, I set out to find a tool to aid me in managing windows seamlessly.
 Eventually, I discovered a quartet of exceptional tools that I highly recommend giving a try.
 To this day, they continue to surpass my expectations and enhance my productivity.
 
-**WARN!!!: Configuration is time-consuming, and you can give up if you do not like that.**
+{{< alert  icon="fire" cardColor="#e63946" iconColor="#1d3557" textColor="#f1faee"  >}}
+Configuration is time-consuming, and you can give up if you do not like that.\*\*
 However, that means you have already missed one amazing thing.
+{{< /alert >}}
 
 ## 2. Tools
 
@@ -29,7 +31,7 @@ However, that means you have already missed one amazing thing.
 Its capabilities are robust enough to provide a fluid experience.
 It can be tailored to your preferences through binding any key to execute commands in [yabai].
 You can view the video linked below to witness the power of [yabai].
-Another notable tool, [Skhd], was developed by the same talented individual who created [yabai].
+Another notable tool, [Skhd], is developed by the same talented individual who created [yabai].
 
 [![YTB](https://img.youtube.com/vi/AdwhjIg_Xe4/0.jpg)](https://www.youtube.com/watch?v=AdwhjIg_Xe4&ab_channel=StephenHuan)
 
@@ -72,4 +74,4 @@ If you have any other recommendations or alternatives, please do not hesitate to
 [stackline]: https://github.com/AdamWagner/stackline/
 [sketchybar]: https://github.com/FelixKratz/SketchyBar/
 [i3]: https://i3wm.org/
-[my personal configuration]: https://github.com/cauliyang/dot-files/
+[my personal configuration]: https://github.com/cauliyang/dotfiles/
