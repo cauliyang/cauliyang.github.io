@@ -100,14 +100,17 @@ Vectorized code is an essential tool to improve the performance of CPU-intensive
 
 ## AVX2 to NEON Conversion in Rust
 
-Rust provides support for both AVX2 and NEON SIMD instructions. The first step in converting AVX2 code to NEON in Rust is to identify the SIMD instructions used in the code.
-
-Once you have identified the instructions, you can look for their NEON equivalents. For example, the AVX2 instruction `vaddps` (vector addition of packed single-precision floating-point values) has an equivalent NEON instruction called `vadd.f32`.
-
-Next, you need to replace the AVX2 intrinsic functions with their NEON counterparts. Intrinsic functions generate the SIMD instructions in the code. For example, the AVX2 intrinsic function `_mm256_add_ps` is used to generate the `vaddps` instruction. The equivalent NEON intrinsic function for `vadd.f32` is `vaddq_f32`.
-
-Finally, you need to adjust the code to work with the different register sizes of NEON. NEON registers are 128 bits wide, whereas AVX2 registers are 256 bits wide. This means that you need to split the data into two parts and process them separately.
-
+Rust provides support for both AVX2 and NEON SIMD instructions.
+The first step in converting AVX2 code to NEON in Rust is to identify the SIMD instructions used in the code.
+Once you have identified the instructions, you can look for their NEON equivalents.
+For example, the AVX2 instruction `vaddps` (vector addition of packed single-precision floating-point values) has an equivalent NEON instruction called `vadd.f32`.
+Next, you need to replace the AVX2 intrinsic functions with their NEON counterparts.
+Intrinsic functions generate the SIMD instructions in the code.
+For example, the AVX2 intrinsic function `_mm256_add_ps` is used to generate the `vaddps` instruction.
+The equivalent NEON intrinsic function for `vadd.f32` is `vaddq_f32`.
+Finally, you need to adjust the code to work with the different register sizes of NEON.
+NEON registers are 128 bits wide, whereas AVX2 registers are 256 bits wide.
+This means that you need to split the data into two parts and process them separately.
 Rust provides a create called `std::arch::arm::neon` that provides NEON intrinsic functions. You can use these intrinsic functions to generate NEON instructions in Rust code.
 
 ## Benefits of Converting to NEON in Rust
@@ -116,9 +119,11 @@ Converting AVX2 code to NEON in Rust can have several benefits. First, it allows
 
 ## Conclusion
 
-Converting AVX2 code to NEON in Rust can be a challenging task, but it can provide significant benefits in terms of performance and portability. By identifying the SIMD instructions used in the code, replacing the AVX2 intrinsic functions with their NEON equivalents, and adjusting the code to work with the different register sizes of NEON, you can create code that runs efficiently on ARM-based platforms and consumes less power.
+Converting AVX2 code to NEON in Rust can be a challenging task, but it can provide significant benefits in terms of performance and portability.
+By identifying the SIMD instructions used in the code, replacing the AVX2 intrinsic functions with their NEON equivalents, and adjusting the code to work with the different register sizes of NEON, you can create code that runs efficiently on ARM-based platforms and consumes less power.
 
-Rust provides support for both AVX2 and NEON SIMD instructions, which makes the conversion process easier. With these considerations in mind, converting AVX2 code to NEON in Rust can be a valuable investment for developers looking to optimize their code for ARM-based platforms.
+Rust provides support for both AVX2 and NEON SIMD instructions, which makes the conversion process easier.
+With these considerations in mind, converting AVX2 code to NEON in Rust can be a valuable investment for developers looking to optimize their code for ARM-based platforms.
 
 ## Further Reading
 

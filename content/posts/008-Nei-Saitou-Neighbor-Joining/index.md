@@ -36,7 +36,7 @@ where \\(k\\) is the k-th node on both routes from \\(i\\) and \\(j\\) to \\(m\\
 9.  Define height \\(h_k = d\_{i,j} /2\\) where \\(h_k\\) is the height of node that is the ancestor to all in \\(C_k\\).
     When drawing the tree $h_k$ is the height above the baseline (where all the leaves are).
 10. \\(L \leftarrow L \cup C_k\\) While there is more than two clusters left go to step 3
-11. Finally, join the remaining two clusters with:
+11. Join the remaining two clusters with:
     $$edge\_{j,k} = d\_{i,j} $$
 
 **Implementation Notes Consider this part of the computation:**
@@ -45,7 +45,7 @@ The values of r\*z can be computed once each time we want to compute matrix
 \\(D\\).
 This saves a vast amount of time.
 Furthermore, since \\(D\_{i,j}\\) is only used to find the argmin of \\(D\_{i,j}\\) we actually don’t have to save array \\(D\\);
-we only need to find the argmin of it.
+we need to find the argmin of it.
 So computing all the r and then combine the argmin step with the computation of \\(D\_{i,j}\\)
 
 ## 3. Implementation
@@ -54,8 +54,6 @@ I write code contained comments, and it is about 1000 lines that consumes me two
 Now let me show my code with rich comments. If you have any questions or recommendation, I am very glad to communicate with you! Please feel free to reach me.
 
 ```python
-# -*- coding: UTF-8 -*-
-# Time 20201109
 """
 This code integrate bootstrap, getting edge_file and tree_file
 
@@ -72,10 +70,10 @@ import pandas as pd
 
 
 class Timer:
-    """[construct  Timer to show working time of tasks]"""
+    """construct  Timer to show working time of tasks"""
 
     def __init__(self, func=time.perf_counter):
-        """[init values]
+        """init values
 
         Args:
             func : Defaults to time.perf_counter.
@@ -87,10 +85,10 @@ class Timer:
         self._start = None
 
     def start(self):
-        """[start a task]
+        """start a task
 
         Raises:
-            RuntimeError:[if task has started then raise error]
+            RuntimeError:if task has started then raise error
         """
 
         if self._start is not None:
@@ -99,10 +97,10 @@ class Timer:
         self._start = self._func()
 
     def stop(self):
-        """[end a task]
+        """end a task
 
         Raises:
-            RuntimeError[if task has not started then raise error]
+            RuntimeErrorif task has not started then raise error
         """
         if self._start is None:
             raise RuntimeError("Not started")
@@ -114,39 +112,35 @@ class Timer:
         self._start = None
 
     def reset(self):
-        """[reset the working time]"""
+        """reset the working time"""
         self.elapsed = 0
 
     def running(self):
-        """[check if task is running]
+        """check if task is running
 
         Returns:
             bool
         """
-
         return self._start is not None
 
     def __enter__(self):
-        """[function used to address 'with text']"""
-
+        """function used to address 'with text'"""
         self.start()
-
         return self
 
     def __exit__(self, *args):
-        """[function used to address 'with text']"""
-
+        """function used to address 'with text'"""
         self.stop()
 
 
 class TreeNode:
-    """[class of tree node]"""
+    """class of tree node"""
 
     def __init__(self, key=None):
-        """[init values of tree node]
+        """init values of tree node
 
         Args:
-            key ([str, float], optional): [node_label, edge]. Defaults to None.
+            key (str, float, optional): node_label, edge. Defaults to None.
 
             self.index: node_index
         """
@@ -159,10 +153,10 @@ class TreeNode:
         self.LIST = []
 
     def insert_left_children(self, left_object):
-        """[insert left children]
+        """insert left children
 
         Args:
-            left_object ([str, float]): [node_label, edge]
+            left_object (str, float): node_label, edge
         """
         # create a new node
         temp = TreeNode(left_object)
@@ -177,10 +171,10 @@ class TreeNode:
             self.left = temp
 
     def insert_right_children(self, right_object):
-        """[insert right children]
+        """insert right children
 
         Args:
-            right_object ([str, float]): [node_label, edge]
+            right_object (str, float): node_label, edge
         """
         # create a new node
         temp = TreeNode(right_object)
@@ -195,15 +189,15 @@ class TreeNode:
             self.right = temp
 
     def isRoot(self):
-        """[check if the node is Root node]
+        """check if the node is Root node
 
         Returns:
-            [bool]: [if node is Root return True]
+            bool: if node is Root return True
         """
 
         handle = False
 
-        if self.key[0] == "root":
+        if self.key0 == "root":
 
             handle = True
 
@@ -249,7 +243,7 @@ class TreeNode:
         return LIST
 
     def postorder(self):
-        """[tree traversal with postorder, and mainly used to debug]"""
+        """tree traversal with postorder, and mainly used to debug"""
         if self.left:
 
             self.left.postorder()
@@ -262,10 +256,10 @@ class TreeNode:
 
 
 def get_parser() -> dict:
-    """[function used to parse parameters from command line and set log]
+    """function used to parse parameters from command line and set log
 
     Returns:
-        [dict]: [return a dict stored parameters]
+        dict: return a dict stored parameters
     """
     # set logging
     logging.basicConfig(
@@ -332,13 +326,13 @@ def get_parser() -> dict:
 
 
 def read_input(input: str) -> dict:
-    """[read input of fa file and return a dict whose value is nametuple stored information]
+    """read input of fa file and return a dict whose value is nametuple stored information
 
     Args:
-        input (str): [fasta file]
+        input (str): fasta file
 
     Returns:
-        dict: [seq_label: (seq,index )]
+        dict: seq_label: (seq,index )
     """
     #  create namedtuple to store information
     seqs, seq = {}, namedtuple("info", ["seq", "index"])
@@ -361,14 +355,14 @@ def read_input(input: str) -> dict:
 
 
 def genetic_distance(seq1: str, seq2: str) -> float:
-    """[calculate genetic distance of seq1 and seqw]
+    """calculate genetic distance of seq1 and seqw
 
     Args:
-        seq1 (str): [sequences of seq1]
-        seq2 (str): [sequences of seq2]
+        seq1 (str): sequences of seq1
+        seq2 (str): sequences of seq2
 
     Returns:
-        float: [genetic distance]
+        float: genetic distance
     """
     # get length of sequences
     length = len(seq1)
@@ -387,15 +381,15 @@ def genetic_distance(seq1: str, seq2: str) -> float:
 
 
 def fetch_distance(seq1_index: str, seq2_index: str, matrix: dict) -> float or None:
-    """[fetch distance from distance matrix in case comupute pair distance repeatedly]
+    """fetch distance from distance matrix in case comupute pair distance repeatedly
 
     Args:
-        seq1_index (str): [seq1 label]
-        seq2_index (str): [seq2 label]
-        matrix (dict): [store distances that is calculated]
+        seq1_index (str): seq1 label
+        seq2_index (str): seq2 label
+        matrix (dict): store distances that is calculated
 
     Returns:
-        float or None: [if distance has calculated return value otherwise None]
+        float or None: if distance has calculated return value otherwise None
     """
     # init value
     distance = None
@@ -413,14 +407,14 @@ def fetch_distance(seq1_index: str, seq2_index: str, matrix: dict) -> float or N
 
 
 def get_distance_matrix(seqs: dict, out: str) -> dict:
-    """[write distance matrix to file]
+    """write distance matrix to file
 
     Args:
-        seqs (dict): [store information of seqs like {seq_label: (seq:, index:)}]
-        out (str): [the name of genetic distance file]
+        seqs (dict): store information of seqs like {seq_label: (seq:, index:)}
+        out (str): the name of genetic distance file
 
     Returns:
-        dict: [{(seq1_label,seq2_label):genetic_distance}]
+        dict: {(seq1_label,seq2_label):genetic_distance}
     """
     # open new file
     out_put = open(out, "w")
@@ -463,15 +457,15 @@ def get_distance_matrix(seqs: dict, out: str) -> dict:
 
 
 def cacl_sum_distance(taxa: str, leaf_set: set, distance_matrix: dict) -> float:
-    """[calculate sum distance of node away from other nodes]
+    """calculate sum distance of node away from other nodes
 
     Args:
-        taxa ([str]): [label for one node]
-        leaf_set ([set]): [a set store current nodes needed to be merged]
-        distance_matrix ([dict]): [{(seq1_label,seq2_label):genetic_distance}]
+        taxa (str): label for one node
+        leaf_set (set): a set store current nodes needed to be merged
+        distance_matrix (dict): {(seq1_label,seq2_label):genetic_distance}
 
     Returns:
-        [float]: [sum distance of node away from others]
+        float: sum distance of node away from others
     """
     # init value
     result = 0
@@ -484,14 +478,14 @@ def cacl_sum_distance(taxa: str, leaf_set: set, distance_matrix: dict) -> float:
 
 
 def find_qmin(leaf_set: set, distance_matrix: dict) -> dict:
-    """[ calculate min q_value and get information]
+    """calculate min q_value and get information
 
     Args:
-        leaf_set ([set]): [current nodes needed to be merged]
-        distance_matrix ([dict]): [dict stored genetic distance of current nodes]
+        leaf_set (set): current nodes needed to be merged
+        distance_matrix (dict): dict stored genetic distance of current nodes
 
     Returns:
-        [dict]:  [value, combination,taxa1_sum, taxa2_sum]
+        dict:  value, combination,taxa1_sum, taxa2_sum
     """
     # init dict
     qmin = {
@@ -535,11 +529,11 @@ def find_qmin(leaf_set: set, distance_matrix: dict) -> dict:
 
 
 def help_nj(leaf_set: set, distance_matrix: dict):
-    """[helper function to conduct neighbor joining]
+    """helper function to conduct neighbor joining
 
     Args:
-        leaf_set ([set]): [current nodes needed to be merged]
-        distance_matrix ([dict]): [store pair distance of current nodes]
+        leaf_set (set): current nodes needed to be merged
+        distance_matrix (dict): store pair distance of current nodes
 
     Returns:
         TREEDICT: a dict stored node that has been merged in binary tree format
@@ -550,11 +544,11 @@ def help_nj(leaf_set: set, distance_matrix: dict):
     TREEDICT = {}
 
     def neighbor_joining(leaf_set: set, distance_matrix: dict):
-        """[implementation of neighbors joining]
+        """implementation of neighbors joining
 
         Args:
-            leaf_set ([set]): [current nodes needed to be merged]
-            distance_matrix ([dict]): [store genetic distance of current nodes]
+            leaf_set (set): current nodes needed to be merged
+            distance_matrix (dict): store genetic distance of current nodes
         """
         # get nonlocal value
         nonlocal TREEDICT
@@ -663,12 +657,12 @@ def my_tree(TREEDICT: dict, final_distance_matrix: dict, seqs: dict):
             key[0] -> label ; key[1] -> edge
 
     Args:
-        TREEDICT ([dict]): [store information of binary tree ]
-        final_distance_matrix ([dict]): [distance of final two nodes]
-        seqs ([dict]): [store information of seqs]
+        TREEDICT (dict): store information of binary tree
+        final_distance_matrix (dict): distance of final two nodes
+        seqs (dict): store information of seqs
 
     Returns:
-        [binary tree]: [binary tree with fake root]
+        binary tree: binary tree with fake root
     """
     # 'merged node' means nodes have been changed as binary tree
     # init value to find if node is 'merged node'  in final two nodes after NJ
@@ -721,15 +715,15 @@ def my_tree(TREEDICT: dict, final_distance_matrix: dict, seqs: dict):
 
 
 def help_edge_matrix(tree, seqs: dict, edge_file: str):
-    """[help function to do preorder traversal in order to get edge file]
+    """help function to do preorder traversal in order to get edge file
 
     Args:
-        tree ([Binary Tree])
-        seqs (dict): [store information about label, seq, and index of seqs]
-        edge_file (str): [output of edge]
+        tree (Binary Tree)
+        seqs (dict): store information about label, seq, and index of seqs
+        edge_file (str): output of edge
 
     Returns:
-        [Binary Tree]: [Binary Tree whose internal node has index]
+        Binary Tree: Binary Tree whose internal node has index
     """
     # init index for internal node
     N = len(seqs) + 1
@@ -779,11 +773,11 @@ def help_edge_matrix(tree, seqs: dict, edge_file: str):
 
 
 def help_newick_parse(tree, tree_file: str):
-    """[help function to do postorder traversal in order to get tree file]
+    """help function to do postorder traversal in order to get tree file
 
     Args:
-        tree ([Binary Tree])
-        tree_file (str): [output of tree]
+        tree (Binary Tree)
+        tree_file (str): output of tree
     """
     # open tree file
     TREE_FILE = open(tree_file, "w")
@@ -888,7 +882,7 @@ def help_find_partion(tree) -> dict:
     """function to partition list for internal nodes in a binary tree
 
     Args:
-        tree (binary_tree): [binary_tree with fake root
+        tree (binary_tree): binary_tree with fake root
 
     Returns:
         dict: node_index: partition list
@@ -931,13 +925,13 @@ def get_bootstrap_value(
     original_tree,
     bootstrap_file: str = "bootstrap.txt",
 ):
-    """[function to integrate relation methods to get bootstrap values for original tree]
+    """function to integrate relation methods to get bootstrap values for original tree
 
     Args:
-        bootstrap_number (int): [number for bootstrap. default = None]
-        original_seqs (dict): [information of original sequences]
-        original_tree ([type]): [binary tree of original sequences]
-        bootstrap_file (str): [output of bootstrap]
+        bootstrap_number (int): number for bootstrap. default = None
+        original_seqs (dict): information of original sequences
+        original_tree (type): binary tree of original sequences
+        bootstrap_file (str): output of bootstrap
     """
     # init list to store bootstrap value for every internal node
     internal_node_bootstrap_value = [0] * (len(original_seqs) - 2)
@@ -975,10 +969,10 @@ def get_bootstrap_value(
 
 
 def worker(args: dict):
-    """[function to integrate all above method to conduct NJ and output tree and edge file]
+    """function to integrate all above method to conduct NJ and output tree and edge file
 
     Args:
-        args ([dict]): [parameters getting from command line]
+        args (dict): parameters getting from command line
 
     Returns:
         tree_root_with_index : binary tree whose node has index

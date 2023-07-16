@@ -4,7 +4,7 @@ tags: ["Python"]
 lastmod: 2023-07-15
 date: 2022-06-16T16:40:06-05:00
 featured: false
-draft: false
+draft: true
 ---
 
 ## Python project for development
