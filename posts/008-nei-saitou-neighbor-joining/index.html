@@ -1,7 +1,7 @@
 <!doctype html><html lang=en dir=ltr class=scroll-smooth data-default-appearance=dark data-auto-appearance=true><head><meta charset=utf-8><meta http-equiv=content-language content="en"><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><title>Nei Saitou Neighbor Joining &#183; Bytes of Life</title><meta name=title content="Nei Saitou Neighbor Joining &#183; Bytes of Life"><meta name=description content="one of my homework that requires me to implement Nei-Saitou Neighbor Joining algorithm to construct phylogenetic tree, as well as evaluating the bootstrap cconfidence."><meta name=keywords content="Bioinformatics,Algorithm,"><link rel=canonical href=https://yangyangli.top/posts/008-nei-saitou-neighbor-joining/><link type=text/css rel=stylesheet href=/css/main.bundle.min.6d3b95f8491dc87056b3f5f36e062e22dde9be467221337480fb117b6e843bceaddc03a13520a5be44fb82fba508bf9170f2758fe59c17b591f8cdf70e52f70a.css integrity="sha512-bTuV+EkdyHBWs/XzbgYuIt3pvkZyITN0gPsRe26EO86t3AOhNSClvkT7gvulCL+RcPJ1j+WcF7WR+M33DlL3Cg=="><script type=text/javascript src=/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj+e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
 <script defer type=text/javascript id=script-bundle src=/js/main.bundle.min.3ddcf04f5b0d4c32f72e726d3c12eebccd8c3c9f9daa9a13414808895de0ae1e1cdddda6849680d5bd96dbb60d0b1e0b24c29f5c83e5631e55e7e6bc02015490.js integrity="sha512-PdzwT1sNTDL3LnJtPBLuvM2MPJ+dqpoTQUgIiV3grh4c3d2mhJaA1b2W27YNCx4LJMKfXIPlYx5V5+a8AgFUkA==" data-copy data-copied></script>
 <script src=/js/zoom.min.js></script>
-<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><meta property="og:title" content="Nei Saitou Neighbor Joining"><meta property="og:description" content="one of my homework that requires me to implement Nei-Saitou Neighbor Joining algorithm to construct phylogenetic tree, as well as evaluating the bootstrap cconfidence."><meta property="og:type" content="article"><meta property="og:url" content="https://yangyangli.top/posts/008-nei-saitou-neighbor-joining/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2019-04-03T11:15:00+08:00"><meta property="article:modified_time" content="2019-04-03T11:15:00+08:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Nei Saitou Neighbor Joining"><meta name=twitter:description content="one of my homework that requires me to implement Nei-Saitou Neighbor Joining algorithm to construct phylogenetic tree, as well as evaluating the bootstrap cconfidence."><script type=application/ld+json>[{"@context":"https://schema.org","@type":"Article","articleSection":"Posts","name":"Nei Saitou Neighbor Joining","headline":"Nei Saitou Neighbor Joining","description":"one of my homework that requires me to implement Nei-Saitou Neighbor Joining algorithm to construct phylogenetic tree, as well as evaluating the bootstrap cconfidence.","abstract":"1.","inLanguage":"en","url":"https:\/\/yangyangli.top\/posts\/008-nei-saitou-neighbor-joining\/","author":{"@type":"Person","name":"Yangyang Li"},"copyrightYear":"2019","dateCreated":"2019-04-03T11:15:00\u002b08:00","datePublished":"2019-04-03T11:15:00\u002b08:00","dateModified":"2019-04-03T11:15:00\u002b08:00","keywords":["Bioinformatics","Algorithm"],"mainEntityOfPage":"true","wordCount":"3637"}]</script><meta name=author content="Yangyang Li"><link href=mailto:yangyang.li@Northwestern.edu rel=me><link href=https://github.com/cauliyang rel=me><link href=https://www.linkedin.com/in/yangyang-li-a64b83226/ rel=me><link href=https://orcid.org/0000-0001-8224-1067 rel=me><link href=https://twitter.com/yangyangliz5 rel=me><link href="https://scholar.google.com/citations?user=ByWsRVMAAAAJ&amp;hl=en" rel=me><script src=/lib/jquery/jquery.slim.min.js integrity></script>
+<link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><meta property="og:title" content="Nei Saitou Neighbor Joining"><meta property="og:description" content="one of my homework that requires me to implement Nei-Saitou Neighbor Joining algorithm to construct phylogenetic tree, as well as evaluating the bootstrap cconfidence."><meta property="og:type" content="article"><meta property="og:url" content="https://yangyangli.top/posts/008-nei-saitou-neighbor-joining/"><meta property="og:image" content="https://yangyangli.top/posts/008-nei-saitou-neighbor-joining/featured.jpg"><meta property="article:section" content="posts"><meta property="article:published_time" content="2019-04-03T11:15:00+08:00"><meta property="article:modified_time" content="2019-04-03T11:15:00+08:00"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://yangyangli.top/posts/008-nei-saitou-neighbor-joining/featured.jpg"><meta name=twitter:title content="Nei Saitou Neighbor Joining"><meta name=twitter:description content="one of my homework that requires me to implement Nei-Saitou Neighbor Joining algorithm to construct phylogenetic tree, as well as evaluating the bootstrap cconfidence."><script type=application/ld+json>[{"@context":"https://schema.org","@type":"Article","articleSection":"Posts","name":"Nei Saitou Neighbor Joining","headline":"Nei Saitou Neighbor Joining","description":"one of my homework that requires me to implement Nei-Saitou Neighbor Joining algorithm to construct phylogenetic tree, as well as evaluating the bootstrap cconfidence.","abstract":"1.","inLanguage":"en","url":"https:\/\/yangyangli.top\/posts\/008-nei-saitou-neighbor-joining\/","author":{"@type":"Person","name":"Yangyang Li"},"copyrightYear":"2019","dateCreated":"2019-04-03T11:15:00\u002b08:00","datePublished":"2019-04-03T11:15:00\u002b08:00","dateModified":"2019-04-03T11:15:00\u002b08:00","keywords":["Bioinformatics","Algorithm"],"mainEntityOfPage":"true","wordCount":"3625"}]</script><meta name=author content="Yangyang Li"><link href=mailto:yangyang.li@Northwestern.edu rel=me><link href=https://github.com/cauliyang rel=me><link href=https://www.linkedin.com/in/yangyang-li-a64b83226/ rel=me><link href=https://orcid.org/0000-0001-8224-1067 rel=me><link href=https://twitter.com/yangyangliz5 rel=me><link href="https://scholar.google.com/citations?user=ByWsRVMAAAAJ&amp;hl=en" rel=me><script src=/lib/jquery/jquery.slim.min.js integrity></script>
 <link type=text/css rel=stylesheet href=/lib/katex/katex.min.ee74dae429f16f37d082342b3661d707b6f11935153bf0dc617eaba60b74e8c933334ad55cfdc4602bff3a3c60e47d1d29b63b9656db61aaa07d98e718e01618.css integrity="sha512-7nTa5CnxbzfQgjQrNmHXB7bxGTUVO/DcYX6rpgt06MkzM0rVXP3EYCv/Ojxg5H0dKbY7llbbYaqgfZjnGOAWGA=="><script defer src=/lib/katex/katex.min.6a864286ffbc8a663f5353bb2881d7bcef3b10ecc2b8a3b41a116da43e86d82ca3a3fc4f79381d7f7fdb721075d2207e0288cc4c390c1c33cb28dc4f255a8373.js integrity="sha512-aoZChv+8imY/U1O7KIHXvO87EOzCuKO0GhFtpD6G2Cyjo/xPeTgdf3/bchB10iB+AojMTDkMHDPLKNxPJVqDcw=="></script>
 <script defer src=/lib/katex/auto-render.min.8968ae052e67b7aafad1f0b3dba35dd19a9ed276e4d594c841b9772afee462c5fec8a314147ce3687dbe02733abe9d97b3e80d99a0405562634a6b8fc3be847e.js integrity="sha512-iWiuBS5nt6r60fCz26Nd0Zqe0nbk1ZTIQbl3Kv7kYsX+yKMUFHzjaH2+AnM6vp2Xs+gNmaBAVWJjSmuPw76Efg==" onload=renderMathInElement(document.body)></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9HEHRPMBLZ"></script>
@@ -14,7 +14,7 @@
 <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentcolor" d="M505 442.7 405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9.0 208 0S0 93.1.0 208s93.1 208 208 208c48.3.0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9.0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7.0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7.0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg></span></button><div class="ltr:mr-14 rtl:ml-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"><button id=appearance-switcher aria-label="Dark mode switcher" type=button><div class="flex items-center justify-center h-12 dark:hidden"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentcolor" d="M32 256C32 132.2 132.3 32 255.8 32c11.36.0 29.7 1.668 40.9 3.746 9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3 9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480 132.1 480 32 379.6 32 256z"/></svg></span></div><div class="items-center justify-center hidden h-12 dark:flex"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentcolor" d="M256 159.1c-53.02.0-95.1 42.98-95.1 95.1s41.2 96.9 95.1 96.9 95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347l-63.2-91.9 63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89 164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6 12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256 2.74 347.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7 19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109 109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69.0-127.1-57.31-127.1-127.1.0-70.69 57.31-127.1 127.1-127.1S383.1 186.2 383.1 256c0 70.7-56.4 127.1-127.1 127.1z"/></svg></span></div></button></div></nav><div class="flex md:hidden items-center space-x-5 md:ml-12"><span></span>
 <button id=search-button-mobile aria-label=Search class="text-base hover:text-primary-600 dark:hover:text-primary-400" title>
 <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentcolor" d="M505 442.7 405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9.0 208 0S0 93.1.0 208s93.1 208 208 208c48.3.0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9.0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7.0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7.0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg></span></button>
-<button id=appearance-switcher-mobile aria-label="Dark mode switcher" type=button style=margin-right:5px><div class="flex items-center justify-center h-12 dark:hidden"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentcolor" d="M32 256C32 132.2 132.3 32 255.8 32c11.36.0 29.7 1.668 40.9 3.746 9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3 9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480 132.1 480 32 379.6 32 256z"/></svg></span></div><div class="items-center justify-center hidden h-12 dark:flex"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentcolor" d="M256 159.1c-53.02.0-95.1 42.98-95.1 95.1s41.2 96.9 95.1 96.9 95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347l-63.2-91.9 63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89 164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6 12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256 2.74 347.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7 19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109 109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69.0-127.1-57.31-127.1-127.1.0-70.69 57.31-127.1 127.1-127.1S383.1 186.2 383.1 256c0 70.7-56.4 127.1-127.1 127.1z"/></svg></span></div></button></div></div><div class="-my-2 -mr-2 md:hidden"><label id=menu-button for=menu-controller class=block><input type=checkbox id=menu-controller class=hidden><div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentcolor" d="M0 96C0 78.33 14.33 64 32 64H416c17.7.0 32 14.33 32 32 0 17.7-14.3 32-32 32H32C14.33 128 0 113.7.0 96zM0 256c0-17.7 14.33-32 32-32H416c17.7.0 32 14.3 32 32s-14.3 32-32 32H32c-17.67.0-32-14.3-32-32zM416 448H32c-17.67.0-32-14.3-32-32s14.33-32 32-32H416c17.7.0 32 14.3 32 32s-14.3 32-32 32z"/></svg></span></div><div id=menu-wrapper style=padding-top:5px class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50"><ul class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl"><li><span class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentcolor" d="M310.6 361.4c12.5 12.5 12.5 32.75.0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75.0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75.0-45.25s32.75-12.5 45.25.0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25.0s12.5 32.75.0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></span></li><li class=mt-1><a href=/news/ class="flex items-center"><p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Recent News 🚀">News</p></a></li><li class=mt-1><a href=/posts/ class="flex items-center"><p class="text-bg font-bg text-gray-500 hover:text-gray-900" title=Posts>Posts</p></a></li><li class=mt-1><a class="flex items-center"><p class="text-bg font-bg text-gray-500 hover:text-gray-900" title>Series</p><span><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentcolor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75.0 011.06.02L10 11.168l3.71-3.938a.75.75.0 111.08 1.04l-4.25 4.5a.75.75.0 01-1.08.0l-4.25-4.5a.75.75.0 01.02-1.06z" clip-rule="evenodd"/></svg></span></span></a></li><li class=mt-1><a href=/pde/ class="flex items-center"><p class="text-sm font-small text-gray-500 hover:text-gray-900" title="Personal Development Environment">Personal Development Environment</p></a></li><li class=mt-1><a href=/latex/ class="flex items-center"><p class="text-sm font-small text-gray-500 hover:text-gray-900" title="LaTex Typesetting">LaTex Typesetting</p></a></li><li class=mb-2></li><li class=mt-1><a href=/projects/ class="flex items-center"><p class="text-bg font-bg text-gray-500 hover:text-gray-900" title=Projects>Projects</p></a></li><li class=mt-1><a href=/about/ class="flex items-center"><p class="text-bg font-bg text-gray-500 hover:text-gray-900" title=About>About</p></a></li><li class=mt-1><a href=/resume.pdf class="flex items-center"><p class="text-bg font-bg text-gray-500 hover:text-gray-900" title>Resume</p></a></li></ul></div></label></div></div><script>(function(){var e=$(".main-menu"),t=window.location.pathname;e.find('a[href="'+t+'"]').each(function(e,t){$(t).children("p").addClass("active")})})()</script></div></div><script>window.addEventListener("scroll",function(){var t=window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0,n=document.getElementById("menu-blur");n.style.opacity=t/300})</script><div class="relative flex flex-col grow"><main id=main-content class=grow><article><div id=hero class="h-[150px] md:h-[200px]"></div><div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom" style=background-image:url(/img/ocean_hu3d03a01dcc18bc5be0e67db3d8d209a6_5097493_1200x0_resize_q75_box.jpg)><div class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal"></div><div class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal"></div></div><div id=background-blur class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div><script>window.addEventListener("scroll",function(){var t=window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0,n=document.getElementById("background-blur");n.style.opacity=t/300})</script><header id=single_header class="mt-5 max-w-prose"><ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden"><li class="inline hidden"><a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href=/>Welcome to my blog!</a><span class="px-1 text-primary-500">/</span></li><li class=inline><a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href=/posts/>Posts</a><span class="px-1 text-primary-500">/</span></li><li class="inline hidden"><a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href=/posts/008-nei-saitou-neighbor-joining/>Nei Saitou Neighbor Joining</a><span class="px-1 text-primary-500">/</span></li></ol><h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">Nei Saitou Neighbor Joining</h1><div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden"><div class="flex flex-row flex-wrap items-center"><span>3637 words</span><span class="px-2 text-primary-500">&#183;</span><span title="Reading time">18 mins</span><span class="px-2 text-primary-500">&#183;</span><span>
+<button id=appearance-switcher-mobile aria-label="Dark mode switcher" type=button style=margin-right:5px><div class="flex items-center justify-center h-12 dark:hidden"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentcolor" d="M32 256C32 132.2 132.3 32 255.8 32c11.36.0 29.7 1.668 40.9 3.746 9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3 9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480 132.1 480 32 379.6 32 256z"/></svg></span></div><div class="items-center justify-center hidden h-12 dark:flex"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentcolor" d="M256 159.1c-53.02.0-95.1 42.98-95.1 95.1s41.2 96.9 95.1 96.9 95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347l-63.2-91.9 63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89 164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6 12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256 2.74 347.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7 19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109 109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69.0-127.1-57.31-127.1-127.1.0-70.69 57.31-127.1 127.1-127.1S383.1 186.2 383.1 256c0 70.7-56.4 127.1-127.1 127.1z"/></svg></span></div></button></div></div><div class="-my-2 -mr-2 md:hidden"><label id=menu-button for=menu-controller class=block><input type=checkbox id=menu-controller class=hidden><div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentcolor" d="M0 96C0 78.33 14.33 64 32 64H416c17.7.0 32 14.33 32 32 0 17.7-14.3 32-32 32H32C14.33 128 0 113.7.0 96zM0 256c0-17.7 14.33-32 32-32H416c17.7.0 32 14.3 32 32s-14.3 32-32 32H32c-17.67.0-32-14.3-32-32zM416 448H32c-17.67.0-32-14.3-32-32s14.33-32 32-32H416c17.7.0 32 14.3 32 32s-14.3 32-32 32z"/></svg></span></div><div id=menu-wrapper style=padding-top:5px class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50"><ul class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl"><li><span class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentcolor" d="M310.6 361.4c12.5 12.5 12.5 32.75.0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75.0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75.0-45.25s32.75-12.5 45.25.0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25.0s12.5 32.75.0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></span></li><li class=mt-1><a href=/news/ class="flex items-center"><p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Recent News 🚀">News</p></a></li><li class=mt-1><a href=/posts/ class="flex items-center"><p class="text-bg font-bg text-gray-500 hover:text-gray-900" title=Posts>Posts</p></a></li><li class=mt-1><a class="flex items-center"><p class="text-bg font-bg text-gray-500 hover:text-gray-900" title>Series</p><span><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentcolor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75.0 011.06.02L10 11.168l3.71-3.938a.75.75.0 111.08 1.04l-4.25 4.5a.75.75.0 01-1.08.0l-4.25-4.5a.75.75.0 01.02-1.06z" clip-rule="evenodd"/></svg></span></span></a></li><li class=mt-1><a href=/pde/ class="flex items-center"><p class="text-sm font-small text-gray-500 hover:text-gray-900" title="Personal Development Environment">Personal Development Environment</p></a></li><li class=mt-1><a href=/latex/ class="flex items-center"><p class="text-sm font-small text-gray-500 hover:text-gray-900" title="LaTex Typesetting">LaTex Typesetting</p></a></li><li class=mb-2></li><li class=mt-1><a href=/projects/ class="flex items-center"><p class="text-bg font-bg text-gray-500 hover:text-gray-900" title=Projects>Projects</p></a></li><li class=mt-1><a href=/about/ class="flex items-center"><p class="text-bg font-bg text-gray-500 hover:text-gray-900" title=About>About</p></a></li><li class=mt-1><a href=/resume.pdf class="flex items-center"><p class="text-bg font-bg text-gray-500 hover:text-gray-900" title>Resume</p></a></li></ul></div></label></div></div><script>(function(){var e=$(".main-menu"),t=window.location.pathname;e.find('a[href="'+t+'"]').each(function(e,t){$(t).children("p").addClass("active")})})()</script></div></div><script>window.addEventListener("scroll",function(){var t=window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0,n=document.getElementById("menu-blur");n.style.opacity=t/300})</script><div class="relative flex flex-col grow"><main id=main-content class=grow><article><div id=hero class="h-[150px] md:h-[200px]"></div><div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom" style=background-image:url(/posts/008-nei-saitou-neighbor-joining/featured_hu017bf1ad1b5851c975f771d309416989_11995944_1200x0_resize_q75_box.jpg)><div class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal"></div><div class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal"></div></div><div id=background-blur class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div><script>window.addEventListener("scroll",function(){var t=window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0,n=document.getElementById("background-blur");n.style.opacity=t/300})</script><header id=single_header class="mt-5 max-w-prose"><ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden"><li class="inline hidden"><a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href=/>Welcome to my blog!</a><span class="px-1 text-primary-500">/</span></li><li class=inline><a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href=/posts/>Posts</a><span class="px-1 text-primary-500">/</span></li><li class="inline hidden"><a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href=/posts/008-nei-saitou-neighbor-joining/>Nei Saitou Neighbor Joining</a><span class="px-1 text-primary-500">/</span></li></ol><h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">Nei Saitou Neighbor Joining</h1><div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden"><div class="flex flex-row flex-wrap items-center"><span>3625 words</span><span class="px-2 text-primary-500">&#183;</span><span title="Reading time">18 mins</span><span class="px-2 text-primary-500">&#183;</span><span>
 <span id=views_posts/008-Nei-Saitou-Neighbor-Joining/index.md title=views>0</span>
 <span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentcolor" d="M288 32c-80.8.0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7.0 24.6C17.3 304 48.6 356 95.4 399.4 142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1 3.3-7.9 3.3-16.7.0-24.6-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144 64.5-144 144-144 144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64-11.5.0-22.3-3-31.6-8.4-.2 2.8-.4 5.5-.4 8.4.0 53 43 96 96 96s96-43 96-96-43-96-96-96c-2.8.0-5.6.1-8.4.4 5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></span></span><span class="px-2 text-primary-500">&#183;</span><span>
 <span id=likes_posts/008-Nei-Saitou-Neighbor-Joining/index.md title=likes>0</span>
@@ -34,19 +34,17 @@ This uses the additivity of the distances to compute the distance to the new clu
 Even though \(C_k\)has assumed the role of both \(C_i\) and \(C_j\) you still need the edge length to \(i\) and \(j\) from $k$ in order to “draw” the tree.
 $$edge_{i,k} = (d_{i,j} + r_i − r_j)$$
 $$edge_{j,k} = (d_{i,j} + r_j − r_i)$$</li><li>Define height \(h_k = d_{i,j} /2\) where \(h_k\) is the height of node that is the ancestor to all in \(C_k\).
-When drawing the tree $h_k$ is the height above the baseline (where all the leaves are).</li><li>\(L \leftarrow L \cup C_k\) While there is more than two clusters left go to step 3</li><li>Finally, join the remaining two clusters with:
+When drawing the tree $h_k$ is the height above the baseline (where all the leaves are).</li><li>\(L \leftarrow L \cup C_k\) While there is more than two clusters left go to step 3</li><li>Join the remaining two clusters with:
 $$edge_{j,k} = d_{i,j} $$</li></ol><p><strong>Implementation Notes Consider this part of the computation:</strong>
 $$D_{i,j} = d_{i,j} − (r_i + r_j ) \ where \ r_i = \frac{1}{|L|-2} \sum_{z \in L}d_{i,z}$$
 The values of r*z can be computed once each time we want to compute matrix
 \(D\).
 This saves a vast amount of time.
 Furthermore, since \(D_{i,j}\) is only used to find the argmin of \(D_{i,j}\) we actually don’t have to save array \(D\);
-we only need to find the argmin of it.
+we need to find the argmin of it.
 So computing all the r and then combine the argmin step with the computation of \(D_{i,j}\)</p><div id=3-implementation class=anchor></div><h2 class="relative group">3. Implementation
 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style=text-decoration-line:none!important href=#3-implementation aria-label=Anchor>#</a></span></h2><p>I write code contained comments, and it is about 1000 lines that consumes me two whole days.
-Now let me show my code with rich comments. If you have any questions or recommendation, I am very glad to communicate with you! Please feel free to reach me.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># -*- coding: UTF-8 -*-</span>
-</span></span><span class=line><span class=cl><span class=c1># Time 20201109</span>
-</span></span><span class=line><span class=cl><span class=s2>&#34;&#34;&#34;
+Now let me show my code with rich comments. If you have any questions or recommendation, I am very glad to communicate with you! Please feel free to reach me.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=s2>&#34;&#34;&#34;
 </span></span></span><span class=line><span class=cl><span class=s2>This code integrate bootstrap, getting edge_file and tree_file
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>USAGE: python -i fa_file -d out_distance_matrix -e out_edge -t out_tree -b number_bootstrap
@@ -62,10 +60,10 @@ Now let me show my code with rich comments. If you have any questions or recomme
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>Timer</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;[construct  Timer to show working time of tasks]&#34;&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;construct  Timer to show working time of tasks&#34;&#34;&#34;</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>func</span><span class=o>=</span><span class=n>time</span><span class=o>.</span><span class=n>perf_counter</span><span class=p>):</span>
-</span></span><span class=line><span class=cl>        <span class=s2>&#34;&#34;&#34;[init values]
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;&#34;&#34;init values
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>        Args:
 </span></span></span><span class=line><span class=cl><span class=s2>            func : Defaults to time.perf_counter.
@@ -77,10 +75,10 @@ Now let me show my code with rich comments. If you have any questions or recomme
 </span></span><span class=line><span class=cl>        <span class=bp>self</span><span class=o>.</span><span class=n>_start</span> <span class=o>=</span> <span class=kc>None</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=nf>start</span><span class=p>(</span><span class=bp>self</span><span class=p>):</span>
-</span></span><span class=line><span class=cl>        <span class=s2>&#34;&#34;&#34;[start a task]
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;&#34;&#34;start a task
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>        Raises:
-</span></span></span><span class=line><span class=cl><span class=s2>            RuntimeError:[if task has started then raise error]
+</span></span></span><span class=line><span class=cl><span class=s2>            RuntimeError:if task has started then raise error
 </span></span></span><span class=line><span class=cl><span class=s2>        &#34;&#34;&#34;</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=bp>self</span><span class=o>.</span><span class=n>_start</span> <span class=ow>is</span> <span class=ow>not</span> <span class=kc>None</span><span class=p>:</span>
@@ -89,10 +87,10 @@ Now let me show my code with rich comments. If you have any questions or recomme
 </span></span><span class=line><span class=cl>        <span class=bp>self</span><span class=o>.</span><span class=n>_start</span> <span class=o>=</span> <span class=bp>self</span><span class=o>.</span><span class=n>_func</span><span class=p>()</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=nf>stop</span><span class=p>(</span><span class=bp>self</span><span class=p>):</span>
-</span></span><span class=line><span class=cl>        <span class=s2>&#34;&#34;&#34;[end a task]
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;&#34;&#34;end a task
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>        Raises:
-</span></span></span><span class=line><span class=cl><span class=s2>            RuntimeError[if task has not started then raise error]
+</span></span></span><span class=line><span class=cl><span class=s2>            RuntimeErrorif task has not started then raise error
 </span></span></span><span class=line><span class=cl><span class=s2>        &#34;&#34;&#34;</span>
 </span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=bp>self</span><span class=o>.</span><span class=n>_start</span> <span class=ow>is</span> <span class=kc>None</span><span class=p>:</span>
 </span></span><span class=line><span class=cl>            <span class=k>raise</span> <span class=ne>RuntimeError</span><span class=p>(</span><span class=s2>&#34;Not started&#34;</span><span class=p>)</span>
@@ -104,39 +102,35 @@ Now let me show my code with rich comments. If you have any questions or recomme
 </span></span><span class=line><span class=cl>        <span class=bp>self</span><span class=o>.</span><span class=n>_start</span> <span class=o>=</span> <span class=kc>None</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=nf>reset</span><span class=p>(</span><span class=bp>self</span><span class=p>):</span>
-</span></span><span class=line><span class=cl>        <span class=s2>&#34;&#34;&#34;[reset the working time]&#34;&#34;&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;&#34;&#34;reset the working time&#34;&#34;&#34;</span>
 </span></span><span class=line><span class=cl>        <span class=bp>self</span><span class=o>.</span><span class=n>elapsed</span> <span class=o>=</span> <span class=mi>0</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=nf>running</span><span class=p>(</span><span class=bp>self</span><span class=p>):</span>
-</span></span><span class=line><span class=cl>        <span class=s2>&#34;&#34;&#34;[check if task is running]
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;&#34;&#34;check if task is running
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>        Returns:
 </span></span></span><span class=line><span class=cl><span class=s2>            bool
 </span></span></span><span class=line><span class=cl><span class=s2>        &#34;&#34;&#34;</span>
-</span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=bp>self</span><span class=o>.</span><span class=n>_start</span> <span class=ow>is</span> <span class=ow>not</span> <span class=kc>None</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=fm>__enter__</span><span class=p>(</span><span class=bp>self</span><span class=p>):</span>
-</span></span><span class=line><span class=cl>        <span class=s2>&#34;&#34;&#34;[function used to address &#39;with text&#39;]&#34;&#34;&#34;</span>
-</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;&#34;&#34;function used to address &#39;with text&#39;&#34;&#34;&#34;</span>
 </span></span><span class=line><span class=cl>        <span class=bp>self</span><span class=o>.</span><span class=n>start</span><span class=p>()</span>
-</span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=bp>self</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=fm>__exit__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=o>*</span><span class=n>args</span><span class=p>):</span>
-</span></span><span class=line><span class=cl>        <span class=s2>&#34;&#34;&#34;[function used to address &#39;with text&#39;]&#34;&#34;&#34;</span>
-</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;&#34;&#34;function used to address &#39;with text&#39;&#34;&#34;&#34;</span>
 </span></span><span class=line><span class=cl>        <span class=bp>self</span><span class=o>.</span><span class=n>stop</span><span class=p>()</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>TreeNode</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;[class of tree node]&#34;&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;class of tree node&#34;&#34;&#34;</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=fm>__init__</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>key</span><span class=o>=</span><span class=kc>None</span><span class=p>):</span>
-</span></span><span class=line><span class=cl>        <span class=s2>&#34;&#34;&#34;[init values of tree node]
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;&#34;&#34;init values of tree node
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>        Args:
-</span></span></span><span class=line><span class=cl><span class=s2>            key ([str, float], optional): [node_label, edge]. Defaults to None.
+</span></span></span><span class=line><span class=cl><span class=s2>            key (str, float, optional): node_label, edge. Defaults to None.
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>            self.index: node_index
 </span></span></span><span class=line><span class=cl><span class=s2>        &#34;&#34;&#34;</span>
@@ -149,10 +143,10 @@ Now let me show my code with rich comments. If you have any questions or recomme
 </span></span><span class=line><span class=cl>        <span class=bp>self</span><span class=o>.</span><span class=n>LIST</span> <span class=o>=</span> <span class=p>[]</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=nf>insert_left_children</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>left_object</span><span class=p>):</span>
-</span></span><span class=line><span class=cl>        <span class=s2>&#34;&#34;&#34;[insert left children]
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;&#34;&#34;insert left children
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>        Args:
-</span></span></span><span class=line><span class=cl><span class=s2>            left_object ([str, float]): [node_label, edge]
+</span></span></span><span class=line><span class=cl><span class=s2>            left_object (str, float): node_label, edge
 </span></span></span><span class=line><span class=cl><span class=s2>        &#34;&#34;&#34;</span>
 </span></span><span class=line><span class=cl>        <span class=c1># create a new node</span>
 </span></span><span class=line><span class=cl>        <span class=n>temp</span> <span class=o>=</span> <span class=n>TreeNode</span><span class=p>(</span><span class=n>left_object</span><span class=p>)</span>
@@ -167,10 +161,10 @@ Now let me show my code with rich comments. If you have any questions or recomme
 </span></span><span class=line><span class=cl>            <span class=bp>self</span><span class=o>.</span><span class=n>left</span> <span class=o>=</span> <span class=n>temp</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=nf>insert_right_children</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>right_object</span><span class=p>):</span>
-</span></span><span class=line><span class=cl>        <span class=s2>&#34;&#34;&#34;[insert right children]
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;&#34;&#34;insert right children
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>        Args:
-</span></span></span><span class=line><span class=cl><span class=s2>            right_object ([str, float]): [node_label, edge]
+</span></span></span><span class=line><span class=cl><span class=s2>            right_object (str, float): node_label, edge
 </span></span></span><span class=line><span class=cl><span class=s2>        &#34;&#34;&#34;</span>
 </span></span><span class=line><span class=cl>        <span class=c1># create a new node</span>
 </span></span><span class=line><span class=cl>        <span class=n>temp</span> <span class=o>=</span> <span class=n>TreeNode</span><span class=p>(</span><span class=n>right_object</span><span class=p>)</span>
@@ -185,15 +179,15 @@ Now let me show my code with rich comments. If you have any questions or recomme
 </span></span><span class=line><span class=cl>            <span class=bp>self</span><span class=o>.</span><span class=n>right</span> <span class=o>=</span> <span class=n>temp</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=nf>isRoot</span><span class=p>(</span><span class=bp>self</span><span class=p>):</span>
-</span></span><span class=line><span class=cl>        <span class=s2>&#34;&#34;&#34;[check if the node is Root node]
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;&#34;&#34;check if the node is Root node
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>        Returns:
-</span></span></span><span class=line><span class=cl><span class=s2>            [bool]: [if node is Root return True]
+</span></span></span><span class=line><span class=cl><span class=s2>            bool: if node is Root return True
 </span></span></span><span class=line><span class=cl><span class=s2>        &#34;&#34;&#34;</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>        <span class=n>handle</span> <span class=o>=</span> <span class=kc>False</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=bp>self</span><span class=o>.</span><span class=n>key</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=o>==</span> <span class=s2>&#34;root&#34;</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=bp>self</span><span class=o>.</span><span class=n>key0</span> <span class=o>==</span> <span class=s2>&#34;root&#34;</span><span class=p>:</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>            <span class=n>handle</span> <span class=o>=</span> <span class=kc>True</span>
 </span></span><span class=line><span class=cl>
@@ -239,7 +233,7 @@ Now let me show my code with rich comments. If you have any questions or recomme
 </span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>LIST</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=nf>postorder</span><span class=p>(</span><span class=bp>self</span><span class=p>):</span>
-</span></span><span class=line><span class=cl>        <span class=s2>&#34;&#34;&#34;[tree traversal with postorder, and mainly used to debug]&#34;&#34;&#34;</span>
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;&#34;&#34;tree traversal with postorder, and mainly used to debug&#34;&#34;&#34;</span>
 </span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=bp>self</span><span class=o>.</span><span class=n>left</span><span class=p>:</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>            <span class=bp>self</span><span class=o>.</span><span class=n>left</span><span class=o>.</span><span class=n>postorder</span><span class=p>()</span>
@@ -252,10 +246,10 @@ Now let me show my code with rich comments. If you have any questions or recomme
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>get_parser</span><span class=p>()</span> <span class=o>-&gt;</span> <span class=nb>dict</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;[function used to parse parameters from command line and set log]
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;function used to parse parameters from command line and set log
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>    Returns:
-</span></span></span><span class=line><span class=cl><span class=s2>        [dict]: [return a dict stored parameters]
+</span></span></span><span class=line><span class=cl><span class=s2>        dict: return a dict stored parameters
 </span></span></span><span class=line><span class=cl><span class=s2>    &#34;&#34;&#34;</span>
 </span></span><span class=line><span class=cl>    <span class=c1># set logging</span>
 </span></span><span class=line><span class=cl>    <span class=n>logging</span><span class=o>.</span><span class=n>basicConfig</span><span class=p>(</span>
@@ -322,13 +316,13 @@ Now let me show my code with rich comments. If you have any questions or recomme
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>read_input</span><span class=p>(</span><span class=nb>input</span><span class=p>:</span> <span class=nb>str</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>dict</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;[read input of fa file and return a dict whose value is nametuple stored information]
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;read input of fa file and return a dict whose value is nametuple stored information
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>    Args:
-</span></span></span><span class=line><span class=cl><span class=s2>        input (str): [fasta file]
+</span></span></span><span class=line><span class=cl><span class=s2>        input (str): fasta file
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>    Returns:
-</span></span></span><span class=line><span class=cl><span class=s2>        dict: [seq_label: (seq,index )]
+</span></span></span><span class=line><span class=cl><span class=s2>        dict: seq_label: (seq,index )
 </span></span></span><span class=line><span class=cl><span class=s2>    &#34;&#34;&#34;</span>
 </span></span><span class=line><span class=cl>    <span class=c1>#  create namedtuple to store information</span>
 </span></span><span class=line><span class=cl>    <span class=n>seqs</span><span class=p>,</span> <span class=n>seq</span> <span class=o>=</span> <span class=p>{},</span> <span class=n>namedtuple</span><span class=p>(</span><span class=s2>&#34;info&#34;</span><span class=p>,</span> <span class=p>[</span><span class=s2>&#34;seq&#34;</span><span class=p>,</span> <span class=s2>&#34;index&#34;</span><span class=p>])</span>
@@ -351,14 +345,14 @@ Now let me show my code with rich comments. If you have any questions or recomme
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>genetic_distance</span><span class=p>(</span><span class=n>seq1</span><span class=p>:</span> <span class=nb>str</span><span class=p>,</span> <span class=n>seq2</span><span class=p>:</span> <span class=nb>str</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>float</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;[calculate genetic distance of seq1 and seqw]
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;calculate genetic distance of seq1 and seqw
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>    Args:
-</span></span></span><span class=line><span class=cl><span class=s2>        seq1 (str): [sequences of seq1]
-</span></span></span><span class=line><span class=cl><span class=s2>        seq2 (str): [sequences of seq2]
+</span></span></span><span class=line><span class=cl><span class=s2>        seq1 (str): sequences of seq1
+</span></span></span><span class=line><span class=cl><span class=s2>        seq2 (str): sequences of seq2
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>    Returns:
-</span></span></span><span class=line><span class=cl><span class=s2>        float: [genetic distance]
+</span></span></span><span class=line><span class=cl><span class=s2>        float: genetic distance
 </span></span></span><span class=line><span class=cl><span class=s2>    &#34;&#34;&#34;</span>
 </span></span><span class=line><span class=cl>    <span class=c1># get length of sequences</span>
 </span></span><span class=line><span class=cl>    <span class=n>length</span> <span class=o>=</span> <span class=nb>len</span><span class=p>(</span><span class=n>seq1</span><span class=p>)</span>
@@ -377,15 +371,15 @@ Now let me show my code with rich comments. If you have any questions or recomme
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>fetch_distance</span><span class=p>(</span><span class=n>seq1_index</span><span class=p>:</span> <span class=nb>str</span><span class=p>,</span> <span class=n>seq2_index</span><span class=p>:</span> <span class=nb>str</span><span class=p>,</span> <span class=n>matrix</span><span class=p>:</span> <span class=nb>dict</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>float</span> <span class=ow>or</span> <span class=kc>None</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;[fetch distance from distance matrix in case comupute pair distance repeatedly]
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;fetch distance from distance matrix in case comupute pair distance repeatedly
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>    Args:
-</span></span></span><span class=line><span class=cl><span class=s2>        seq1_index (str): [seq1 label]
-</span></span></span><span class=line><span class=cl><span class=s2>        seq2_index (str): [seq2 label]
-</span></span></span><span class=line><span class=cl><span class=s2>        matrix (dict): [store distances that is calculated]
+</span></span></span><span class=line><span class=cl><span class=s2>        seq1_index (str): seq1 label
+</span></span></span><span class=line><span class=cl><span class=s2>        seq2_index (str): seq2 label
+</span></span></span><span class=line><span class=cl><span class=s2>        matrix (dict): store distances that is calculated
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>    Returns:
-</span></span></span><span class=line><span class=cl><span class=s2>        float or None: [if distance has calculated return value otherwise None]
+</span></span></span><span class=line><span class=cl><span class=s2>        float or None: if distance has calculated return value otherwise None
 </span></span></span><span class=line><span class=cl><span class=s2>    &#34;&#34;&#34;</span>
 </span></span><span class=line><span class=cl>    <span class=c1># init value</span>
 </span></span><span class=line><span class=cl>    <span class=n>distance</span> <span class=o>=</span> <span class=kc>None</span>
@@ -403,14 +397,14 @@ Now let me show my code with rich comments. If you have any questions or recomme
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>get_distance_matrix</span><span class=p>(</span><span class=n>seqs</span><span class=p>:</span> <span class=nb>dict</span><span class=p>,</span> <span class=n>out</span><span class=p>:</span> <span class=nb>str</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>dict</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;[write distance matrix to file]
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;write distance matrix to file
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>    Args:
-</span></span></span><span class=line><span class=cl><span class=s2>        seqs (dict): [store information of seqs like {seq_label: (seq:, index:)}]
-</span></span></span><span class=line><span class=cl><span class=s2>        out (str): [the name of genetic distance file]
+</span></span></span><span class=line><span class=cl><span class=s2>        seqs (dict): store information of seqs like {seq_label: (seq:, index:)}
+</span></span></span><span class=line><span class=cl><span class=s2>        out (str): the name of genetic distance file
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>    Returns:
-</span></span></span><span class=line><span class=cl><span class=s2>        dict: [{(seq1_label,seq2_label):genetic_distance}]
+</span></span></span><span class=line><span class=cl><span class=s2>        dict: {(seq1_label,seq2_label):genetic_distance}
 </span></span></span><span class=line><span class=cl><span class=s2>    &#34;&#34;&#34;</span>
 </span></span><span class=line><span class=cl>    <span class=c1># open new file</span>
 </span></span><span class=line><span class=cl>    <span class=n>out_put</span> <span class=o>=</span> <span class=nb>open</span><span class=p>(</span><span class=n>out</span><span class=p>,</span> <span class=s2>&#34;w&#34;</span><span class=p>)</span>
@@ -453,15 +447,15 @@ Now let me show my code with rich comments. If you have any questions or recomme
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>cacl_sum_distance</span><span class=p>(</span><span class=n>taxa</span><span class=p>:</span> <span class=nb>str</span><span class=p>,</span> <span class=n>leaf_set</span><span class=p>:</span> <span class=nb>set</span><span class=p>,</span> <span class=n>distance_matrix</span><span class=p>:</span> <span class=nb>dict</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>float</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;[calculate sum distance of node away from other nodes]
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;calculate sum distance of node away from other nodes
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>    Args:
-</span></span></span><span class=line><span class=cl><span class=s2>        taxa ([str]): [label for one node]
-</span></span></span><span class=line><span class=cl><span class=s2>        leaf_set ([set]): [a set store current nodes needed to be merged]
-</span></span></span><span class=line><span class=cl><span class=s2>        distance_matrix ([dict]): [{(seq1_label,seq2_label):genetic_distance}]
+</span></span></span><span class=line><span class=cl><span class=s2>        taxa (str): label for one node
+</span></span></span><span class=line><span class=cl><span class=s2>        leaf_set (set): a set store current nodes needed to be merged
+</span></span></span><span class=line><span class=cl><span class=s2>        distance_matrix (dict): {(seq1_label,seq2_label):genetic_distance}
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>    Returns:
-</span></span></span><span class=line><span class=cl><span class=s2>        [float]: [sum distance of node away from others]
+</span></span></span><span class=line><span class=cl><span class=s2>        float: sum distance of node away from others
 </span></span></span><span class=line><span class=cl><span class=s2>    &#34;&#34;&#34;</span>
 </span></span><span class=line><span class=cl>    <span class=c1># init value</span>
 </span></span><span class=line><span class=cl>    <span class=n>result</span> <span class=o>=</span> <span class=mi>0</span>
@@ -474,14 +468,14 @@ Now let me show my code with rich comments. If you have any questions or recomme
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>find_qmin</span><span class=p>(</span><span class=n>leaf_set</span><span class=p>:</span> <span class=nb>set</span><span class=p>,</span> <span class=n>distance_matrix</span><span class=p>:</span> <span class=nb>dict</span><span class=p>)</span> <span class=o>-&gt;</span> <span class=nb>dict</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;[ calculate min q_value and get information]
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;calculate min q_value and get information
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>    Args:
-</span></span></span><span class=line><span class=cl><span class=s2>        leaf_set ([set]): [current nodes needed to be merged]
-</span></span></span><span class=line><span class=cl><span class=s2>        distance_matrix ([dict]): [dict stored genetic distance of current nodes]
+</span></span></span><span class=line><span class=cl><span class=s2>        leaf_set (set): current nodes needed to be merged
+</span></span></span><span class=line><span class=cl><span class=s2>        distance_matrix (dict): dict stored genetic distance of current nodes
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>    Returns:
-</span></span></span><span class=line><span class=cl><span class=s2>        [dict]:  [value, combination,taxa1_sum, taxa2_sum]
+</span></span></span><span class=line><span class=cl><span class=s2>        dict:  value, combination,taxa1_sum, taxa2_sum
 </span></span></span><span class=line><span class=cl><span class=s2>    &#34;&#34;&#34;</span>
 </span></span><span class=line><span class=cl>    <span class=c1># init dict</span>
 </span></span><span class=line><span class=cl>    <span class=n>qmin</span> <span class=o>=</span> <span class=p>{</span>
@@ -525,11 +519,11 @@ Now let me show my code with rich comments. If you have any questions or recomme
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>help_nj</span><span class=p>(</span><span class=n>leaf_set</span><span class=p>:</span> <span class=nb>set</span><span class=p>,</span> <span class=n>distance_matrix</span><span class=p>:</span> <span class=nb>dict</span><span class=p>):</span>
-</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;[helper function to conduct neighbor joining]
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;helper function to conduct neighbor joining
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>    Args:
-</span></span></span><span class=line><span class=cl><span class=s2>        leaf_set ([set]): [current nodes needed to be merged]
-</span></span></span><span class=line><span class=cl><span class=s2>        distance_matrix ([dict]): [store pair distance of current nodes]
+</span></span></span><span class=line><span class=cl><span class=s2>        leaf_set (set): current nodes needed to be merged
+</span></span></span><span class=line><span class=cl><span class=s2>        distance_matrix (dict): store pair distance of current nodes
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>    Returns:
 </span></span></span><span class=line><span class=cl><span class=s2>        TREEDICT: a dict stored node that has been merged in binary tree format
@@ -540,11 +534,11 @@ Now let me show my code with rich comments. If you have any questions or recomme
 </span></span><span class=line><span class=cl>    <span class=n>TREEDICT</span> <span class=o>=</span> <span class=p>{}</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=k>def</span> <span class=nf>neighbor_joining</span><span class=p>(</span><span class=n>leaf_set</span><span class=p>:</span> <span class=nb>set</span><span class=p>,</span> <span class=n>distance_matrix</span><span class=p>:</span> <span class=nb>dict</span><span class=p>):</span>
-</span></span><span class=line><span class=cl>        <span class=s2>&#34;&#34;&#34;[implementation of neighbors joining]
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;&#34;&#34;implementation of neighbors joining
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>        Args:
-</span></span></span><span class=line><span class=cl><span class=s2>            leaf_set ([set]): [current nodes needed to be merged]
-</span></span></span><span class=line><span class=cl><span class=s2>            distance_matrix ([dict]): [store genetic distance of current nodes]
+</span></span></span><span class=line><span class=cl><span class=s2>            leaf_set (set): current nodes needed to be merged
+</span></span></span><span class=line><span class=cl><span class=s2>            distance_matrix (dict): store genetic distance of current nodes
 </span></span></span><span class=line><span class=cl><span class=s2>        &#34;&#34;&#34;</span>
 </span></span><span class=line><span class=cl>        <span class=c1># get nonlocal value</span>
 </span></span><span class=line><span class=cl>        <span class=k>nonlocal</span> <span class=n>TREEDICT</span>
@@ -653,12 +647,12 @@ Now let me show my code with rich comments. If you have any questions or recomme
 </span></span></span><span class=line><span class=cl><span class=s2>            key[0] -&gt; label ; key[1] -&gt; edge
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>    Args:
-</span></span></span><span class=line><span class=cl><span class=s2>        TREEDICT ([dict]): [store information of binary tree ]
-</span></span></span><span class=line><span class=cl><span class=s2>        final_distance_matrix ([dict]): [distance of final two nodes]
-</span></span></span><span class=line><span class=cl><span class=s2>        seqs ([dict]): [store information of seqs]
+</span></span></span><span class=line><span class=cl><span class=s2>        TREEDICT (dict): store information of binary tree
+</span></span></span><span class=line><span class=cl><span class=s2>        final_distance_matrix (dict): distance of final two nodes
+</span></span></span><span class=line><span class=cl><span class=s2>        seqs (dict): store information of seqs
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>    Returns:
-</span></span></span><span class=line><span class=cl><span class=s2>        [binary tree]: [binary tree with fake root]
+</span></span></span><span class=line><span class=cl><span class=s2>        binary tree: binary tree with fake root
 </span></span></span><span class=line><span class=cl><span class=s2>    &#34;&#34;&#34;</span>
 </span></span><span class=line><span class=cl>    <span class=c1># &#39;merged node&#39; means nodes have been changed as binary tree</span>
 </span></span><span class=line><span class=cl>    <span class=c1># init value to find if node is &#39;merged node&#39;  in final two nodes after NJ</span>
@@ -711,15 +705,15 @@ Now let me show my code with rich comments. If you have any questions or recomme
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>help_edge_matrix</span><span class=p>(</span><span class=n>tree</span><span class=p>,</span> <span class=n>seqs</span><span class=p>:</span> <span class=nb>dict</span><span class=p>,</span> <span class=n>edge_file</span><span class=p>:</span> <span class=nb>str</span><span class=p>):</span>
-</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;[help function to do preorder traversal in order to get edge file]
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;help function to do preorder traversal in order to get edge file
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>    Args:
-</span></span></span><span class=line><span class=cl><span class=s2>        tree ([Binary Tree])
-</span></span></span><span class=line><span class=cl><span class=s2>        seqs (dict): [store information about label, seq, and index of seqs]
-</span></span></span><span class=line><span class=cl><span class=s2>        edge_file (str): [output of edge]
+</span></span></span><span class=line><span class=cl><span class=s2>        tree (Binary Tree)
+</span></span></span><span class=line><span class=cl><span class=s2>        seqs (dict): store information about label, seq, and index of seqs
+</span></span></span><span class=line><span class=cl><span class=s2>        edge_file (str): output of edge
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>    Returns:
-</span></span></span><span class=line><span class=cl><span class=s2>        [Binary Tree]: [Binary Tree whose internal node has index]
+</span></span></span><span class=line><span class=cl><span class=s2>        Binary Tree: Binary Tree whose internal node has index
 </span></span></span><span class=line><span class=cl><span class=s2>    &#34;&#34;&#34;</span>
 </span></span><span class=line><span class=cl>    <span class=c1># init index for internal node</span>
 </span></span><span class=line><span class=cl>    <span class=n>N</span> <span class=o>=</span> <span class=nb>len</span><span class=p>(</span><span class=n>seqs</span><span class=p>)</span> <span class=o>+</span> <span class=mi>1</span>
@@ -769,11 +763,11 @@ Now let me show my code with rich comments. If you have any questions or recomme
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>help_newick_parse</span><span class=p>(</span><span class=n>tree</span><span class=p>,</span> <span class=n>tree_file</span><span class=p>:</span> <span class=nb>str</span><span class=p>):</span>
-</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;[help function to do postorder traversal in order to get tree file]
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;help function to do postorder traversal in order to get tree file
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>    Args:
-</span></span></span><span class=line><span class=cl><span class=s2>        tree ([Binary Tree])
-</span></span></span><span class=line><span class=cl><span class=s2>        tree_file (str): [output of tree]
+</span></span></span><span class=line><span class=cl><span class=s2>        tree (Binary Tree)
+</span></span></span><span class=line><span class=cl><span class=s2>        tree_file (str): output of tree
 </span></span></span><span class=line><span class=cl><span class=s2>    &#34;&#34;&#34;</span>
 </span></span><span class=line><span class=cl>    <span class=c1># open tree file</span>
 </span></span><span class=line><span class=cl>    <span class=n>TREE_FILE</span> <span class=o>=</span> <span class=nb>open</span><span class=p>(</span><span class=n>tree_file</span><span class=p>,</span> <span class=s2>&#34;w&#34;</span><span class=p>)</span>
@@ -878,7 +872,7 @@ Now let me show my code with rich comments. If you have any questions or recomme
 </span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;function to partition list for internal nodes in a binary tree
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>    Args:
-</span></span></span><span class=line><span class=cl><span class=s2>        tree (binary_tree): [binary_tree with fake root
+</span></span></span><span class=line><span class=cl><span class=s2>        tree (binary_tree): binary_tree with fake root
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>    Returns:
 </span></span></span><span class=line><span class=cl><span class=s2>        dict: node_index: partition list
@@ -921,13 +915,13 @@ Now let me show my code with rich comments. If you have any questions or recomme
 </span></span><span class=line><span class=cl>    <span class=n>original_tree</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>    <span class=n>bootstrap_file</span><span class=p>:</span> <span class=nb>str</span> <span class=o>=</span> <span class=s2>&#34;bootstrap.txt&#34;</span><span class=p>,</span>
 </span></span><span class=line><span class=cl><span class=p>):</span>
-</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;[function to integrate relation methods to get bootstrap values for original tree]
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;function to integrate relation methods to get bootstrap values for original tree
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>    Args:
-</span></span></span><span class=line><span class=cl><span class=s2>        bootstrap_number (int): [number for bootstrap. default = None]
-</span></span></span><span class=line><span class=cl><span class=s2>        original_seqs (dict): [information of original sequences]
-</span></span></span><span class=line><span class=cl><span class=s2>        original_tree ([type]): [binary tree of original sequences]
-</span></span></span><span class=line><span class=cl><span class=s2>        bootstrap_file (str): [output of bootstrap]
+</span></span></span><span class=line><span class=cl><span class=s2>        bootstrap_number (int): number for bootstrap. default = None
+</span></span></span><span class=line><span class=cl><span class=s2>        original_seqs (dict): information of original sequences
+</span></span></span><span class=line><span class=cl><span class=s2>        original_tree (type): binary tree of original sequences
+</span></span></span><span class=line><span class=cl><span class=s2>        bootstrap_file (str): output of bootstrap
 </span></span></span><span class=line><span class=cl><span class=s2>    &#34;&#34;&#34;</span>
 </span></span><span class=line><span class=cl>    <span class=c1># init list to store bootstrap value for every internal node</span>
 </span></span><span class=line><span class=cl>    <span class=n>internal_node_bootstrap_value</span> <span class=o>=</span> <span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=o>*</span> <span class=p>(</span><span class=nb>len</span><span class=p>(</span><span class=n>original_seqs</span><span class=p>)</span> <span class=o>-</span> <span class=mi>2</span><span class=p>)</span>
@@ -965,10 +959,10 @@ Now let me show my code with rich comments. If you have any questions or recomme
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>worker</span><span class=p>(</span><span class=n>args</span><span class=p>:</span> <span class=nb>dict</span><span class=p>):</span>
-</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;[function to integrate all above method to conduct NJ and output tree and edge file]
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;function to integrate all above method to conduct NJ and output tree and edge file
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>    Args:
-</span></span></span><span class=line><span class=cl><span class=s2>        args ([dict]): [parameters getting from command line]
+</span></span></span><span class=line><span class=cl><span class=s2>        args (dict): parameters getting from command line
 </span></span></span><span class=line><span class=cl><span class=s2>
 </span></span></span><span class=line><span class=cl><span class=s2>    Returns:
 </span></span></span><span class=line><span class=cl><span class=s2>        tree_root_with_index : binary tree whose node has index
