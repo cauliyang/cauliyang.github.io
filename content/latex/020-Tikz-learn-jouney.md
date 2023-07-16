@@ -53,8 +53,9 @@ Let's dive into the fascinating world of technical diagrams together, one line o
 
 Happy learning!
 
-{{< alert cardColor="#e63946" >}}
-Note: This blog will be updated periodically to reflect my ongoing progress with TikZ. Do keep checking back for fresh codes and insights.
+{{< alert  icon="fire" cardColor="#e63946" iconColor="#1d3557" textColor="#f1faee"  >}}
+Note: This blog will be updated periodically to reflect my ongoing progress with TikZ.
+Do keep checking back for fresh codes and insights.
 {{< /alert >}}
 
 <!-- links -->

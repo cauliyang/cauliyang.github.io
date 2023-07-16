@@ -1,9 +1,10 @@
 ---
-title: The Important  Steps You Cannot Miss When Building Python Library Part 1
+title: Best Practices for Decent Python Project
 tags: ["Develop"]
-date: 2021-12-03T09:56:07-06:00
+lastmod: 2023-07-15
+date: 2023-07-15
 featured: false
-draft: true
+draft: false
 ---
 
 ## 1. Introduction
@@ -169,8 +170,8 @@ This section contains some other useful information about how to build a profess
 [safety]: https://pypi.org/project/safety/
 [commands completion]: https://github.com/bobthecow/git-flow-completion
 [blog]: https://medium.com/@hritik.jaiswal/how-to-write-a-good-commit-message-9d2d533b9052
-[**sphinx**]: https://www.sphinx-doc.org/en/master/
-[**restructuredtext (rst)**]: https://docutils.sourceforge.io/rst.html
+[sphinx]: https://www.sphinx-doc.org/en/master/
+[restructuredtext]: https://docutils.sourceforge.io/rst.html
 [great blog]: https://realpython.com/documenting-python-code/
 [sphinx and rst syntax guide (0.9.3)]: https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html
 [restructuredtext markup specification]: https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html

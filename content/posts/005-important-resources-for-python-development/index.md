@@ -1,9 +1,10 @@
 ---
 title: Comprehensive Resources for Python Development
 tags: ["Python"]
+lastmod: 2023-07-15
 date: 2022-06-16T16:40:06-05:00
 featured: false
-draft: true
+draft: false
 ---
 
 ## Python project for development

@@ -11,8 +11,6 @@ categories: ["macOS"]
 
 ## TODO
 
-2023-02-16:
-
 <!-- https://github.com/ibraheemdev/modern-unix -->
 <!-- - [ ] https://github.com/junegunn/fzf/blob/master/ADVANCED.md -->
 
