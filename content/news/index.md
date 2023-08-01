@@ -45,12 +45,19 @@ The pulse of the present, echoing in the halls of Bytes of Life.
 {{< tweet user="yangyangliz5" id="1669769895448379392" >}}
 {{< /timelineItem >}}
 
+{{< timelineItem icon="graduation-cap" header="Join Biological Data Science Conference 🎉" badge="2022-11-09">}}
+<img src="imgs/bdsc.png" alt="data science">
+<a href="https://meetings.cshl.edu/archivesmeetings.aspx?meet=DATA&year=22" target="_blank">Continuing Reading</a>
+{{< /timelineItem >}}
+
+
 {{< timelineItem icon="graduation-cap" header="Coauthor Paper is Published 🎉" badge="2022-10-31">}}
 <img src="imgs/scanexitron.png" alt="scanexitron">
 <a href="https://pubmed.ncbi.nlm.nih.gov/36099042" target="_blank">Continuing Reading</a>
 {{< /timelineItem >}}
 
 {{< timelineItem icon="graduation-cap" header="Transfer to Northwestern University 🎉" badge="2022-06-01">}}
+<img src="imgs/nw.gif" alt="northwestern">
 <a href="https://www.feinberg.northwestern.edu" target="_blank">Northwestern University</a>
 {{< /timelineItem >}}
 
