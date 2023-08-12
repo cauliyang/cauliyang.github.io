@@ -8,6 +8,10 @@ draft: false
 # image: "https://github.com/cauliyang/learn_tikz/blob/main/gallery/colored_diagram.pdf"
 ---
 
+## Overview
+
+{{< embed-pdf url="./gallery/tikz.pdf" hidePaginator="true" renderPageNum="3" >}}
+
 ## Why
 
 Welcome to 'My TikZ-Learning Journey', a space where I document my exploration with the wonderful TikZ library in LaTeX.

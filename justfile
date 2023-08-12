@@ -17,6 +17,10 @@ check-link:
     lychee  --cache --suggest content
     # Link check completed.
 
+
+update-tikz:
+	wget https://raw.githubusercontent.com/cauliyang/learn_tikz/main/main.pdf -O  content/latex/020-Tikz-learn-jouney/gallery/tikz.pdf
+
 # Updates the 'themes' git submodule
 update-theme:
     # Updating themes...
@@ -30,7 +34,7 @@ update-precommit:
     # Pre-commit hooks update completed.
 
 # Calls update-theme and update-precommit
-update: update-precommit update-theme
+update: update-precommit update-theme update-tikz
 
 # Formats the code using pre-commit
 format: clean
