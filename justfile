@@ -1,3 +1,5 @@
+# vim: set ft=make :
+
 # Starts the Hugo server
 server:
     # Starting Hugo server...

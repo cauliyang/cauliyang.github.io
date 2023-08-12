@@ -565,4 +565,10 @@ consectetur adipiscing elit.
 "Toto, I've a feeling we're not in Kansas anymore." The Wizard of Oz (1939)
 {{< /typeit >}}
 
+
+
 <!-- prettier-ignore-end -->
+
+## Embed PDF
+
+{{< embed-pdf url="tikz.pdf" hidePaginator="true" renderPageNum="3" >}}
