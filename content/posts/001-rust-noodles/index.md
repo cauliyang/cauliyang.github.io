@@ -455,7 +455,9 @@ On the other hand, rust-htslib has undergone extensive testing and has proven to
 In summary, both Noodles and rust-htslib are valuable Rust libraries for managing genomic data, and each has its own advantages and disadvantages.
 Choosing between the two depends on the specific needs of the project at hand.
 Noodles, being a pure Rust implementation, may be the better option if flexibility and adaptability are desired.
-The sample code can be found at the [repository], and feel free to check it out.
+The sample code can be found at the repository.
+
+{{< github repo="cauliyang/noodles_blog" >}}
 
 <!-- links -->
 
