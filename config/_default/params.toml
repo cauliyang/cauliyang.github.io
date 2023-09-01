@@ -12,7 +12,7 @@ autoSwitchAppearance = true
 enableSearch = true
 enableCodeCopy = true
 
-mainSections = ["posts", "projects"]
+mainSections = ["posts", "projects", "pde", "latex"]
 # robots = ""
 
 disableImageOptimization = false

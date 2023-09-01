@@ -9,6 +9,8 @@ tags: ["Development"]
 categories: ["macOS"]
 ---
 
+{{< carousel images="gallery/*" interval="2500" >}}
+
 ## TODO
 
 <!-- https://github.com/ibraheemdev/modern-unix -->
