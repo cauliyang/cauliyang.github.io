@@ -7,61 +7,57 @@ featured: false
 draft: false
 ---
 
-## Deep Learning Inference
+## 1. Deep Learning Inference
 
-Nowadays, Rust and C++ are raising in deep learning due to their efficiency
-even though Python is the most popular programming language.
-Python still dominates training of models but inferior in inferencing,
-especially in cross-platform environment.
-Large Language Model (LLM) prevulate since ChatGPT comes out.
-Every company and research group are competing and mining "glod" in LLM, which
-generates "lots of" so called LLMs.
-However, not every LLM is useful and valuable.
+Currently, both Rust and C++ are emerging as noteworthy contenders in the realm
+of deep learning, primarily due to their efficiency despite Python's prevailing
+dominance in model training.
+While Python continues to commandeer the training phase, it lags in performance
+during inference.
+Large Language Models (LLMs), such as ChatGPT, have burgeoned since their
+inception, instigating a competitive frenzy among corporations and research
+organizations alike.
+This has led to an explosion of various LLMs, although not all exhibit equal
+utility or value.
 
-In addition, Larger image generation models like stable diffusion attacts
-individuals' focus as well.
-Both LLMs and Big image generation models share one attributes: billions of
-parameters sized with GB unit.
+Furthermore, expansive image generation models, such as stable diffusion
+and midjourney, are capturing considering attention.
+Both LLMs and these advanced image generators possess a common characteristic:
+they are engineered with billions of parameters, occupying gigabytes of memory.
 
-Privacy is another significant concerns for us who want to use LLM.
-We do not want our data is "steal" by these models without pay.
-Recently, llama is an open source LLM, which aim to compete with ChatGPT.
-Considering privacy, the best solution is to run the model in our own device.
-Nevertheless, not everyone has a powerful CPU not mentioned GPU.
-Hence, the community urgent to achieve extreme speed when running the models.
-[llama.cpp], which inference framework written in C/C++ and use optimized skills, including SIMD, quantization, mixed precision, GPU, and **cross-platform**, as many as
-possible, handle the necessity
-The open source community contributes popular models inferenced via [llama.cpp],
-which allows everyone run LLM in our own devices.
+Privacy remains a paramount concern for users of LLMs.
+The prevailing sentiment is a reluctance to have our data harvested by these computational behemoths without compensation.
+Recent open-source entrants like llama aim to challenge established players like ChatGPT while prioritizing user privacy.
+The optimal course of action in terms of privacy is to operate these models on personal devices.
+However, the hardware constraints, particularly the lack of powerful CPUs or GPUs, pose a challenge.
+Therefore, there is an urgent impetus within the community to optimize model execution speed.
+The [llama.cpp] inference framework, written in C/C++ and utilizing advanced techniques like SIMD, quantization, mixed precision, and acceleration for different backend (GPU, MKL, etc.), addresses this need.
+Contributions from the open-source community have enabled popular models to be
+inferenced via [llama.cpp], thereby democratizing access to LLMs across various
+devices.
 
-[llama.cpp] and C++ are great, but Rust still has its own space.
-Rust is super suitable for WebAssembly and create Web Application or GUI
-application [^1].
-Additionally, there are some excellent pure Rust deep learning framework including [dfdx], [burn], and [candle], and they are
-envoled quickly and are able to be cross-platform with different accerlated
-backend.
+While C++ and [llama.cpp] off sbstantial benefits, Rust carves out its own
+niche, particularly excelling in WebAssembly and the development of web or GUI
+application[^1].
+Server nascent yet rapidly evolving deep learning framework, such as [dfdx], [burn], and [candle], are implemented purely in Rust and offer cross-platform compatibility with various accerlated backends.
 
-In summary, we can use [llama.cpp] or Rust to deploy the model when we finish training
-steps.
-It enables large deep learning models to be accessible for everyone and every device.
-
-My own device is MacBook Pro M1 so that I connect to a remote HPC to use CUDA.
-The HPC's information is shown in the figure below.
+In summary, upon completion of the model training phase, deployment can be effectively handled by either llama.cpp or Rust-based solutions.
+This facilitates the accessibility of large-scale deep learning models across an array of devices and platforms.
+As for my personal setup, I utilize a MacBook Pro with an M1 chip and rely on a remote High-Performance Computing (HPC) cluster for CUDA capabilities.
+Further details about the HPC setup are delineated in the subsequent figure.
 
 ![hpc](imgs/hpc.png "HPC")
 
-## Check your CUDA driver version
+## 2. Check your CUDA driver version
 
-Unfortunately, I still meet some problems when I try to config CUDA environment in a high processing computer (HPC).
-The blog will record how I resolve the problems without admin right.
+Unfortunately, I continue to encounter issues while attempting to configure the CUDA environment on a High-Performance Computing (HPC) cluster.
+This blog post will chronicle my journey to surmount these obstacles without administrative right.
 
-To configure CUDA for Rust and C++, we need to ensure that the necessary CUDA libraries and headers are properly installed.
-The build system is set up to link against them.
-Additionally, we may need to specify the appropriate compiler flags and paths for CUDA integration.
-To configure CUDA for Rust and C++, make sure to install CUDA libraries and headers properly.
-Also, set up your build system to link against them and specify the necessary compiler flags and paths for CUDA integration.
+In order to establish a functional CUDA environment for both Rust and C++, it's imperative to confirm that all requisite CUDA libraries and headers are correctly installed.
+Subsequently, the build system must be configured to link against these specific libraries.
+Moreover, it may be necessary to delineate the appropriate compiler flags and paths to facilitate seamless CUDA integration.
 
-For example, my device
+For illustrative purposes, consider my personal device configuration:
 
 ```bash
 nvidia-smi
@@ -69,16 +65,14 @@ nvidia-smi
 
 ![CUDA](imgs/nvidia-smi.png "CUDA Driver")
 
-The version of CUDA Driver is 11.7 in the remote HPC.
-Usually, we do not have admin admission so that we cannot upgrade the driver's
-version.
-Based on the version of driver, we need to install CUDA 11.7 as well.
+In the remote High-Performance Computing (HPC) cluster, the CUDA Driver is version 11.7.
+Typically, we lack administrative access, precluding us from updating the driver to a newer version.
+Consequently, it becomes necessary to install a matching CUDA 11.7 suite to ensure compatibility.
 
-## Use CONDA to install CUDA and gcc/g++
+## 3. Use CONDA to install CUDA and gcc/g++
 
-I recommend [mamba] instead of [conda], it provides a more efficient resolver to install dependencies.
-I will use `/home/mambaforge` as the insteallation location of [mamba] in the
-flowing example.
+I advocate for the use of [mamba] as an alternative to [conda], given its superior efficiency in resolving and installing dependencies.
+For the purposes of the ensuing example, I shall designate `/home/mambaforge` as the installation directory for [mamba].
 
 {{< alert >}}
 Do not forget to change to your own installation location when you plan to give
@@ -87,8 +81,8 @@ it a try.
 
 ### Create new environment
 
-Let's create a new environment to escape dependencies complict.
-Python 3.10 is now stable one.
+Let's establish a fresh environment to circumvent any dependency conflicts.
+Python 3.10 currently serves as the stable release.
 
 ```bash
 mamba create -n cuda python=3.10
@@ -97,9 +91,8 @@ mamba activate cuda
 
 ### Install CUDA
 
-We install CUDA from [nvidia] channel and specify certain version using
-different labels.
-For example, here we install CUDA 11.7.
+We install the CUDA package from the [nvidia] channel, opting for a specific version by employing designated labels.
+In this instance, we are installing CUDA 11.7.
 
 ```bash
 mamba install cuda -c nvidia/label/cuda-11.7.0
@@ -107,34 +100,52 @@ mamba install cuda -c nvidia/label/cuda-11.7.0
 
 ### Install compiler
 
-Besides, we need to install compiler as well otherwise the other compilers like system default `/usr/bin/gcc` may
-be used when compiling code.
+Additionally, it's imperative to install a compatible compiler;
+failing to do so may result in the utilization of system-default compilers, such as `/usr/bin/gcc`, during the code compilation process.
 
 ```bash
-mamba install gcc=11.0 gxx=11.0
+mamba install gcc=11.0 gxx=11.0 cmake
 ```
 
-Create environment variable for a specific environment.
+It's essential to define the environment variable `CUDA_ROOT` in order to effectively utilize CUDA.
+
+```bash
+CUDA_ROOT=/home/mambaforg/envs/cuda RUSTFLAGS="-L/home/mambaforge/envs/cuda/lib/stubs" cargo run
+CUDA_ROOT=/home/mambaforg/envs/cuda g++ -o test test.cpp
+```
+
+Let's configure an environment-specific variable so as to obviate the need for setting `CUDA_ROOT` repeatedly.
 
 ```bash
 mamba env config vars set CUDA_ROOT=/home/mambaforg/envs/cuda
-mamba env config vars set RUSTFLAGS="-L/projects/b1171/ylk4626/mambaforge/envs/cuda/lib/stubs"
+mamba env config vars set RUSTFLAGS="-L/home/mambaforge/envs/cuda/lib/stubs"
 ```
 
-## Quick start for candle
+Reactivating the environment to make the environment "alive".
+
+```bash
+mamba activate cuda
+```
+
+## 4. Quick start for candle
+
+[candle] is a deep learning framework crafted in Rust, a programming language that excels in WebAssembly development.
+A suite of robust and maturing full-stack WebAssembly libraries, including [leptos] and [dixous], further underscores Rust's capabilities.
+Therefore, if the objective is to create a web application underpinned by deep learning technologies, Rust emerges as the significant choice.
+Let's proceed to experiment with [candle] in conjunction with CUDA.
 
 ```bash
 cargo new test_candle
 cd test_candle
 ```
 
-Add candle as dependencies with CUDA feature
+Incorporate `candle` into the project's dependencies, specifying CUDA as a featured attribute.
 
 ```bash
 cargo add candle_core --features cuda
 ```
 
-Let's edit `src/main.rs`, and test the code in CPU first.
+Let's modify the `src/main.rs` file and initially conduct a test run on the CPU.
 
 ```rust
 use candle_core::{Device, Tensor};
@@ -151,13 +162,13 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 }
 ```
 
-Run the code:
+Execute the code:
 
 ```bash
 cargo run
 ```
 
-Here we use GPU
+In this instance, we are utilizing the GPU.
 
 ```rust
 use candle_core::{Device, Tensor};
@@ -188,6 +199,14 @@ cd candle
 
 ### Whisper
 
+Let's assume that we have already configured the environment variables `CUDA_ROOT` and `RUSTFLAGS`.
+
+```bash
+cargo run --examples whisper --features cuda --realease
+```
+
+Alternatively, employ temporary environment variables for the session.
+
 ```bash
 CUDA_ROOT="/home/mambaforge/env/cuda"  RUSTFLAGS="-L/home/mambaforge/env/cuda/lib/stubs" cargo run --examples whisper --features cuda --realease
 ```
@@ -197,7 +216,7 @@ CUDA_ROOT="/home/mambaforge/env/cuda"  RUSTFLAGS="-L/home/mambaforge/env/cuda/li
 ### Stable Diffusion
 
 ```bash
-CUDA_ROOT=/projects/b1171/ylk4626/mambaforge/envs/cuda  cargo run --example stable-diffusion --release --features cuda   -- --prompt "a rusty robot holding a fire torch"
+cargo run --example stable-diffusion --release --features cuda   -- --prompt "a rusty robot holding a fire torch"
 ```
 
 ![Stable Diffusion](imgs/sd.png "Stable Diffusion")
@@ -206,13 +225,14 @@ The generated image:
 
 ![image](imgs/sd_final.png "generated image")
 
-## use CONDA_PREFIX as CUDA_ROOT
+## 5. Quick start for [llama.cpp]
 
-```
-CUDA_ROOT="/home/mambaforge/env/cuda"
-```
+[llama.cpp] will be coming soon.
 
-## Bonus
+## 6. Bonus
+
+A bash script is used to apply an interactive computing node using `slurm`.
+Changing `-p b1171 --account=b1171` if you use the script.
 
 ```bash
 #!/bin/bash
@@ -259,18 +279,39 @@ else
     echo "Using CPU only"
     srun -n 8 -p b1171 --account=b1171 -t ${time}:00:00 --mem ${memory}g --pty bash
 fi
-
 ```
 
-## Canveat
+## 7. Canveat
 
-## Q & A
+`undefined reference to `memcpy@GLIBC_2.14'`
 
-- why not to use slurm
+Checking the `glibc` installed in the conda environment.
 
 ```bash
-module load cuda
+$ mamba list |rg sys                                                                                                                              (cuda)
+sysroot_linux-64          2.12                he073ed8_16    conda-forge
 ```
+
+After investigation, I found that `conda` ships with `GLIBC_2.14` whatever the compiler version.
+Hence, the solution is to use `module` 👻
+
+- check the available version of CUDA
+
+```bash
+module spider cuda
+```
+
+- load cuda that is comp
+
+```bash
+module load cuda/gcc-11.3.0
+```
+
+## 8. Q & A
+
+- why not to use `module load`
+
+`module load` is great but we canont control everything 🤪.
 
 [^1]: https://github.com/flosse/rust-web-framework-comparison
 
@@ -282,3 +323,5 @@ module load cuda
 [dfdx]: https://github.com/coreylowman/dfdx
 [mamba]: https://mamba.readthedocs.io/en/latest/index.html
 [conda]: https://docs.conda.io/en/latest/
+[leptos]: https://github.com/leptos-rs/leptos
+[dixous]: https://dioxuslabs.com/

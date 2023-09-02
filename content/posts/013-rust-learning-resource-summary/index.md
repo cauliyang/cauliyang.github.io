@@ -4,7 +4,7 @@ description: "Summary valueble learning resources to gain in-depth understanding
 tags: ["Rust"]
 date: 2022-12-21
 featured: false
-draft: false
+draft: true
 ---
 
 ## 1. Why learning Rust?

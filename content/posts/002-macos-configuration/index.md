@@ -9,6 +9,8 @@ tags: ["Development"]
 categories: ["macOS"]
 ---
 
+## Gallery
+
 {{< carousel images="gallery/*" interval="2500" >}}
 
 ## TODO
