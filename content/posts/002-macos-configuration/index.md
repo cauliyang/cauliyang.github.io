@@ -2,7 +2,7 @@
 title: macOS Setup for Development and Research
 description: This guide provides practical tips and strategies for customizing and fine-tuning your macOS system, so that you can focus on your work, minimize interruptions, and get more done in less time
 date: 2022-11-26
-lastmod: 2023-07-14
+lastmod: 2023-09-02
 featured: false
 draft: false
 tags: ["Development"]
