@@ -162,12 +162,11 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 }
 ```
 
-Execute the code:
-
 ```bash
 cargo run
 ```
 
+Execute the code:
 In this instance, we are utilizing the GPU.
 
 ```rust
@@ -185,7 +184,10 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 ```
 
 ```bash
-cargo run
+$ cargo run
+[[ 0.6323, -0.8924,  0.7706,  2.3862],
+ [-0.1840,  0.1122, -0.3946, -0.9851]]
+Tensor[[2, 4], f32, cuda:0]
 ```
 
 ![cuda](imgs/cuda.png "CUDA")
