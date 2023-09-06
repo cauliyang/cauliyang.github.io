@@ -266,4 +266,5 @@ Utilizing GitHub Actions, we can construct a nuanced, yet efficient, workflow fo
 The aforementioned examples merely act as foundational elements; truly, the possibilities are boundless.
 
 {{<github repo="cauliyang/learn_tikz">}}
+
 {{<github repo="cauliyang/learning_notes">}}
