@@ -27,7 +27,7 @@ Whether you are a beginner just starting out with LaTeX and TikZ, or an experien
 ## What is TikZ?
 
 TikZ is a higher-level drawing language built on top of the LaTeX document preparation system.
-It allows the creation of complex, beautiful graphics, all in the heart of LaTeX.
+It allows the creation of complex, beautiful graphics, all at the heart of LaTeX.
 Despite its power, TikZ can be daunting to learn due to its comprehensive nature.
 From creating simple geometrical figures to developing intricate diagrams such as flowcharts, network diagrams, or logic circuits, TikZ provides the tools for us to implement our imagination in a precise, structured manner.
 
@@ -44,7 +44,7 @@ However, I do believe that by seeing the practical application of TikZ commands 
 I encourage you all to experiment with the shared codes, tweak them, and make them your own.
 By sharing my journey, I aim to inspire you to embark on your own exploration of TikZ and LaTeX.
 
-## Join me in this journey
+## Join me on this journey
 
 As we navigate the complexities of learning TikZ together, we'll inevitably stumble, err, and grow.
 Remember, this learning journey isn't about perfection.
