@@ -18,7 +18,7 @@ categories: ["macOS"]
 <!-- https://github.com/ibraheemdev/modern-unix -->
 <!-- - [ ] https://github.com/junegunn/fzf/blob/master/ADVANCED.md -->
 
-- [ ] add latex stuff
+- [ ] add latex
 - [ ] add lsd
 - [ ] add fd
 - [ ] add fzf
