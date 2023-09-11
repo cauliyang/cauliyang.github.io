@@ -5,6 +5,8 @@ tags: ["Latex", "CI"]
 date: 2023-09-01
 featured: true
 draft: false
+series: ["LaTex Typesetting"]
+series_order: 1
 ---
 
 ## Latex

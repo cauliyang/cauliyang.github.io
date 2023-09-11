@@ -6,6 +6,8 @@ date: 2023-06-02
 featured: true
 draft: false
 # image: "https://github.com/cauliyang/learn_tikz/blob/main/gallery/colored_diagram.pdf"
+series: ["LaTex Typesetting"]
+series_order: 2
 ---
 
 ## Overview
