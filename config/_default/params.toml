@@ -71,7 +71,6 @@ relatedContentLimit = 3
 showTaxonomies = true
 showAuthorsBadges = true
 showWordCount = true
-showSummary = true
 showComments = true
 sharingLinks = [
     "linkedin",
