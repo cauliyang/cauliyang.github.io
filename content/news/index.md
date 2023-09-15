@@ -41,6 +41,16 @@ The pulse of the present, echoing in the halls of Bytes of Life.
 
 {{< timeline >}}
 
+
+{{< timelineItem icon="star" header="Run Mag Miles" badge="AWESOME" >}}
+{{< gallery >}}
+<img src="gallery/run_5k_0915.jpg" class="grid-w33" />
+<img src="gallery/run_5k_0915_2.jpg" class="grid-w33" />
+<img src="gallery/run_5k_0915_3.jpg" class="grid-w33" />
+<img src="gallery/run_5k_0915_4.jpg" class="grid-w33" />
+{{< /gallery >}}
+{{< /timelineItem >}}
+
 {{< timelineItem icon="graduation-cap" header="Release PxBLAT 🚀" badge="2023-06-15">}}
 {{< tweet user="yangyangliz5" id="1687941434811297792" >}}
 {{< github repo="ylab-hi/pxblat" >}}
