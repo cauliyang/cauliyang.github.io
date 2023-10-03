@@ -3,11 +3,12 @@ title: Code Snippets
 description:
 tags: ["C++", "Rust", "Python"]
 date: 2022-09-22
+lastmod: 2023-09-02
 featured: false
-draft: true
+draft: false
 ---
 
-## Get Random numbers
+## 1. Get Random numbers
 
 ```cpp
 #include <algorithm>
