@@ -8,7 +8,7 @@ featured: false
 draft: false
 # image: "https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/2022-12-22%2011.42.57.gif"
 showTableOfContents: false
-series: ["Personal Deveopment Environment"]
+series: ["Personal Development Environment"]
 series_order: 1
 ---
 

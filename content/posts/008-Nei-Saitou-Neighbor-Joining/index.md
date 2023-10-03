@@ -495,7 +495,7 @@ def find_qmin(leaf_set: set, distance_matrix: dict) -> dict:
         "taxa2_sum": None,
     }
 
-    # calculate  Q value every combinatin of nodes
+    # calculate  Q value every combination of nodes
     for combination, distance in distance_matrix.items():
 
         taxa1, taxa2 = combination
@@ -939,7 +939,7 @@ def get_bootstrap_value(
     original_partion_dict = help_find_partion(original_tree)
     # init list to store dict contained bootstrap_partion and its node_index
     bootstrap_partion_list = []
-    # begin to bootstrap and consruct binary tree
+    # begin to bootstrap and construct binary tree
 
     for number in range(bootstrap_number):
         logging.info(f"BOOTSTRAP NUMBER : {number+1}")

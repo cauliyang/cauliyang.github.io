@@ -1,6 +1,6 @@
 ---
 title: Autonamte Latex Build Processing
-description: build robust dcoumentation system for LaTex.
+description: build robust documentation system for LaTex.
 tags: ["Latex", "CI"]
 date: 2023-09-01
 featured: true
