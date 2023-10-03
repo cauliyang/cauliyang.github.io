@@ -485,7 +485,7 @@ Now let me show my code with rich comments. If you have any questions or recomme
 </span></span><span class=line><span class=cl>        <span class=s2>&#34;taxa2_sum&#34;</span><span class=p>:</span> <span class=kc>None</span><span class=p>,</span>
 </span></span><span class=line><span class=cl>    <span class=p>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1># calculate  Q value every combinatin of nodes</span>
+</span></span><span class=line><span class=cl>    <span class=c1># calculate  Q value every combination of nodes</span>
 </span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>combination</span><span class=p>,</span> <span class=n>distance</span> <span class=ow>in</span> <span class=n>distance_matrix</span><span class=o>.</span><span class=n>items</span><span class=p>():</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>        <span class=n>taxa1</span><span class=p>,</span> <span class=n>taxa2</span> <span class=o>=</span> <span class=n>combination</span>
@@ -929,7 +929,7 @@ Now let me show my code with rich comments. If you have any questions or recomme
 </span></span><span class=line><span class=cl>    <span class=n>original_partion_dict</span> <span class=o>=</span> <span class=n>help_find_partion</span><span class=p>(</span><span class=n>original_tree</span><span class=p>)</span>
 </span></span><span class=line><span class=cl>    <span class=c1># init list to store dict contained bootstrap_partion and its node_index</span>
 </span></span><span class=line><span class=cl>    <span class=n>bootstrap_partion_list</span> <span class=o>=</span> <span class=p>[]</span>
-</span></span><span class=line><span class=cl>    <span class=c1># begin to bootstrap and consruct binary tree</span>
+</span></span><span class=line><span class=cl>    <span class=c1># begin to bootstrap and construct binary tree</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>number</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=n>bootstrap_number</span><span class=p>):</span>
 </span></span><span class=line><span class=cl>        <span class=n>logging</span><span class=o>.</span><span class=n>info</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;BOOTSTRAP NUMBER : </span><span class=si>{</span><span class=n>number</span><span class=o>+</span><span class=mi>1</span><span class=si>}</span><span class=s2>&#34;</span><span class=p>)</span>
