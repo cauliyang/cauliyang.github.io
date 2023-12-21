@@ -21,6 +21,9 @@ check-link:
 update-tikz:
 	wget https://raw.githubusercontent.com/cauliyang/learn_tikz/main/main.pdf -O  content/latex/020-Tikz-learn-jouney/gallery/tikz.pdf
 
+update-scinote:
+	cp ../learning_notes/scinote.html static/
+
 # Updates the 'themes' git submodule
 update-theme:
     # Updating themes...
@@ -34,7 +37,7 @@ update-precommit:
     # Pre-commit hooks update completed.
 
 # Calls update-theme and update-precommit
-update: update-precommit update-theme update-tikz
+update: update-precommit update-theme update-tikz update-scinote
 
 # Formats the code using pre-commit
 format: clean
