@@ -36,7 +36,7 @@ update-precommit:
     # Pre-commit hooks update completed.
 
 # Calls update-theme and update-precommit
-update: update-precommit update-theme update-tikz 
+update: update-precommit update-theme update-tikz
 
 # Formats the code using pre-commit
 format: clean
