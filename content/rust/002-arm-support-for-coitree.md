@@ -15,7 +15,7 @@ The blog post will provide examples and data to illustrate the increased speed a
 ## Interval Tree
 
 Interval tree is a data structure used in computer science to efficiently store and retrieve intervals (ranges of values) from a set of data.
-Thealgorithm works by recursively dividing intervals into smaller subsets and creating a binary tree structure that allows for quick lookup and retrieval of intervals.
+The algorithm works by recursively dividing intervals into smaller subsets and creating a binary tree structure that allows for quick lookup and retrieval of intervals.
 
 In bioinformatics, interval trees are commonly used to analyze DNA sequencing data, as well as in other applications such as gene expression analysis and genome-wide association studies.
 For example, interval trees can be used to identify regions of the genome that are likely to be involved in certain genetic diseases, or to identify gene expression patterns that are associated with specific phenotypes.
