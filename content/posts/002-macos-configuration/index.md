@@ -249,7 +249,7 @@ brew install tree
 [Cheat.sh] is a free and open-source web service that provides quick access to a wide range of cheat sheets and examples for various programming languages and command-line tools.
 It's designed to be fast, lightweight, and accessible from any device with an internet connection.
 
-{{< figure src= "https://camo.githubusercontent.com/6072fd18893f3b0cc2efdc1f28630af858744c15ad953628799910502113456e/68747470733a2f2f63686561742e73682f66696c65732f64656d6f2d6375726c2e676966" numbered="true" width="500" >}}
+{{< figure src= "http://cheat.sh/files/big-logo-v2-fixed.png" numbered="true" width="500" >}}
 
 Cheat.sh is an excellent choice for users who want quick and easy access to cheat sheets and examples for various programming languages and command-line tools.
 With its simple and intuitive interface, it's a great resource for both beginners and experienced users alike.
@@ -283,7 +283,7 @@ Here's how to get started with Hyperfine:
 brew install hyperfine
 ```
 
-{{< figure src= "https://camo.githubusercontent.com/88a0cb35f42e02e28b0433d4b5e0029e52e723d8feb8df753e1ed06a5161db56/68747470733a2f2f692e696d6775722e636f6d2f7a31394f5978452e676966"  numbered="true" width="500" >}}
+{{< figure src= "https://i.imgur.com/z19OYxE.gif"  numbered="true" width="500" >}}
 
 Hyperfine also provides several options for customizing the benchmarking process, such as specifying the number of runs, warmup iterations, and statistical confidence interval.
 You can find more information on how to use these options in the official documentation or by running "hyperfine --help" in the terminal.
@@ -304,7 +304,7 @@ cargo install ouch
 Topgrade is a free and open-source utility for upgrading all your packages.
 It's designed to be fast, flexible, and easy to use, with a simple command-line interface that allows you to quickly upgrade your packages without worrying about dependencies or conflicts.
 
-{{< figure src="https://github.com/topgrade-rs/topgrade/raw/master/doc/screenshot.gif" width=500 >}}
+{{< figure src="https://github.com/topgrade-rs/topgrade/blob/main/doc/topgrade_demo.gif" width=500 >}}
 
 Here's how to get started with Topgrade:
 
@@ -314,7 +314,7 @@ brew install topgrade
 
 ### imagemagick
 
-{{< figure src="https://camo.githubusercontent.com/d108320692f0c676af0aee5c34be0f3cc854e7398a2691ffe54c5f289aff0d4b/68747470733a2f2f696d6167656d616769636b2e6f72672f696d6167652f77697a6172642e706e67" width=250 >}}
+{{< figure src="https://imagemagick.org/image/wizard.png" width=250 >}}
 
 ImageMagick is a free and open-source command-line utility for manipulating and converting images.
 It's designed to be fast, flexible, and easy to use, with a simple command-line interface that allows you to perform a wide range of image processing tasks.
