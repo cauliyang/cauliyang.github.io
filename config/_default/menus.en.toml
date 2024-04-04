@@ -57,6 +57,12 @@ parent = "Series"
 pageRef = "latex"
 weight = 20
 
+[[main]]
+name = "Talks"
+parent = "Series"
+pageRef = "talks"
+weight = 30
+
 # [[subnavigation]]
 # name = "An interesting topic"
 # pageRef = "tags/interesting-topic"
