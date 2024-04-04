@@ -458,7 +458,6 @@ TSWLatexianTemp*
 # windows thumbnail cache:
 Thumbs.db
 resources/
-blowfish/
 
 .lycheecache
 public/
