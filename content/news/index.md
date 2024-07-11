@@ -41,6 +41,11 @@ The pulse of the present, echoing in the halls of Bytes of Life.
 
 {{< timeline >}}
 
+{{< timelineItem icon="graduation-cap" header="A New Paper is Published" badge="2024-06-19">}}
+<img src="imgs/pxblat.png" alt="pxblat">
+{{< /timelineItem >}}
+
+
 {{< timelineItem icon="graduation-cap" header="Got 1st Place Award at codex interactive visualization challenge" badge="2024-04-02">}}
 <img src="imgs/codex.png" alt="data science">
 {{< /timelineItem >}}
