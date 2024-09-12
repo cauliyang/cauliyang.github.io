@@ -19,6 +19,9 @@ jobs:
           submodules: false
           fetch-depth: 0
 
+      - name: debug
+        run: ls -la themes
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
