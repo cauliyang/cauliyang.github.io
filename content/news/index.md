@@ -41,6 +41,12 @@ The pulse of the present, echoing in the halls of Bytes of Life.
 
 {{< timeline >}}
 
+{{< timelineItem icon="graduation-cap" header="A workshop for Visualizing Data with Seaborn" badge="2024-09-11">}}
+<a href="https://yangyangli.top/Visualizing-Data-with-Seaborn/">  <img src="imgs/seaborn.png" alt="seaborn"> </a>
+{{< github repo="cauliyang/Visualizing-Data-with-Seaborn" >}}
+{{< /timelineItem >}}
+
+
 {{< timelineItem icon="graduation-cap" header="A New Paper is Published" badge="2024-06-19">}}
 <img src="imgs/pxblat.png" alt="pxblat">
 {{< /timelineItem >}}
