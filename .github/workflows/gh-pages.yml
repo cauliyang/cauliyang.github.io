@@ -20,7 +20,7 @@ jobs:
           fetch-depth: 0
 
       - name: debug
-        run: ls -la themes
+        run: ls -la themes/blowfish
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
