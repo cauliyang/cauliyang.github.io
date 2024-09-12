@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          submodules: false
+          submodules: true
           fetch-depth: 0
 
       - name: debug
