@@ -1,3 +1,7 @@
+[submodule "themes/blowfish"]
+	path = themes/blowfish
+	url = https://github.com/nunocoracao/blowfish.git
+	branch = dev
 [submodule "themes/hugo-embed-pdf-shortcode"]
 	path = themes/hugo-embed-pdf-shortcode
 	url = https://github.com/anvithks/hugo-embed-pdf-shortcode.git
