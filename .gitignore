@@ -462,3 +462,4 @@ resources/
 .lycheecache
 public/
 blowfish/
+tmp
