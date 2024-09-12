@@ -1,7 +1,1415 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Welcome to my blog! on Bytes of Life</title><link>https://yangyangli.top/</link><description>Recent content in Welcome to my blog! on Bytes of Life</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>2024 &lt;a class='hover:underline hover:decoration-primary-400 hover:text-primary-500' href=https://yangyangli.top target=_blank rel='noopener noreferrer'>Yangyang Li&lt;/a></copyright><lastBuildDate>Thu, 04 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://yangyangli.top/index.xml" rel="self" type="application/rss+xml"/><item><title>Aurora Is a Web Application for Visualizing Non-linear Graph</title><link>https://yangyangli.top/talks/001-codex/</link><pubDate>Thu, 04 Apr 2024 00:00:00 +0000</pubDate><guid>https://yangyangli.top/talks/001-codex/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/talks/001-codex/featured.png"/></item><item><title>Notes from learning everything</title><link>https://yangyangli.top/posts/025-learning-notes/</link><pubDate>Thu, 21 Dec 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/025-learning-notes/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/025-learning-notes/featured.jpg"/></item><item><title>Autonamte Latex Build Processing</title><link>https://yangyangli.top/latex/002-autonamte-latex-build/</link><pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/latex/002-autonamte-latex-build/</guid><description>Latex # LaTeX functions as an intricate tool for the meticulous creation of scientific documents, enriched by a comprehensive ecosystem and an extensive assortment of templates. I habitually utilize LaTeX for a plethora of activities, including the annotation of notes, the authoring of scholarly articles, and the formulation of thesis.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/latex/002-autonamte-latex-build/featured.jpg"/></item><item><title>CUDA for Deep Learning Inference in Rust and C++</title><link>https://yangyangli.top/posts/022-cuda-configuration-for-rust-and-cpp/</link><pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/022-cuda-configuration-for-rust-and-cpp/</guid><description>1. Deep Learning Inference # Currently, both Rust and C++ are emerging as noteworthy contenders in the realm of deep learning, primarily due to their efficiency despite Python&amp;rsquo;s prevailing dominance in model training.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/022-cuda-configuration-for-rust-and-cpp/featured.jpg"/></item><item><title>Aurora: A Web Application for Visualizing Non-linear Graph</title><link>https://yangyangli.top/projects/021-aurora-nlgraph-visilization/</link><pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/projects/021-aurora-nlgraph-visilization/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/projects/021-aurora-nlgraph-visilization/featured.png"/></item><item><title>Development Tips</title><link>https://yangyangli.top/posts/020-develop-tips/</link><pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/020-develop-tips/</guid><description> my desktop snapshot 1 hidden desktop icons on macOS # defaults write com.apple.finder CreateDesktop false killall Finder Otherwise, you want to show the icons again
-defaults write com.apple.finder CreateDesktop true killall Finder</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/020-develop-tips/feature.png"/></item><item><title>PxBLAT:An Efficient and Ergonomics Python Binding Library for BLAT</title><link>https://yangyangli.top/projects/001-pxblat/</link><pubDate>Sun, 25 Jun 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/projects/001-pxblat/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/projects/001-pxblat/featured.png"/></item><item><title>TikZ-Learning Journey</title><link>https://yangyangli.top/latex/020-tikz-learn-jouney/</link><pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/latex/020-tikz-learn-jouney/</guid><description>Overview # Previous Next &amp;nbsp; &amp;nbsp; / [pdf] View the PDF file here. Why # Welcome to &amp;lsquo;My TikZ-Learning Journey&amp;rsquo;, a space where I document my exploration with the wonderful TikZ library in LaTeX.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/latex/020-tikz-learn-jouney/featured.jpg"/></item><item><title>Efficient Genomic Interval Search Using SIMD-Enhanced COITree</title><link>https://yangyangli.top/posts/019-efficient-genoimc-interval-search/</link><pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/019-efficient-genoimc-interval-search/</guid><description>Background # In bioinformatics, researchers frequently analyze various types of genomic data, such as DNA sequencing data, RNA sequencing data, and epigenetic data. Manipulating genomic intervals is a crucial task in comprehending the genetic basis of diseases and identifying potential therapeutic targets.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/019-efficient-genoimc-interval-search/featured.jpg"/></item><item><title>How to Use Noodles Library in Rust</title><link>https://yangyangli.top/posts/001-rust-noodles/</link><pubDate>Sat, 04 Mar 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/001-rust-noodles/</guid><description>1. Introduction # Noodles and Rust-htslib are two widely used Rust libraries for genomic data handling. While both libraries are designed to work with genomic data, they take different approaches to achieve this goal.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/001-rust-noodles/featured.png"/></item><item><title>Collections of Amazing Vim Tips</title><link>https://yangyangli.top/pde/000-nvim-tips/</link><pubDate>Wed, 21 Dec 2022 00:00:00 +0000</pubDate><guid>https://yangyangli.top/pde/000-nvim-tips/</guid><description>Why # This blog will evolve to including more valuable content. Using nvim tag to filter more content about nvim and others.
-001 Using command mode in visual block. # After you select a visual block in vim, you can execute operation on the block by typing :normal ops.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/pde/000-nvim-tips/featured.jpg"/></item><item><title>Tiling Windows Management in macOS</title><link>https://yangyangli.top/posts/014-macos-tiling-windows-management/</link><pubDate>Tue, 20 Dec 2022 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/014-macos-tiling-windows-management/</guid><description>1. Aims # The philosophy of Vim&amp;rsquo;s motion has had a profound influence on me, leading me to fully embrace Neovim. The notion of having to reposition windows using a mouse is anathema to me.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/014-macos-tiling-windows-management/featured.png"/></item><item><title>Make A Powerful Terminal Workspace</title><link>https://yangyangli.top/posts/012-make-a-powerful-ternimal/</link><pubDate>Thu, 15 Dec 2022 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/012-make-a-powerful-ternimal/</guid><description>I recently made a change to my terminal setup, switching from using iTerm2 + Zsh + Tmux to Alacritty + Fish + Zellij. Now I use Wezterm + Fish + Zellij.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/012-make-a-powerful-ternimal/featured.png"/></item><item><title>macOS Setup for Development and Research</title><link>https://yangyangli.top/posts/002-macos-configuration/</link><pubDate>Sat, 26 Nov 2022 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/002-macos-configuration/</guid><description>Gallery # Previous Nextsads TODO # add latex add lsd add fd add fzf add ripgrep add procs add zoxide add gitui add btop TLDR # alacritty office aldente one switch alfred pdf expert alttab picgo bartender pycharm cheat.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/002-macos-configuration/featured.png"/></item><item><title>Bioinformatics Algorithm Library aka BINARY</title><link>https://yangyangli.top/projects/011-bioinformatics-algorithm-library/</link><pubDate>Mon, 26 Sep 2022 13:07:28 -0500</pubDate><guid>https://yangyangli.top/projects/011-bioinformatics-algorithm-library/</guid><description>The library is a collection of algorithms and data structures that are designed for modern C++ bioinformatics applications. You can use the library in your own projects or as a part of a larger project.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/projects/011-bioinformatics-algorithm-library/featured.png"/></item><item><title>Bioinformatics Toolbox Aka Boss</title><link>https://yangyangli.top/projects/009-new-tool-bioinformatics-toolbox-aka-boss/</link><pubDate>Sun, 25 Sep 2022 23:22:31 -0500</pubDate><guid>https://yangyangli.top/projects/009-new-tool-bioinformatics-toolbox-aka-boss/</guid><description>BOSS is a bioinformatics toolbox, which will contain efficient tools. It is written in modern C++ and is tested exhaustively. It is designed to be easy to use and time-efficient. BOSS is a free software and is distributed under the terms of the GNU General Public License V3.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/projects/009-new-tool-bioinformatics-toolbox-aka-boss/featured.png"/></item><item><title>Code Snippets</title><link>https://yangyangli.top/posts/023-cpp-snippet/</link><pubDate>Thu, 22 Sep 2022 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/023-cpp-snippet/</guid><description>Get Random numbers # #include &amp;lt;algorithm&amp;gt; #include &amp;lt;iostream&amp;gt; #include &amp;lt;iterator&amp;gt; #include &amp;lt;random&amp;gt; int main() { std::random_device rd; std::mt19937 rng(rd()); std::uniform_int_distribution&amp;lt;int&amp;gt; dist6(1, 6); std::generate_n(std::ostream_iterator&amp;lt;int&amp;gt;(std::cout, &amp;#34; &amp;#34;), 10, [&amp;amp;dist6, &amp;amp;rng]() { return dist6(rng); }); return 0; } Get random numbers between min and max # // Generate a random number between min and max (inclusive) // Assumes std::srand() has already been called // Assumes max - min &amp;lt;= RAND_MAX int getRandomNumber(int min, int max) { static constexpr double fraction { 1.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/023-cpp-snippet/featured.jpg"/></item><item><title>Short Code Example</title><link>https://yangyangli.top/posts/short-code/</link><pubDate>Fri, 24 Jun 2022 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/short-code/</guid><description>Alert # {{&amp;lt; alert &amp;gt;}} **Warning!** This action is destructive! {{&amp;lt; /alert &amp;gt;}} Warning! This action is destructive! {{&amp;lt; alert cardColor=&amp;#34;red&amp;#34; &amp;gt;}} **Warning!** This action is destructive! {{&amp;lt; /alert &amp;gt;}} Warning!</description></item><item><title>C++ Development in Bioinformatics</title><link>https://yangyangli.top/posts/003-build-cpp-development-env-with-htslib/</link><pubDate>Wed, 15 Jun 2022 23:17:30 -0500</pubDate><guid>https://yangyangli.top/posts/003-build-cpp-development-env-with-htslib/</guid><description>1.1 Config Compile Environment # I am currently planning to develop a tool using C++ in both Linux and macOS environments. However, I frequently encounter obstacles in the form of lacking root access to download dependencies using apt-get install -y dependencies directly in Ubuntu.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/003-build-cpp-development-env-with-htslib/featured.jpg"/></item><item><title>A Python Toolbox - Pybox</title><link>https://yangyangli.top/posts/001-a-wonderful-library-you-must-not-know/</link><pubDate>Fri, 03 Dec 2021 00:03:50 -0600</pubDate><guid>https://yangyangli.top/posts/001-a-wonderful-library-you-must-not-know/</guid><description>0. Changes # Add usage 1. Introduction # I have been considering a collection of useful commands for everyday tasks, as many have requested such a tool. In order to make this collection as user-friendly as possible, I have decided to develop a project, which I hope will prove valuable for others as well.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/001-a-wonderful-library-you-must-not-know/featured.png"/></item><item><title>PCA by Python</title><link>https://yangyangli.top/posts/010-pca-by-python/</link><pubDate>Sun, 04 Apr 2021 23:58:37 +0800</pubDate><guid>https://yangyangli.top/posts/010-pca-by-python/</guid><description>1. Introduction # This article records two methods of PCA analysis using Python, and visualizes 2-dimensional results
-1.1 What&amp;rsquo;s PCA? # When it comes to methods of reducing dimension, PCA that is an unsupervised linear transformation technique, must be not ignored.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/010-pca-by-python/featured.png"/></item><item><title>Face Recognition in Video</title><link>https://yangyangli.top/posts/015-face-recognition-in-video/</link><pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/015-face-recognition-in-video/</guid><description>1. 准备工作 # 使用Python实现需求，环境需求比较严苛，所需要的主要依赖：
-Requirements
-dlib 由 C++编写，提供了和机器学习、数值计算、图模型算法、图像处理等领域相关的一系列功能 face-recognition 已经经过训练成熟的识别人脸的工具 imutils 用来操作系统文件和文件夹 Opencv是用来操作视频流，并将视频流转换格式 1.1 环境搭建 # 通过 pip 进行安装，在使用 pip 进行安装时，应该注意切换到国内源进行下载，提高下载速度，下面分享一下当前国内的 pip 源：
-阿里云 https://mirrors.aliyun.com/pypi/simple/ 中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/ 豆瓣 http://pypi.douban.com/simple/ 清华大学 https://pypi.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/015-face-recognition-in-video/featured.png"/></item><item><title>Nei Saitou Neighbor Joining</title><link>https://yangyangli.top/posts/008-nei-saitou-neighbor-joining/</link><pubDate>Wed, 03 Apr 2019 11:15:00 +0800</pubDate><guid>https://yangyangli.top/posts/008-nei-saitou-neighbor-joining/</guid><description>1. Background # Before diving into code, the description of NJ algorithm can be found in , where first column indicates parent node, and second column is its children node, the last column is the value of edge.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/008-nei-saitou-neighbor-joining/featured.jpg"/></item><item><title>About</title><link>https://yangyangli.top/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yangyangli.top/about/</guid><description>Hello and welcome! I am Yangyang Li, a Ph.D. candidate in the DGP Program at Northwestern University Feinberg School of Medicine. I specialize in developing algorithms and deep learning methods to tackle challenging biological problems.</description></item><item><title>Recent News 🚀</title><link>https://yangyangli.top/news/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yangyangli.top/news/</guid><description>The pulse of the present, echoing in the halls of Bytes of Life. A New Paper is Published 2024-06-19 Got 1st Place Award at codex interactive visualization challenge 2024-04-02 Run Mag Miles AWESOME Release PxBLAT 🚀 2023-06-15 We are happy to release the Python package PxBLAT.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Welcome to my blog! on Bytes of Life</title><link>https://yangyangli.top/</link><description>Recent content in Welcome to my blog! on Bytes of Life</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>2024 &lt;a class='hover:underline hover:decoration-primary-400 hover:text-primary-500' href=https://yangyangli.top target=_blank rel='noopener noreferrer'>Yangyang Li&lt;/a></copyright><lastBuildDate>Thu, 04 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://yangyangli.top/index.xml" rel="self" type="application/rss+xml"/><item><title>Aurora Is a Web Application for Visualizing Non-linear Graph</title><link>https://yangyangli.top/talks/001-codex/</link><pubDate>Thu, 04 Apr 2024 00:00:00 +0000</pubDate><guid>https://yangyangli.top/talks/001-codex/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/talks/001-codex/featured.png"/></item><item><title>Notes from learning everything</title><link>https://yangyangli.top/posts/025-learning-notes/</link><pubDate>Thu, 21 Dec 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/025-learning-notes/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/025-learning-notes/featured.jpg"/></item><item><title>Autonamte Latex Build Processing</title><link>https://yangyangli.top/latex/002-autonamte-latex-build/</link><pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/latex/002-autonamte-latex-build/</guid><description>&lt;h2 class="relative group">Latex
+&lt;div id="latex" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#latex" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;p>LaTeX functions as an intricate tool for the meticulous creation of scientific documents, enriched by a comprehensive ecosystem and an extensive assortment of templates.
+I habitually utilize LaTeX for a plethora of activities, including the annotation of notes, the authoring of scholarly articles, and the formulation of thesis.
+GitHub serves as an indispensable medium for version management and collaborative endeavors.
+As such, automating the assembly procedure of LaTeX documents through GitHub would confer significant benefits.&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/latex/002-autonamte-latex-build/featured.jpg"/></item><item><title>CUDA for Deep Learning Inference in Rust and C++</title><link>https://yangyangli.top/posts/022-cuda-configuration-for-rust-and-cpp/</link><pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/022-cuda-configuration-for-rust-and-cpp/</guid><description>&lt;h2 class="relative group">1. Deep Learning Inference
+&lt;div id="1-deep-learning-inference" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#1-deep-learning-inference" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;p>Currently, both Rust and C++ are emerging as noteworthy contenders in the realm
+of deep learning, primarily due to their efficiency despite Python&amp;rsquo;s prevailing
+dominance in model training.
+While Python continues to commandeer the training phase, it lags in performance
+during inference.
+Large Language Models (LLMs), such as ChatGPT, have burgeoned since their
+inception, instigating a competitive frenzy among corporations and research
+organizations alike.
+This has led to an explosion of various LLMs, although not all exhibit equal
+utility or value.&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/022-cuda-configuration-for-rust-and-cpp/featured.jpg"/></item><item><title>Aurora: A Web Application for Visualizing Non-linear Graph</title><link>https://yangyangli.top/projects/021-aurora-nlgraph-visilization/</link><pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/projects/021-aurora-nlgraph-visilization/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/projects/021-aurora-nlgraph-visilization/featured.png"/></item><item><title>Development Tips</title><link>https://yangyangli.top/posts/020-develop-tips/</link><pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/020-develop-tips/</guid><description>&lt;p>
+&lt;figure>
+&lt;img
+class="my-0 rounded-md"
+loading="lazy"
+srcset="
+/posts/020-develop-tips/feature_hu17205809281887361296.png 330w,
+/posts/020-develop-tips/feature_hu14959671114477201062.png 660w,
+/posts/020-develop-tips/feature_hu12444768155139872382.png 1024w,
+/posts/020-develop-tips/feature_hu9056245521476489534.png 2x"
+src="https://yangyangli.top/posts/020-develop-tips/feature_hu14959671114477201062.png"
+alt="bg"
+/>
+&lt;figcaption>my desktop snapshot&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
+&lt;h2 class="relative group">1 hidden desktop icons on macOS
+&lt;div id="1-hidden-desktop-icons-on-macos" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#1-hidden-desktop-icons-on-macos" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">defaults write com.apple.finder CreateDesktop &lt;span class="nb">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">killall Finder
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Otherwise, you want to show the icons again&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/020-develop-tips/feature.png"/></item><item><title>PxBLAT:An Efficient and Ergonomics Python Binding Library for BLAT</title><link>https://yangyangli.top/projects/001-pxblat/</link><pubDate>Sun, 25 Jun 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/projects/001-pxblat/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/projects/001-pxblat/featured.png"/></item><item><title>TikZ-Learning Journey</title><link>https://yangyangli.top/latex/020-tikz-learn-jouney/</link><pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/latex/020-tikz-learn-jouney/</guid><description>&lt;h2 class="relative group">Overview
+&lt;div id="overview" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#overview" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;script type="text/javascript" src= '/js/pdf-js/build/pdf.js'>&lt;/script>
+&lt;style>
+#embed-pdf-container {
+position: relative;
+width: 100%;
+height: auto;
+min-height: 20vh;
+}
+.pdf-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+#the-canvas {
+border: 1px solid black;
+direction: ltr;
+width: 100%;
+height: auto;
+display: none;
+}
+.pdf-loadingWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 350px;
+}
+.pdf-loading {
+display: inline-block;
+width: 50px;
+height: 50px;
+border: 3px solid #d2d0d0;;
+border-radius: 50%;
+border-top-color: #383838;
+animation: spin 1s ease-in-out infinite;
+-webkit-animation: spin 1s ease-in-out infinite;
+}
+#overlayText {
+word-wrap: break-word;
+display: grid;
+justify-content: end;
+}
+#overlayText a {
+position: relative;
+top: 10px;
+right: 4px;
+color: #000;
+margin: auto;
+background-color: #eeeeee;
+padding: 0.3em 1em;
+border: solid 2px;
+border-radius: 12px;
+border-color: #00000030;
+text-decoration: none;
+}
+#overlayText svg {
+height: clamp(1em, 2vw, 1.4em);
+width: clamp(1em, 2vw, 1.4em);
+}
+@keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+to { -webkit-transform: rotate(360deg); }
+}
+&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-20111f94">
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-20111f94">
+&lt;div class="pdf-loading" id="pdf-loading-20111f94">&lt;/div>
+&lt;/div>
+&lt;div id="overlayText">
+&lt;a href="./gallery/tikz.pdf" aria-label="Download" download>
+&lt;svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+&lt;path d="M9 13c.3 0 .5-.1.7-.3L15.4 7 14 5.6l-4 4V1H8v8.6l-4-4L2.6 7l5.7 5.7c.2.2.4.3.7.3zm-7 2h14v2H2z" />
+&lt;/svg>
+&lt;/a>
+&lt;/div>
+&lt;canvas class="pdf-canvas" id="pdf-canvas-20111f94">&lt;/canvas>
+&lt;/div>
+&lt;div class="pdf-paginator" id="pdf-paginator-20111f94">
+&lt;button id="pdf-prev-20111f94">Previous&lt;/button>
+&lt;button id="pdf-next-20111f94">Next&lt;/button> &amp;nbsp; &amp;nbsp;
+&lt;span>
+&lt;span class="pdf-pagenum" id="pdf-pagenum-20111f94">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-20111f94">&lt;/span>
+&lt;/span>
+&lt;a class="pdf-source" id="pdf-source-20111f94" href="./gallery/tikz.pdf">[pdf]&lt;/a>
+&lt;/div>
+&lt;noscript>
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-20111f94" href="./gallery/tikz.pdf">here&lt;/a>.
+&lt;/noscript>
+&lt;script type="text/javascript">
+(function(){
+var url = '.\/gallery\/tikz.pdf';
+var hidePaginator = "true" === "true";
+var hideLoader = "" === "true";
+var selectedPageNum = parseInt("3") || 1;
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+if (pdfjsLib.GlobalWorkerOptions.workerSrc == '')
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https:\/\/yangyangli.top\/" + 'js/pdf-js/build/pdf.worker.js';
+var pdfDoc = null,
+pageNum = selectedPageNum,
+pageRendering = false,
+pageNumPending = null,
+scale = 3,
+canvas = document.getElementById('pdf-canvas-20111f94'),
+ctx = canvas.getContext('2d'),
+paginator = document.getElementById("pdf-paginator-20111f94"),
+loadingWrapper = document.getElementById('pdf-loadingWrapper-20111f94');
+showPaginator();
+showLoader();
+function renderPage(num) {
+pageRendering = true;
+pdfDoc.getPage(num).then(function(page) {
+var viewport = page.getViewport({scale: scale});
+canvas.height = viewport.height;
+canvas.width = viewport.width;
+var renderContext = {
+canvasContext: ctx,
+viewport: viewport
+};
+var renderTask = page.render(renderContext);
+renderTask.promise.then(function() {
+pageRendering = false;
+showContent();
+if (pageNumPending !== null) {
+renderPage(pageNumPending);
+pageNumPending = null;
+}
+});
+});
+document.getElementById('pdf-pagenum-20111f94').textContent = num;
+}
+function showContent() {
+loadingWrapper.style.display = 'none';
+canvas.style.display = 'block';
+}
+function showLoader() {
+if(hideLoader) return
+loadingWrapper.style.display = 'flex';
+canvas.style.display = 'none';
+}
+function showPaginator() {
+if(hidePaginator) return
+paginator.style.display = 'block';
+}
+function queueRenderPage(num) {
+if (pageRendering) {
+pageNumPending = num;
+} else {
+renderPage(num);
+}
+}
+function onPrevPage() {
+if (pageNum &lt;= 1) {
+return;
+}
+pageNum--;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-prev-20111f94').addEventListener('click', onPrevPage);
+function onNextPage() {
+if (pageNum >= pdfDoc.numPages) {
+return;
+}
+pageNum++;
+queueRenderPage(pageNum);
+}
+document.getElementById('pdf-next-20111f94').addEventListener('click', onNextPage);
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+pdfDoc = pdfDoc_;
+var numPages = pdfDoc.numPages;
+document.getElementById('pdf-pagecount-20111f94').textContent = numPages;
+if(pageNum > numPages) {
+pageNum = numPages
+}
+renderPage(pageNum);
+});
+})();
+&lt;/script>
+&lt;h2 class="relative group">Why
+&lt;div id="why" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#why" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;p>Welcome to &amp;lsquo;My TikZ-Learning Journey&amp;rsquo;, a space where I document my exploration with the wonderful TikZ library in LaTeX.
+LaTeX is a typesetting system used widely in academia and industries for the production of scientific and technical documents.
+Of its many features, the one I&amp;rsquo;ve recently been fascinated with is the TikZ library - a versatile package for crafting detailed and professional-grade diagrams.&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/latex/020-tikz-learn-jouney/featured.jpg"/></item><item><title>Efficient Genomic Interval Search Using SIMD-Enhanced COITree</title><link>https://yangyangli.top/posts/019-efficient-genoimc-interval-search/</link><pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/019-efficient-genoimc-interval-search/</guid><description>&lt;h2 class="relative group">Background
+&lt;div id="background" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#background" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;p>In bioinformatics, researchers frequently analyze various types of genomic data, such as DNA sequencing data, RNA sequencing data, and epigenetic data.
+Manipulating genomic intervals is a crucial task in comprehending the genetic basis of diseases and identifying potential therapeutic targets.
+Genomic intervals are defined as regions that span from a starting position to an ending position and can encompass genes, regulatory elements, and other functional elements of the genome.
+One primary application of genomic interval manipulation is analyzing ChIP-seq data.
+Moreover, manipulating genomic intervals allows for the integration of ChIP-seq data with other genomic data types, such as gene expression and genetic variations.
+This integration provides a more comprehensive understanding of biological processes and their contribution to normal development or disease.
+However, integrating these data types into a single data structure can pose challenges, especially when handling large datasets.
+Cache Oblivious Interval Trees (COITree), with cache-oblivious design and efficient query algorithms, have the potential to handle and integrate multiple types of genomic data into a single data structure.
+It stores the intervals in contiguous memory and employs in-order van Emde Boas layout to enhance query performance
+&lt;span class="hugo-cite-intext"
+itemprop="citation">(&lt;span class="hugo-cite-group">
+&lt;a href="#vanemdeboas1976dec">&lt;span class="visually-hidden">Citation: &lt;/span>&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;meta itemprop="givenName" content="P.">&lt;span itemprop="familyName">Emde Boas&lt;/span>&lt;/span>,&amp;#32;&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;meta itemprop="givenName" content="R.">&lt;span itemprop="familyName">Kaas&lt;/span>&lt;/span>
+&lt;em>&amp;amp; al.&lt;/em>,&amp;#32;&lt;span itemprop="datePublished">1976&lt;/span>&lt;/a>&lt;span class="hugo-cite-citation">
+&lt;span itemscope
+itemtype="https://schema.org/Article"
+data-type="article">&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;span itemprop="familyName">Emde Boas&lt;/span>,&amp;#32;
+&lt;meta itemprop="givenName" content="P." />
+P.&lt;/span>,&amp;#32;
+&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;span itemprop="familyName">Kaas&lt;/span>,&amp;#32;
+&lt;meta itemprop="givenName" content="R." />
+R.&lt;/span>&amp;#32;&amp;amp;&amp;#32;&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;span itemprop="familyName">Zijlstra&lt;/span>,&amp;#32;
+&lt;meta itemprop="givenName" content="E." />
+E.&lt;/span>
+&amp;#32;
+(&lt;span itemprop="datePublished">1976&lt;/span>).
+&amp;#32;&lt;span itemprop="name">Design and implementation of an efficient priority queue&lt;/span>.&lt;i>
+&lt;span itemprop="about">Math. Systems Theory&lt;/span>,&amp;#32;10(1)&lt;/i>.&amp;#32;&lt;span itemprop="pagination">99–127&lt;/span>.
+&lt;a href="https://doi.org/10.1007/BF01683268"
+itemprop="identifier"
+itemtype="https://schema.org/URL">https://doi.org/10.1007/BF01683268&lt;/a>&lt;/span>
+&lt;/span>&lt;/span>)&lt;/span>
+.
+The tree is designed to optimize cache performance by reducing the number of cache misses during traversal
+&lt;span class="hugo-cite-intext"
+itemprop="citation">(&lt;span class="hugo-cite-group">
+&lt;a href="#vanemdeboas1977jun">&lt;span class="visually-hidden">Citation: &lt;/span>&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;meta itemprop="givenName" content="P.">&lt;span itemprop="familyName">Emde Boas&lt;/span>&lt;/span>,&amp;#32;&lt;span itemprop="datePublished">1977&lt;/span>&lt;/a>&lt;span class="hugo-cite-citation">
+&lt;span itemscope
+itemtype="https://schema.org/Article"
+data-type="article">&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;span itemprop="familyName">Emde Boas&lt;/span>,&amp;#32;
+&lt;meta itemprop="givenName" content="P." />
+P.&lt;/span>
+&amp;#32;
+(&lt;span itemprop="datePublished">1977&lt;/span>).
+&amp;#32;&lt;span itemprop="name">Preserving order in a forest in less than logarithmic time and linear space&lt;/span>.&lt;i>
+&lt;span itemprop="about">Inf. Process. Lett.&lt;/span>,&amp;#32;6(3)&lt;/i>.&amp;#32;&lt;span itemprop="pagination">80–82&lt;/span>.
+&lt;a href="https://doi.org/10.1016/0020-0190%2877%2990031-X"
+itemprop="identifier"
+itemtype="https://schema.org/URL">https://doi.org/10.1016/0020-0190(77)90031-X&lt;/a>&lt;/span>
+&lt;/span>&lt;/span>)&lt;/span>
+.
+However, COITree still suffer from performance bottlenecks, particularly when dealing with large datasets.
+One approach to addressing this bottleneck is to use Single Instruction Multiple Data (SIMD), which is optimized for vector operations, to improve the performance of COITree.
+Thus, I hypothesize that the approach is a viable solution for improving the speed and efficiency of genomic interval analysis.&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/019-efficient-genoimc-interval-search/featured.jpg"/></item><item><title>How to Use Noodles Library in Rust</title><link>https://yangyangli.top/posts/001-rust-noodles/</link><pubDate>Sat, 04 Mar 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/001-rust-noodles/</guid><description>&lt;h2 class="relative group">1. Introduction
+&lt;div id="1-introduction" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#1-introduction" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;p>&lt;a href="https://github.com/zaeleus/noodles" target="_blank">Noodles&lt;/a> and &lt;a href="https://github.com/rust-bio/rust-htslib" target="_blank">Rust-htslib&lt;/a> are two widely used Rust libraries for genomic data handling.
+While both libraries are designed to work with genomic data, they take different approaches to achieve this goal.
+This blog explores Noodles and compares it with &lt;a href="https://github.com/rust-bio/rust-htslib" target="_blank">Rust-htslib&lt;/a>, while also discussing its potential pitfalls.&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/001-rust-noodles/featured.png"/></item><item><title>Collections of Amazing Vim Tips</title><link>https://yangyangli.top/pde/000-nvim-tips/</link><pubDate>Wed, 21 Dec 2022 00:00:00 +0000</pubDate><guid>https://yangyangli.top/pde/000-nvim-tips/</guid><description>&lt;h2 class="relative group">Why
+&lt;div id="why" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#why" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;p>This blog will evolve to including more valuable content.
+Using &lt;code>nvim&lt;/code> tag to filter more content about nvim and others.&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/pde/000-nvim-tips/featured.jpg"/></item><item><title>Tiling Windows Management in macOS</title><link>https://yangyangli.top/posts/014-macos-tiling-windows-management/</link><pubDate>Tue, 20 Dec 2022 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/014-macos-tiling-windows-management/</guid><description>&lt;h2 class="relative group">1. Aims
+&lt;div id="1-aims" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#1-aims" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;p>The philosophy of Vim&amp;rsquo;s motion has had a profound influence on me, leading me to fully embrace &lt;a href="https://neovim.io/" target="_blank">Neovim&lt;/a>.
+The notion of having to reposition windows using a mouse is anathema to me.
+I greatly value the experience of utilizing solely the keyboard.
+As such, I set out to find a tool to aid me in managing windows seamlessly.
+Eventually, I discovered a quartet of exceptional tools that I highly recommend giving a try.
+To this day, they continue to surpass my expectations and enhance my productivity.&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/014-macos-tiling-windows-management/featured.png"/></item><item><title>Make A Powerful Terminal Workspace</title><link>https://yangyangli.top/posts/012-make-a-powerful-ternimal/</link><pubDate>Thu, 15 Dec 2022 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/012-make-a-powerful-ternimal/</guid><description>&lt;p>I recently made a change to my terminal setup, switching from using iTerm2 + Zsh + Tmux to Alacritty + Fish + Zellij.
+Now I use Wezterm + Fish + Zellij.
+I discovered that my new combination is extremely powerful and versatile.
+The flexibility to highly customize each of these tools was a significant factor in my decision to keep them.&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/012-make-a-powerful-ternimal/featured.png"/></item><item><title>macOS Setup for Development and Research</title><link>https://yangyangli.top/posts/002-macos-configuration/</link><pubDate>Sat, 26 Nov 2022 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/002-macos-configuration/</guid><description>&lt;h2 class="relative group">Gallery
+&lt;div id="gallery" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#gallery" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;div id="carousel-44fa7e18c6132e468e3a14ed4f42c56a" class="relative" data-twe-carousel-init data-twe-ride="carousel">
+&lt;div class="absolute right-0 bottom-0 left-0 z-[2] mx-[15%] mb-10 flex list-none justify-center p-0"
+data-twe-carousel-indicators>
+&lt;button type="button" data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a" data-twe-slide-to="0" data-twe-carousel-active aria-current="true"
+class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+aria-label="Slide 0">&lt;/button>
+&lt;button type="button" data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a" data-twe-slide-to="1"
+class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+aria-label="Slide 1">&lt;/button>
+&lt;button type="button" data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a" data-twe-slide-to="2"
+class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+aria-label="Slide 2">&lt;/button>
+&lt;button type="button" data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a" data-twe-slide-to="3"
+class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+aria-label="Slide 3">&lt;/button>
+&lt;button type="button" data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a" data-twe-slide-to="4"
+class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+aria-label="Slide 4">&lt;/button>
+&lt;/div>
+&lt;div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+&lt;div class="relative float-left -mr-[100%] w-full transition-transform duration-[2500ms] ease-in-out motion-reduce:transition-none"
+data-twe-carousel-item data-twe-carousel-active >
+&lt;div class="ratio-16-9 single_hero_background">
+&lt;img src="https://yangyangli.top/posts/002-macos-configuration/gallery/desktop1.png" class="block absolute top-0 object-cover w-full h-full nozoom" alt="carousel image 0"/>
+&lt;/div>
+&lt;/div>
+&lt;div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[2500ms] ease-in-out motion-reduce:transition-none"
+data-twe-carousel-item >
+&lt;div class="ratio-16-9 single_hero_background">
+&lt;img src="https://yangyangli.top/posts/002-macos-configuration/gallery/desktop2.png" class="block absolute top-0 object-cover w-full h-full nozoom" alt="carousel image 1"/>
+&lt;/div>
+&lt;/div>
+&lt;div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[2500ms] ease-in-out motion-reduce:transition-none"
+data-twe-carousel-item >
+&lt;div class="ratio-16-9 single_hero_background">
+&lt;img src="https://yangyangli.top/posts/002-macos-configuration/gallery/desktop3.png" class="block absolute top-0 object-cover w-full h-full nozoom" alt="carousel image 2"/>
+&lt;/div>
+&lt;/div>
+&lt;div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[2500ms] ease-in-out motion-reduce:transition-none"
+data-twe-carousel-item >
+&lt;div class="ratio-16-9 single_hero_background">
+&lt;img src="https://yangyangli.top/posts/002-macos-configuration/gallery/desktop4.png" class="block absolute top-0 object-cover w-full h-full nozoom" alt="carousel image 3"/>
+&lt;/div>
+&lt;/div>
+&lt;div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[2500ms] ease-in-out motion-reduce:transition-none"
+data-twe-carousel-item >
+&lt;div class="ratio-16-9 single_hero_background">
+&lt;img src="https://yangyangli.top/posts/002-macos-configuration/gallery/featured.png" class="block absolute top-0 object-cover w-full h-full nozoom" alt="carousel image 4"/>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;button
+class="absolute top-0 bottom-0 left-0 z-[2] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+type="button" data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a" data-twe-slide="prev">
+&lt;span class="inline-block h-8 w-8">
+&lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4.5"
+stroke="currentColor" class="h-6 w-6">
+&lt;path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+&lt;/svg>
+&lt;/span>
+&lt;span
+class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Previous&lt;/span>
+&lt;/button>
+&lt;button
+class="absolute top-0 bottom-0 right-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+type="button" data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a" data-twe-slide="next">
+&lt;span class="inline-block h-8 w-8">
+&lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4.5"
+stroke="currentColor" class="h-6 w-6">
+&lt;path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+&lt;/svg>
+&lt;/span>
+&lt;span
+class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Nextsads&lt;/span>
+&lt;/button>
+&lt;/div>
+&lt;h2 class="relative group">TODO
+&lt;div id="todo" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#todo" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;!-- https://github.com/ibraheemdev/modern-unix -->
+&lt;!-- - [ ] https://github.com/junegunn/fzf/blob/master/ADVANCED.md -->
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> add latex&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> add lsd&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> add fd&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> add fzf&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> add ripgrep&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> add procs&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> add zoxide&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> add gitui&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> add btop&lt;/li>
+&lt;/ul>
+&lt;!-- Act as a blog writer. You will act as a creative and engaging technical writer and create tutorial on how
+to do different stuff on specific topic.I will provide you with the topic and you will come up with an engaging
+article about the topic. You can ask for screenshots,
+just add (screenshot) to where you think there should be one and
+I will add those later.These are the first basic topic: "introduce chatgpt" -->
+&lt;h2 class="relative group">TLDR
+&lt;div id="tldr" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#tldr" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align: left">&lt;/th>
+&lt;th style="text-align: left">&lt;/th>
+&lt;th style="text-align: left">&lt;/th>
+&lt;th style="text-align: left">&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align: left">&lt;a href="https://github.com/alacritty/alacritty" target="_blank">alacritty&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://www.office.com/" target="_blank">office&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://github.com/davidwernhart/AlDente" target="_blank">aldente&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://fireball.studio/oneswitch" target="_blank">one switch&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;a href="https://www.alfredapp.com/" target="_blank">alfred&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://pdfexpert.com/?utm_source=google&amp;amp;utm_medium=cpc&amp;amp;utm_campaign=brand-hp&amp;amp;utm_google-campaign=brand-hp&amp;amp;utm_content=264692671625&amp;amp;utm_term=pdf%20expert&amp;amp;gclid=Cj0KCQiAy4eNBhCaARIsAFDVtI2Mb-84Xo5XJBQWkPHxGL-G11BnR8iF65B4kGDm2huhRRUa0wJy5VMaAjoREALw_wcB" target="_blank">pdf expert&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://alt-tab-macos.netlify.app/" target="_blank">alttab&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://picgo.github.io/PicGo-Doc/en/guide/" target="_blank">picgo&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;a href="https://www.macbartender.com/" target="_blank">bartender&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://www.jetbrains.com/pycharm/" target="_blank">pycharm&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://github.com/chubin/cheat.sh" target="_blank">cheat.sh&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://rectangleapp.com/" target="_blank">rectangle&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;a href="https://www.google.com/chrome/?brand=FKPE&amp;amp;geo=US&amp;amp;gclid=Cj0KCQiAy4eNBhCaARIsAFDVtI0QHFokL1RZC_foWkHv92lRIhon6vMSWCm_2Zfe6g5vrkRO-JxOwJcaAsToEALw_wcB&amp;amp;gclsrc=aw.ds" target="_blank">chrome&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://reederapp.com/" target="_blank">reeder 5&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://www.jetbrains.com/clion/" target="_blank">clion&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://www.rust-lang.org/" target="_blank">rust&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;a href="https://docs.conda.io/en/latest/" target="_blank">conda&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://www.renfei.org/snippets-lab/" target="_blank">snippetslab&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://www.stclairsoft.com/DefaultFolderX/" target="_blank">default folder x&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://rogueamoeba.com/soundsource/" target="_blank">soundsource&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;a href="https://www.docker.com/?utm_source=google&amp;amp;utm_medium=cpc&amp;amp;utm_campaign=dockerhomepage&amp;amp;utm_content=namer&amp;amp;utm_term=dockerhomepage&amp;amp;utm_budget=growth&amp;amp;gclid=Cj0KCQiAy4eNBhCaARIsAFDVtI1yYmAI5cysoIDN2Vbhs5tplap41qP5MKKybSNbg9nTCA8oPe2yeXAaAofgEALw_wcB" target="_blank">docker&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://www.google.com/search?q=spacevim" target="_blank">spacevim&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://github.com/bootandy/dust" target="_blank">dust&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://manytricks.com/timesink/" target="_blank">time sink&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;a href="https://getferdi.com/" target="_blank">ferdi&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://tldr.sh/" target="_blank">tldr&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://fishshell.com/" target="_blank">fish&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://github.com/tmux/tmux/wiki" target="_blank">tmux&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;a href="https://git-scm.com/" target="_blank">git&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://github.com/tmuxinator/tmuxinator" target="_blank">tmuxinator&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://github.com/sharkdp/hyperfine/" target="_blank">hyperfine&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://vimawesome.com/" target="_blank">vim&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;a href="https://github.com/meowtec/Imagine" target="_blank">imagine&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://developer.apple.com/xcode/" target="_blank">xcode&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://apps.apple.com/cn/app/ishot-%E4%BC%98%E7%A7%80%E7%9A%84%E6%88%AA%E5%9B%BE%E5%BD%95%E5%B1%8F%E5%B7%A5%E5%85%B7/id1485844094?mt=12" target="_blank">ishot&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://www.xmind.net/download/" target="_blank">xmind&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;a href="https://iterm2.com" target="_blank">iterm2&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://zellij.dev/documentation/introduction.html" target="_blank">zellij&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://github.com/LunarVim/LunarVim" target="_blank">lunarvim&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://zoom.us/download" target="_blank">zoom&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;a href="https://apps.apple.com/us/app/magnet/id441258766?mt=12" target="_blank">magnet&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://www.zotero.org/" target="_blank">zotero&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://mamba.readthedocs.io/en/latest/" target="_blank">mamba&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://ohmyz.sh/" target="_blank">zsh&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;a href="https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html" target="_blank">micromamba&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://github.com/jorgebucaran/fisher" target="_blank">fisher&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://github.com/conda-forge/miniforge/" target="_blank">miniforge&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://github.com/ouch-org/ouch" target="_blank">ouch&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;a href="https://github.com/MonitorControl/MonitorControl" target="_blank">monitorcontrol&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://github.com/topgrade-rs/topgrade" target="_blank">topgrade&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://monodraw.helftone.com/" target="_blank">monodraw&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://github.com/imagemagick/imagemagick" target="_blank">imagemagick&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;a href="https://neovim.io/" target="_blank">neovim&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://github.com/ytdl-org/youtube-dl" target="_blank">youtobe-dl&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://www.notion.so/product" target="_blank">notion&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://www.jetbrains.com" target="_blank">jetbrains&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;a href="https://www.google.com/drive/" target="_blank">google drive&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://panic.com/transmit/" target="_blank">transmit&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://brew.sh/" target="_blank">homebrew&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://www.geeksforgeeks.org/tree-command-unixlinux/" target="_blank">tree&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;a href="https://github.com/yang991178/fluent-reader" target="_blank">fluent reader&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://wezfurlong.org/wezterm" target="_blank">wezterm&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://iina.io/" target="_blank">iina&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://code.visualstudio.com/" target="_blank">vs code&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 class="relative group">1. Introduction
+&lt;div id="1-introduction" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#1-introduction" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;p>Given the time and effort required for migrating configurations, I have decided to create a blog documenting the entire process.
+The configurations will be divided into two sections, the first of which will cover the software that I frequently use, and the second will contain the configuration files themselves.
+As I have recently acquired a MacBook Pro M1 model, here is a list of the tools I am currently utilizing.&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/002-macos-configuration/featured.png"/></item><item><title>Bioinformatics Algorithm Library aka BINARY</title><link>https://yangyangli.top/projects/011-bioinformatics-algorithm-library/</link><pubDate>Mon, 26 Sep 2022 13:07:28 -0500</pubDate><guid>https://yangyangli.top/projects/011-bioinformatics-algorithm-library/</guid><description>&lt;p>The library is a collection of algorithms and data structures that are designed for modern C++ bioinformatics applications.
+You can use the library in your own projects or as a part of a larger project.&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/projects/011-bioinformatics-algorithm-library/featured.png"/></item><item><title>Bioinformatics Toolbox Aka Boss</title><link>https://yangyangli.top/projects/009-new-tool-bioinformatics-toolbox-aka-boss/</link><pubDate>Sun, 25 Sep 2022 23:22:31 -0500</pubDate><guid>https://yangyangli.top/projects/009-new-tool-bioinformatics-toolbox-aka-boss/</guid><description>&lt;p>BOSS is a bioinformatics toolbox, which will contain efficient tools. It is written in modern C++ and is tested exhaustively. It is designed to be easy to use and time-efficient. BOSS is a free software and is distributed under the terms of the GNU General Public License V3.&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/projects/009-new-tool-bioinformatics-toolbox-aka-boss/featured.png"/></item><item><title>Code Snippets</title><link>https://yangyangli.top/posts/023-cpp-snippet/</link><pubDate>Thu, 22 Sep 2022 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/023-cpp-snippet/</guid><description>&lt;h2 class="relative group">Get Random numbers
+&lt;div id="get-random-numbers" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#get-random-numbers" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;algorithm&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;iostream&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;iterator&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;random&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">random_device&lt;/span> &lt;span class="n">rd&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">mt19937&lt;/span> &lt;span class="n">rng&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">rd&lt;/span>&lt;span class="p">());&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">uniform_int_distribution&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">dist6&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">generate_n&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">ostream_iterator&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">cout&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="mi">10&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">[&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">dist6&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">rng&lt;/span>&lt;span class="p">]()&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="n">dist6&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">rng&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;h2 class="relative group">Get random numbers between min and max
+&lt;div id="get-random-numbers-between-min-and-max" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#get-random-numbers-between-min-and-max" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Generate a random number between min and max (inclusive)
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Assumes std::srand() has already been called
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Assumes max - min &amp;lt;= RAND_MAX
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">getRandomNumber&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">min&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">max&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">static&lt;/span> &lt;span class="k">constexpr&lt;/span> &lt;span class="kt">double&lt;/span> &lt;span class="n">fraction&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="mf">1.0&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">RAND_MAX&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mf">1.0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">};&lt;/span> &lt;span class="c1">// static used for efficiency, so we only calculate this value once
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// evenly distribute the random number across our range
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="n">min&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="k">static_cast&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="n">max&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">min&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">rand&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">fraction&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;h2 class="relative group">Clear Input Stream
+&lt;div id="clear-input-stream" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#clear-input-stream" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">cin&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">fail&lt;/span>&lt;span class="p">())&lt;/span> &lt;span class="c1">// has a previous extraction failed or overflowed?
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// yep, so let&amp;#39;s handle the failure
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">cin&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">clear&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="c1">// put us back in &amp;#39;normal&amp;#39; operation mode
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">cin&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">ignore&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">numeric_limits&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">streamsize&lt;/span>&lt;span class="o">&amp;gt;::&lt;/span>&lt;span class="n">max&lt;/span>&lt;span class="p">(),&lt;/span> &lt;span class="sc">&amp;#39;\n&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// and remove the bad input
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;h2 class="relative group">Compare Float Number
+&lt;div id="compare-float-number" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#compare-float-number" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;algorithm&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;cmath&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">bool&lt;/span> &lt;span class="nf">approximatelyEqualAbsRel&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">double&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">double&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">double&lt;/span> &lt;span class="n">absEpsilon&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">double&lt;/span> &lt;span class="n">relEpsilon&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// Check if the numbers are really close -- needed when comparing numbers near zero.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="kt">double&lt;/span> &lt;span class="n">diff&lt;/span>&lt;span class="p">{&lt;/span> &lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">abs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">diff&lt;/span> &lt;span class="o">&amp;lt;=&lt;/span> &lt;span class="n">absEpsilon&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nb">true&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// Otherwise fall back to Knuth&amp;#39;s algorithm
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">return&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">diff&lt;/span> &lt;span class="o">&amp;lt;=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">max&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">abs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">abs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">relEpsilon&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;h2 class="relative group">Shelang for Python
+&lt;div id="shelang-for-python" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#shelang-for-python" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="ch">#!/usr/bin/env python3&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># -*- coding: utf-8 -*-&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">@author: YangyangLi
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">@contact: yangyang.li@northwestern.edu
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">@version: 0.0.1
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">@license: MIT Licence
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">@file: cli.py.py
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">@time: 2020/12/28 10:21 PM
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;h2 class="relative group">Shelang for Bash
+&lt;div id="shelang-for-bash" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#shelang-for-bash" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#!/bin/bash
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="nb">set&lt;/span> -e
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">set&lt;/span> -u
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">set&lt;/span> -o pipefail
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;h2 class="relative group">CLI for Rust
+&lt;div id="cli-for-rust" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#cli-for-rust" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-rust" data-lang="rust">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#[allow(unused)]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">use&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">clap&lt;/span>::&lt;span class="n">Parser&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">use&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">env_logger&lt;/span>::&lt;span class="n">Builder&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">use&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">human_panic&lt;/span>::&lt;span class="n">setup_panic&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">use&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">log&lt;/span>::&lt;span class="n">info&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="cp">#[derive(Parser, Debug)]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="cp">#[command(name = &lt;/span>&lt;span class="s">&amp;#34;sv2gf&amp;#34;&lt;/span>&lt;span class="cp">)]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="cp">#[command(version = &lt;/span>&lt;span class="s">&amp;#34;0.1.0&amp;#34;&lt;/span>&lt;span class="cp">)]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">struct&lt;/span> &lt;span class="nc">Args&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="sd">/// The input file of svs
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd">&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="cp">#[arg(short = &amp;#39;s&amp;#39;, long)]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">sv&lt;/span>: &lt;span class="nc">PathBuf&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="sd">/// The input file of gfs
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd">&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="cp">#[arg(short = &amp;#39;g&amp;#39;, long)]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">gf&lt;/span>: &lt;span class="nc">PathBuf&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="sd">/// The Distance threshold
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd">&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="cp">#[arg(short = &amp;#39;d&amp;#39;, long, default_value = &lt;/span>&lt;span class="s">&amp;#34;1000000&amp;#34;&lt;/span>&lt;span class="cp">)]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">dis_threshold&lt;/span>: &lt;span class="kt">u32&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="cp">#[clap(flatten)]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">verbose&lt;/span>: &lt;span class="nc">clap_verbosity_flag&lt;/span>::&lt;span class="n">Verbosity&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">fn&lt;/span> &lt;span class="nf">cli&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>-&amp;gt; &lt;span class="p">(&lt;/span>&lt;span class="n">PathBuf&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">PathBuf&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kt">u32&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">let&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">args&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Args&lt;/span>::&lt;span class="n">parse&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">let&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">sv&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">args&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">sv&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">let&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">gf&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">args&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">gf&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">let&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">dis_threshold&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">args&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">dis_threshold&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="fm">info!&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;sv: {:?}, gf: {:?}&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">sv&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">gf&lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sv&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">gf&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">dis_threshold&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">fn&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="fm">setup_panic!&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">let&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">args&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Args&lt;/span>::&lt;span class="n">parse&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="n">Builder&lt;/span>::&lt;span class="n">new&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">filter_level&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">args&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">verbose&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">log_level_filter&lt;/span>&lt;span class="p">())&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">init&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="kd">let&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">input_sv&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">input_gf&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">dis&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">cli&lt;/span>&lt;span class="p">();&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;h2 class="relative group">Export port from two layers nodes
+&lt;div id="export-port-from-two-layers-nodes" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#export-port-from-two-layers-nodes" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">ssh -L 8899:localhost:8899 quest ssh -N -L 8899:localhost:8899 qgpu0101
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;h2 class="relative group">Timer for C++
+&lt;div id="timer-for-c" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#timer-for-c" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span> &lt;span class="cpf">&amp;lt;chrono&amp;gt;&lt;/span>&lt;span class="cp"> &lt;/span>&lt;span class="c1">// for std::chrono functions
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">Timer&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">private&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// Type aliases to make accessing nested type easier
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">using&lt;/span> &lt;span class="n">clock_type&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">chrono&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">steady_clock&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">using&lt;/span> &lt;span class="n">second_type&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">chrono&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">duration&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="kt">double&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">ratio&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">chrono&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">time_point&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">clock_type&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">m_beg&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="n">clock_type&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">now&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">void&lt;/span> &lt;span class="n">reset&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">m_beg&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">clock_type&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">now&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">double&lt;/span> &lt;span class="nf">elapsed&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="k">const&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">std&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">chrono&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">duration_cast&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">second_type&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">clock_type&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">now&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">m_beg&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="n">count&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;h2 class="relative group">Gradient Clipping
+&lt;div id="gradient-clipping" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#gradient-clipping" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">grad_clipping&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">net&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">theta&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nb">isinstance&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">net&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">nn&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Module&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">params&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="n">p&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="n">p&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">net&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">parameters&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="n">p&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">requires_grad&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">params&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">net&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">params&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">norm&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">torch&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sqrt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">torch&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sum&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="n">p&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">grad&lt;/span> &lt;span class="o">**&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="n">p&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">params&lt;/span> &lt;span class="p">))&lt;/span> &lt;span class="c1"># include all parameters&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">norm&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">theta&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">param&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">params&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">param&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">grad&lt;/span>&lt;span class="p">[:]&lt;/span> &lt;span class="o">*=&lt;/span> &lt;span class="n">theta&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">nor&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;h2 class="relative group">RST Docstring directive
+&lt;div id="rst-docstring-directive" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#rst-docstring-directive" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="p">:&lt;/span>&lt;span class="n">Example&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">&amp;gt;&amp;gt;&amp;gt;&lt;/span> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;hello world!&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">hello&lt;/span> &lt;span class="n">world&lt;/span>&lt;span class="err">!&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">..&lt;/span> &lt;span class="n">note&lt;/span>&lt;span class="p">::&lt;/span> &lt;span class="n">can&lt;/span> &lt;span class="n">be&lt;/span> &lt;span class="n">useful&lt;/span> &lt;span class="n">to&lt;/span> &lt;span class="n">emphasize&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">..&lt;/span> &lt;span class="n">seealso&lt;/span>&lt;span class="p">::&lt;/span> &lt;span class="p">:&lt;/span>&lt;span class="n">class&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="err">`&lt;/span>&lt;span class="n">MainClass2&lt;/span>&lt;span class="err">`&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">..&lt;/span> &lt;span class="n">warning&lt;/span>&lt;span class="p">::&lt;/span> &lt;span class="n">arg2&lt;/span> &lt;span class="n">must&lt;/span> &lt;span class="n">be&lt;/span> &lt;span class="n">non&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">zero&lt;/span>&lt;span class="o">.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">..&lt;/span> &lt;span class="n">todo&lt;/span>&lt;span class="p">::&lt;/span> &lt;span class="n">check&lt;/span> &lt;span class="n">that&lt;/span> &lt;span class="n">arg2&lt;/span> &lt;span class="ow">is&lt;/span> &lt;span class="n">non&lt;/span> &lt;span class="n">zero&lt;/span>&lt;span class="o">.&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;h2 class="relative group">Git remove large files
+&lt;div id="git-remove-large-files" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#git-remove-large-files" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">git filter-repo --force --strip-blobs-bigger-than 100M
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;h2 class="relative group">Stop Colab Disconnect
+&lt;div id="stop-colab-disconnect" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#stop-colab-disconnect" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">function&lt;/span> &lt;span class="nx">KeepClicking&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Clicking&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">querySelector&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;colab-connect-button&amp;#34;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">click&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">setInterval&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">KeepClicking&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">60000&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;h2 class="relative group">Open Colab
+&lt;div id="open-colab" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#open-colab" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;pre tabindex="0">&lt;code>[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
+&lt;/code>&lt;/pre>
+&lt;h2 class="relative group">Srun for interactive shell
+&lt;div id="srun-for-interactive-shell" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#srun-for-interactive-shell" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">srun -n &lt;span class="m">1&lt;/span> -t 1:00:00 -p gpu --gres&lt;span class="o">=&lt;/span>gpu:tesla:1 --pty bash
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;h2 class="relative group">Bash info for Slurm
+&lt;div id="bash-info-for-slurm" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#bash-info-for-slurm" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#!/bin/bash -l
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="c1">#SBATCH --job-name=MLHW3 # job name&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#SBATCH --output=MLHW3_%j.log # log name&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#SBATCH --time=8:00:00 # time&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#SBATCH --ntasks=1 # tasks number&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#SBATCH --cpus-per-task=8 # cpu number&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#SBATCH --ntasks-per-node=1 # node number&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#SBATCH --mem=30G # total memory&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#SBATCH --tmp=30G #&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#SBATCH --mail-type=ALL&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#SBATCH --mail-user=li002252@umn.edu&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#SBATCH --gres=gpu:v100:1 # gpu&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#SBATCH -p v100 # partitions&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> &lt;span class="nv">$SLURM_SUBMIT_DIR&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">date&lt;span class="p">;&lt;/span>hostname&lt;span class="p">;&lt;/span>&lt;span class="nb">pwd&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;h2 class="relative group">Conda export env
+&lt;div id="conda-export-env" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#conda-export-env" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">conda env &lt;span class="nb">export&lt;/span> &lt;span class="p">|&lt;/span> grep -v &lt;span class="s1">&amp;#39;^prefix&amp;#39;&lt;/span> &amp;gt; freeze.yml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">conda env create -f freeze.yml
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;h2 class="relative group">Multiple output in Jupyter
+&lt;div id="multiple-output-in-jupyter" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#multiple-output-in-jupyter" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">IPython.core.interactiveshell&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">InteractiveShell&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">InteractiveShell&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ast_node_interactivity&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;all&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;h2 class="relative group">Multiple Images in Latex
+&lt;div id="multiple-images-in-latex" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#multiple-images-in-latex" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-latex" data-lang="latex">&lt;span class="line">&lt;span class="cl">&lt;span class="k">\usepackage&lt;/span>&lt;span class="nb">{&lt;/span>subcaption&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\begin&lt;/span>&lt;span class="nb">{&lt;/span>figure&lt;span class="nb">}&lt;/span>[h]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\begin&lt;/span>&lt;span class="nb">{&lt;/span>subfigure&lt;span class="nb">}{&lt;/span>0.5&lt;span class="k">\textwidth&lt;/span>&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\includegraphics&lt;/span>&lt;span class="na">[width=0.9\linewidth, height=5cm]&lt;/span>&lt;span class="nb">{&lt;/span>rna&lt;span class="nb">_&lt;/span>ttest.png&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\caption&lt;/span>&lt;span class="nb">{&lt;/span>T-test for RNA-Seq data&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\label&lt;/span>&lt;span class="nb">{&lt;/span>fig:subim1&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\end&lt;/span>&lt;span class="nb">{&lt;/span>subfigure&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\begin&lt;/span>&lt;span class="nb">{&lt;/span>subfigure&lt;span class="nb">}{&lt;/span>0.5&lt;span class="k">\textwidth&lt;/span>&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\includegraphics&lt;/span>&lt;span class="na">[width=0.9\linewidth, height=5cm]&lt;/span>&lt;span class="nb">{&lt;/span>rna&lt;span class="nb">_&lt;/span>ranksum.png&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\caption&lt;/span>&lt;span class="nb">{&lt;/span>Rank-sum for RNA-Seq data&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\label&lt;/span>&lt;span class="nb">{&lt;/span>fig:subim2&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\end&lt;/span>&lt;span class="nb">{&lt;/span>subfigure&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\begin&lt;/span>&lt;span class="nb">{&lt;/span>subfigure&lt;span class="nb">}{&lt;/span>0.5&lt;span class="k">\textwidth&lt;/span>&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\includegraphics&lt;/span>&lt;span class="na">[width=0.9\linewidth, height=5cm]&lt;/span>&lt;span class="nb">{&lt;/span>micro&lt;span class="nb">_&lt;/span>ttest.png&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\caption&lt;/span>&lt;span class="nb">{&lt;/span>T-test for Microarray data&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\label&lt;/span>&lt;span class="nb">{&lt;/span>fig:subim1&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\end&lt;/span>&lt;span class="nb">{&lt;/span>subfigure&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\begin&lt;/span>&lt;span class="nb">{&lt;/span>subfigure&lt;span class="nb">}{&lt;/span>0.5&lt;span class="k">\textwidth&lt;/span>&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\includegraphics&lt;/span>&lt;span class="na">[width=0.9\linewidth, height=5cm]&lt;/span>&lt;span class="nb">{&lt;/span>micro&lt;span class="nb">_&lt;/span>ranksum.png&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\caption&lt;/span>&lt;span class="nb">{&lt;/span>Rank-sum for Microarray data&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\label&lt;/span>&lt;span class="nb">{&lt;/span>fig:subim2&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">\end&lt;/span>&lt;span class="nb">{&lt;/span>subfigure&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\caption&lt;/span>&lt;span class="nb">{&lt;/span>Histogram of the p-values of all genes&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">\end&lt;/span>&lt;span class="nb">{&lt;/span>figure&lt;span class="nb">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;h2 class="relative group">Show fonts in Jupyter
+&lt;div id="show-fonts-in-jupyter" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#show-fonts-in-jupyter" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">matplotlib.font_manager&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">IPython.core.display&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">HTML&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">make_html&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">fontname&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="s2">&amp;#34;&amp;lt;p&amp;gt;&lt;/span>&lt;span class="si">{font}&lt;/span>&lt;span class="s2">: &amp;lt;span style=&amp;#39;font-family:&lt;/span>&lt;span class="si">{font}&lt;/span>&lt;span class="s2">; font-size: 24px;&amp;#39;&amp;gt;&lt;/span>&lt;span class="si">{font}&lt;/span>&lt;span class="s2">&amp;lt;/p&amp;gt;&amp;#34;&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">format&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">font&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">fontname&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">code&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">join&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="n">make_html&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">font&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="n">font&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="nb">sorted&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">set&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="n">f&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">name&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="n">f&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">matplotlib&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">font_manager&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">fontManager&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ttflist&lt;/span>&lt;span class="p">]))])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">HTML&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;&amp;lt;div style=&amp;#39;column-count: 2;&amp;#39;&amp;gt;&lt;/span>&lt;span class="si">{}&lt;/span>&lt;span class="s2">&amp;lt;/div&amp;gt;&amp;#34;&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">format&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">code&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;h2 class="relative group">Display image in Jupyter
+&lt;div id="display-image-in-jupyter" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#display-image-in-jupyter" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">IPython.display&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">Image&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">IPython.core.display&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">HTML&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">PATH&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;tree_default_max_depth.png&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">Image&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">filename&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">PATH&lt;/span> &lt;span class="p">,&lt;/span> &lt;span class="n">width&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">900&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">height&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">900&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/023-cpp-snippet/featured.jpg"/></item><item><title>Short Code Example</title><link>https://yangyangli.top/posts/short-code/</link><pubDate>Fri, 24 Jun 2022 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/short-code/</guid><description>&lt;h2 class="relative group">Alert
+&lt;div id="alert" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#alert" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">alert&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gs">**Warning!**&lt;/span> This action is destructive!
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nt">alert&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;div
+class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900"
+>
+&lt;span
+class="text-primary-400 ltr:pr-3 rtl:pl-3 flex items-center"
+>
+&lt;span class="relative block icon">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">&lt;path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/>&lt;/svg>
+&lt;/span>
+&lt;/span>
+&lt;span
+class="dark:text-neutral-300"
+>&lt;strong>Warning!&lt;/strong> This action is destructive!&lt;/span>
+&lt;/div>
+&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">alert&lt;/span> &lt;span class="na">cardColor&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;red&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gs">**Warning!**&lt;/span> This action is destructive!
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nt">alert&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;div
+class="flex px-4 py-3 rounded-md"
+style="background-color: red"
+>
+&lt;span
+class="text-primary-400 ltr:pr-3 rtl:pl-3 flex items-center"
+>
+&lt;span class="relative block icon">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">&lt;path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/>&lt;/svg>
+&lt;/span>
+&lt;/span>
+&lt;span
+class="dark:text-neutral-300"
+>&lt;strong>Warning!&lt;/strong> This action is destructive!&lt;/span>
+&lt;/div>
+&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">alert&lt;/span> &lt;span class="na">textColor&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;red&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gs">**Warning!**&lt;/span> This action is destructive!
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nt">alert&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;div
+class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900"
+>
+&lt;span
+class="text-primary-400 ltr:pr-3 rtl:pl-3 flex items-center"
+>
+&lt;span class="relative block icon">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">&lt;path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/>&lt;/svg>
+&lt;/span>
+&lt;/span>
+&lt;span
+style="color: red"
+>&lt;strong>Warning!&lt;/strong> This action is destructive!&lt;/span>
+&lt;/div>
+&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">alert&lt;/span> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">twitter&lt;/span>&lt;span class="err">&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gs">**Warning!**&lt;/span> This action is destructive!
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nt">alert&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;div
+class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900"
+>
+&lt;span
+class="text-primary-400 ltr:pr-3 rtl:pl-3 flex items-center"
+>
+&lt;span class="relative block icon">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">&lt;path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/>&lt;/svg>
+&lt;/span>
+&lt;/span>
+&lt;span
+class="dark:text-neutral-300"
+>Do not forget to follow me&lt;/span>
+&lt;/div>
+&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">alert&lt;/span> &lt;span class="na">icon&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;fire&amp;#34;&lt;/span> &lt;span class="na">cardColor&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;#e63946&amp;#34;&lt;/span> &lt;span class="na">iconColor&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;#1d3557&amp;#34;&lt;/span> &lt;span class="na">textColor&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;#f1faee&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gs">**Warning!**&lt;/span> This action is destructive!
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nt">alert&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;div
+class="flex px-4 py-3 rounded-md"
+style="background-color: #e63946"
+>
+&lt;span
+class="ltr:pr-3 rtl:pl-3 flex items-center"
+style="color: #1d3557"
+>
+&lt;span class="relative block icon">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+&lt;path fill="currentColor" d="M159.3 5.4c7.8-7.3 19.9-7.2 27.7 .1c27.6 25.9 53.5 53.8 77.7 84c11-14.4 23.5-30.1 37-42.9c7.9-7.4 20.1-7.4 28 .1c34.6 33 63.9 76.6 84.5 118c20.3 40.8 33.8 82.5 33.8 111.9C448 404.2 348.2 512 224 512C98.4 512 0 404.1 0 276.5c0-38.4 17.8-85.3 45.4-131.7C73.3 97.7 112.7 48.6 159.3 5.4zM225.7 416c25.3 0 47.7-7 68.8-21c42.1-29.4 53.4-88.2 28.1-134.4c-2.8-5.6-5.6-11.2-9.8-16.8l-50.6 58.8s-81.4-103.6-87.1-110.6C133.1 243.8 112 273.2 112 306.8C112 375.4 162.6 416 225.7 416z"/>&lt;/svg>
+&lt;/span>
+&lt;/span>
+&lt;span
+style="color: #f1faee"
+>Do not forget to follow me&lt;/span>
+&lt;/div>
+&lt;h2 class="relative group">Article
+&lt;div id="article" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#article" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">article&lt;/span> &lt;span class="na">link&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;/posts/002-macos-configuration/&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;section class="space-y-10 w-full">
+&lt;a class="flex flex-wrap article " href="https://yangyangli.top/posts/002-macos-configuration/">
+&lt;div class="w-full md:w-auto h-full thumbnail nozoom thumbnailshadow md:mr-7" style="background-image:url(/posts/002-macos-configuration/featured_hu16020680319292866216.png);">&lt;/div>
+&lt;div class=" mt-3 md:mt-0">
+&lt;div class="items-center text-left text-xl font-semibold">
+&lt;div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+href="https://yangyangli.top/posts/002-macos-configuration/">macOS Setup for Development and Research&lt;/div>
+&lt;/div>
+&lt;div class="text-sm text-neutral-500 dark:text-neutral-400">
+&lt;div class="flex flex-row flex-wrap items-center">
+&lt;time datetime="2023-09-02T00:00:00&amp;#43;00:00">Updated: 2 September 2023&lt;/time>&lt;span class="px-2 text-primary-500">&amp;middot;&lt;/span>&lt;span>3280 words&lt;/span>&lt;span class="px-2 text-primary-500">&amp;middot;&lt;/span>&lt;span title="Reading time">16 mins&lt;/span>&lt;span class="px-2 text-primary-500">&amp;middot;&lt;/span>&lt;span>
+&lt;span id="views_posts/002-macos-configuration/index.md" class="animate-pulse inline-block text-transparent max-h-3 rounded-full mt-[-2px] align-middle bg-neutral-300 dark:bg-neutral-400" title="views">loading&lt;/span>
+&lt;span class="inline-block align-text-bottom">
+&lt;span class="relative block icon">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+&lt;path fill="currentColor" d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/>&lt;/svg>
+&lt;/span>
+&lt;/span>
+&lt;/span>&lt;span class="px-2 text-primary-500">&amp;middot;&lt;/span>&lt;span>
+&lt;span id="likes_posts/002-macos-configuration/index.md"
+class="animate-pulse inline-block text-transparent max-h-3 rounded-full mt-[-2px] align-middle bg-neutral-300 dark:bg-neutral-400"
+title="likes">loading&lt;/span>
+&lt;span class="inline-block align-text-bottom">
+&lt;span class="relative block icon">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+&lt;path fill="currentColor" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>&lt;/svg>
+&lt;/span>
+&lt;/span>
+&lt;/span>
+&lt;/div>
+&lt;div class="flex flex-row flex-wrap items-center">
+&lt;/div>
+&lt;div class="flex flex-row flex-wrap items-center">
+&lt;span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&amp;#34;/categories/macos/&amp;#34;,'_self');">
+&lt;span class="flex" style="cursor: pointer;">
+&lt;span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+MacOS
+&lt;/span>
+&lt;/span>
+&lt;/span>
+&lt;span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&amp;#34;/tags/development/&amp;#34;,'_self');">
+&lt;span class="flex" style="cursor: pointer;">
+&lt;span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+Development
+&lt;/span>
+&lt;/span>
+&lt;/span>
+&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/a>
+&lt;/section>
+&lt;h2 class="relative group">Badge
+&lt;div id="badge" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#badge" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">badge&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">New article!
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nt">badge&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;span class="flex" style="cursor: pointer;">
+&lt;span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+New article!
+&lt;/span>
+&lt;/span>
+&lt;h2 class="relative group">Button
+&lt;div id="button" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#button" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">button&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;#button&amp;#34;&lt;/span> &lt;span class="na">target&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;_self&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Call to action
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nt">button&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;a
+class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700"
+href="#button"
+target="_self"
+role="button"
+>
+Call to action
+&lt;/a>
+&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">button&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://blowfish.page/docs/shortcodes/#icon&amp;#34;&lt;/span> &lt;span class="na">target&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;_self&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Call to action
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nt">button&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;a
+class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700"
+href="https://blowfish.page/docs/shortcodes/#icon"
+target="_self"
+role="button"
+>
+Open external links
+&lt;/a>
+&lt;h2 class="relative group">Carousel
+&lt;div id="carousel" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#carousel" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;p>&lt;code>carousel&lt;/code> is used to showcase multiple images in an interactive and visually appealing way. This allows a user to slide through multiple images while only taking up the vertical space of a single one. All images are displayed using the full width of the parent component and using one of the predefined aspect ratios of &lt;code>16:9&lt;/code>, &lt;code>21:9&lt;/code> or &lt;code>32:9&lt;/code>.&lt;/p></description></item><item><title>C++ Development in Bioinformatics</title><link>https://yangyangli.top/posts/003-build-cpp-development-env-with-htslib/</link><pubDate>Wed, 15 Jun 2022 23:17:30 -0500</pubDate><guid>https://yangyangli.top/posts/003-build-cpp-development-env-with-htslib/</guid><description>&lt;h2 class="relative group">1.1 Config Compile Environment
+&lt;div id="11-config-compile-environment" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#11-config-compile-environment" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;p>I am currently planning to develop a tool using &lt;em>C++&lt;/em> in both Linux and macOS environments.
+However, I frequently encounter obstacles in the form of lacking root access to download dependencies using &lt;code>apt-get install -y dependencies&lt;/code> directly in Ubuntu.
+Navigating the complicated dependency chain and compiling each library individually can be time-consuming, often taking a night or even a week to complete.
+One solution to this issue is to use a package manager such as &lt;strong>Conda&lt;/strong>, which is primarily used in the &lt;em>data science&lt;/em> domain.
+&lt;strong>Conda&lt;/strong> offers support for other languages such as &lt;em>C++&lt;/em>, &lt;em>Rust&lt;/em> and &lt;em>R&lt;/em> as well.
+Concrete package names may change at any time, and it&amp;rsquo;s necessary to search for the real package name.
+Therefore, &lt;strong>Conda&lt;/strong> can be useful tool for installing &lt;em>C++&lt;/em> dependencies, particularly in the bioinformatics domain.
+It&amp;rsquo;s worth mentioning that there are several other solutions available for managing &lt;em>C++&lt;/em> dependencies such as &lt;a href="https://vcpkg.io/en/index.html" target="_blank">Vcpkg&lt;/a>, &lt;a href="https://conan.io/" target="_blank">Conan&lt;/a>, and I use &lt;a href="https://github.com/cpm-cmake/CPM.cmake" target="_blank">CPM&lt;/a> as an alternative option.&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/003-build-cpp-development-env-with-htslib/featured.jpg"/></item><item><title>A Python Toolbox - Pybox</title><link>https://yangyangli.top/posts/001-a-wonderful-library-you-must-not-know/</link><pubDate>Fri, 03 Dec 2021 00:03:50 -0600</pubDate><guid>https://yangyangli.top/posts/001-a-wonderful-library-you-must-not-know/</guid><description>&lt;h2 class="relative group">0. Changes
+&lt;div id="0-changes" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#0-changes" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Add usage&lt;/li>
+&lt;/ul>
+&lt;h2 class="relative group">1. Introduction
+&lt;div id="1-introduction" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#1-introduction" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;p>I have been considering a collection of useful commands for everyday tasks, as many have requested such a tool.
+In order to make this collection as user-friendly as possible, I have decided to develop a project, which I hope will prove valuable for others as well.
+As I come across new commands that I find useful, I will continue to add them to this toolbox.
+Currently, the toolbox includes a command for downloading files from &lt;a href="https://drive.google.com/" target="_blank">Google Driver&lt;/a>, which can download both individual files and those within a folder, though downloading files within a folder requires authentication through the Google API.
+Additionally, this project, dubbed &lt;strong>Pybox&lt;/strong>, as it is based on Python, includes other features listed below.&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/001-a-wonderful-library-you-must-not-know/featured.png"/></item><item><title>PCA by Python</title><link>https://yangyangli.top/posts/010-pca-by-python/</link><pubDate>Sun, 04 Apr 2021 23:58:37 +0800</pubDate><guid>https://yangyangli.top/posts/010-pca-by-python/</guid><description>&lt;h2 class="relative group">1. Introduction
+&lt;div id="1-introduction" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#1-introduction" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;p>This article records two methods of PCA analysis using Python, and visualizes 2-dimensional results&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/010-pca-by-python/featured.png"/></item><item><title>Face Recognition in Video</title><link>https://yangyangli.top/posts/015-face-recognition-in-video/</link><pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/015-face-recognition-in-video/</guid><description>&lt;h2 class="relative group">1. 准备工作
+&lt;div id="1-%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#1-%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;p>使用&lt;strong>Python&lt;/strong>实现需求，环境需求比较严苛，所需要的主要依赖：&lt;/p>
+&lt;p>&lt;strong>Requirements&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>dlib&lt;/strong> 由 C++编写，提供了和机器学习、数值计算、图模型算法、图像处理等领域相关的一系列功能&lt;/li>
+&lt;li>&lt;strong>face-recognition&lt;/strong> 已经经过训练成熟的识别人脸的工具&lt;/li>
+&lt;li>&lt;strong>imutils&lt;/strong> 用来操作系统文件和文件夹&lt;/li>
+&lt;li>&lt;strong>Opencv&lt;/strong>是用来操作视频流，并将视频流转换格式&lt;/li>
+&lt;/ul>
+&lt;h3 class="relative group">1.1 环境搭建
+&lt;div id="11-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#11-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>通过 pip 进行安装，在使用 pip 进行安装时，应该注意切换到国内源进行下载，提高下载速度，下面分享一下当前国内的 pip 源：&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/015-face-recognition-in-video/featured.png"/></item><item><title>Nei Saitou Neighbor Joining</title><link>https://yangyangli.top/posts/008-nei-saitou-neighbor-joining/</link><pubDate>Wed, 03 Apr 2019 11:15:00 +0800</pubDate><guid>https://yangyangli.top/posts/008-nei-saitou-neighbor-joining/</guid><description>&lt;h2 class="relative group">1. Background
+&lt;div id="1-background" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#1-background" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;p>Before diving into code, the description of NJ algorithm can be found in
+&lt;figure>
+&lt;img class="my-0 rounded-md" loading="lazy" src="https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1605172209524.png" alt="This Link" />
+&lt;/figure>
+, where first column indicates parent node, and second column is its children node, the last column is the value of edge.&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/008-nei-saitou-neighbor-joining/featured.jpg"/></item><item><title>About</title><link>https://yangyangli.top/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yangyangli.top/about/</guid><description>&lt;p>Hello and welcome! I am Yangyang Li, a Ph.D. candidate in the DGP Program at Northwestern University Feinberg School of Medicine.
+I specialize in developing algorithms and deep learning methods to tackle
+challenging biological problems.&lt;/p></description></item><item><title>Recent News 🚀</title><link>https://yangyangli.top/news/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yangyangli.top/news/</guid><description>&lt;div class="lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl">
+The pulse of the present, echoing in the halls of Bytes of Life.
+&lt;/div>
+&lt;hr>
+&lt;!-- prettier-ignore-start -->
+&lt;!-- timelineItem icon="graduation-cap" header="Become Ph.D. Candidate" badge="2023-06-15" subheader="subheader" -->
+&lt;!--
+&lt;li>
+&lt;div class="flex flex-start">
+&lt;div class="bg-primary-500 dark:bg-primary-300 text-neutral-50 dark:text-neutral-700 min-w-[30px] h-8 text-2xl flex items-center justify-center rounded-full -ml-12 mt-5">
+&lt;span class="relative block icon">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+&lt;path fill="currentColor" d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/>&lt;/svg>
+&lt;/span>
+&lt;/div>
+&lt;div class="block p-6 rounded-lg shadow-2xl min-w-full ml-6 mb-10 break-words">
+&lt;div class="flex justify-between">
+&lt;h2 class="mt-0">
+Another Awesome Header
+&lt;/h2>
+&lt;h3 class="">
+&lt;span class="flex" style="cursor: pointer;">
+&lt;span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+date - present
+&lt;/span>
+&lt;/span>
+&lt;/h3>
+&lt;/div>
+&lt;h4 class="mt-0">
+Awesome Subheader
+&lt;/h4>
+&lt;div class="mb-6"> -->
+&lt;!-- &lt;ul> -->
+&lt;!-- &lt;li>Coffee&lt;/li> -->
+&lt;!-- &lt;li>Tea&lt;/li> -->
+&lt;!-- &lt;li>Milk&lt;/li> -->
+&lt;!-- &lt;/ul> -->
+&lt;!-- &lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/li>
+-->
+&lt;!--
+&lt;li>
+&lt;div class="flex flex-start">
+&lt;div class="bg-primary-500 dark:bg-primary-300 text-neutral-50 dark:text-neutral-700 min-w-[30px] h-8 text-2xl flex items-center justify-center rounded-full -ml-12 mt-5">
+&lt;span class="relative block icon">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">&lt;path fill="currentColor" d="M287.9 0C297.1 0 305.5 5.25 309.5 13.52L378.1 154.8L531.4 177.5C540.4 178.8 547.8 185.1 550.7 193.7C553.5 202.4 551.2 211.9 544.8 218.2L433.6 328.4L459.9 483.9C461.4 492.9 457.7 502.1 450.2 507.4C442.8 512.7 432.1 513.4 424.9 509.1L287.9 435.9L150.1 509.1C142.9 513.4 133.1 512.7 125.6 507.4C118.2 502.1 114.5 492.9 115.1 483.9L142.2 328.4L31.11 218.2C24.65 211.9 22.36 202.4 25.2 193.7C28.03 185.1 35.5 178.8 44.49 177.5L197.7 154.8L266.3 13.52C270.4 5.249 278.7 0 287.9 0L287.9 0zM287.9 78.95L235.4 187.2C231.9 194.3 225.1 199.3 217.3 200.5L98.98 217.9L184.9 303C190.4 308.5 192.9 316.4 191.6 324.1L171.4 443.7L276.6 387.5C283.7 383.7 292.2 383.7 299.2 387.5L404.4 443.7L384.2 324.1C382.9 316.4 385.5 308.5 391 303L476.9 217.9L358.6 200.5C350.7 199.3 343.9 194.3 340.5 187.2L287.9 78.95z"/>&lt;/svg>
+&lt;/span>
+&lt;/div>
+&lt;div class="block p-6 rounded-lg shadow-2xl min-w-full ml-6 mb-10 break-words">
+&lt;div class="flex justify-between">
+&lt;h2 class="mt-0">
+Shortcodes
+&lt;/h2>
+&lt;h3 class="">
+&lt;span class="flex" style="cursor: pointer;">
+&lt;span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+AWESOME
+&lt;/span>
+&lt;/span>
+&lt;/h3>
+&lt;/div>
+&lt;div class="mb-6"> -->
+&lt;!-- With other shortcodes -->
+&lt;!--
+&lt;div id="gallery-9ecf5364b364c93507a6f04c5a0bd2bb" class="gallery">
+-->
+&lt;!-- &lt;img src="gallery/01.jpg" class="grid-w33" /> -->
+&lt;!-- &lt;img src="gallery/02.jpg" class="grid-w33" /> -->
+&lt;!-- &lt;img src="gallery/03.jpg" class="grid-w33" /> -->
+&lt;!-- &lt;img src="gallery/04.jpg" class="grid-w33" /> -->
+&lt;!-- &lt;img src="gallery/05.jpg" class="grid-w33" /> -->
+&lt;!-- &lt;img src="gallery/06.jpg" class="grid-w33" /> -->
+&lt;!-- &lt;img src="gallery/07.jpg" class="grid-w33" /> -->
+&lt;!--
+&lt;/div> -->
+&lt;!-- &lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/li>
+-->
+&lt;ol class="border-l-2 border-primary-500 dark:border-primary-300 list-none">
+&lt;li>
+&lt;div class="flex flex-start">
+&lt;div class="bg-primary-500 dark:bg-primary-300 text-neutral-50 dark:text-neutral-700 min-w-[30px] h-8 text-2xl flex items-center justify-center rounded-full -ml-12 mt-5">
+&lt;span class="relative block icon">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+&lt;path fill="currentColor" d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"/>&lt;/svg>
+&lt;/span>
+&lt;/div>
+&lt;div class="block p-6 rounded-lg shadow-2xl min-w-full ml-6 mb-10 break-words">
+&lt;div class="flex justify-between">
+&lt;h2 class="mt-0">
+A workshop for Visualizing Data with Seaborn
+&lt;/h2>
+&lt;h3 class="">
+&lt;span class="flex" style="cursor: pointer;">
+&lt;span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+2024-09-11
+&lt;/span>
+&lt;/span>
+&lt;/h3>
+&lt;/div>
+&lt;div class="mb-6">
+&lt;a href="https://yangyangli.top/Visualizing-Data-with-Seaborn/"> &lt;img src="imgs/seaborn.png" alt="seaborn"> &lt;/a>
+&lt;a id="github-477d6754d87406b991fb4014284fc1ed" target="_blank" href="https://github.com/cauliyang/Visualizing-Data-with-Seaborn" class="cursor-pointer">
+&lt;div
+class="w-full md:w-auto pt-3 p-5 border border-neutral-200 dark:border-neutral-700 border rounded-md shadow-2xl">
+&lt;div class="flex items-center">
+&lt;span class="text-2xl text-neutral-800 dark:text-neutral" style="margin-right:10px;">
+&lt;span class="relative block icon">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">&lt;path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>&lt;/svg>
+&lt;/span>
+&lt;/span>
+&lt;div
+id="github-477d6754d87406b991fb4014284fc1ed-full_name"
+class="m-0 font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral">
+cauliyang/Visualizing-Data-with-Seaborn
+&lt;/div>
+&lt;/div>
+&lt;p id="github-477d6754d87406b991fb4014284fc1ed-description" class="m-0 mt-2 text-md text-neutral-800 dark:text-neutral">
+Seaborn is a powerful Python library that makes it easy to create informative and attractive statistical graphics. In this workshop, we’ll cover the basics of Seaborn, including how to create different types of plots, customize them, and interpret the results.
+&lt;/p></description></item></channel></rss>

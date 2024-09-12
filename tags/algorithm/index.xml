@@ -1,1 +1,74 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Algorithm on Bytes of Life</title><link>https://yangyangli.top/tags/algorithm/</link><description>Recent content in Algorithm on Bytes of Life</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>2024 &lt;a class='hover:underline hover:decoration-primary-400 hover:text-primary-500' href=https://yangyangli.top target=_blank rel='noopener noreferrer'>Yangyang Li&lt;/a></copyright><lastBuildDate>Sun, 12 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://yangyangli.top/tags/algorithm/index.xml" rel="self" type="application/rss+xml"/><item><title>Efficient Genomic Interval Search Using SIMD-Enhanced COITree</title><link>https://yangyangli.top/posts/019-efficient-genoimc-interval-search/</link><pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/019-efficient-genoimc-interval-search/</guid><description>Background # In bioinformatics, researchers frequently analyze various types of genomic data, such as DNA sequencing data, RNA sequencing data, and epigenetic data. Manipulating genomic intervals is a crucial task in comprehending the genetic basis of diseases and identifying potential therapeutic targets.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/019-efficient-genoimc-interval-search/featured.jpg"/></item><item><title>Bioinformatics Algorithm Library aka BINARY</title><link>https://yangyangli.top/projects/011-bioinformatics-algorithm-library/</link><pubDate>Mon, 26 Sep 2022 13:07:28 -0500</pubDate><guid>https://yangyangli.top/projects/011-bioinformatics-algorithm-library/</guid><description>The library is a collection of algorithms and data structures that are designed for modern C++ bioinformatics applications. You can use the library in your own projects or as a part of a larger project.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/projects/011-bioinformatics-algorithm-library/featured.png"/></item><item><title>Nei Saitou Neighbor Joining</title><link>https://yangyangli.top/posts/008-nei-saitou-neighbor-joining/</link><pubDate>Wed, 03 Apr 2019 11:15:00 +0800</pubDate><guid>https://yangyangli.top/posts/008-nei-saitou-neighbor-joining/</guid><description>1. Background # Before diving into code, the description of NJ algorithm can be found in , where first column indicates parent node, and second column is its children node, the last column is the value of edge.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/008-nei-saitou-neighbor-joining/featured.jpg"/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Algorithm on Bytes of Life</title><link>https://yangyangli.top/tags/algorithm/</link><description>Recent content in Algorithm on Bytes of Life</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>2024 &lt;a class='hover:underline hover:decoration-primary-400 hover:text-primary-500' href=https://yangyangli.top target=_blank rel='noopener noreferrer'>Yangyang Li&lt;/a></copyright><lastBuildDate>Sun, 12 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://yangyangli.top/tags/algorithm/index.xml" rel="self" type="application/rss+xml"/><item><title>Efficient Genomic Interval Search Using SIMD-Enhanced COITree</title><link>https://yangyangli.top/posts/019-efficient-genoimc-interval-search/</link><pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/019-efficient-genoimc-interval-search/</guid><description>&lt;h2 class="relative group">Background
+&lt;div id="background" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#background" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;p>In bioinformatics, researchers frequently analyze various types of genomic data, such as DNA sequencing data, RNA sequencing data, and epigenetic data.
+Manipulating genomic intervals is a crucial task in comprehending the genetic basis of diseases and identifying potential therapeutic targets.
+Genomic intervals are defined as regions that span from a starting position to an ending position and can encompass genes, regulatory elements, and other functional elements of the genome.
+One primary application of genomic interval manipulation is analyzing ChIP-seq data.
+Moreover, manipulating genomic intervals allows for the integration of ChIP-seq data with other genomic data types, such as gene expression and genetic variations.
+This integration provides a more comprehensive understanding of biological processes and their contribution to normal development or disease.
+However, integrating these data types into a single data structure can pose challenges, especially when handling large datasets.
+Cache Oblivious Interval Trees (COITree), with cache-oblivious design and efficient query algorithms, have the potential to handle and integrate multiple types of genomic data into a single data structure.
+It stores the intervals in contiguous memory and employs in-order van Emde Boas layout to enhance query performance
+&lt;span class="hugo-cite-intext"
+itemprop="citation">(&lt;span class="hugo-cite-group">
+&lt;a href="#vanemdeboas1976dec">&lt;span class="visually-hidden">Citation: &lt;/span>&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;meta itemprop="givenName" content="P.">&lt;span itemprop="familyName">Emde Boas&lt;/span>&lt;/span>,&amp;#32;&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;meta itemprop="givenName" content="R.">&lt;span itemprop="familyName">Kaas&lt;/span>&lt;/span>
+&lt;em>&amp;amp; al.&lt;/em>,&amp;#32;&lt;span itemprop="datePublished">1976&lt;/span>&lt;/a>&lt;span class="hugo-cite-citation">
+&lt;span itemscope
+itemtype="https://schema.org/Article"
+data-type="article">&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;span itemprop="familyName">Emde Boas&lt;/span>,&amp;#32;
+&lt;meta itemprop="givenName" content="P." />
+P.&lt;/span>,&amp;#32;
+&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;span itemprop="familyName">Kaas&lt;/span>,&amp;#32;
+&lt;meta itemprop="givenName" content="R." />
+R.&lt;/span>&amp;#32;&amp;amp;&amp;#32;&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;span itemprop="familyName">Zijlstra&lt;/span>,&amp;#32;
+&lt;meta itemprop="givenName" content="E." />
+E.&lt;/span>
+&amp;#32;
+(&lt;span itemprop="datePublished">1976&lt;/span>).
+&amp;#32;&lt;span itemprop="name">Design and implementation of an efficient priority queue&lt;/span>.&lt;i>
+&lt;span itemprop="about">Math. Systems Theory&lt;/span>,&amp;#32;10(1)&lt;/i>.&amp;#32;&lt;span itemprop="pagination">99–127&lt;/span>.
+&lt;a href="https://doi.org/10.1007/BF01683268"
+itemprop="identifier"
+itemtype="https://schema.org/URL">https://doi.org/10.1007/BF01683268&lt;/a>&lt;/span>
+&lt;/span>&lt;/span>)&lt;/span>
+.
+The tree is designed to optimize cache performance by reducing the number of cache misses during traversal
+&lt;span class="hugo-cite-intext"
+itemprop="citation">(&lt;span class="hugo-cite-group">
+&lt;a href="#vanemdeboas1977jun">&lt;span class="visually-hidden">Citation: &lt;/span>&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;meta itemprop="givenName" content="P.">&lt;span itemprop="familyName">Emde Boas&lt;/span>&lt;/span>,&amp;#32;&lt;span itemprop="datePublished">1977&lt;/span>&lt;/a>&lt;span class="hugo-cite-citation">
+&lt;span itemscope
+itemtype="https://schema.org/Article"
+data-type="article">&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;span itemprop="familyName">Emde Boas&lt;/span>,&amp;#32;
+&lt;meta itemprop="givenName" content="P." />
+P.&lt;/span>
+&amp;#32;
+(&lt;span itemprop="datePublished">1977&lt;/span>).
+&amp;#32;&lt;span itemprop="name">Preserving order in a forest in less than logarithmic time and linear space&lt;/span>.&lt;i>
+&lt;span itemprop="about">Inf. Process. Lett.&lt;/span>,&amp;#32;6(3)&lt;/i>.&amp;#32;&lt;span itemprop="pagination">80–82&lt;/span>.
+&lt;a href="https://doi.org/10.1016/0020-0190%2877%2990031-X"
+itemprop="identifier"
+itemtype="https://schema.org/URL">https://doi.org/10.1016/0020-0190(77)90031-X&lt;/a>&lt;/span>
+&lt;/span>&lt;/span>)&lt;/span>
+.
+However, COITree still suffer from performance bottlenecks, particularly when dealing with large datasets.
+One approach to addressing this bottleneck is to use Single Instruction Multiple Data (SIMD), which is optimized for vector operations, to improve the performance of COITree.
+Thus, I hypothesize that the approach is a viable solution for improving the speed and efficiency of genomic interval analysis.&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/019-efficient-genoimc-interval-search/featured.jpg"/></item><item><title>Bioinformatics Algorithm Library aka BINARY</title><link>https://yangyangli.top/projects/011-bioinformatics-algorithm-library/</link><pubDate>Mon, 26 Sep 2022 13:07:28 -0500</pubDate><guid>https://yangyangli.top/projects/011-bioinformatics-algorithm-library/</guid><description>&lt;p>The library is a collection of algorithms and data structures that are designed for modern C++ bioinformatics applications.
+You can use the library in your own projects or as a part of a larger project.&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/projects/011-bioinformatics-algorithm-library/featured.png"/></item><item><title>Nei Saitou Neighbor Joining</title><link>https://yangyangli.top/posts/008-nei-saitou-neighbor-joining/</link><pubDate>Wed, 03 Apr 2019 11:15:00 +0800</pubDate><guid>https://yangyangli.top/posts/008-nei-saitou-neighbor-joining/</guid><description>&lt;h2 class="relative group">1. Background
+&lt;div id="1-background" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+style="text-decoration-line: none !important;" href="#1-background" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;p>Before diving into code, the description of NJ algorithm can be found in
+&lt;figure>
+&lt;img class="my-0 rounded-md" loading="lazy" src="https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1605172209524.png" alt="This Link" />
+&lt;/figure>
+, where first column indicates parent node, and second column is its children node, the last column is the value of edge.&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/008-nei-saitou-neighbor-joining/featured.jpg"/></item></channel></rss>
