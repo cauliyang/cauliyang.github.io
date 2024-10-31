@@ -6,7 +6,6 @@ date: 2023-03-12
 featured: false
 draft: false
 # image: "https://raw.githubusercontent.com/lecepin/rust-logo/main/images/1660287876916.jpeg"
-bibFile: data/bib/019-support-arm-for-coitrees-bibliography.json
 ---
 
 {{< katex >}}
@@ -21,8 +20,8 @@ Moreover, manipulating genomic intervals allows for the integration of ChIP-seq 
 This integration provides a more comprehensive understanding of biological processes and their contribution to normal development or disease.
 However, integrating these data types into a single data structure can pose challenges, especially when handling large datasets.
 Cache Oblivious Interval Trees (COITree), with cache-oblivious design and efficient query algorithms, have the potential to handle and integrate multiple types of genomic data into a single data structure.
-It stores the intervals in contiguous memory and employs in-order van Emde Boas layout to enhance query performance {{<cite  vanEmdeBoas1976Dec >}}.
-The tree is designed to optimize cache performance by reducing the number of cache misses during traversal {{<cite  vanEmdeBoas1977Jun >}}.
+It stores the intervals in contiguous memory and employs in-order van Emde Boas layout to enhance query performance.
+The tree is designed to optimize cache performance by reducing the number of cache misses during traversal.
 However, COITree still suffer from performance bottlenecks, particularly when dealing with large datasets.
 One approach to addressing this bottleneck is to use Single Instruction Multiple Data (SIMD), which is optimized for vector operations, to improve the performance of COITree.
 Thus, I hypothesize that the approach is a viable solution for improving the speed and efficiency of genomic interval analysis.
@@ -37,13 +36,13 @@ Overall, I intend to develop optimized COITree to address a critical need in bio
 
 ## Result
 
-To evaluate the performance benefits of using neon instruction set in COITree, I will conduct bench-marking tests with and without the neon instruction set, as well as existing tools including BEDTools (Quinlan and Hall, 2010), Augmented interval list {{<cite  Feng2019Dec    >}}, and Bedtk {{<cite  Li2021May  >}}.
+To evaluate the performance benefits of using neon instruction set in COITree, I will conduct bench-marking tests with and without the neon instruction set, as well as existing tools including BEDTools (Quinlan and Hall, 2010), Augmented interval list, and Bedtk.
 The evaluation task involves interval search problem that is fundamental to genomic data analysis.
-For benchmarking data, I will use stratification BED files from the Global Alliance for Genomics and Health (GA4GH) Benchmarking {{<cite  Krusche2019May  >}}.
+For benchmarking data, I will use stratification BED files from the Global Alliance for Genomics and Health (GA4GH) Benchmarking.
 By comparing the effectiveness of COITree with neon instruction set against state-of-the-art tools, we can determine whether this approach can significantly enhance the speed and efficiency of genomic data analysis
 
 A genomic interval \\(r\\) is defined by two coordinates that represent the start and end locations of a feature on a chromosome.
-The general interval search problem is defined as follows {{<cite   Feng2019Dec >}}.
+The general interval search problem is defined as follows (Feng 2019).
 
 Given a set of \\(N\\) intervals in a \\(R = {r_1, r_2, \dots,r_N} \; for \; N \gg 1 \\), and a query interval \\( q \\), find the subset of \\( S \\) of \\( R \\) that intersect \\(q\\).
 If we define all intervals to be half-open, \\( S \\) can be represented as:
@@ -59,7 +58,7 @@ I compared the performance with and without the neon instruction set as well as 
 I query every genomic interval of dataset A on dataset B, and the total overlapping genomic intervals is 35 032 849.
 As BEDTools and bedtk provide enrich features, I used subcommand coverage of BEDTools and subcommand cov of Bedtk to find overlapping intervals.
 Other tools are designed to the problem so that I do not need to use subcommand.
-I used hyperfine {{<cite  Peter2022  >}}, which is command-line benchmarking tool, to evaluate the performance.
+I used [hyperfine](https://github.com/sharkdp/hyperfine), which is command-line benchmarking tool, to evaluate the performance.
 
 For each tool, I warmed up the tool three times before executing it ten times.
 All experiments were run on a computer with macOS 12.6.6.3 2 21G320 arm64 and 32 GB of memory.
@@ -104,4 +103,4 @@ check the [slides](https://yangyangli.top/coitree-slide.html).
 
 ## Reference
 
-{{< bibliography cited >}}
+Feng, J., Ratan, A., & Sheffield, N. C. Augmented interval list: A novel data structure for efficient genomic interval search. Bioinfomatics. 2019; 35 (23): 4907–4911. Publisher Full Text.

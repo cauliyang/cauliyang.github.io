@@ -14,7 +14,7 @@
   {{- $url = replace $url "/" "%2F" -}}
   {{- $query := querify "accept_lang" "auto" "app_id" $api_key -}}
   {{- $request := printf "https://opengraph.io/api/1.1/site/%s?%s" $url $query -}}
-  {{- $json = getJSON $request -}}
+  {{- $json = resources.GetRemote $request | transform.Unmarshal -}}
 {{- else -}}
   {{- errorf "The '%s' shortcode requires a single positional parameter, a URL. See %s" .Name .Position -}}
 {{- end -}}

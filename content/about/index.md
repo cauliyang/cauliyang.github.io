@@ -21,12 +21,20 @@ showAuthor: true
 layoutBackgroundHeaderSpace: false
 ---
 
+
+<img src="./self-crop.png" width="400" height="400" />
+
 Hello and welcome! I am Yangyang Li, a Ph.D. candidate in the DGP Program at Northwestern University Feinberg School of Medicine.
 I specialize in developing algorithms and deep learning methods to tackle
 challenging biological problems.
 
-Furthermore, I have a fervent passion for harnessing the power of programming languages, such as C++, Rust, and Python, to tackle intricate challenges in Computational Biology.
-My journey as a Ph.D. student has afforded me the privilege to engage in pioneering research projects, each of which stretches the limits of our current understanding and holds the promise to effect genuine global impact.
+I am a fourth-year Ph.D. candidate at the intersection of deep learning, algorithmic efficiency, and computational biology.
+My research harnesses cutting-edge machine learning techniques and high-performance computing to unravel complex biological
+enigmas.
+With a proven track record in developing innovative research software and data-driven solutions, I excel at translating
+intricate scientific challenges into actionable insights.
+Driven by a passion for pushing the boundaries of bioinformatics, I am poised to make significant contributions in a dynamic, research-intensive environment where I can continue to evolve as a
+scientist and innovator.
 
 Beyond my academic pursuits, I have a keen interest in keeping a finger on the pulse of the latest tech industry advancements.
 I'm always on the lookout to learn novel programming languages and refine my techniques.
