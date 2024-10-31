@@ -14,48 +14,8 @@ Moreover, manipulating genomic intervals allows for the integration of ChIP-seq 
 This integration provides a more comprehensive understanding of biological processes and their contribution to normal development or disease.
 However, integrating these data types into a single data structure can pose challenges, especially when handling large datasets.
 Cache Oblivious Interval Trees (COITree), with cache-oblivious design and efficient query algorithms, have the potential to handle and integrate multiple types of genomic data into a single data structure.
-It stores the intervals in contiguous memory and employs in-order van Emde Boas layout to enhance query performance
-&lt;span class="hugo-cite-intext"
-itemprop="citation">(&lt;span class="hugo-cite-group">
-&lt;a href="#vanemdeboas1976dec">&lt;span class="visually-hidden">Citation: &lt;/span>&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;meta itemprop="givenName" content="P.">&lt;span itemprop="familyName">Emde Boas&lt;/span>&lt;/span>,&amp;#32;&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;meta itemprop="givenName" content="R.">&lt;span itemprop="familyName">Kaas&lt;/span>&lt;/span>
-&lt;em>&amp;amp; al.&lt;/em>,&amp;#32;&lt;span itemprop="datePublished">1976&lt;/span>&lt;/a>&lt;span class="hugo-cite-citation">
-&lt;span itemscope
-itemtype="https://schema.org/Article"
-data-type="article">&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;span itemprop="familyName">Emde Boas&lt;/span>,&amp;#32;
-&lt;meta itemprop="givenName" content="P." />
-P.&lt;/span>,&amp;#32;
-&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;span itemprop="familyName">Kaas&lt;/span>,&amp;#32;
-&lt;meta itemprop="givenName" content="R." />
-R.&lt;/span>&amp;#32;&amp;amp;&amp;#32;&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;span itemprop="familyName">Zijlstra&lt;/span>,&amp;#32;
-&lt;meta itemprop="givenName" content="E." />
-E.&lt;/span>
-&amp;#32;
-(&lt;span itemprop="datePublished">1976&lt;/span>).
-&amp;#32;&lt;span itemprop="name">Design and implementation of an efficient priority queue&lt;/span>.&lt;i>
-&lt;span itemprop="about">Math. Systems Theory&lt;/span>,&amp;#32;10(1)&lt;/i>.&amp;#32;&lt;span itemprop="pagination">99–127&lt;/span>.
-&lt;a href="https://doi.org/10.1007/BF01683268"
-itemprop="identifier"
-itemtype="https://schema.org/URL">https://doi.org/10.1007/BF01683268&lt;/a>&lt;/span>
-&lt;/span>&lt;/span>)&lt;/span>
-.
-The tree is designed to optimize cache performance by reducing the number of cache misses during traversal
-&lt;span class="hugo-cite-intext"
-itemprop="citation">(&lt;span class="hugo-cite-group">
-&lt;a href="#vanemdeboas1977jun">&lt;span class="visually-hidden">Citation: &lt;/span>&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;meta itemprop="givenName" content="P.">&lt;span itemprop="familyName">Emde Boas&lt;/span>&lt;/span>,&amp;#32;&lt;span itemprop="datePublished">1977&lt;/span>&lt;/a>&lt;span class="hugo-cite-citation">
-&lt;span itemscope
-itemtype="https://schema.org/Article"
-data-type="article">&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;span itemprop="familyName">Emde Boas&lt;/span>,&amp;#32;
-&lt;meta itemprop="givenName" content="P." />
-P.&lt;/span>
-&amp;#32;
-(&lt;span itemprop="datePublished">1977&lt;/span>).
-&amp;#32;&lt;span itemprop="name">Preserving order in a forest in less than logarithmic time and linear space&lt;/span>.&lt;i>
-&lt;span itemprop="about">Inf. Process. Lett.&lt;/span>,&amp;#32;6(3)&lt;/i>.&amp;#32;&lt;span itemprop="pagination">80–82&lt;/span>.
-&lt;a href="https://doi.org/10.1016/0020-0190%2877%2990031-X"
-itemprop="identifier"
-itemtype="https://schema.org/URL">https://doi.org/10.1016/0020-0190(77)90031-X&lt;/a>&lt;/span>
-&lt;/span>&lt;/span>)&lt;/span>
-.
+It stores the intervals in contiguous memory and employs in-order van Emde Boas layout to enhance query performance.
+The tree is designed to optimize cache performance by reducing the number of cache misses during traversal.
 However, COITree still suffer from performance bottlenecks, particularly when dealing with large datasets.
 One approach to addressing this bottleneck is to use Single Instruction Multiple Data (SIMD), which is optimized for vector operations, to improve the performance of COITree.
 Thus, I hypothesize that the approach is a viable solution for improving the speed and efficiency of genomic interval analysis.&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/019-efficient-genoimc-interval-search/featured.jpg"/></item><item><title>How to Use Noodles Library in Rust</title><link>https://yangyangli.top/posts/001-rust-noodles/</link><pubDate>Sat, 04 Mar 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/001-rust-noodles/</guid><description>&lt;h2 class="relative group">1. Introduction

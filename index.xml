@@ -266,48 +266,8 @@ Moreover, manipulating genomic intervals allows for the integration of ChIP-seq 
 This integration provides a more comprehensive understanding of biological processes and their contribution to normal development or disease.
 However, integrating these data types into a single data structure can pose challenges, especially when handling large datasets.
 Cache Oblivious Interval Trees (COITree), with cache-oblivious design and efficient query algorithms, have the potential to handle and integrate multiple types of genomic data into a single data structure.
-It stores the intervals in contiguous memory and employs in-order van Emde Boas layout to enhance query performance
-&lt;span class="hugo-cite-intext"
-itemprop="citation">(&lt;span class="hugo-cite-group">
-&lt;a href="#vanemdeboas1976dec">&lt;span class="visually-hidden">Citation: &lt;/span>&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;meta itemprop="givenName" content="P.">&lt;span itemprop="familyName">Emde Boas&lt;/span>&lt;/span>,&amp;#32;&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;meta itemprop="givenName" content="R.">&lt;span itemprop="familyName">Kaas&lt;/span>&lt;/span>
-&lt;em>&amp;amp; al.&lt;/em>,&amp;#32;&lt;span itemprop="datePublished">1976&lt;/span>&lt;/a>&lt;span class="hugo-cite-citation">
-&lt;span itemscope
-itemtype="https://schema.org/Article"
-data-type="article">&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;span itemprop="familyName">Emde Boas&lt;/span>,&amp;#32;
-&lt;meta itemprop="givenName" content="P." />
-P.&lt;/span>,&amp;#32;
-&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;span itemprop="familyName">Kaas&lt;/span>,&amp;#32;
-&lt;meta itemprop="givenName" content="R." />
-R.&lt;/span>&amp;#32;&amp;amp;&amp;#32;&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;span itemprop="familyName">Zijlstra&lt;/span>,&amp;#32;
-&lt;meta itemprop="givenName" content="E." />
-E.&lt;/span>
-&amp;#32;
-(&lt;span itemprop="datePublished">1976&lt;/span>).
-&amp;#32;&lt;span itemprop="name">Design and implementation of an efficient priority queue&lt;/span>.&lt;i>
-&lt;span itemprop="about">Math. Systems Theory&lt;/span>,&amp;#32;10(1)&lt;/i>.&amp;#32;&lt;span itemprop="pagination">99–127&lt;/span>.
-&lt;a href="https://doi.org/10.1007/BF01683268"
-itemprop="identifier"
-itemtype="https://schema.org/URL">https://doi.org/10.1007/BF01683268&lt;/a>&lt;/span>
-&lt;/span>&lt;/span>)&lt;/span>
-.
-The tree is designed to optimize cache performance by reducing the number of cache misses during traversal
-&lt;span class="hugo-cite-intext"
-itemprop="citation">(&lt;span class="hugo-cite-group">
-&lt;a href="#vanemdeboas1977jun">&lt;span class="visually-hidden">Citation: &lt;/span>&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;meta itemprop="givenName" content="P.">&lt;span itemprop="familyName">Emde Boas&lt;/span>&lt;/span>,&amp;#32;&lt;span itemprop="datePublished">1977&lt;/span>&lt;/a>&lt;span class="hugo-cite-citation">
-&lt;span itemscope
-itemtype="https://schema.org/Article"
-data-type="article">&lt;span itemprop="author" itemscope itemtype="https://schema.org/Person">&lt;span itemprop="familyName">Emde Boas&lt;/span>,&amp;#32;
-&lt;meta itemprop="givenName" content="P." />
-P.&lt;/span>
-&amp;#32;
-(&lt;span itemprop="datePublished">1977&lt;/span>).
-&amp;#32;&lt;span itemprop="name">Preserving order in a forest in less than logarithmic time and linear space&lt;/span>.&lt;i>
-&lt;span itemprop="about">Inf. Process. Lett.&lt;/span>,&amp;#32;6(3)&lt;/i>.&amp;#32;&lt;span itemprop="pagination">80–82&lt;/span>.
-&lt;a href="https://doi.org/10.1016/0020-0190%2877%2990031-X"
-itemprop="identifier"
-itemtype="https://schema.org/URL">https://doi.org/10.1016/0020-0190(77)90031-X&lt;/a>&lt;/span>
-&lt;/span>&lt;/span>)&lt;/span>
-.
+It stores the intervals in contiguous memory and employs in-order van Emde Boas layout to enhance query performance.
+The tree is designed to optimize cache performance by reducing the number of cache misses during traversal.
 However, COITree still suffer from performance bottlenecks, particularly when dealing with large datasets.
 One approach to addressing this bottleneck is to use Single Instruction Multiple Data (SIMD), which is optimized for vector operations, to improve the performance of COITree.
 Thus, I hypothesize that the approach is a viable solution for improving the speed and efficiency of genomic interval analysis.&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/019-efficient-genoimc-interval-search/featured.jpg"/></item><item><title>How to Use Noodles Library in Rust</title><link>https://yangyangli.top/posts/001-rust-noodles/</link><pubDate>Sat, 04 Mar 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/001-rust-noodles/</guid><description>&lt;h2 class="relative group">1. Introduction
@@ -466,108 +426,108 @@ style="text-decoration-line: none !important;" href="#tldr" aria-label="Anchor">
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">&lt;/th>
-&lt;th style="text-align: left">&lt;/th>
-&lt;th style="text-align: left">&lt;/th>
-&lt;th style="text-align: left">&lt;/th>
+&lt;th>&lt;/th>
+&lt;th>&lt;/th>
+&lt;th>&lt;/th>
+&lt;th>&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">&lt;a href="https://github.com/alacritty/alacritty" target="_blank">alacritty&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://www.office.com/" target="_blank">office&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://github.com/davidwernhart/AlDente" target="_blank">aldente&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://fireball.studio/oneswitch" target="_blank">one switch&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://github.com/alacritty/alacritty" target="_blank">alacritty&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://www.office.com/" target="_blank">office&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://github.com/davidwernhart/AlDente" target="_blank">aldente&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://fireball.studio/oneswitch" target="_blank">one switch&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;a href="https://www.alfredapp.com/" target="_blank">alfred&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://pdfexpert.com/?utm_source=google&amp;amp;utm_medium=cpc&amp;amp;utm_campaign=brand-hp&amp;amp;utm_google-campaign=brand-hp&amp;amp;utm_content=264692671625&amp;amp;utm_term=pdf%20expert&amp;amp;gclid=Cj0KCQiAy4eNBhCaARIsAFDVtI2Mb-84Xo5XJBQWkPHxGL-G11BnR8iF65B4kGDm2huhRRUa0wJy5VMaAjoREALw_wcB" target="_blank">pdf expert&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://alt-tab-macos.netlify.app/" target="_blank">alttab&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://picgo.github.io/PicGo-Doc/en/guide/" target="_blank">picgo&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://www.alfredapp.com/" target="_blank">alfred&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://pdfexpert.com/?utm_source=google&amp;amp;utm_medium=cpc&amp;amp;utm_campaign=brand-hp&amp;amp;utm_google-campaign=brand-hp&amp;amp;utm_content=264692671625&amp;amp;utm_term=pdf%20expert&amp;amp;gclid=Cj0KCQiAy4eNBhCaARIsAFDVtI2Mb-84Xo5XJBQWkPHxGL-G11BnR8iF65B4kGDm2huhRRUa0wJy5VMaAjoREALw_wcB" target="_blank">pdf expert&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://alt-tab-macos.netlify.app/" target="_blank">alttab&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://picgo.github.io/PicGo-Doc/en/guide/" target="_blank">picgo&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;a href="https://www.macbartender.com/" target="_blank">bartender&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://www.jetbrains.com/pycharm/" target="_blank">pycharm&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://github.com/chubin/cheat.sh" target="_blank">cheat.sh&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://rectangleapp.com/" target="_blank">rectangle&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://www.macbartender.com/" target="_blank">bartender&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://www.jetbrains.com/pycharm/" target="_blank">pycharm&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://github.com/chubin/cheat.sh" target="_blank">cheat.sh&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://rectangleapp.com/" target="_blank">rectangle&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;a href="https://www.google.com/chrome/?brand=FKPE&amp;amp;geo=US&amp;amp;gclid=Cj0KCQiAy4eNBhCaARIsAFDVtI0QHFokL1RZC_foWkHv92lRIhon6vMSWCm_2Zfe6g5vrkRO-JxOwJcaAsToEALw_wcB&amp;amp;gclsrc=aw.ds" target="_blank">chrome&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://reederapp.com/" target="_blank">reeder 5&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://www.jetbrains.com/clion/" target="_blank">clion&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://www.rust-lang.org/" target="_blank">rust&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://www.google.com/chrome/?brand=FKPE&amp;amp;geo=US&amp;amp;gclid=Cj0KCQiAy4eNBhCaARIsAFDVtI0QHFokL1RZC_foWkHv92lRIhon6vMSWCm_2Zfe6g5vrkRO-JxOwJcaAsToEALw_wcB&amp;amp;gclsrc=aw.ds" target="_blank">chrome&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://reederapp.com/" target="_blank">reeder 5&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://www.jetbrains.com/clion/" target="_blank">clion&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://www.rust-lang.org/" target="_blank">rust&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;a href="https://docs.conda.io/en/latest/" target="_blank">conda&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://www.renfei.org/snippets-lab/" target="_blank">snippetslab&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://www.stclairsoft.com/DefaultFolderX/" target="_blank">default folder x&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://rogueamoeba.com/soundsource/" target="_blank">soundsource&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://docs.conda.io/en/latest/" target="_blank">conda&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://www.renfei.org/snippets-lab/" target="_blank">snippetslab&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://www.stclairsoft.com/DefaultFolderX/" target="_blank">default folder x&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://rogueamoeba.com/soundsource/" target="_blank">soundsource&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;a href="https://www.docker.com/?utm_source=google&amp;amp;utm_medium=cpc&amp;amp;utm_campaign=dockerhomepage&amp;amp;utm_content=namer&amp;amp;utm_term=dockerhomepage&amp;amp;utm_budget=growth&amp;amp;gclid=Cj0KCQiAy4eNBhCaARIsAFDVtI1yYmAI5cysoIDN2Vbhs5tplap41qP5MKKybSNbg9nTCA8oPe2yeXAaAofgEALw_wcB" target="_blank">docker&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://www.google.com/search?q=spacevim" target="_blank">spacevim&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://github.com/bootandy/dust" target="_blank">dust&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://manytricks.com/timesink/" target="_blank">time sink&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://www.docker.com/?utm_source=google&amp;amp;utm_medium=cpc&amp;amp;utm_campaign=dockerhomepage&amp;amp;utm_content=namer&amp;amp;utm_term=dockerhomepage&amp;amp;utm_budget=growth&amp;amp;gclid=Cj0KCQiAy4eNBhCaARIsAFDVtI1yYmAI5cysoIDN2Vbhs5tplap41qP5MKKybSNbg9nTCA8oPe2yeXAaAofgEALw_wcB" target="_blank">docker&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://www.google.com/search?q=spacevim" target="_blank">spacevim&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://github.com/bootandy/dust" target="_blank">dust&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://manytricks.com/timesink/" target="_blank">time sink&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;a href="https://getferdi.com/" target="_blank">ferdi&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://tldr.sh/" target="_blank">tldr&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://fishshell.com/" target="_blank">fish&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://github.com/tmux/tmux/wiki" target="_blank">tmux&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://getferdi.com/" target="_blank">ferdi&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://tldr.sh/" target="_blank">tldr&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://fishshell.com/" target="_blank">fish&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://github.com/tmux/tmux/wiki" target="_blank">tmux&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;a href="https://git-scm.com/" target="_blank">git&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://github.com/tmuxinator/tmuxinator" target="_blank">tmuxinator&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://github.com/sharkdp/hyperfine/" target="_blank">hyperfine&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://vimawesome.com/" target="_blank">vim&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://git-scm.com/" target="_blank">git&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://github.com/tmuxinator/tmuxinator" target="_blank">tmuxinator&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://github.com/sharkdp/hyperfine/" target="_blank">hyperfine&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://vimawesome.com/" target="_blank">vim&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;a href="https://github.com/meowtec/Imagine" target="_blank">imagine&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://developer.apple.com/xcode/" target="_blank">xcode&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://apps.apple.com/cn/app/ishot-%E4%BC%98%E7%A7%80%E7%9A%84%E6%88%AA%E5%9B%BE%E5%BD%95%E5%B1%8F%E5%B7%A5%E5%85%B7/id1485844094?mt=12" target="_blank">ishot&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://www.xmind.net/download/" target="_blank">xmind&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://github.com/meowtec/Imagine" target="_blank">imagine&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://developer.apple.com/xcode/" target="_blank">xcode&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://apps.apple.com/cn/app/ishot-%E4%BC%98%E7%A7%80%E7%9A%84%E6%88%AA%E5%9B%BE%E5%BD%95%E5%B1%8F%E5%B7%A5%E5%85%B7/id1485844094?mt=12" target="_blank">ishot&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://www.xmind.net/download/" target="_blank">xmind&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;a href="https://iterm2.com" target="_blank">iterm2&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://zellij.dev/documentation/introduction.html" target="_blank">zellij&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://github.com/LunarVim/LunarVim" target="_blank">lunarvim&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://zoom.us/download" target="_blank">zoom&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://iterm2.com" target="_blank">iterm2&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://zellij.dev/documentation/introduction.html" target="_blank">zellij&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://github.com/LunarVim/LunarVim" target="_blank">lunarvim&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://zoom.us/download" target="_blank">zoom&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;a href="https://apps.apple.com/us/app/magnet/id441258766?mt=12" target="_blank">magnet&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://www.zotero.org/" target="_blank">zotero&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://mamba.readthedocs.io/en/latest/" target="_blank">mamba&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://ohmyz.sh/" target="_blank">zsh&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://apps.apple.com/us/app/magnet/id441258766?mt=12" target="_blank">magnet&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://www.zotero.org/" target="_blank">zotero&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://mamba.readthedocs.io/en/latest/" target="_blank">mamba&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://ohmyz.sh/" target="_blank">zsh&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;a href="https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html" target="_blank">micromamba&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://github.com/jorgebucaran/fisher" target="_blank">fisher&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://github.com/conda-forge/miniforge/" target="_blank">miniforge&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://github.com/ouch-org/ouch" target="_blank">ouch&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html" target="_blank">micromamba&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://github.com/jorgebucaran/fisher" target="_blank">fisher&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://github.com/conda-forge/miniforge/" target="_blank">miniforge&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://github.com/ouch-org/ouch" target="_blank">ouch&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;a href="https://github.com/MonitorControl/MonitorControl" target="_blank">monitorcontrol&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://github.com/topgrade-rs/topgrade" target="_blank">topgrade&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://monodraw.helftone.com/" target="_blank">monodraw&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://github.com/imagemagick/imagemagick" target="_blank">imagemagick&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://github.com/MonitorControl/MonitorControl" target="_blank">monitorcontrol&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://github.com/topgrade-rs/topgrade" target="_blank">topgrade&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://monodraw.helftone.com/" target="_blank">monodraw&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://github.com/imagemagick/imagemagick" target="_blank">imagemagick&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;a href="https://neovim.io/" target="_blank">neovim&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://github.com/ytdl-org/youtube-dl" target="_blank">youtobe-dl&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://www.notion.so/product" target="_blank">notion&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://www.jetbrains.com" target="_blank">jetbrains&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://neovim.io/" target="_blank">neovim&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://github.com/ytdl-org/youtube-dl" target="_blank">youtobe-dl&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://www.notion.so/product" target="_blank">notion&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://www.jetbrains.com" target="_blank">jetbrains&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;a href="https://www.google.com/drive/" target="_blank">google drive&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://panic.com/transmit/" target="_blank">transmit&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://brew.sh/" target="_blank">homebrew&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://www.geeksforgeeks.org/tree-command-unixlinux/" target="_blank">tree&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://www.google.com/drive/" target="_blank">google drive&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://panic.com/transmit/" target="_blank">transmit&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://brew.sh/" target="_blank">homebrew&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://www.geeksforgeeks.org/tree-command-unixlinux/" target="_blank">tree&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;a href="https://github.com/yang991178/fluent-reader" target="_blank">fluent reader&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://wezfurlong.org/wezterm" target="_blank">wezterm&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://iina.io/" target="_blank">iina&lt;/a>&lt;/td>
-&lt;td style="text-align: left">&lt;a href="https://code.visualstudio.com/" target="_blank">vs code&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://github.com/yang991178/fluent-reader" target="_blank">fluent reader&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://wezfurlong.org/wezterm" target="_blank">wezterm&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://iina.io/" target="_blank">iina&lt;/a>&lt;/td>
+&lt;td>&lt;a href="https://code.visualstudio.com/" target="_blank">vs code&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1287,7 +1247,8 @@ style="text-decoration-line: none !important;" href="#1-background" aria-label="
 &lt;figure>
 &lt;img class="my-0 rounded-md" loading="lazy" src="https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1605172209524.png" alt="This Link" />
 &lt;/figure>
-, where first column indicates parent node, and second column is its children node, the last column is the value of edge.&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/008-nei-saitou-neighbor-joining/featured.jpg"/></item><item><title>About</title><link>https://yangyangli.top/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yangyangli.top/about/</guid><description>&lt;p>Hello and welcome! I am Yangyang Li, a Ph.D. candidate in the DGP Program at Northwestern University Feinberg School of Medicine.
+, where first column indicates parent node, and second column is its children node, the last column is the value of edge.&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/008-nei-saitou-neighbor-joining/featured.jpg"/></item><item><title>About</title><link>https://yangyangli.top/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yangyangli.top/about/</guid><description>&lt;img src="./self-crop.png" width="400" height="400" />
+&lt;p>Hello and welcome! I am Yangyang Li, a Ph.D. candidate in the DGP Program at Northwestern University Feinberg School of Medicine.
 I specialize in developing algorithms and deep learning methods to tackle
 challenging biological problems.&lt;/p></description></item><item><title>Recent News 🚀</title><link>https://yangyangli.top/news/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://yangyangli.top/news/</guid><description>&lt;div class="lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl">
 The pulse of the present, echoing in the halls of Bytes of Life.
