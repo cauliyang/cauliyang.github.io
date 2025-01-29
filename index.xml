@@ -32,11 +32,11 @@ utility or value.&lt;/p></description><media:content xmlns:media="http://search.
 class="my-0 rounded-md"
 loading="lazy"
 srcset="
-/posts/020-develop-tips/feature_hu17205809281887361296.png 330w,
-/posts/020-develop-tips/feature_hu14959671114477201062.png 660w,
-/posts/020-develop-tips/feature_hu12444768155139872382.png 1024w,
-/posts/020-develop-tips/feature_hu9056245521476489534.png 2x"
-src="https://yangyangli.top/posts/020-develop-tips/feature_hu14959671114477201062.png"
+/posts/020-develop-tips/feature_hu_29db136119a58aca.png 330w,
+/posts/020-develop-tips/feature_hu_5d6bbb4be5a0cae6.png 660w,
+/posts/020-develop-tips/feature_hu_e7d63d2200f77d92.png 1024w,
+/posts/020-develop-tips/feature_hu_1e8f95df2d35b9d.png 2x"
+src="https://yangyangli.top/posts/020-develop-tips/feature_hu_5d6bbb4be5a0cae6.png"
 alt="bg"
 />
 &lt;figcaption>my desktop snapshot&lt;/figcaption>
@@ -1025,7 +1025,7 @@ class="dark:text-neutral-300"
 >Do not forget to follow me&lt;/span>
 &lt;/div>
 &lt;hr>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">alert&lt;/span> &lt;span class="na">icon&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;fire&amp;#34;&lt;/span> &lt;span class="na">cardColor&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;#e63946&amp;#34;&lt;/span> &lt;span class="na">iconColor&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;#1d3557&amp;#34;&lt;/span> &lt;span class="na">textColor&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;#f1faee&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">alert&lt;/span> &lt;span class="na">icon&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;fire&amp;#34;&lt;/span> &lt;span class="na">cardColor&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="ni">#e63946&lt;/span>&lt;span class="s">&amp;#34;&lt;/span> &lt;span class="na">iconColor&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="ni">#1d3557&lt;/span>&lt;span class="s">&amp;#34;&lt;/span> &lt;span class="na">textColor&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="ni">#f1faee&lt;/span>&lt;span class="s">&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gs">**Warning!**&lt;/span> This action is destructive!
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nt">alert&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
@@ -1058,7 +1058,7 @@ style="text-decoration-line: none !important;" href="#article" aria-label="Ancho
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;section class="space-y-10 w-full">
 &lt;a class="flex flex-wrap article " href="https://yangyangli.top/posts/002-macos-configuration/">
-&lt;div class="w-full md:w-auto h-full thumbnail nozoom thumbnailshadow md:mr-7" style="background-image:url(/posts/002-macos-configuration/featured_hu16020680319292866216.png);">&lt;/div>
+&lt;div class="w-full md:w-auto h-full thumbnail nozoom thumbnailshadow md:mr-7" style="background-image:url(/posts/002-macos-configuration/featured_hu_40419e1b4b9b5015.png);">&lt;/div>
 &lt;div class=" mt-3 md:mt-0">
 &lt;div class="items-center text-left text-xl font-semibold">
 &lt;div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
@@ -1089,14 +1089,14 @@ title="likes">loading&lt;/span>
 &lt;div class="flex flex-row flex-wrap items-center">
 &lt;/div>
 &lt;div class="flex flex-row flex-wrap items-center">
-&lt;span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&amp;#34;/categories/macos/&amp;#34;,'_self');">
+&lt;span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&amp;#34;/categories/macos/&amp;#34;,'_self');return false;">
 &lt;span class="flex" style="cursor: pointer;">
 &lt;span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
 MacOS
 &lt;/span>
 &lt;/span>
 &lt;/span>
-&lt;span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&amp;#34;/tags/development/&amp;#34;,'_self');">
+&lt;span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&amp;#34;/tags/development/&amp;#34;,'_self');return false;">
 &lt;span class="flex" style="cursor: pointer;">
 &lt;span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
 Development
@@ -1132,7 +1132,7 @@ class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 
 style="text-decoration-line: none !important;" href="#button" aria-label="Anchor">#&lt;/a>
 &lt;/span>
 &lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">button&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;#button&amp;#34;&lt;/span> &lt;span class="na">target&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;_self&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">button&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="ni">#button&lt;/span>&lt;span class="s">&amp;#34;&lt;/span> &lt;span class="na">target&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;_self&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Call to action
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nt">button&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;a
@@ -1144,7 +1144,7 @@ role="button"
 Call to action
 &lt;/a>
 &lt;hr>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">button&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://blowfish.page/docs/shortcodes/#icon&amp;#34;&lt;/span> &lt;span class="na">target&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;_self&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">button&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://blowfish.page/docs/shortcodes/&lt;/span>&lt;span class="ni">#icon&lt;/span>&lt;span class="s">&amp;#34;&lt;/span> &lt;span class="na">target&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;_self&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Call to action
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nt">button&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;a

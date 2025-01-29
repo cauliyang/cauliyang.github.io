@@ -4,11 +4,11 @@
 class="my-0 rounded-md"
 loading="lazy"
 srcset="
-/posts/020-develop-tips/feature_hu17205809281887361296.png 330w,
-/posts/020-develop-tips/feature_hu14959671114477201062.png 660w,
-/posts/020-develop-tips/feature_hu12444768155139872382.png 1024w,
-/posts/020-develop-tips/feature_hu9056245521476489534.png 2x"
-src="https://yangyangli.top/posts/020-develop-tips/feature_hu14959671114477201062.png"
+/posts/020-develop-tips/feature_hu_29db136119a58aca.png 330w,
+/posts/020-develop-tips/feature_hu_5d6bbb4be5a0cae6.png 660w,
+/posts/020-develop-tips/feature_hu_e7d63d2200f77d92.png 1024w,
+/posts/020-develop-tips/feature_hu_1e8f95df2d35b9d.png 2x"
+src="https://yangyangli.top/posts/020-develop-tips/feature_hu_5d6bbb4be5a0cae6.png"
 alt="bg"
 />
 &lt;figcaption>my desktop snapshot&lt;/figcaption>
