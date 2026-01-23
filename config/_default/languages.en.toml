@@ -20,12 +20,12 @@ image = "img/self.jpg"
 headline = "PhD Candidate @ <a class='hover:underline hover:decoration-primary-400 hover:text-primary-500' href=https://www.feinberg.northwestern.edu target=_blank rel='noopener noreferrer'>Northwestern University</a>"
 bio = "PhD Candidate at Northwestern University"
 links = [
-    { email = "mailto:yangyang.li@Northwestern.edu" },
-    { github = "https://github.com/cauliyang" },
-    { linkedin = "https://www.linkedin.com/in/yangyang-liz5" },
-    { orcid = "https://orcid.org/0000-0001-8224-1067" },
-    { twitter = "https://twitter.com/yangyangliz5" },
-    { graduation-cap = "https://scholar.google.com/citations?user=ByWsRVMAAAAJ&hl=en" },
+  { email = "mailto:yangyang.li@Northwestern.edu" },
+  { github = "https://github.com/cauliyang" },
+  { linkedin = "https://www.linkedin.com/in/yangyang-liz5" },
+  { orcid = "https://orcid.org/0000-0001-8224-1067" },
+  { x = "https://twitter.com/yangyangliz5" },
+  { graduation-cap = "https://scholar.google.com/citations?user=ByWsRVMAAAAJ&hl=en" },
 ]
 #   links = [
 #     { email = "mailto:hello@your_domain.com" },

@@ -73,14 +73,14 @@ showAuthorsBadges = true
 showWordCount = true
 showComments = true
 sharingLinks = [
-    "linkedin",
-    "twitter",
-    "reddit",
-    "pinterest",
-    "facebook",
-    "email",
-    "whatsapp",
-    "telegram",
+  "linkedin",
+  "x",
+  "reddit",
+  "pinterest",
+  "facebook",
+  "email",
+  "whatsapp",
+  "telegram",
 ]
 
 [list]

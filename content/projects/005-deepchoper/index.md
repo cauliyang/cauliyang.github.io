@@ -1,5 +1,5 @@
 ---
-title: "A Genomic Language Model for Chimera Artifact Detection in Nanopore Direct RNA Sequencing"
+title: "Genomic Language Model Mitigates Chimera Artifacts in Nanopore Direct RNA Sequencing"
 description: "Deepchopper "
 tags: ["deep learning", "Nanopore", "Language Model"]
 date: 2024-10-31

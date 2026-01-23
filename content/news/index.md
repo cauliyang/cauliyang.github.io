@@ -15,42 +15,31 @@ The pulse of the present, echoing in the halls of Bytes of Life.
 
 <!-- prettier-ignore-start -->
 
-
-<!-- timelineItem icon="graduation-cap" header="Become Ph.D. Candidate" badge="2023-06-15" subheader="subheader" -->
-<!-- {{< timelineItem icon="code" header="Another Awesome Header" badge="date - present" subheader="Awesome Subheader" >}} -->
-
-<!-- <ul> -->
-<!--   <li>Coffee</li> -->
-<!--   <li>Tea</li> -->
-<!--   <li>Milk</li> -->
-<!-- </ul> -->
-<!-- {{< /timelineItem >}} -->
-
-<!-- {{< timelineItem icon="star" header="Shortcodes" badge="AWESOME" >}} -->
-<!-- With other shortcodes -->
-<!-- {{< gallery >}} -->
-<!-- <img src="gallery/01.jpg" class="grid-w33" /> -->
-<!-- <img src="gallery/02.jpg" class="grid-w33" /> -->
-<!-- <img src="gallery/03.jpg" class="grid-w33" /> -->
-<!-- <img src="gallery/04.jpg" class="grid-w33" /> -->
-<!-- <img src="gallery/05.jpg" class="grid-w33" /> -->
-<!-- <img src="gallery/06.jpg" class="grid-w33" /> -->
-<!-- <img src="gallery/07.jpg" class="grid-w33" /> -->
-<!-- {{< /gallery >}} -->
-<!-- {{< /timelineItem >}} -->
-
 {{< timeline >}}
+
+{{< timelineItem icon="graduation-cap" header="DeepChopper Is Published: A New Language Model" badge="2026-01-19">}}
+<img src="imgs/deepchopper.png" alt="DeepChopper">
+{{< github repo="ylab-hi/DeepChopper" >}}
+{{< /timelineItem >}}
+
+{{< timelineItem icon="graduation-cap" header="Our New Paper Is Officially Published" badge="2025-10-31">}}
+<img src="imgs/octopusv.png" alt="OctopuSV">
+{{< github repo="ylab-hi/OctopuSV" >}}
+{{< /timelineItem >}}
+
+{{< timelineItem icon="graduation-cap" header="Led a Practical Workshop on Testing in Python with Pytest" badge="2024-09-11">}}
+<a href="https://yangyangli.top/workshop_next_step_in_python_05052025/#/title-slide">  <img src="imgs/pytest.png" alt="pytest"> </a>
+{{< github repo="cauliyang/workshop_next_step_in_python_05052025" >}}
+{{< /timelineItem >}}
 
 {{< timelineItem icon="graduation-cap" header="A workshop for Visualizing Data with Seaborn" badge="2024-09-11">}}
 <a href="https://yangyangli.top/Visualizing-Data-with-Seaborn/">  <img src="imgs/seaborn.png" alt="seaborn"> </a>
 {{< github repo="cauliyang/Visualizing-Data-with-Seaborn" >}}
 {{< /timelineItem >}}
 
-
 {{< timelineItem icon="graduation-cap" header="A New Paper is Published" badge="2024-06-19">}}
 <img src="imgs/pxblat.png" alt="pxblat">
 {{< /timelineItem >}}
-
 
 {{< timelineItem icon="graduation-cap" header="Got 1st Place Award at codex interactive visualization challenge" badge="2024-04-02">}}
 <img src="imgs/codex.png" alt="data science">
@@ -79,7 +68,6 @@ The pulse of the present, echoing in the halls of Bytes of Life.
 <a href="https://meetings.cshl.edu/archivesmeetings.aspx?meet=DATA&year=22" target="_blank">Continuing Reading</a>
 {{< /timelineItem >}}
 
-
 {{< timelineItem icon="graduation-cap" header="Coauthor Paper is Published 🎉" badge="2022-10-31">}}
 <img src="imgs/scanexitron.png" alt="scanexitron">
 <a href="https://pubmed.ncbi.nlm.nih.gov/36099042" target="_blank">Continuing Reading</a>
@@ -94,11 +82,9 @@ The pulse of the present, echoing in the halls of Bytes of Life.
 <a href="https://twin-cities.umn.edu/" target="_blank">University of Minnesota</a>
 {{< /timelineItem >}}
 
-
 {{< timelineItem icon="graduation-cap" header="Master Graduation 🎉" badge="2020-06-01">}}
 <a href="https://en.cau.edu.cn" target="_blank">China Agricultural University</a>
 {{< /timelineItem >}}
-
 
 {{< /timeline >}}
 
