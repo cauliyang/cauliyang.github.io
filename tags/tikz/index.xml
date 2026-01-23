@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tikz on Bytes of Life</title><link>https://yangyangli.top/tags/tikz/</link><description>Recent content in Tikz on Bytes of Life</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>2024 &lt;a class='hover:underline hover:decoration-primary-400 hover:text-primary-500' href=https://yangyangli.top target=_blank rel='noopener noreferrer'>Yangyang Li&lt;/a></copyright><lastBuildDate>Fri, 02 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://yangyangli.top/tags/tikz/index.xml" rel="self" type="application/rss+xml"/><item><title>TikZ-Learning Journey</title><link>https://yangyangli.top/latex/020-tikz-learn-jouney/</link><pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/latex/020-tikz-learn-jouney/</guid><description>&lt;h2 class="relative group">Overview
-&lt;div id="overview" class="anchor">&lt;/div>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tikz on Bytes of Life</title><link>https://yangyangli.top/tags/tikz/</link><description>Recent content in Tikz on Bytes of Life</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>2026 &lt;a class='hover:underline hover:decoration-primary-400 hover:text-primary-500' href=https://yangyangli.top target=_blank rel='noopener noreferrer'&gt;Yangyang Li&lt;/a&gt;</copyright><lastBuildDate>Fri, 02 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://yangyangli.top/tags/tikz/index.xml" rel="self" type="application/rss+xml"/><item><title>TikZ-Learning Journey</title><link>https://yangyangli.top/latex/020-tikz-learn-jouney/</link><pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/latex/020-tikz-learn-jouney/</guid><description>&lt;h2 class="relative group"&gt;Overview
+&lt;div id="overview" class="anchor"&gt;&lt;/div&gt;
 &lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-style="text-decoration-line: none !important;" href="#overview" aria-label="Anchor">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;script type="text/javascript" src= '/js/pdf-js/build/pdf.js'>&lt;/script>
-&lt;style>
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#overview" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h2&gt;
+&lt;script type="text/javascript" src= '/js/pdf-js/build/pdf.js'&gt;&lt;/script&gt;
+&lt;style&gt;
 #embed-pdf-container {
 position: relative;
 width: 100%;
@@ -73,31 +72,31 @@ to { -webkit-transform: rotate(360deg); }
 @-webkit-keyframes spin {
 to { -webkit-transform: rotate(360deg); }
 }
-&lt;/style>&lt;div class="embed-pdf-container" id="embed-pdf-container-20111f94">
-&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-20111f94">
-&lt;div class="pdf-loading" id="pdf-loading-20111f94">&lt;/div>
-&lt;/div>
-&lt;div id="overlayText">
-&lt;a href="./gallery/tikz.pdf" aria-label="Download" download>
-&lt;svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-&lt;path d="M9 13c.3 0 .5-.1.7-.3L15.4 7 14 5.6l-4 4V1H8v8.6l-4-4L2.6 7l5.7 5.7c.2.2.4.3.7.3zm-7 2h14v2H2z" />
-&lt;/svg>
-&lt;/a>
-&lt;/div>
-&lt;canvas class="pdf-canvas" id="pdf-canvas-20111f94">&lt;/canvas>
-&lt;/div>
-&lt;div class="pdf-paginator" id="pdf-paginator-20111f94">
-&lt;button id="pdf-prev-20111f94">Previous&lt;/button>
-&lt;button id="pdf-next-20111f94">Next&lt;/button> &amp;nbsp; &amp;nbsp;
-&lt;span>
-&lt;span class="pdf-pagenum" id="pdf-pagenum-20111f94">&lt;/span> / &lt;span class="pdf-pagecount" id="pdf-pagecount-20111f94">&lt;/span>
-&lt;/span>
-&lt;a class="pdf-source" id="pdf-source-20111f94" href="./gallery/tikz.pdf">[pdf]&lt;/a>
-&lt;/div>
-&lt;noscript>
-View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-20111f94" href="./gallery/tikz.pdf">here&lt;/a>.
-&lt;/noscript>
-&lt;script type="text/javascript">
+&lt;/style&gt;&lt;div class="embed-pdf-container" id="embed-pdf-container-20111f94"&gt;
+&lt;div class="pdf-loadingWrapper" id="pdf-loadingWrapper-20111f94"&gt;
+&lt;div class="pdf-loading" id="pdf-loading-20111f94"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="overlayText"&gt;
+&lt;a href="./gallery/tikz.pdf" aria-label="Download" download&gt;
+&lt;svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"&gt;
+&lt;path d="M9 13c.3 0 .5-.1.7-.3L15.4 7 14 5.6l-4 4V1H8v8.6l-4-4L2.6 7l5.7 5.7c.2.2.4.3.7.3zm-7 2h14v2H2z" /&gt;
+&lt;/svg&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;canvas class="pdf-canvas" id="pdf-canvas-20111f94"&gt;&lt;/canvas&gt;
+&lt;/div&gt;
+&lt;div class="pdf-paginator" id="pdf-paginator-20111f94"&gt;
+&lt;button id="pdf-prev-20111f94"&gt;Previous&lt;/button&gt;
+&lt;button id="pdf-next-20111f94"&gt;Next&lt;/button&gt; &amp;nbsp; &amp;nbsp;
+&lt;span&gt;
+&lt;span class="pdf-pagenum" id="pdf-pagenum-20111f94"&gt;&lt;/span&gt; / &lt;span class="pdf-pagecount" id="pdf-pagecount-20111f94"&gt;&lt;/span&gt;
+&lt;/span&gt;
+&lt;a class="pdf-source" id="pdf-source-20111f94" href="./gallery/tikz.pdf"&gt;[pdf]&lt;/a&gt;
+&lt;/div&gt;
+&lt;noscript&gt;
+View the PDF file &lt;a class="pdf-source" id="pdf-source-noscript-20111f94" href="./gallery/tikz.pdf"&gt;here&lt;/a&gt;.
+&lt;/noscript&gt;
+&lt;script type="text/javascript"&gt;
 (function(){
 var url = '.\/gallery\/tikz.pdf';
 var hidePaginator = "true" === "true";
@@ -168,7 +167,7 @@ queueRenderPage(pageNum);
 }
 document.getElementById('pdf-prev-20111f94').addEventListener('click', onPrevPage);
 function onNextPage() {
-if (pageNum >= pdfDoc.numPages) {
+if (pageNum &gt;= pdfDoc.numPages) {
 return;
 }
 pageNum++;
@@ -179,21 +178,20 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
 pdfDoc = pdfDoc_;
 var numPages = pdfDoc.numPages;
 document.getElementById('pdf-pagecount-20111f94').textContent = numPages;
-if(pageNum > numPages) {
+if(pageNum &gt; numPages) {
 pageNum = numPages
 }
 renderPage(pageNum);
 });
 })();
-&lt;/script>
-&lt;h2 class="relative group">Why
-&lt;div id="why" class="anchor">&lt;/div>
+&lt;/script&gt;
+&lt;h2 class="relative group"&gt;Why
+&lt;div id="why" class="anchor"&gt;&lt;/div&gt;
 &lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-style="text-decoration-line: none !important;" href="#why" aria-label="Anchor">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>Welcome to &amp;lsquo;My TikZ-Learning Journey&amp;rsquo;, a space where I document my exploration with the wonderful TikZ library in LaTeX.
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#why" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h2&gt;
+&lt;p&gt;Welcome to &amp;lsquo;My TikZ-Learning Journey&amp;rsquo;, a space where I document my exploration with the wonderful TikZ library in LaTeX.
 LaTeX is a typesetting system used widely in academia and industries for the production of scientific and technical documents.
-Of its many features, the one I&amp;rsquo;ve recently been fascinated with is the TikZ library - a versatile package for crafting detailed and professional-grade diagrams.&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/latex/020-tikz-learn-jouney/featured.jpg"/></item></channel></rss>
+Of its many features, the one I&amp;rsquo;ve recently been fascinated with is the TikZ library - a versatile package for crafting detailed and professional-grade diagrams.&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/latex/020-tikz-learn-jouney/featured.jpg"/></item></channel></rss>

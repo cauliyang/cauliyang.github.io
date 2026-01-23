@@ -1,27 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Computer Vision on Bytes of Life</title><link>https://yangyangli.top/tags/computer-vision/</link><description>Recent content in Computer Vision on Bytes of Life</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>2024 &lt;a class='hover:underline hover:decoration-primary-400 hover:text-primary-500' href=https://yangyangli.top target=_blank rel='noopener noreferrer'>Yangyang Li&lt;/a></copyright><lastBuildDate>Thu, 20 Jun 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://yangyangli.top/tags/computer-vision/index.xml" rel="self" type="application/rss+xml"/><item><title>Face Recognition in Video</title><link>https://yangyangli.top/posts/015-face-recognition-in-video/</link><pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/015-face-recognition-in-video/</guid><description>&lt;h2 class="relative group">1. 准备工作
-&lt;div id="1-%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C" class="anchor">&lt;/div>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Computer Vision on Bytes of Life</title><link>https://yangyangli.top/tags/computer-vision/</link><description>Recent content in Computer Vision on Bytes of Life</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>2026 &lt;a class='hover:underline hover:decoration-primary-400 hover:text-primary-500' href=https://yangyangli.top target=_blank rel='noopener noreferrer'&gt;Yangyang Li&lt;/a&gt;</copyright><lastBuildDate>Thu, 20 Jun 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://yangyangli.top/tags/computer-vision/index.xml" rel="self" type="application/rss+xml"/><item><title>Face Recognition in Video</title><link>https://yangyangli.top/posts/015-face-recognition-in-video/</link><pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/015-face-recognition-in-video/</guid><description>&lt;h2 class="relative group"&gt;1. 准备工作
+&lt;div id="1-准备工作" class="anchor"&gt;&lt;/div&gt;
 &lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-style="text-decoration-line: none !important;" href="#1-%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C" aria-label="Anchor">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>使用&lt;strong>Python&lt;/strong>实现需求，环境需求比较严苛，所需要的主要依赖：&lt;/p>
-&lt;p>&lt;strong>Requirements&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>dlib&lt;/strong> 由 C++编写，提供了和机器学习、数值计算、图模型算法、图像处理等领域相关的一系列功能&lt;/li>
-&lt;li>&lt;strong>face-recognition&lt;/strong> 已经经过训练成熟的识别人脸的工具&lt;/li>
-&lt;li>&lt;strong>imutils&lt;/strong> 用来操作系统文件和文件夹&lt;/li>
-&lt;li>&lt;strong>Opencv&lt;/strong>是用来操作视频流，并将视频流转换格式&lt;/li>
-&lt;/ul>
-&lt;h3 class="relative group">1.1 环境搭建
-&lt;div id="11-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA" class="anchor">&lt;/div>
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#1-%e5%87%86%e5%a4%87%e5%b7%a5%e4%bd%9c" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h2&gt;
+&lt;p&gt;使用&lt;strong&gt;Python&lt;/strong&gt;实现需求，环境需求比较严苛，所需要的主要依赖：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Requirements&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;dlib&lt;/strong&gt; 由 C++编写，提供了和机器学习、数值计算、图模型算法、图像处理等领域相关的一系列功能&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;face-recognition&lt;/strong&gt; 已经经过训练成熟的识别人脸的工具&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;imutils&lt;/strong&gt; 用来操作系统文件和文件夹&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Opencv&lt;/strong&gt;是用来操作视频流，并将视频流转换格式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 class="relative group"&gt;1.1 环境搭建
+&lt;div id="11-环境搭建" class="anchor"&gt;&lt;/div&gt;
 &lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-style="text-decoration-line: none !important;" href="#11-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA" aria-label="Anchor">#&lt;/a>
-&lt;/span>
-&lt;/h3>
-&lt;ol>
-&lt;li>
-&lt;p>通过 pip 进行安装，在使用 pip 进行安装时，应该注意切换到国内源进行下载，提高下载速度，下面分享一下当前国内的 pip 源：&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/015-face-recognition-in-video/featured.png"/></item></channel></rss>
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#11-%e7%8e%af%e5%a2%83%e6%90%ad%e5%bb%ba" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;通过 pip 进行安装，在使用 pip 进行安装时，应该注意切换到国内源进行下载，提高下载速度，下面分享一下当前国内的 pip 源：&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/015-face-recognition-in-video/featured.png"/></item></channel></rss>

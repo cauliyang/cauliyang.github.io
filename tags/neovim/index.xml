@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Neovim on Bytes of Life</title><link>https://yangyangli.top/tags/neovim/</link><description>Recent content in Neovim on Bytes of Life</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>2024 &lt;a class='hover:underline hover:decoration-primary-400 hover:text-primary-500' href=https://yangyangli.top target=_blank rel='noopener noreferrer'>Yangyang Li&lt;/a></copyright><lastBuildDate>Wed, 21 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yangyangli.top/tags/neovim/index.xml" rel="self" type="application/rss+xml"/><item><title>Collections of Amazing Vim Tips</title><link>https://yangyangli.top/pde/000-nvim-tips/</link><pubDate>Wed, 21 Dec 2022 00:00:00 +0000</pubDate><guid>https://yangyangli.top/pde/000-nvim-tips/</guid><description>&lt;h2 class="relative group">Why
-&lt;div id="why" class="anchor">&lt;/div>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Neovim on Bytes of Life</title><link>https://yangyangli.top/tags/neovim/</link><description>Recent content in Neovim on Bytes of Life</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>2026 &lt;a class='hover:underline hover:decoration-primary-400 hover:text-primary-500' href=https://yangyangli.top target=_blank rel='noopener noreferrer'&gt;Yangyang Li&lt;/a&gt;</copyright><lastBuildDate>Wed, 21 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://yangyangli.top/tags/neovim/index.xml" rel="self" type="application/rss+xml"/><item><title>Collections of Amazing Vim Tips</title><link>https://yangyangli.top/pde/000-nvim-tips/</link><pubDate>Wed, 21 Dec 2022 00:00:00 +0000</pubDate><guid>https://yangyangli.top/pde/000-nvim-tips/</guid><description>&lt;h2 class="relative group"&gt;Why
+&lt;div id="why" class="anchor"&gt;&lt;/div&gt;
 &lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-style="text-decoration-line: none !important;" href="#why" aria-label="Anchor">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>This blog will evolve to including more valuable content.
-Using &lt;code>nvim&lt;/code> tag to filter more content about nvim and others.&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/pde/000-nvim-tips/featured.jpg"/></item></channel></rss>
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#why" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h2&gt;
+&lt;p&gt;This blog will evolve to including more valuable content.
+Using &lt;code&gt;nvim&lt;/code&gt; tag to filter more content about nvim and others.&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/pde/000-nvim-tips/featured.jpg"/></item></channel></rss>
