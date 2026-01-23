@@ -1,11 +1,11 @@
 ---
 title: "About"
-description: "Recipes, guides, and tutorials for Blowfish"
+description: "Learn more about Yangyang Li - PhD candidate, AI researcher, and computational biologist"
 draft: false
 
 showDate: false
 showDateUpdated: false
-showHeadingAnchors: false
+showHeadingAnchors: true
 showPagination: false
 showReadingTime: false
 showTableOfContents: true
@@ -21,14 +21,33 @@ showAuthor: true
 layoutBackgroundHeaderSpace: false
 ---
 
-<img src="./self-crop.png" width="400" height="400" />
+<img src="./self-crop.png" width="400" height="400" alt="Yangyang Li" />
 
-Hello! I’m Yangyang Li, a fifth-year Ph.D. candidate in the DGP Program at the Northwestern University Feinberg School of Medicine, approaching graduation and actively exploring my next opportunity. I study AI for health, with a focus on developing efficient algorithms and deep learning methods for challenging problems in computational biology.
+## About Me
 
-My work sits at the intersection of deep learning, high-performance computing, and bioinformatics, where I build research software and data-driven solutions to translate complex biological data into actionable insights.
+Hello! I'm **Yangyang Li**, a fifth-year Ph.D. candidate in the DGP Program at Northwestern University Feinberg School of Medicine. As I approach graduation, I'm actively exploring opportunities where I can apply my expertise in AI and computational biology to solve real-world challenges.
 
-This website is a space where I share my experiences, ideas, and resources in programming, deep learning, and AI-driven biomedical research.
+## Research Focus
 
-A cup of coffee will support me to insist sharing :smile:
+My research sits at the intersection of:
+- **Deep Learning** - Developing novel neural network architectures for biological data analysis
+- **High-Performance Computing** - Building scalable algorithms for large-scale genomic datasets
+- **Bioinformatics** - Creating research software that translates complex biological data into actionable insights
 
-[![](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/yangyangli/donate)
+I specialize in developing efficient algorithms and deep learning methods for challenging problems in computational biology, particularly in genomic interval analysis and AI-driven biomedical research.
+
+## This Blog
+
+This website serves as a platform where I share:
+- Technical tutorials and guides on AI, programming, and bioinformatics
+- Research insights and computational methods
+- Development resources and best practices
+- Learning experiences in deep learning and software engineering
+
+Whether you're a researcher, developer, or student, I hope you find valuable resources here.
+
+## Support My Work
+
+If you find my content helpful, consider supporting my work. Your contribution helps me continue creating and sharing quality content.
+
+[![Donate via Liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/yangyangli/donate)

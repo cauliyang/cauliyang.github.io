@@ -38,7 +38,7 @@ showScrollToTop = true
 layout = "background"            # valid options: page, profile, hero, card, background, custom
 homepageImage = "img/berend.jpg" # used in: hero, and card
 showRecent = true
-showRecentItems = 15
+showRecentItems = 10
 showMoreLink = true
 showMoreLinkDest = "/posts"
 cardView = true
@@ -46,7 +46,7 @@ cardViewScreenWidth = false
 layoutBackgroundBlur = true      # only used when layout equals background
 
 [article]
-showDate = false
+showDate = true
 showViews = true
 showLikes = true
 showDateUpdated = true
@@ -67,7 +67,7 @@ invertPagination = false
 showReadingTime = true
 showTableOfContents = true
 showRelatedContent = true
-relatedContentLimit = 3
+relatedContentLimit = 5
 showTaxonomies = true
 showAuthorsBadges = true
 showWordCount = true

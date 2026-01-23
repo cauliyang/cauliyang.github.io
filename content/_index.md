@@ -1,15 +1,14 @@
 ---
-title: "Welcome to my blog!"
-description: "This is a demo of adding content to the homepage."
+title: "Bytes of Life"
+description: "Exploring AI, bioinformatics, and computational biology through code and research"
 ---
 
-<!-- In the symphony of code, each byte has its melody, each algorithm its rhythm. -->
 <!-- prettier-ignore-start -->
 {{< typeit
   tag=h3
   lifeLike=true
   speed=40
 >}}
-In the algorithm of life, continuous learning is the only constant.
+Where algorithms meet biology, and code brings insights to life.
 {{< /typeit >}}
 <!-- prettier-ignore-end -->

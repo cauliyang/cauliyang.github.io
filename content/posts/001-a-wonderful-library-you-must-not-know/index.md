@@ -1,31 +1,39 @@
 ---
-title: A Python Toolbox - Pybox
-description: A toolbox including a batch of useful commands for annoying tasks.
-tags: ["Develop"]
+title: "Pybox: A Python Toolbox for Common Development Tasks"
+description: A collection of useful command-line utilities to streamline everyday development workflows.
+tags: ["Python", "Development", "CLI", "Tools"]
 categories: ["Python"]
 date: 2021-12-03T00:03:50-06:00
 featured: false
 draft: false
-# image: "https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/logo.png"
 heroStyle: thumbAndBackground
 ---
 
-## 0. Changes
+## Introduction
 
-- [x] Add usage
+Have you ever found yourself repeatedly searching for commands to download files from Google Drive or send messages to Slack? I created **Pybox** to solve this problem - a Python-based command-line toolbox that consolidates useful utilities for common development tasks.
 
-## 1. Introduction
+This project continues to evolve as I discover new commands worth sharing. Current features include:
+- Downloading files from Google Drive (both individual files and entire folders)
+- Sending messages to Slack channels
+- Asynchronous file downloads
+- And more utilities being added regularly
 
-I have been considering a collection of useful commands for everyday tasks, as many have requested such a tool.
-In order to make this collection as user-friendly as possible, I have decided to develop a project, which I hope will prove valuable for others as well.
-As I come across new commands that I find useful, I will continue to add them to this toolbox.
-Currently, the toolbox includes a command for downloading files from [Google Driver], which can download both individual files and those within a folder, though downloading files within a folder requires authentication through the Google API.
-Additionally, this project, dubbed **Pybox**, as it is based on Python, includes other features listed below.
+**Note:** Downloading files from Google Drive folders requires authentication through the Google API.
 
-## 2. Installation
+## Installation
 
-The library is available on [pypi] so that you can install it with `pip` or `pip3` by typing `pip install pyboxes`.
-I also have plan to publish this library on [Conda] so that you can install it with `conda install pyboxes`.
+Pybox is available on PyPI for easy installation:
+
+```bash
+pip install pyboxes
+```
+
+Future plans include publishing to Conda for alternative installation:
+
+```bash
+conda install pyboxes  # Coming soon
+```
 
 ## 3. Usage
 

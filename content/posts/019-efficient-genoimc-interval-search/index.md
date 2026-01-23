@@ -1,11 +1,10 @@
 ---
 title: Efficient Genomic Interval Search Using SIMD-Enhanced COITree
-description: Fast implementation of intervel tree.
-tags: ["Rust", "Algorithm", "Bioinformatics"]
+description: High-performance interval tree implementation leveraging SIMD instructions for faster genomic data analysis.
+tags: ["Rust", "Algorithm", "Bioinformatics", "Performance"]
 date: 2023-03-12
-featured: false
+featured: true
 draft: false
-# image: "https://raw.githubusercontent.com/lecepin/rust-logo/main/images/1660287876916.jpeg"
 ---
 
 {{< katex >}}
@@ -26,43 +25,43 @@ However, COITree still suffer from performance bottlenecks, particularly when de
 One approach to addressing this bottleneck is to use Single Instruction Multiple Data (SIMD), which is optimized for vector operations, to improve the performance of COITree.
 Thus, I hypothesize that the approach is a viable solution for improving the speed and efficiency of genomic interval analysis.
 
-## How transfer avx2 to neon
+## Transitioning from AVX2 to NEON
 
-Neon instruction set is a specialized instruction set available in arm64 architecture that enables Single Instruction Multiple Data (SIMD) processing.
-It facilitates executing a single instruction on multiple pieces of data simultaneously, resulting in a significant performance improvement.
+The NEON instruction set is a specialized SIMD instruction set available in ARM64 architecture that enables Single Instruction Multiple Data processing.
+It facilitates executing a single instruction on multiple pieces of data simultaneously, resulting in significant performance improvements.
 This feature enables more accurate and comprehensive analyses of large-scale genomic data, leading to novel insights into the genetic basis of diseases and the development of more effective treatments.
-Furthermore, it can reduce the need for computational resources, which is especially important in processing large datasets.
-Overall, I intend to develop optimized COITree to address a critical need in bioinformatics for faster and more efficient methods of analyzing gnomic data.
+Furthermore, it reduces computational resource requirements, which is especially important when processing large datasets.
+By developing an optimized COITree implementation, we address a critical need in bioinformatics for faster and more efficient methods of analyzing genomic data.
 
-## Result
+## Results
 
-To evaluate the performance benefits of using neon instruction set in COITree, I will conduct bench-marking tests with and without the neon instruction set, as well as existing tools including BEDTools (Quinlan and Hall, 2010), Augmented interval list, and Bedtk.
-The evaluation task involves interval search problem that is fundamental to genomic data analysis.
-For benchmarking data, I will use stratification BED files from the Global Alliance for Genomics and Health (GA4GH) Benchmarking.
-By comparing the effectiveness of COITree with neon instruction set against state-of-the-art tools, we can determine whether this approach can significantly enhance the speed and efficiency of genomic data analysis
+To evaluate the performance benefits of using the NEON instruction set in COITree, I conducted benchmarking tests with and without NEON, as well as comparisons with existing tools including BEDTools (Quinlan and Hall, 2010), Augmented Interval List, and Bedtk.
+The evaluation task involves the interval search problem, which is fundamental to genomic data analysis.
+For benchmarking data, I used stratification BED files from the Global Alliance for Genomics and Health (GA4GH) Benchmarking.
+By comparing the effectiveness of COITree with NEON instructions against state-of-the-art tools, we can determine whether this approach significantly enhances the speed and efficiency of genomic data analysis.
 
 A genomic interval \\(r\\) is defined by two coordinates that represent the start and end locations of a feature on a chromosome.
-The general interval search problem is defined as follows (Feng 2019).
+The general interval search problem is defined as follows (Feng, 2019):
 
-Given a set of \\(N\\) intervals in a \\(R = {r_1, r_2, \dots,r_N} \; for \; N \gg 1 \\), and a query interval \\( q \\), find the subset of \\( S \\) of \\( R \\) that intersect \\(q\\).
-If we define all intervals to be half-open, \\( S \\) can be represented as:
+Given a set of \\(N\\) intervals \\(R = \\{r_1, r_2, \dots, r_N\\}\\) where \\(N \gg 1\\), and a query interval \\(q\\), find the subset \\(S\\) of \\(R\\) that intersects \\(q\\).
+If we define all intervals to be half-open, \\(S\\) can be represented as:
 
 $$
         S(q) = \\{ r \in  R \\;| \\; (r.start < q.end \wedge r.end > q.start)\\}
 $$
 
-I have implemented the optimized COITree in Rust.
-To evaluate its performance, I used two genomic interval datasets A and B from GA4GH.
-Dataset A and B contain 4816112 and 44426501 genomic intervals, respectively.
-I compared the performance with and without the neon instruction set as well as existing tools including BEDTools (v2.30.0), Augmented interval list (v0.1.1), and Bedtk (v0.0-r25dirty).
-I query every genomic interval of dataset A on dataset B, and the total overlapping genomic intervals is 35 032 849.
-As BEDTools and bedtk provide enrich features, I used subcommand coverage of BEDTools and subcommand cov of Bedtk to find overlapping intervals.
-Other tools are designed to the problem so that I do not need to use subcommand.
-I used [hyperfine](https://github.com/sharkdp/hyperfine), which is command-line benchmarking tool, to evaluate the performance.
+I implemented the optimized COITree in Rust.
+To evaluate its performance, I used two genomic interval datasets (A and B) from GA4GH.
+Datasets A and B contain 4,816,112 and 44,426,501 genomic intervals, respectively.
+I compared the performance with and without NEON instructions, as well as against existing tools including BEDTools (v2.30.0), Augmented Interval List (v0.1.1), and Bedtk (v0.0-r25dirty).
+I queried every genomic interval from dataset A against dataset B, resulting in a total of 35,032,849 overlapping genomic intervals.
+Since BEDTools and Bedtk provide enriched features, I used the `coverage` subcommand of BEDTools and the `cov` subcommand of Bedtk to find overlapping intervals.
+Other tools are specifically designed for this problem, so no subcommands were required.
+I used [hyperfine](https://github.com/sharkdp/hyperfine), a command-line benchmarking tool, to evaluate the performance.
 
-For each tool, I warmed up the tool three times before executing it ten times.
-All experiments were run on a computer with macOS 12.6.6.3 2 21G320 arm64 and 32 GB of memory.
-In the case of sorted datasets, the optimized COITree outperformed all other tools, as shown in Table 1.
+For each tool, I performed three warm-up runs before executing it ten times.
+All experiments were run on a computer with macOS 12.6 (ARM64 architecture) and 32 GB of memory.
+For sorted datasets, the optimized COITree outperformed all other tools, as shown in Table 1.
 
 Table 1: Runtime of tools on the sorted dataset
 
@@ -84,23 +83,24 @@ Table 2: Runtime of tools on the unsorted dataset
 | bedtk cov                 | 7.11     | 6.97    | 7.18    | 1.30     |
 | bedtools coverage -counts | 256.08   | 244.48  | 276.65  | 46.88    |
 
-Since sorted datasets reduce the complexity of the problem, we may not observe a relatively significant speedup.
+Since sorted datasets reduce the complexity of the problem, significant speedups may not be apparent.
 Therefore, I shuffled interval dataset B and repeated the experiment.
-As shown in Table 2, the optimized COITree demonstrated the best performance, and was about 46 times faster than BEDTools.
-Our results demonstrate a substantial performance improvement when using the Neon instruction set, especially on unsorted datasets.
-The tests also showed that the performance gain was particularly noticeable when working with large datasets.
+As shown in Table 2, the optimized COITree demonstrated the best performance, achieving approximately 46× speedup compared to BEDTools.
+These results demonstrate substantial performance improvements when using the NEON instruction set, especially on unsorted datasets.
+The tests also showed that performance gains were particularly noticeable when working with large datasets.
 
-In conclusion, incorporating SIMD in COITree can significantly enhance its performance.
-This strategy can also be applied to other data structures, providing a way to optimize performance.
-By leveraging the power of specialized instruction sets such as Neon, we can achieve more efficient and performant algorithms.
-The optimized COITree will empower researchers to mine genomics data more ergonomically and efficiently.
-The code for optimized implementation in Rust is freely available.
+## Conclusion
+
+Incorporating SIMD instructions in COITree significantly enhances its performance.
+This optimization strategy can be applied to other data structures, providing a general approach to performance improvement.
+By leveraging specialized instruction sets such as NEON, we can achieve more efficient and performant algorithms for genomic data analysis.
+The optimized COITree empowers researchers to analyze genomic data more efficiently and effectively.
+The complete implementation in Rust is freely available as open source.
 
 {{< github repo="cauliyang/coitrees"  >}}
 
-I also gave a presentation for the work if you are interested in that please
-check the [slides](https://yangyangli.top/coitree-slide.html).
+For more details, check out my [presentation slides](https://yangyangli.top/coitree-slide.html) on this work.
 
-## Reference
+## References
 
-Feng, J., Ratan, A., & Sheffield, N. C. Augmented interval list: A novel data structure for efficient genomic interval search. Bioinfomatics. 2019; 35 (23): 4907–4911. Publisher Full Text.
+Feng, J., Ratan, A., & Sheffield, N. C. (2019). Augmented interval list: A novel data structure for efficient genomic interval search. *Bioinformatics*, 35(23), 4907–4911.
