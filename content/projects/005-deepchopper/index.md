@@ -5,4 +5,6 @@ tags: ["Deep Learning", "Nanopore", "Language Model", "Bioinformatics"]
 date: 2024-10-31
 featured: true
 externalUrl: "https://ylab-hi.github.io/DeepChopper/"
+aliases:
+  - /projects/005-deepchoper/
 ---

@@ -155,6 +155,6 @@ DeepChopper is open source. If you sequence dRNA-seq data, RNA002 or RNA004, the
 
 - **GitHub:** [github.com/ylab-hi/DeepChopper](https://github.com/ylab-hi/DeepChopper)
 - **Documentation:** [ylab-hi.github.io/DeepChopper](https://ylab-hi.github.io/DeepChopper/)
-- **Project page on this site:** [DeepChopper project](/projects/005-deepchoper/)
+- **Project page on this site:** [DeepChopper project](/projects/005-deepchopper/)
 
 If you find adapter-bridged chimeras in your own data, I'd love to hear about it. The systematic story is only a few cell lines deep right now, and every new dataset adds to the picture of how dRNA-seq actually behaves in the wild.
