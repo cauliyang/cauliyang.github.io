@@ -1,6 +1,7 @@
 ---
 title: Best Practices for Decent Python Project
-tags: ["Develop"]
+description: A checklist of the things you should not skip when turning a Python script into a real library, from project layout to CI and publishing.
+tags: ["Python", "Development"]
 lastmod: 2023-07-15
 date: 2023-07-15
 featured: false

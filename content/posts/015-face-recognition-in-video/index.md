@@ -1,6 +1,7 @@
 ---
 title: Face Recognition in Video
-tags: ["Deep Learning", "Computer Vision"]
+description: Building a Python pipeline for face recognition in video streams, with notes on dependency setup and performance.
+tags: ["Deep Learning", "Computer Vision", "Python"]
 date: 2019-06-20
 featured: false
 draft: false

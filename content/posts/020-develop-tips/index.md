@@ -1,7 +1,7 @@
 ---
 title: Development Tips
-description: Fast implementation of intervel tree.
-tags: ["Development"]
+description: A growing collection of small development tricks I keep reaching for.
+tags: ["Development", "Tools"]
 date: 2023-07-05
 featured: false
 draft: false

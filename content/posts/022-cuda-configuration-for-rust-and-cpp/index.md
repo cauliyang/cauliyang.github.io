@@ -1,7 +1,7 @@
 ---
 title: CUDA for Deep Learning Inference in Rust and C++
-description:
-tags: ["Rust", "C++", "CUDA"]
+description: How I configure CUDA for low-latency deep learning inference from Rust and C++, including toolchain and runtime considerations.
+tags: ["Rust", "C++", "CUDA", "Deep Learning"]
 date: 2023-08-29
 featured: false
 draft: false

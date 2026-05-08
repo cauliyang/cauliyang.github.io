@@ -1,12 +1,10 @@
 ---
 title: Make A Powerful Terminal Workspace
-description: Using Alacritty, Zellij, and Fish to empower the terminal
-tags: ["Terminal"]
-categories: ["macOS"]
+description: Building a fast, keyboard-driven terminal workspace with Alacritty, Zellij, and Fish.
+tags: ["Terminal", "macOS", "Tools"]
 date: 2022-12-15
 featured: false
 draft: false
-# image: "https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/iShot_2022-12-17_01.41.16.png"
 ---
 
 I recently made a change to my terminal setup, switching from using iTerm2 + Zsh + Tmux to Alacritty + Fish + Zellij.

@@ -1,8 +1,8 @@
 ---
 title: Nei Saitou Neighbor Joining
-description: one of my homework that requires me to implement Nei-Saitou Neighbor Joining algorithm to construct phylogenetic tree, as well as evaluating the bootstrap cconfidence.
+description: Implementing the Nei-Saitou Neighbor Joining algorithm to build phylogenetic trees, with bootstrap confidence evaluation.
 tags: ["Bioinformatics", "Algorithm"]
-date: 2019-04-03T11:15:00+08:00
+date: 2019-04-03
 featured: false
 draft: false
 ---

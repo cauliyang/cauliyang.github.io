@@ -1,7 +1,7 @@
 ---
 title: Begin to Learn Rust!
-description: "Summary valueble learning resources to gain in-depth understanding of Rust"
-tags: ["Rust"]
+description: A curated collection of resources I used to gain a deep understanding of Rust, from beginner tutorials to advanced topics.
+tags: ["Rust", "Learning"]
 date: 2022-12-21
 featured: false
 draft: true

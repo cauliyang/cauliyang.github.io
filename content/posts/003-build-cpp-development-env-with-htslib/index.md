@@ -1,7 +1,8 @@
 ---
 title: C++ Development in Bioinformatics
-tags: ["Develop", "C++"]
-date: 2022-06-15T23:17:30-05:00
+description: How I set up a productive C++ environment for bioinformatics work, including htslib, build tools, and dependency management without root access.
+tags: ["C++", "Bioinformatics", "Development"]
+date: 2022-06-15
 featured: false
 draft: false
 ---
