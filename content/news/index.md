@@ -55,12 +55,12 @@ The pulse of the present, echoing in the halls of Bytes of Life.
 {{< /timelineItem >}}
 
 {{< timelineItem icon="graduation-cap" header="Release PxBLAT 🚀" badge="2023-06-15">}}
-{{< tweet user="yangyangliz5" id="1687941434811297792" >}}
+{{< x user="yangyangliz5" id="1687941434811297792" >}}
 {{< github repo="ylab-hi/pxblat" >}}
 {{< /timelineItem >}}
 
 {{< timelineItem icon="graduation-cap" header="Become Ph.D. Candidate 🎉" badge="2023-06-15">}}
-{{< tweet user="yangyangliz5" id="1669769895448379392" >}}
+{{< x user="yangyangliz5" id="1669769895448379392" >}}
 {{< /timelineItem >}}
 
 {{< timelineItem icon="eye" header="Join Biological Data Science Conference 🛫" badge="2022-11-09">}}
