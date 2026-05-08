@@ -1,4 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bytes of Life</title><link>https://yangyangli.top/</link><description>Recent content on Bytes of Life</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>2026 &lt;a class='hover:underline hover:decoration-primary-400 hover:text-primary-500' href=https://yangyangli.top target=_blank rel='noopener noreferrer'&gt;Yangyang Li&lt;/a&gt;</copyright><lastBuildDate>Thu, 23 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://yangyangli.top/index.xml" rel="self" type="application/rss+xml"/><item><title>A language model enables accurate structural variant detection in whole-genome amplified long-read sequencing</title><link>https://yangyangli.top/projects/006-chimeralm/</link><pubDate>Thu, 23 Jan 2025 00:00:00 +0000</pubDate><guid>https://yangyangli.top/projects/006-chimeralm/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/projects/006-chimeralm/featured.png"/></item><item><title>Genomic Language Model Mitigates Chimera Artifacts in Nanopore Direct RNA Sequencing</title><link>https://yangyangli.top/projects/005-deepchoper/</link><pubDate>Thu, 31 Oct 2024 00:00:00 +0000</pubDate><guid>https://yangyangli.top/projects/005-deepchoper/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/projects/005-deepchoper/featured.png"/></item><item><title>Aurora Is a Web Application for Visualizing Non-linear Graph</title><link>https://yangyangli.top/talks/001-codex/</link><pubDate>Thu, 04 Apr 2024 00:00:00 +0000</pubDate><guid>https://yangyangli.top/talks/001-codex/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/talks/001-codex/featured.png"/></item><item><title>Notes from learning everything</title><link>https://yangyangli.top/posts/025-learning-notes/</link><pubDate>Thu, 21 Dec 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/025-learning-notes/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/025-learning-notes/featured.jpg"/></item><item><title>Autonamte Latex Build Processing</title><link>https://yangyangli.top/latex/002-autonamte-latex-build/</link><pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/latex/002-autonamte-latex-build/</guid><description>&lt;h2 class="relative group"&gt;Latex
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bytes of Life</title><link>https://yangyangli.top/</link><description>Recent content on Bytes of Life</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>2026 &lt;a class='hover:underline hover:decoration-primary-400 hover:text-primary-500' href=https://yangyangli.top target=_blank rel='noopener noreferrer'&gt;Yangyang Li&lt;/a&gt;</copyright><lastBuildDate>Thu, 07 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://yangyangli.top/index.xml" rel="self" type="application/rss+xml"/><item><title>DeepChopper: A Genomic Language Model that Cleans Up Nanopore Direct RNA Sequencing</title><link>https://yangyangli.top/posts/027-deepchopper/</link><pubDate>Thu, 07 May 2026 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/027-deepchopper/</guid><description>&lt;h2 class="relative group"&gt;The chimera mystery
+&lt;div id="the-chimera-mystery" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#the-chimera-mystery" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h2&gt;
+&lt;p&gt;Direct RNA sequencing (dRNA-seq) on Oxford Nanopore looks, on paper, like a transcriptomics dream.
+You sequence native RNA molecules end to end, you keep the modifications, and you skip every reverse-transcription and PCR step that has been quietly polluting short-read data for years.
+For a while, that was the story we were telling ourselves.&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/027-deepchopper/featured.jpg"/></item><item><title>A language model enables accurate structural variant detection in whole-genome amplified long-read sequencing</title><link>https://yangyangli.top/projects/006-chimeralm/</link><pubDate>Thu, 23 Jan 2025 00:00:00 +0000</pubDate><guid>https://yangyangli.top/projects/006-chimeralm/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/projects/006-chimeralm/featured.png"/></item><item><title>Genomic Language Model Mitigates Chimera Artifacts in Nanopore Direct RNA Sequencing</title><link>https://yangyangli.top/projects/005-deepchopper/</link><pubDate>Thu, 31 Oct 2024 00:00:00 +0000</pubDate><guid>https://yangyangli.top/projects/005-deepchopper/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/projects/005-deepchopper/featured.png"/></item><item><title>Aurora Is a Web Application for Visualizing Non-linear Graph</title><link>https://yangyangli.top/talks/001-codex/</link><pubDate>Thu, 04 Apr 2024 00:00:00 +0000</pubDate><guid>https://yangyangli.top/talks/001-codex/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/talks/001-codex/featured.png"/></item><item><title>Autonamte Latex Build Processing</title><link>https://yangyangli.top/latex/002-autonamte-latex-build/</link><pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/latex/002-autonamte-latex-build/</guid><description>&lt;h2 class="relative group"&gt;Latex
 &lt;div id="latex" class="anchor"&gt;&lt;/div&gt;
 &lt;span
 class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none"&gt;
@@ -33,9 +42,9 @@ decoding="async"
 fetchpriority="low"
 alt="bg"
 srcset="
-/posts/020-develop-tips/feature_hu_8092ae8de1ce0e71.png 330w,
-/posts/020-develop-tips/feature_hu_c571c2f3601d23d6.png 660w,
-/posts/020-develop-tips/feature_hu_a408612d3cc160a7.png 1280w
+/posts/020-develop-tips/feature_hu_6037127089f9f78.png 330w,
+/posts/020-develop-tips/feature_hu_dfbf4193b686381e.png 660w,
+/posts/020-develop-tips/feature_hu_cb81a34603c0b9a1.png 1280w
 "
 data-zoom-src="https://yangyangli.top/posts/020-develop-tips/feature.png"
 src="https://yangyangli.top/posts/020-develop-tips/feature.png"&gt;
@@ -51,7 +60,7 @@ class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 
 &lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;defaults write com.apple.finder CreateDesktop &lt;span class="nb"&gt;false&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;killall Finder
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Otherwise, you want to show the icons again&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/020-develop-tips/feature.png"/></item><item><title>PxBLAT:An Efficient and Ergonomics Python Binding Library for BLAT</title><link>https://yangyangli.top/projects/001-pxblat/</link><pubDate>Sun, 25 Jun 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/projects/001-pxblat/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/projects/001-pxblat/featured.png"/></item><item><title>TikZ-Learning Journey</title><link>https://yangyangli.top/latex/020-tikz-learn-jouney/</link><pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/latex/020-tikz-learn-jouney/</guid><description>&lt;h2 class="relative group"&gt;Overview
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Otherwise, you want to show the icons again&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/020-develop-tips/feature.png"/></item><item><title>PxBLAT: An Efficient and Ergonomic Python Binding Library for BLAT</title><link>https://yangyangli.top/projects/001-pxblat/</link><pubDate>Sun, 25 Jun 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/projects/001-pxblat/</guid><description/><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/projects/001-pxblat/featured.png"/></item><item><title>TikZ-Learning Journey</title><link>https://yangyangli.top/latex/020-tikz-learn-jouney/</link><pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate><guid>https://yangyangli.top/latex/020-tikz-learn-jouney/</guid><description>&lt;h2 class="relative group"&gt;Overview
 &lt;div id="overview" class="anchor"&gt;&lt;/div&gt;
 &lt;span
 class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none"&gt;
@@ -317,9 +326,9 @@ class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 
 &lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#gallery" aria-label="Anchor"&gt;#&lt;/a&gt;
 &lt;/span&gt;
 &lt;/h2&gt;
-&lt;link rel="stylesheet" href="https://yangyangli.top/css/carousel-carousel-44fa7e18c6132e468e3a14ed4f42c56a-1770217760099556355.min.7b3b17f85dc23718e6a245bb50f1122615f7e859a46163d56ab19c28333a59f4ad93894cff378a813e6a22938f2fc7503ff4be1d2b6157e738845cba299880fe.css" integrity="sha512-ezsX&amp;#43;F3CNxjmokW7UPESJhX36FmkYWPVarGcKDM6WfStk4lM/zeKgT5qIpOPL8dQP/S&amp;#43;HSthV&amp;#43;c4hFy6KZiA/g=="&gt;
+&lt;link rel="stylesheet" href="https://yangyangli.top/css/carousel-carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778271204100963179.min.a941378769ef698bd83340ca4727bd714992bf6dd700c01c042551d8cfef2640db484c749a0bf448a1af5154581f84c2ee095c0ceca295ba30de3707321194e9.css" integrity="sha512-qUE3h2nvaYvYM0DKRye9cUmSv23XAMAcBCVR2M/vJkDbSEx0mgv0SKGvUVRYH4TC7glcDOyilbow3jcHMhGU6Q=="&gt;
 &lt;div
-id="carousel-44fa7e18c6132e468e3a14ed4f42c56a-1770217760099556355"
+id="carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778271204100963179"
 class="relative"
 data-twe-carousel-init
 data-twe-ride="carousel"
@@ -329,32 +338,32 @@ class="absolute right-0 bottom-0 left-0 z-2 mx-[15%] mb-10 flex list-none justif
 data-twe-carousel-indicators&gt;
 &lt;button
 type="button"
-data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1770217760099556355"
+data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778271204100963179"
 data-twe-slide-to="0"
 data-twe-carousel-active aria-current="true"
 class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
 aria-label="Slide 0"&gt;&lt;/button&gt;
 &lt;button
 type="button"
-data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1770217760099556355"
+data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778271204100963179"
 data-twe-slide-to="1"
 class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
 aria-label="Slide 1"&gt;&lt;/button&gt;
 &lt;button
 type="button"
-data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1770217760099556355"
+data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778271204100963179"
 data-twe-slide-to="2"
 class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
 aria-label="Slide 2"&gt;&lt;/button&gt;
 &lt;button
 type="button"
-data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1770217760099556355"
+data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778271204100963179"
 data-twe-slide-to="3"
 class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
 aria-label="Slide 3"&gt;&lt;/button&gt;
 &lt;button
 type="button"
-data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1770217760099556355"
+data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778271204100963179"
 data-twe-slide-to="4"
 class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
 aria-label="Slide 4"&gt;&lt;/button&gt;
@@ -419,7 +428,7 @@ alt="carousel image 5"&gt;
 &lt;button
 class="absolute top-0 bottom-0 left-0 z-2 flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
 type="button"
-data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1770217760099556355"
+data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778271204100963179"
 data-twe-slide="prev"&gt;
 &lt;span class="inline-block h-8 w-8"&gt;
 &lt;svg
@@ -440,7 +449,7 @@ class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-
 &lt;button
 class="absolute top-0 bottom-0 right-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
 type="button"
-data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1770217760099556355"
+data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778271204100963179"
 data-twe-slide="next"&gt;
 &lt;span class="inline-block h-8 w-8"&gt;
 &lt;svg
@@ -800,8 +809,8 @@ class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 
 &lt;/h2&gt;
 &lt;p&gt;Given the time and effort required for migrating configurations, I have decided to create a blog documenting the entire process.
 The configurations will be divided into two sections, the first of which will cover the software that I frequently use, and the second will contain the configuration files themselves.
-As I have recently acquired a MacBook Pro M1 model, here is a list of the tools I am currently utilizing.&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/002-macos-configuration/featured.png"/></item><item><title>Bioinformatics Algorithm Library aka BINARY</title><link>https://yangyangli.top/projects/003-bioinformatics-algorithm-library/</link><pubDate>Mon, 26 Sep 2022 13:07:28 -0500</pubDate><guid>https://yangyangli.top/projects/003-bioinformatics-algorithm-library/</guid><description>&lt;p&gt;The library is a collection of algorithms and data structures that are designed for modern C++ bioinformatics applications.
-You can use the library in your own projects or as a part of a larger project.&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/projects/003-bioinformatics-algorithm-library/featured.png"/></item><item><title>Bioinformatics Toolbox Aka Boss</title><link>https://yangyangli.top/projects/002-new-tool-bioinformatics-toolbox-aka-boss/</link><pubDate>Sun, 25 Sep 2022 23:22:31 -0500</pubDate><guid>https://yangyangli.top/projects/002-new-tool-bioinformatics-toolbox-aka-boss/</guid><description>&lt;p&gt;BOSS is a bioinformatics toolbox, which will contain efficient tools. It is written in modern C++ and is tested exhaustively. It is designed to be easy to use and time-efficient. BOSS is a free software and is distributed under the terms of the GNU General Public License V3.&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/projects/002-new-tool-bioinformatics-toolbox-aka-boss/featured.png"/></item><item><title>Code Snippets</title><link>https://yangyangli.top/posts/023-cpp-snippet/</link><pubDate>Thu, 22 Sep 2022 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/023-cpp-snippet/</guid><description>&lt;h2 class="relative group"&gt;Get Random numbers
+As I have recently acquired a MacBook Pro M1 model, here is a list of the tools I am currently utilizing.&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/002-macos-configuration/featured.png"/></item><item><title>Bioinformatics Algorithm Library aka BINARY</title><link>https://yangyangli.top/projects/003-bioinformatics-algorithm-library/</link><pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate><guid>https://yangyangli.top/projects/003-bioinformatics-algorithm-library/</guid><description>&lt;p&gt;The library is a collection of algorithms and data structures that are designed for modern C++ bioinformatics applications.
+You can use the library in your own projects or as a part of a larger project.&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/projects/003-bioinformatics-algorithm-library/featured.png"/></item><item><title>Bioinformatics Toolbox Aka Boss</title><link>https://yangyangli.top/projects/002-new-tool-bioinformatics-toolbox-aka-boss/</link><pubDate>Sun, 25 Sep 2022 00:00:00 +0000</pubDate><guid>https://yangyangli.top/projects/002-new-tool-bioinformatics-toolbox-aka-boss/</guid><description>&lt;p&gt;BOSS is a bioinformatics toolbox, which will contain efficient tools. It is written in modern C++ and is tested exhaustively. It is designed to be easy to use and time-efficient. BOSS is a free software and is distributed under the terms of the GNU General Public License V3.&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/projects/002-new-tool-bioinformatics-toolbox-aka-boss/featured.png"/></item><item><title>Code Snippets</title><link>https://yangyangli.top/posts/023-cpp-snippet/</link><pubDate>Thu, 22 Sep 2022 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/023-cpp-snippet/</guid><description>&lt;h2 class="relative group"&gt;Get Random numbers
 &lt;div id="get-random-numbers" class="anchor"&gt;&lt;/div&gt;
 &lt;span
 class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none"&gt;
@@ -1289,7 +1298,7 @@ class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 
 href="https://yangyangli.top/posts/002-macos-configuration/"
 class="absolute inset-0"
 aria-label=""&gt;&lt;/a&gt;
-&lt;div class="w-full md:w-auto h-full thumbnail nozoom thumbnailshadow md:mr-7" style="background-image:url(/posts/002-macos-configuration/featured_hu_5366f5625eec4202.png);"&gt;&lt;/div&gt;
+&lt;div class="w-full md:w-auto h-full thumbnail nozoom thumbnailshadow md:mr-7" style="background-image:url(/posts/002-macos-configuration/featured_hu_669109cad2c617d.png);"&gt;&lt;/div&gt;
 &lt;div class=" mt-3 md:mt-0"&gt;
 &lt;div class="items-center text-left text-xl font-semibold"&gt;
 &lt;div
@@ -1324,7 +1333,7 @@ title="likes"
 &lt;div class="flex flex-row flex-wrap items-center"&gt;
 &lt;/div&gt;
 &lt;div class="flex flex-row flex-wrap items-center"&gt;
-&lt;a class="relative mt-[0.5rem] mr-2" href="https://yangyangli.top/categories/macos/"
+&lt;a class="relative mt-[0.5rem] mr-2" href="https://yangyangli.top/tags/macos/"
 &gt;&lt;span class="flex cursor-pointer"&gt;
 &lt;span
 class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"&gt;
@@ -1398,7 +1407,7 @@ class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 
 &lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#carousel" aria-label="Anchor"&gt;#&lt;/a&gt;
 &lt;/span&gt;
 &lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;carousel&lt;/code&gt; is used to showcase multiple images in an interactive and visually appealing way. This allows a user to slide through multiple images while only taking up the vertical space of a single one. All images are displayed using the full width of the parent component and using one of the predefined aspect ratios of &lt;code&gt;16:9&lt;/code&gt;, &lt;code&gt;21:9&lt;/code&gt; or &lt;code&gt;32:9&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>C++ Development in Bioinformatics</title><link>https://yangyangli.top/posts/003-build-cpp-development-env-with-htslib/</link><pubDate>Wed, 15 Jun 2022 23:17:30 -0500</pubDate><guid>https://yangyangli.top/posts/003-build-cpp-development-env-with-htslib/</guid><description>&lt;h2 class="relative group"&gt;1.1 Config Compile Environment
+&lt;p&gt;&lt;code&gt;carousel&lt;/code&gt; is used to showcase multiple images in an interactive and visually appealing way. This allows a user to slide through multiple images while only taking up the vertical space of a single one. All images are displayed using the full width of the parent component and using one of the predefined aspect ratios of &lt;code&gt;16:9&lt;/code&gt;, &lt;code&gt;21:9&lt;/code&gt; or &lt;code&gt;32:9&lt;/code&gt;.&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/short-code/featured.jpg"/></item><item><title>C++ Development in Bioinformatics</title><link>https://yangyangli.top/posts/003-build-cpp-development-env-with-htslib/</link><pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/003-build-cpp-development-env-with-htslib/</guid><description>&lt;h2 class="relative group"&gt;1.1 Config Compile Environment
 &lt;div id="11-config-compile-environment" class="anchor"&gt;&lt;/div&gt;
 &lt;span
 class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none"&gt;
@@ -1421,14 +1430,14 @@ target="_blank"
 &gt;Conan&lt;/a&gt;, and I use &lt;a
 href="https://github.com/cpm-cmake/CPM.cmake"
 target="_blank"
-&gt;CPM&lt;/a&gt; as an alternative option.&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/003-build-cpp-development-env-with-htslib/featured.jpg"/></item><item><title>Pybox: A Python Toolbox for Common Development Tasks</title><link>https://yangyangli.top/posts/001-a-wonderful-library-you-must-not-know/</link><pubDate>Fri, 03 Dec 2021 00:03:50 -0600</pubDate><guid>https://yangyangli.top/posts/001-a-wonderful-library-you-must-not-know/</guid><description>&lt;h2 class="relative group"&gt;Introduction
+&gt;CPM&lt;/a&gt; as an alternative option.&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/003-build-cpp-development-env-with-htslib/featured.jpg"/></item><item><title>Pybox: A Python Toolbox for Common Development Tasks</title><link>https://yangyangli.top/posts/001-a-wonderful-library-you-must-not-know/</link><pubDate>Fri, 03 Dec 2021 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/001-a-wonderful-library-you-must-not-know/</guid><description>&lt;h2 class="relative group"&gt;Introduction
 &lt;div id="introduction" class="anchor"&gt;&lt;/div&gt;
 &lt;span
 class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none"&gt;
 &lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#introduction" aria-label="Anchor"&gt;#&lt;/a&gt;
 &lt;/span&gt;
 &lt;/h2&gt;
-&lt;p&gt;Have you ever found yourself repeatedly searching for commands to download files from Google Drive or send messages to Slack? I created &lt;strong&gt;Pybox&lt;/strong&gt; to solve this problem - a Python-based command-line toolbox that consolidates useful utilities for common development tasks.&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/001-a-wonderful-library-you-must-not-know/featured.png"/></item><item><title>PCA by Python</title><link>https://yangyangli.top/posts/010-pca-by-python/</link><pubDate>Sun, 04 Apr 2021 23:58:37 +0800</pubDate><guid>https://yangyangli.top/posts/010-pca-by-python/</guid><description>&lt;h2 class="relative group"&gt;1. Introduction
+&lt;p&gt;Have you ever found yourself repeatedly searching for commands to download files from Google Drive or send messages to Slack? I created &lt;strong&gt;Pybox&lt;/strong&gt; to solve this problem - a Python-based command-line toolbox that consolidates useful utilities for common development tasks.&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/001-a-wonderful-library-you-must-not-know/featured.png"/></item><item><title>PCA by Python</title><link>https://yangyangli.top/posts/010-pca-by-python/</link><pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/010-pca-by-python/</guid><description>&lt;h2 class="relative group"&gt;1. Introduction
 &lt;div id="1-introduction" class="anchor"&gt;&lt;/div&gt;
 &lt;span
 class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none"&gt;
@@ -1459,7 +1468,7 @@ class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 
 &lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;通过 pip 进行安装，在使用 pip 进行安装时，应该注意切换到国内源进行下载，提高下载速度，下面分享一下当前国内的 pip 源：&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/015-face-recognition-in-video/featured.png"/></item><item><title>Nei Saitou Neighbor Joining</title><link>https://yangyangli.top/posts/008-nei-saitou-neighbor-joining/</link><pubDate>Wed, 03 Apr 2019 11:15:00 +0800</pubDate><guid>https://yangyangli.top/posts/008-nei-saitou-neighbor-joining/</guid><description>&lt;h2 class="relative group"&gt;1. Background
+&lt;p&gt;通过 pip 进行安装，在使用 pip 进行安装时，应该注意切换到国内源进行下载，提高下载速度，下面分享一下当前国内的 pip 源：&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://yangyangli.top/posts/015-face-recognition-in-video/featured.png"/></item><item><title>Nei Saitou Neighbor Joining</title><link>https://yangyangli.top/posts/008-nei-saitou-neighbor-joining/</link><pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate><guid>https://yangyangli.top/posts/008-nei-saitou-neighbor-joining/</guid><description>&lt;h2 class="relative group"&gt;1. Background
 &lt;div id="1-background" class="anchor"&gt;&lt;/div&gt;
 &lt;span
 class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none"&gt;
