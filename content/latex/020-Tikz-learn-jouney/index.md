@@ -1,7 +1,8 @@
 ---
 title: TikZ-Learning Journey
 description: visualization in LaTex.
-tags: ["Latex", "Tikz"]
+categories: ["Writing"]
+tags: ["LaTeX", "TikZ"]
 date: 2023-06-02
 featured: true
 draft: false

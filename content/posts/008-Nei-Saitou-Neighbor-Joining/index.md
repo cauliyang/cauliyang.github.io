@@ -1,7 +1,8 @@
 ---
 title: Nei Saitou Neighbor Joining
 description: Implementing the Nei-Saitou Neighbor Joining algorithm to build phylogenetic trees, with bootstrap confidence evaluation.
-tags: ["Bioinformatics", "Algorithm"]
+categories: ["Bioinformatics", "Algorithms"]
+tags: ["Python"]
 date: 2019-04-03
 featured: false
 draft: false

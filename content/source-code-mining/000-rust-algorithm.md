@@ -1,8 +1,11 @@
 ---
 title: Rust Algorithm
 description: Minning Algorithm in Rust
+categories:
+  - Algorithms
+  - Software Development
 tags:
-  - Algorithm
+  - Rust
 date: 2023-02-04T00:03:50-06:00
 featured: false
 draft: true

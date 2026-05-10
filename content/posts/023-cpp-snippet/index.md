@@ -1,7 +1,8 @@
 ---
 title: Code Snippets
 description: A growing reference of small, reusable C++ and Rust snippets I keep reaching for.
-tags: ["C++", "Rust", "Development"]
+categories: ["Software Development"]
+tags: ["C++", "Rust"]
 date: 2022-09-22
 lastmod: 2023-10-04
 featured: false

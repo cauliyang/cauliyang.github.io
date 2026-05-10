@@ -1,7 +1,8 @@
 ---
 title: Tiling Windows Management in macOS
 description: A keyboard-driven tiling setup on macOS using yabai, skhd, stackline, and sketchybar.
-tags: ["macOS", "Tools"]
+categories: ["Tools"]
+tags: ["macOS"]
 date: 2022-12-20
 featured: false
 draft: false

@@ -1,8 +1,10 @@
 ---
 title: Using Translator and Dictionary in Neovim
 description:
+categories:
+  - Tools
 tags:
-  - tool
+  - Neovim
 date: 2022-12-20
 featured: false
 draft: true

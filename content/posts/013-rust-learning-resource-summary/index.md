@@ -1,6 +1,7 @@
 ---
 title: Begin to Learn Rust!
 description: A curated collection of resources I used to gain a deep understanding of Rust, from beginner tutorials to advanced topics.
+categories: ["Software Development"]
 tags: ["Rust", "Learning"]
 date: 2022-12-21
 featured: false

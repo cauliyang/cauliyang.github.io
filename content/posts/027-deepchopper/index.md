@@ -1,7 +1,8 @@
 ---
 title: "DeepChopper: A Genomic Language Model that Cleans Up Nanopore Direct RNA Sequencing"
 description: "How we built a HyenaDNA-based model to detect adapter-bridged chimera artifacts at single-nucleotide resolution: the story, the science, and the engineering behind it."
-tags: ["Deep Learning", "Nanopore", "Language Model", "Bioinformatics", "Rust"]
+categories: ["Bioinformatics", "Machine Learning", "Writing"]
+tags: ["Deep Learning", "Nanopore", "Language Model", "Adapter Trimming", "Rust"]
 date: 2026-05-07
 featured: true
 draft: false

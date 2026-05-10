@@ -1,7 +1,8 @@
 ---
 title: "Pybox: A Python Toolbox for Common Development Tasks"
 description: A collection of useful command-line utilities to streamline everyday development workflows.
-tags: ["Python", "Development", "CLI", "Tools"]
+categories: ["Software Development", "Tools"]
+tags: ["Python", "CLI"]
 date: 2021-12-03
 featured: false
 draft: false

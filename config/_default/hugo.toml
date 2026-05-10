@@ -26,7 +26,6 @@ anchor = 'Center'
 [taxonomies]
 tag = "tags"
 category = "categories"
-author = "authors"
 series = "series"
 
 [sitemap]
@@ -52,10 +51,6 @@ weight = 100
 [[related.indices]]
 name = "series"
 weight = 50
-
-[[related.indices]]
-name = "authors"
-weight = 20
 
 [[related.indices]]
 name = "date"

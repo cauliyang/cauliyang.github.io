@@ -1,7 +1,8 @@
 ---
 title: Comprehensive Transformer
 description: Working notes on the Transformer architecture and modern language model components.
-tags: ["Deep Learning", "Language Model"]
+categories: ["Machine Learning"]
+tags: ["Deep Learning", "Language Model", "Transformers"]
 date: 2024-01-07
 featured: false
 draft: true

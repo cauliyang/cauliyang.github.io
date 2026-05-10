@@ -1,7 +1,8 @@
 ---
 title: Development Tips
 description: A growing collection of small development tricks I keep reaching for.
-tags: ["Development", "Tools"]
+categories: ["Tools"]
+tags: []
 date: 2023-07-05
 featured: false
 draft: false

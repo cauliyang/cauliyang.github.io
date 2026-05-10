@@ -1,7 +1,8 @@
 ---
 title: Efficient Genomic Interval Search Using SIMD-Enhanced COITree
 description: High-performance interval tree implementation leveraging SIMD instructions for faster genomic data analysis.
-tags: ["Rust", "Algorithm", "Bioinformatics", "Performance"]
+categories: ["Bioinformatics", "Algorithms"]
+tags: ["Rust", "Performance"]
 date: 2023-03-12
 featured: true
 draft: false

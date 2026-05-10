@@ -1,9 +1,10 @@
 ---
 title: ChatGPT As Writing Helper
 description: Use ChatGpt with proper prompt to make amazing things
+categories:
+  - Writing
 tags:
-  - Deep Learning
-  - Tools
+  - ChatGPT
 date: 2023-01-11
 featured: false
 draft: true

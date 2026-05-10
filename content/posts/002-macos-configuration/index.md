@@ -5,6 +5,7 @@ date: 2022-11-26
 lastmod: 2023-09-02
 featured: false
 draft: false
+categories: ["Tools"]
 tags: ["macOS", "Development"]
 ---
 

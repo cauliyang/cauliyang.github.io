@@ -1,7 +1,8 @@
 ---
 title: Bioinformatics Algorithm Library aka BINARY
 description: A collection of algorithms and data structures that are designed for modern C++ bioinformatics applications.
-tags: ["Bioinformatics", "C++", "Algorithm", "Data Structure"]
+categories: ["Bioinformatics", "Algorithms"]
+tags: ["C++", "Data Structures"]
 date: 2022-09-26
 featured: false
 draft: false

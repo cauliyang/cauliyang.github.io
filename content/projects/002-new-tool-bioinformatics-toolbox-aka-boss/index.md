@@ -1,7 +1,8 @@
 ---
 title: Bioinformatics Toolbox Aka Boss
 description: A toolbox for bioinformatics analysis in C++
-tags: ["Bioinformatics", "Development", "C++"]
+categories: ["Bioinformatics", "Software Development"]
+tags: ["C++"]
 date: 2022-09-25
 featured: false
 draft: false

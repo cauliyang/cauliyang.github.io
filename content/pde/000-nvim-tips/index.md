@@ -1,6 +1,7 @@
 ---
 title: Collections of Amazing Vim Tips
 description: Smart Tips make life better
+categories: ["Tools"]
 tags: ["Neovim"]
 date: 2022-12-21
 lastmod: 2023-07-15

@@ -1,8 +1,10 @@
 ---
 title: Comprehensive Method to Install Bioinformatics Tool
 description: You will miss nothing after reading.
-tags:
+categories:
   - Bioinformatics
+  - Tools
+tags: []
 date: 2023-02-17
 featured: false
 draft: true

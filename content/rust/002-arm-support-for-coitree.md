@@ -1,9 +1,12 @@
 ---
 title: Boosting Coitree Algorithm Performance with Arm Neon Support
 description: This blog post will explore the benefits of supporting Arm Neon technology for the Coitree algorithm.
+categories:
+  - Algorithms
+  - Software Development
 tags:
   - Rust
-  - Algorithm
+  - Performance
 date: 2023-03-04
 draft: true
 ---

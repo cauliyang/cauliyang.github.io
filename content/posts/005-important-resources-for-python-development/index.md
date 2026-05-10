@@ -1,7 +1,8 @@
 ---
 title: Comprehensive Resources for Python Development
 description: A curated reference of tools, libraries, and learning resources I rely on for Python development, from version control to packaging and testing.
-tags: ["Python", "Development"]
+categories: ["Software Development"]
+tags: ["Python", "Learning"]
 lastmod: 2023-07-15
 date: 2022-06-16
 featured: false

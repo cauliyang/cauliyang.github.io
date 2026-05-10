@@ -1,7 +1,8 @@
 ---
 title: How to Use Noodles Library in Rust
 description: A practical walkthrough of the Rust noodles crate for parsing common bioinformatics file formats, with the gotchas I wish I had known earlier.
-tags: ["Rust", "Bioinformatics"]
+categories: ["Bioinformatics", "Software Development"]
+tags: ["Rust"]
 date: 2023-03-04
 featured: false
 draft: false

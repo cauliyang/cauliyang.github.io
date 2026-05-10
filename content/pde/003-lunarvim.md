@@ -1,8 +1,10 @@
 ---
 title: Supercharge Your Productivity with Neovim - Building a Customized Development Environment
 description: the article will focus on using the text editor Neovim to create a highly efficient and personalized development environment. The article will cover topics such as installing and configuring Neovim, customizing the user interface, configuring plugins, and optimizing the workflow.
+categories:
+  - Tools
 tags:
-  - Nvim
+  - Neovim
 date: 2023-02-01
 featured: false
 draft: true

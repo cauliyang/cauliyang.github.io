@@ -1,7 +1,8 @@
 ---
 title: Make A Powerful Terminal Workspace
 description: Building a fast, keyboard-driven terminal workspace with Alacritty, Zellij, and Fish.
-tags: ["Terminal", "macOS", "Tools"]
+categories: ["Tools"]
+tags: ["Terminal", "macOS"]
 date: 2022-12-15
 featured: false
 draft: false
