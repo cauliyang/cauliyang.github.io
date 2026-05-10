@@ -1,16 +1,35 @@
 @font-face {
-  font-family: CascadiaCode;
-  src: url("/fonts/CascadiaCode.ttf");
+  font-family: "InterVariable";
+  src: url("/fonts/InterVariable.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: iosevka-regularf;
-  src: url("/fonts/iosevka-regular.ttf");
+  font-family: CascadiaCode;
+  src: url("/fonts/CascadiaCode.ttf");
+  font-display: swap;
 }
 
 html {
-  font-family: CascadiaCode, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "InterVariable", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   scroll-behavior: smooth;
+}
+
+/* Keep monospace where it belongs */
+code,
+pre,
+kbd,
+samp,
+.chroma {
+  font-family: "Cascadia Code", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* Tabular numerals in tables for clean numeric alignment */
+article table {
+  font-feature-settings: "tnum";
 }
 
 /* Compensate for the fixed header so anchor jumps land below it */
