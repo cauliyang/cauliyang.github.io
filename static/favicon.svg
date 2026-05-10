@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#0F766E"/>
+  <text x="32" y="44" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="36" fill="#5EEAD4">B</text>
+  <rect x="44" y="14" width="6" height="36" fill="#5EEAD4">
+    <animate attributeName="opacity" values="1;1;0;0" dur="1.1s" repeatCount="indefinite"/>
+  </rect>
+</svg>
