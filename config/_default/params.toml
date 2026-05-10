@@ -17,8 +17,9 @@ mainSections = ["posts", "projects", "pde", "latex"]
 
 disableImageOptimization = false
 
-defaultBackgroundImage = "img/ocean.jpg" # used as default for background images
-defaultFeaturedImage = "img/ocean.jpg"   # used as default for featured images in all articles
+defaultBackgroundImage = "img/hero-bytesoflife.jpg" # used as default for background images
+defaultFeaturedImage = "img/featured-default.jpg"   # used as default for featured images in all articles
+defaultSocialImage = "img/og-default.png"           # used as default OG/Twitter card
 
 highlightCurrentMenuArea = true
 smartTOC = true
@@ -36,7 +37,7 @@ showScrollToTop = true
 
 [homepage]
 layout = "background"            # valid options: page, profile, hero, card, background, custom
-homepageImage = "img/berend.jpg" # used in: hero, and card
+homepageImage = "img/hero-bytesoflife.jpg" # used in: hero, and card
 showRecent = true
 showRecentItems = 10
 showMoreLink = true
