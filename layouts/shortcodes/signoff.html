@@ -1,0 +1,20 @@
+{{- $author := site.Params.Author -}}
+<aside class="signoff" aria-label="Author sign-off">
+  <div class="signoff__rule" aria-hidden="true"></div>
+  <div class="signoff__body">
+    <p class="signoff__name">{{ $author.name | default "Yangyang Li" }}</p>
+    {{ with $author.headline }}<p class="signoff__role">{{ . | markdownify }}</p>{{ end }}
+    {{ with $author.links }}
+      <div class="signoff__links">
+        {{ range $i, $link := . }}
+          {{ range $name, $url := $link }}
+            {{ if not (strings.HasPrefix $url "mailto:") }}
+              <a href="{{ $url }}" target="_blank" rel="me noopener noreferrer" aria-label="{{ $name | title }}">{{ partial "icon.html" $name }}</a>
+            {{ end }}
+          {{ end }}
+        {{ end }}
+        <a href="{{ "/index.xml" | relURL }}" aria-label="RSS feed">{{ partial "icon.html" "rss" }}</a>
+      </div>
+    {{ end }}
+  </div>
+</aside>
