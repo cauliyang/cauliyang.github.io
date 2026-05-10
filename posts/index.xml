@@ -112,9 +112,9 @@ class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 
 &lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#gallery" aria-label="Anchor"&gt;#&lt;/a&gt;
 &lt;/span&gt;
 &lt;/h2&gt;
-&lt;link rel="stylesheet" href="https://yangyangli.top/css/carousel-carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778271204100963179.min.a941378769ef698bd83340ca4727bd714992bf6dd700c01c042551d8cfef2640db484c749a0bf448a1af5154581f84c2ee095c0ceca295ba30de3707321194e9.css" integrity="sha512-qUE3h2nvaYvYM0DKRye9cUmSv23XAMAcBCVR2M/vJkDbSEx0mgv0SKGvUVRYH4TC7glcDOyilbow3jcHMhGU6Q=="&gt;
+&lt;link rel="stylesheet" href="https://yangyangli.top/css/carousel-carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778379041845885229.min.efa28ac44577ed2c6e4840074eda595e09d54cfad82e682126a7744c3847e6ad1cde6a8c9db0264e80deb4d500feb26579acc19e1cb571122c9913a3902614e9.css" integrity="sha512-76KKxEV37SxuSEAHTtpZXgnVTPrYLmghJqd0TDhH5q0c3mqMnbAmToDetNUA/rJleazBnhy1cRIsmROjkCYU6Q=="&gt;
 &lt;div
-id="carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778271204100963179"
+id="carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778379041845885229"
 class="relative"
 data-twe-carousel-init
 data-twe-ride="carousel"
@@ -124,32 +124,32 @@ class="absolute right-0 bottom-0 left-0 z-2 mx-[15%] mb-10 flex list-none justif
 data-twe-carousel-indicators&gt;
 &lt;button
 type="button"
-data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778271204100963179"
+data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778379041845885229"
 data-twe-slide-to="0"
 data-twe-carousel-active aria-current="true"
 class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
 aria-label="Slide 0"&gt;&lt;/button&gt;
 &lt;button
 type="button"
-data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778271204100963179"
+data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778379041845885229"
 data-twe-slide-to="1"
 class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
 aria-label="Slide 1"&gt;&lt;/button&gt;
 &lt;button
 type="button"
-data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778271204100963179"
+data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778379041845885229"
 data-twe-slide-to="2"
 class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
 aria-label="Slide 2"&gt;&lt;/button&gt;
 &lt;button
 type="button"
-data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778271204100963179"
+data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778379041845885229"
 data-twe-slide-to="3"
 class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
 aria-label="Slide 3"&gt;&lt;/button&gt;
 &lt;button
 type="button"
-data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778271204100963179"
+data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778379041845885229"
 data-twe-slide-to="4"
 class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
 aria-label="Slide 4"&gt;&lt;/button&gt;
@@ -214,7 +214,7 @@ alt="carousel image 5"&gt;
 &lt;button
 class="absolute top-0 bottom-0 left-0 z-2 flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
 type="button"
-data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778271204100963179"
+data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778379041845885229"
 data-twe-slide="prev"&gt;
 &lt;span class="inline-block h-8 w-8"&gt;
 &lt;svg
@@ -235,7 +235,7 @@ class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-
 &lt;button
 class="absolute top-0 bottom-0 right-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
 type="button"
-data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778271204100963179"
+data-twe-target="#carousel-44fa7e18c6132e468e3a14ed4f42c56a-1778379041845885229"
 data-twe-slide="next"&gt;
 &lt;span class="inline-block h-8 w-8"&gt;
 &lt;svg
