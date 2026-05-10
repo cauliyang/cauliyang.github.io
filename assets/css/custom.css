@@ -209,3 +209,55 @@ button.copy-button:hover,
 .dark .signoff__links a {
   color: rgb(var(--color-primary-300));
 }
+
+/* Drop cap on opt-in posts (frontmatter: dropcap: true) */
+.dropcap article > p:first-of-type::first-letter,
+article.dropcap > p:first-of-type::first-letter {
+  float: left;
+  font-size: 3.6em;
+  line-height: 0.85;
+  font-weight: 800;
+  margin: 0.1em 0.12em 0 0;
+  color: rgb(var(--color-primary-500));
+  font-feature-settings: "ss01";
+}
+
+/* Reading-progress bar at the very top of every page */
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: transparent;
+  z-index: 9999;
+  pointer-events: none;
+}
+#reading-progress > div {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg,
+    rgb(var(--color-primary-400)),
+    rgb(var(--color-primary-600)));
+  transition: width 0.08s linear;
+}
+
+/* Anchor link icons in accent color on hover */
+article :is(h1, h2, h3, h4) a[aria-label="Anchor"]:hover,
+article :is(h1, h2, h3, h4) a[href^="#"]:hover {
+  color: rgb(var(--color-primary-500));
+}
+
+/* Branded callouts: leverage the theme's <blockquote> for {{< alert >}} */
+.alert,
+article > blockquote.alert {
+  border-left: 4px solid rgb(var(--color-primary-500));
+  background: rgba(var(--color-primary-500), 0.06);
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+  margin: 1.25rem 0;
+}
+.dark .alert,
+.dark article > blockquote.alert {
+  background: rgba(var(--color-primary-400), 0.10);
+}

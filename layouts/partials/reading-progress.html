@@ -1,0 +1,28 @@
+<script>
+(function () {
+  function init() {
+    if (document.querySelector('#reading-progress')) return;
+    var wrap = document.createElement('div');
+    wrap.id = 'reading-progress';
+    wrap.setAttribute('aria-hidden', 'true');
+    var inner = document.createElement('div');
+    wrap.appendChild(inner);
+    document.body.insertBefore(wrap, document.body.firstChild);
+    function update() {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop || document.body.scrollTop;
+      var height = (h.scrollHeight || document.body.scrollHeight) - h.clientHeight;
+      var pct = height > 0 ? (scrolled / height) * 100 : 0;
+      inner.style.width = pct + '%';
+    }
+    document.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
