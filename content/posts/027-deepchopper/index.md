@@ -12,7 +12,7 @@ draft: false
 
 ## The chimera mystery
 
-Direct RNA sequencing (dRNA-seq) on Oxford Nanopore looks, on paper, like a transcriptomics dream.
+Direct RNA sequencing (dRNA-seq) on Oxford Nanopore Technologies (ONT) platforms looks, on paper, like a transcriptomics dream.
 You sequence native RNA molecules end to end, you keep the modifications, and you skip every reverse-transcription and PCR step that has been quietly polluting short-read data for years.
 For a while, that was the story we were telling ourselves.
 
@@ -73,7 +73,7 @@ DeepChopper is, mechanically, a token classifier. Each nucleotide gets a binary 
 
 1. **Tokenize** at single-nucleotide resolution (`A`, `C`, `G`, `T`, `N`).
 2. **HyenaDNA backbone** turns those tokens into 256-dim feature vectors with a long receptive field.
-3. **Quality block**, a small stack of MLPs with residual connections, folds in z-score-normalized per-base quality scores.
+3. **Quality block**, a small stack of multilayer perceptrons (MLPs) with residual connections, folds in z-score-normalized per-base quality scores.
 4. **Classification head** projects each position to two logits and softmaxes.
 5. **Sliding-window majority vote** post-processes raw predictions to clean up boundaries.
 
@@ -105,7 +105,7 @@ If you have ever had a "smart" tool quietly OOM after hour 16 of a run, you know
 
 ## Curating training data without ground truth
 
-One of the harder problems was honest: nobody hands you a labeled dataset of "internal adapters in dRNA-seq". We had to build one.
+One of the harder problems was simple to state: nobody hands you a labeled dataset of "internal adapters in dRNA-seq". We had to build one.
 
 The trick we converged on:
 

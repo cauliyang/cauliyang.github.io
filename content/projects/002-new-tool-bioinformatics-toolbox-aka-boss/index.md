@@ -1,6 +1,6 @@
 ---
-title: Bioinformatics Toolbox Aka Boss
-description: A toolbox for bioinformatics analysis in C++
+title: "BOSS: A Bioinformatics Toolbox in Modern C++"
+description: "A collection of fast, exhaustively tested command-line tools for everyday bioinformatics tasks, written in modern C++ and released under GPLv3."
 categories: ["Bioinformatics", "Software Development"]
 tags: ["C++"]
 date: 2022-09-25
@@ -8,13 +8,13 @@ featured: false
 draft: false
 ---
 
-BOSS is a bioinformatics toolbox, which will contain efficient tools. It is written in modern C++ and is tested exhaustively. It is designed to be easy to use and time-efficient. BOSS is a free software and is distributed under the terms of the GNU General Public License V3.
+BOSS is a bioinformatics toolbox written in modern C++. Each tool is designed to be easy to use and fast, and the whole codebase is tested exhaustively. BOSS is free software distributed under the GNU General Public License v3.
 
-Currently, BOSS contains the following tools:
+It currently ships two tools:
 
-- [boss-fqsp](https://github.com/cauliyang/boss/blob/master/document/boss-fqsp.md) : A fast tool for splitting fastq files into paired files.
-- [boss-squeue](https://github.com/cauliyang/boss/blob/master/document/boss-squeue.md): Summary Status of Jobs in HPC Queues
+- [boss-fqsp](https://github.com/cauliyang/boss/blob/master/document/boss-fqsp.md): a fast tool for splitting FASTQ files into paired files.
+- [boss-squeue](https://github.com/cauliyang/boss/blob/master/document/boss-squeue.md): a summary of job status in HPC queues.
 
 {{< github repo="cauliyang/boss" >}}
 
-It is now evolving and will be updated frequently. Please check the GitHub repository for the latest version.
+The toolbox is still evolving and is updated frequently; check the GitHub repository for the latest version.

@@ -1,6 +1,6 @@
 ---
-title: Bioinformatics Algorithm Library aka BINARY
-description: A collection of algorithms and data structures that are designed for modern C++ bioinformatics applications.
+title: "BINARY: A Bioinformatics Algorithm Library in Modern C++"
+description: "A C++20 library of efficient, thread-safe algorithms and data structures for bioinformatics applications, with Python bindings."
 categories: ["Bioinformatics", "Algorithms"]
 tags: ["C++", "Data Structures"]
 date: 2022-09-26
@@ -8,22 +8,17 @@ featured: false
 draft: false
 ---
 
-The library is a collection of algorithms and data structures that are designed for modern C++ bioinformatics applications.
-You can use the library in your own projects or as a part of a larger project.
+BINARY is a collection of algorithms and data structures built for modern C++ bioinformatics applications. You can use it directly in your own projects or as a component of a larger system. Every data structure and algorithm is implemented in modern C++ with an emphasis on efficiency.
 
-The library will include efficient data structure and algorithm implemented by Modern C++.
+The library follows a few design principles:
 
-**The design philosophy of the library:**
-
-- Embrace C++20 standard
-- Supports modern C++ features
+- Embrace the C++20 standard and modern C++ features
 - Support concurrency and thread safety
-- Priority is given to safety and clean design
-- Hard to use wrongly
-- Testing extensively
-- Python bindings
--
+- Prioritise safety and clean design
+- Make the API hard to use incorrectly
+- Test extensively
+- Provide Python bindings
 
 {{< github repo="ylab-hi/BINARY" >}}
 
-The current project is developing and evolving, and changes will be made to the library as time goes on.
+The project is under active development, and the library will change as it evolves.

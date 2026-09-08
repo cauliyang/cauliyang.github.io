@@ -1,6 +1,6 @@
 ---
 title: Development Tips
-description: A growing collection of small development tricks I keep reaching for.
+description: Short, copy-and-paste development tricks I keep reaching for, starting with hiding the macOS desktop icons.
 categories: ["Tools"]
 tags: ["macOS", "Development"]
 date: 2023-07-05
@@ -8,14 +8,18 @@ featured: false
 draft: false
 ---
 
-## 1 hidden desktop icons on macOS
+A running list of small tricks that are too short for their own post.
+
+## Hide desktop icons on macOS
+
+A clean desktop is one less distraction during screen sharing and recording. Finder can stop drawing the icons entirely:
 
 ```bash
 defaults write com.apple.finder CreateDesktop false
 killall Finder
 ```
 
-Otherwise, you want to show the icons again
+To show them again:
 
 ```bash
 defaults write com.apple.finder CreateDesktop true

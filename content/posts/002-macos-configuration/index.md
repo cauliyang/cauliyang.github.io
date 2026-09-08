@@ -1,6 +1,6 @@
 ---
 title: macOS Setup for Development and Research
-description: A living guide to customizing macOS for focused, distraction-free development and research work.
+description: The tools I install on a fresh Mac for bioinformatics and software work, from Homebrew and the terminal to editors and everyday apps.
 date: 2022-11-26
 lastmod: 2023-09-02
 featured: false
@@ -15,180 +15,112 @@ tags: ["macOS", "Development"]
 
 ## TLDR
 
-|                  |               |                    |               |
-| ---------------- | ------------- | ------------------ | ------------- |
-| [alacritty]      | [office]      | [aldente]          | [one switch]  |
-| [alfred]         | [pdf expert]  | [alttab]           | [picgo]       |
-| [bartender]      | [pycharm]     | [cheat.sh]         | [rectangle]   |
-| [chrome]         | [reeder 5]    | [clion]            | [rust]        |
-| [conda]          | [snippetslab] | [default folder x] | [soundsource] |
-| [docker]         | [spacevim]    | [dust]             | [time sink]   |
-| [ferdi]          | [tldr]        | [fish]             | [tmux]        |
-| [git]            | [tmuxinator]  | [hyperfine]        | [vim]         |
-| [imagine]        | [xcode]       | [ishot]            | [xmind]       |
-| [iterm2]         | [zellij]      | [lunarvim]         | [zoom]        |
-| [magnet]         | [zotero]      | [mamba]            | [zsh]         |
-| [micromamba]     | [fisher]      | [miniforge]        | [ouch]        |
-| [monitorcontrol] | [topgrade]    | [monodraw]         | [imagemagick] |
-| [neovim]         | [youtobe-dl]  | [notion]           | [jetbrains]   |
-| [google drive]   | [transmit]    | [homebrew]         | [tree]        |
-| [fluent reader]  | [wezterm]     | [iina]             | [vs code]     |
+|                  |                          |                    |               |
+| ---------------- | ------------------------ | ------------------ | ------------- |
+| [Alacritty]      | [Office]                 | [AlDente]          | [One Switch]  |
+| [Alfred]         | [PDF Expert]             | [AltTab]           | [PicGo]       |
+| [Bartender]      | [PyCharm]                | [cheat.sh]         | [Rectangle]   |
+| [Chrome]         | [Reeder 5]               | [CLion]            | [Rust]        |
+| [Conda]          | [SnippetsLab]            | [Default Folder X] | [SoundSource] |
+| [Docker]         | [SpaceVim]               | [dust]             | [Time Sink]   |
+| [Ferdi]          | [tldr]                   | [fish]             | [tmux]        |
+| [Git]            | [tmuxinator]             | [hyperfine]        | [Vim]         |
+| [Imagine]        | [Xcode]                  | [iShot]            | [Xmind]       |
+| [iTerm2]         | [Zellij]                 | [LunarVim]         | [Zoom]        |
+| [Magnet]         | [Zotero]                 | [Mamba]            | [zsh]         |
+| [Micromamba]     | [fisher]                 | [Miniforge]        | [ouch]        |
+| [MonitorControl] | [topgrade]               | [Monodraw]         | [ImageMagick] |
+| [Neovim]         | [youtube-dl][youtobe-dl] | [Notion]           | [JetBrains]   |
+| [Google Drive]   | [Transmit]               | [Homebrew]         | [tree]        |
+| [Fluent Reader]  | [WezTerm]                | [IINA]             | [VS Code]     |
 
-## 1. Introduction
+## Why I keep this list
 
-Given the time and effort required for migrating configurations, I have decided to create a blog documenting the entire process.
-The configurations will be divided into two sections, the first of which will cover the software that I frequently use, and the second will contain the configuration files themselves.
-As I have recently acquired a MacBook Pro M1 model, here is a list of the tools I am currently utilizing.
+Migrating a development setup to a new machine takes a surprising amount of time, so I started documenting the whole process when I moved to a MacBook Pro with the M1 chip.
+This post covers the software I use every day; the configuration files themselves live in my dotfiles.
+It is a living document: tools I have retired stay in the list, struck through or marked as replaced, so the history of the setup is still visible.
 
-## 2. Package Manager
+## Package manager
 
 ### Homebrew
 
-If you're a macOS user looking to expand your software options beyond what's available in the App Store, Homebrew is an excellent solution.
-Homebrew is a free and open-source package manager that simplifies the process of installing software on your Mac.
+[Homebrew] is the package manager for macOS. Almost everything else in this post is installed through it, so it goes first.
 
-Here's how to get started with [Homebrew]:
-
-- Open the Terminal app, which you can find in the Utilities folder within the Applications folder.
-- In the Terminal window, paste the following command and hit enter to install Homebrew:
+{{< steps >}}
+{{< step number="1" title="Install Homebrew" >}}
+Open Terminal (Applications → Utilities) and run the installer. It will ask for your password once to set up the required directories.
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-- You may be prompted to enter your password during the installation process.
-  This is normal and required to give Homebrew the necessary permissions to install software on your system.
-- Once the installation is complete, you can start using Homebrew to install software packages.
-  For example, if you want to install the popular text editor `vim` you can type the following command into the Terminal window:
+{{< /step >}}
+{{< step number="2" title="Install a package" >}}
+Homebrew resolves and installs dependencies for you.
 
 ```bash
 brew install vim
 ```
 
-Homebrew will then download and install the latest version of `vim`, along with any dependencies that it requires.
-
-- To update Homebrew itself and all installed packages, use the following command:
+{{< /step >}}
+{{< step number="3" title="Keep everything current" >}}
 
 ```bash
 brew update && brew upgrade
 ```
 
-This will update Homebrew to the latest version and upgrade all installed packages to their latest versions.
-Overall, Homebrew is an excellent tool for macOS users who want to expand their software options beyond what's available in the App Store.
-It's simple to install and use, and it can save you a lot of time and effort when it comes to installing and managing software on your Mac.
+{{< /step >}}
+{{< /steps >}}
 
-## 3. Terminal Working Space
+## Terminal workspace
 
-The first part of the blog features an overview of the applications and tools in my workflow, along with brief descriptions.
-For those with a specific interest in a particular one, links will be provided for further reading.
-This allows readers to learn more about the tools and potentially discover new resources for their own use.
+My terminal stack has changed over time:
 
-- [iterm2] → [alacritty] -> [wezterm]
+- [iTerm2] → [Alacritty] → [WezTerm]
 - [zsh] → [fish]
-- [tmux] → [zellij]
+- [tmux] → [Zellij]
 
-However, I still leave information about previous tools.
-I also write another blog to talk about how to move to new terminal setting.
+I keep the notes on the earlier tools below for reference. The move to the current setup has its own post:
 
 {{< article link="/posts/012-make-a-powerful-ternimal/">}}
 
 ### Alacritty
 
-[Alacritty] is a free and open-source terminal emulator that is designed to be both fast and lightweight.
-It's written in Rust, a high-performance programming language, and is available for multiple operating systems, including macOS, Linux, and Windows.
-
-Here's how to get started with [Alacritty] on macOS:
-
-- First, make sure that we have Homebrew installed by following the steps in previous tutorial.
-  Homebrew is the easiest way to install [Alacritty] on macOS.
-- Open the Terminal app and type the following command to install [Alacritty]
+[Alacritty] is a fast, GPU-accelerated terminal emulator written in Rust. It runs on macOS, Linux, and Windows and deliberately does very little beyond rendering text quickly, which is exactly what I want when a multiplexer handles the rest.
 
 ```bash
 brew install --cask alacritty
 ```
 
-This command will install [Alacritty] and all of its dependencies on our system.
-
-- Once the installation is complete, we can launch [Alacritty] by typing "alacritty" in the Terminal window.
-- By default, [Alacritty] uses a simple and minimalistic configuration.
-  We can customize it by creating a configuration file at the following location:
-
-```bash
-~/.config/alacritty/alacritty.yml
-```
-
-Here, we can set things like the font size, color scheme, and other preferences to suit our needs.
-We can find more information on how to customize [Alacritty] on the official website or in the documentation.
-
-Overall, [Alacritty] is an choice for users who want a fast and lightweight terminal emulator that's easy to use and customize.
-With its simple installation process and easy-to-use configuration options, it's a great alternative to other popular terminal emulators on macOS.
+Configuration lives in `~/.config/alacritty/alacritty.yml`, where you set the font, color scheme, and key bindings. The [official documentation][alacritty] covers every option.
 
 ### Zellij
 
-[Zellij] is a free and open-source terminal workspace that allows us to create and manage multiple terminal sessions within a single window.
-Compared to [tmux], [zellij] provide more friendly interface.
-
-Here's how to get started with Zellij:
+[Zellij] is a terminal workspace: it manages panes, tabs, and sessions inside one window. It fills the same role as [tmux], but its default key bindings and on-screen hints make it much friendlier to start with.
 
 ```bash
 brew install zellij
 ```
 
-By default, [Zellij] uses a simple and minimalistic configuration.
-We can customize it by creating a configuration file at the following location:
-
-```bash
-~/.config/zellij/config.kdl
-```
-
-Here, we can set things like the keybindings, color scheme, and other preferences.
-We can find more information on how to customize [Zellij] on the official website or in the documentation.
-With its simple installation process and easy-to-use configuration options, it's a great alternative to other popular terminal workspaces.
+Key bindings, themes, and layouts are configured in `~/.config/zellij/config.kdl`.
 
 ### Fish
 
-{{< figure src="https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/iShot_2023-02-18_22.55.20.png" width=900 >}}
+{{< figure src="https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/iShot_2023-02-18_22.55.20.png" alt="Fish shell showing inline autosuggestions in Alacritty" width=900 >}}
 
-[Fish], or the "Friendly Interactive SHell" is a free and open-source command-line shell for Unix-based operating systems like macOS and Linux.
-It's designed to be both easy to use and highly customizable, with a modern and user-friendly interface.
-It includes some valuable features including autosuggestion by default in comparison with [zsh].
-Hence, we can use it out of box without any efforts for configuration.
-
-Here's how to get started with [Fish] on macOS:
-
-- First, make sure that we have [Homebrew] installed on our system by following the steps in my previous tutorial.
-  Homebrew is the easiest way to install Fish on macOS.
-- Open the [alacritty] and type the following command to install Fish:
+[fish], the Friendly Interactive Shell, ships with autosuggestions from your history, syntax highlighting, and sensible completions out of the box. Getting the same experience in [zsh] takes a stack of plugins; with fish I need almost no configuration.
 
 ```bash
 brew install fish
 ```
 
-- Once the installation is complete, we can launch Fish by typing "fish" in the Terminal window.
-  This will start a new Fish shell session.
-- By default, Fish uses a simple and minimalistic configuration.
-  We can customize it by creating a configuration file at the following location:
+Run `fish` to start a session. Configuration goes in `~/.config/fish/config.fish`, and I manage plugins with [fisher].
 
-```bash
-~/.config/fish/config.fish
-```
-
-Fish has plugins system as well, and I use [fisher] to manage plugins.
-Here, we can set things like the prompt, aliases, and other preferences.
-We can find more information on how to customize Fish on the official website or in the documentation.
-
-- One of the unique features of Fish is its auto-suggestion system, which suggests commands as we type based on command history.
-  This can save our time and effort when working with the command line.
-
-## 4. Command Line Application
+## Command-line tools
 
 ### Git
 
-**Git** is a free and open-source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
-Also, Git a t tool used in the terminal to download and upload data or code to the _GitHub_.
-Similarly, Git is shipped with macOS, so we may need to update that by `brew upgrade git`.
-
-Here's how to get started with [git] on macOS:
+[Git] is the distributed version control system behind nearly every project I touch and the way I move code to and from GitHub. macOS ships an older Git, so I install a current one with Homebrew:
 
 ```bash
 brew install git
@@ -196,28 +128,15 @@ brew install git
 
 ### Conda
 
-**Conda** is a package, dependency, and environment management for any language such as _Python_, _R_, _Ruby_, _C/C++_, and more.
-Conda is an open-source package management system and environment management system that runs on Windows, macOS, and Linux.
-Conda quickly installs, runs, and updates packages and their dependencies.
-Conda easily creates, saves, loads, and switches between environments.
-It was created for Python programs, but it can package and distribute software for any language.
+[Conda] manages packages, dependencies, and isolated environments for any language: Python, R, C/C++, and more. It started as a Python tool, but I use it to install compiled bioinformatics software just as often.
 
-In addition, I recommend to use [mamba] to wrap **Conda** to accelerate running speed.
-However, we should install [miniforge] that is a minimal installer for [conda] with some pre-configured features if using M1 model.
-[miniforge] emphasis on supporting various CPU architectures including Apple M1.
-We can also use [mamba] or [micromamba] to install packages in [conda] environment.
+On Apple Silicon I install [Miniforge], a minimal Conda installer that defaults to the conda-forge channel and supports the arm64 architecture. For speed, I use [Mamba] or [Micromamba] as a drop-in replacement for the `conda` command when installing packages.
 
-- [Tree]
+### tree
 
-**tree** is a recursive directory listing program that produces a depth-indented listing of files.
-With no arguments, tree lists the files in the current directory.
-When directory arguments are given, tree lists all the files or directories
-found in the given directories each in turn. Upon completion of listing all
-files and directories found, tree returns the total number of files.
+[tree] prints a directory as an indented listing of files. With no arguments it lists the current directory; given paths, it lists each in turn and reports the total number of files and directories.
 
-{{< figure src= "https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/20210610190826.png" caption="tree" numbered="true" width="500" >}}
-
-Here's how to get started with [tree] on macOS:
+{{< figure src="https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/20210610190826.png" alt="Output of the tree command showing a nested directory listing" caption="tree" numbered="true" width="500" >}}
 
 ```bash
 brew install tree
@@ -225,54 +144,35 @@ brew install tree
 
 ### cheat.sh
 
-[Cheat.sh] is a free and open-source web service that provides quick access to a wide range of cheat sheets and examples for various programming languages and command-line tools.
-It's designed to be fast, lightweight, and accessible from any device with an internet connection.
+[cheat.sh] is a community-maintained cheat sheet service for programming languages and command-line tools, reachable from any terminal with `curl cheat.sh/<command>`. It is the fastest way I know to look up a forgotten flag.
 
-{{< figure src= "http://cheat.sh/files/big-logo-v2-fixed.png" numbered="true" width="500" >}}
-
-Cheat.sh is an excellent choice for users who want quick and easy access to cheat sheets and examples for various programming languages and command-line tools.
-With its simple and intuitive interface, it's a great resource for both beginners and experienced users alike.
+{{< figure src="http://cheat.sh/files/big-logo-v2-fixed.png" alt="cheat.sh logo" numbered="true" width="500" >}}
 
 ### dust
 
-dust = du + rust. It like du but more intuitive.
-[Dust] is a free and open-source utility for analyzing disk usage.
-It's designed to be fast, flexible, and easy to use, with a simple command-line interface that allows us to identify and analyze disk usage patterns.
-
-Here's how to get started with Dust:
-
-- First, make sure that Homebrew is installed by following the steps in my previous tutorial.
-  Homebrew is the easiest way to install Dust on macOS.
-- Open the [alacritty] and type the following command to install Dust:
+[dust] is `du` written in Rust. Instead of a flat list of numbers it prints a tree sorted by size, so the directories eating your disk are obvious at a glance.
 
 ```bash
 brew install dust
 ```
 
-{{< figure src= "https://raw.githubusercontent.com/bootandy/dust/master/media/snap.png"  numbered="true" width="500" >}}
+{{< figure src="https://raw.githubusercontent.com/bootandy/dust/master/media/snap.png" alt="dust output showing disk usage as a size-sorted tree" numbered="true" width="500" >}}
 
 ### hyperfine
 
-Hyperfine is a free and open-source command-line benchmarking utility.
-It's designed to be fast, flexible, and easy to use, with a simple command-line interface that allows you to quickly measure the performance of your shell commands and scripts.
-
-Here's how to get started with Hyperfine:
+[hyperfine] is a command-line benchmarking tool. It runs a command repeatedly, handles warmup, and reports the mean with a confidence interval, which is far more trustworthy than a single `time` run.
 
 ```bash
 brew install hyperfine
 ```
 
-{{< figure src= "https://i.imgur.com/z19OYxE.gif"  numbered="true" width="500" >}}
+{{< figure src="https://i.imgur.com/z19OYxE.gif" alt="hyperfine comparing the run time of two commands" numbered="true" width="500" >}}
 
-Hyperfine also provides several options for customizing the benchmarking process, such as specifying the number of runs, warmup iterations, and statistical confidence interval.
-You can find more information on how to use these options in the official documentation or by running "hyperfine --help" in the terminal.
+Run `hyperfine --help` for the options on run count, warmup iterations, and exporting results.
 
 ### ouch
 
-ouch stands for obvious unified compression helper, and it support tar, .zip, .gz, .xz, .lzma, .bz, .bz2, .lz4, .sz and .zst.
-`ouch decompress a.zip` for decompressing, `ouch cmopress one.txt two.txt archive.zip` for compression.
-
-Here's how to get started with ouch:
+[ouch] (Obvious Unified Compression Helper) gives one interface to tar, zip, gz, xz, lzma, bz2, lz4, sz, and zst, and picks the format from the file extension. `ouch decompress a.zip` extracts an archive; `ouch compress one.txt two.txt archive.zip` creates one.
 
 ```bash
 cargo install ouch
@@ -280,87 +180,59 @@ cargo install ouch
 
 ### topgrade
 
-Topgrade is a free and open-source utility for upgrading all your packages.
-It's designed to be fast, flexible, and easy to use, with a simple command-line interface that allows you to quickly upgrade your packages without worrying about dependencies or conflicts.
+[topgrade] upgrades everything on the machine in one command: Homebrew, Cargo, Conda, plugin managers, and more. It replaces the handful of update commands I used to run by hand.
 
-{{< figure src="https://raw.githubusercontent.com/topgrade-rs/topgrade/main/doc/topgrade_demo.gif" width=500 >}}
-
-Here's how to get started with Topgrade:
+{{< figure src="https://raw.githubusercontent.com/topgrade-rs/topgrade/main/doc/topgrade_demo.gif" alt="topgrade upgrading several package managers in sequence" width=500 >}}
 
 ```bash
 brew install topgrade
 ```
 
-### imagemagick
+### ImageMagick
 
-{{< figure src="https://imagemagick.org/image/wizard.png" width=250 >}}
+{{< figure src="https://imagemagick.org/image/wizard.png" alt="ImageMagick wizard logo" width=250 >}}
 
-ImageMagick is a free and open-source command-line utility for manipulating and converting images.
-It's designed to be fast, flexible, and easy to use, with a simple command-line interface that allows you to perform a wide range of image processing tasks.
-
-Here's how to get started with ImageMagick:
+[ImageMagick] is the command-line toolkit for converting and editing images. I use it mostly to resize and convert figures for slides and blog posts.
 
 ```bash
 brew install imagemagick
 ```
 
-Once the installation is complete, you can use ImageMagick by running the "convert" command in the Terminal window, followed by the name of the input file, the name of the output file, and any optional parameters that you want to use.
-For example, to resize an image and save it as a JPEG file, you can type the following:
+The `convert` command takes an input file, optional operations, and an output file:
 
 ```bash
-
 convert input.jpg -resize 800x600 output.jpg
-
 ```
 
-This will resize the "input.jpg" file to 800x600 pixels and save the result as "output.jpg".
-We can find more information on how to use the "convert" command and its various parameters in the official documentation or by running "man convert" in the terminal.
+Other useful commands are `identify` for image metadata, `composite` for layering images, and `montage` for contact sheets. `man convert` and the official documentation cover the rest, and the same functionality is exposed as a library for C, Perl, Python, and Ruby.
 
-In addition to the "convert" command, ImageMagick provides a wide range of other commands for performing various image processing tasks, such as "identify" for displaying image metadata, "composite" for compositing multiple images, and "montage" for creating image montages.
-We can find a full list of ImageMagick commands and their descriptions in the official documentation.
-ImageMagick also provides a powerful and flexible API that we can use to integrate image processing functionality into our own programs and scripts.
-The API is available in several programming languages, including C, Perl, Python, and Ruby, and provides a wide range of functions for manipulating and converting images.
+### youtube-dl
 
-### youtobe-dl
-
-[youtube-dl] is a free and open-source command-line utility for downloading videos from YouTube and other video sharing websites.
-It's designed to be fast, flexible, and easy to use, with a simple command-line interface that allows us to download videos with various options.
-
-Here's how to get started with youtube-dl:
+[youtube-dl][youtobe-dl] downloads videos from YouTube and many other sites.
 
 ```bash
 brew install youtube-dl
 ```
 
-Once the installation is complete, you can use youtube-dl by running the "youtube-dl" command in the Terminal window, followed by the URL of the video that you want to download.
-For example, to download a YouTube video, you can type the following:
+Pass it a URL and it picks the best available format and saves the file to the current directory:
 
 ```bash
 youtube-dl https://www.youtube.com/watch?v=VIDEO_ID
 ```
 
-Replace "VIDEO_ID" with the actual ID of the video that you want to download.
-youtube-dl will automatically detect the best available format and quality for the video, and save it to your current working directory.
-In addition to downloading videos, youtube-dl provides a wide range of other options for customizing the download process, such as selecting a specific video format, downloading only the audio, downloading subtitles, and downloading entire playlists or channels.
-You can find more information on how to use these options in the official documentation or by running "youtube-dl --help" in the terminal.
+Options cover format selection, audio-only downloads, subtitles, and whole playlists or channels; see `youtube-dl --help`.
 
-### lsd
+## Window management
 
-## 5. Windows Management
+For keyboard-driven window management I use [yabai], [skhd], and [SketchyBar]: a tiling window manager, a hotkey daemon, and a status bar that work together.
 
-If you're looking for a powerful and flexible way to manage windows on Mac, you might want to consider using yabai, skhd, and sketchybar.
-These are a set of open-source utilities that provide advanced window management features, allowing to control the layout, positioning, and sizing of windows with ease.
+{{< figure src="https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/iShot_2022-12-20_20.27.10.png" alt="macOS desktop with tiled windows managed by yabai and a SketchyBar status bar" width=600 >}}
 
-{{< figure src="https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/iShot_2022-12-20_20.27.10.png" width=600 >}}
+I describe the setup in detail in a separate post:
 
-I have [blog]({{< ref "014-macos-tiling-windows-management" >}}) to talk about how to use the tools.
 {{< article link="/posts/014-macos-tiling-windows-management/" >}}
 
-Here's how to get started:
-
-- First, we need to install Homebrew on Mac if it haven't already.
-  We can follow the steps in my previous tutorial to do this.
-- Once Homebrew is installed, open the Terminal app ([alacritty]) and type the following command to install [yabai], [skhd], and [skychybar]:
+Install all three with Homebrew:
 
 ```bash
 brew install koekeishiya/formulae/yabai
@@ -370,94 +242,66 @@ brew tap FelixKratz/formulae
 brew install sketchybar
 ```
 
-Once the installations are complete, we need to create configuration files for [yabai] and [skhd].
-These files define the keyboard shortcuts and settings, which are used to control windows.
+After installation, yabai and skhd each need a configuration file that defines the layout rules and the keyboard shortcuts. Both tools are flexible, so expect to iterate on the configuration for a while.
 
-And that's it! With [yabai], [skhd], and [skychybar], we can now manage windows on Mac using keyboard shortcuts.
-These tools offer a lot of flexibility, so don't be afraid to experiment and find
+Tools I used before switching to yabai:
 
-Alternative combination:
+- ~~[Magnet]~~ snaps windows to screen regions with shortcuts
+- ~~[Rectangle]~~ moves and resizes windows with keyboard shortcuts
+- ~~[AltTab]~~ brings a Windows-style window switcher to macOS
 
-- ~~[Magnet]~~ A tool is used to manage windows for different applications
-- ~~[Rectangle]~~ A tool to move and resize windows in macOS
-- ~~[AltTab]~~ is a good tool to manage windows for different applications
+## Editors
 
-## 6. Editor
-
-When it comes to coding on macOS, we have a variety of options for text editors, including Neovim, VSCode, and JetBrains.
-Each editor has its own strengths and weaknesses, and choosing the right one will depend on personal preferences and needs.
-In this section, I'll introduce each editor and compare them to help to decide which one is right.
+Each of the three editors I use has a clear strength, and the choice comes down to the task and personal preference.
 
 ### Neovim
 
-[Neovim] is a fork of the popular text editor Vim, with the goal of modernizing and improving upon Vim's functionality.
-It's a powerful text editor that's highly customizable, with a strong focus on keyboard shortcuts and extensibili great choice
-if you're looking for a lightweight, fast, and highly configurable editor.
-It's great for coding in a terminal, with a vast array of plugins available for customizing workflow.
-It does have a steeper learning curve than some other editors.
-Neovim is my favorite tool and I have written a [series]({{< ref "/pde" >}}) about my personal development environment.
+[Neovim] is a fork of Vim that modernizes the codebase, adds Lua configuration, and exposes a plugin API that has produced a huge ecosystem. It is fast, runs anywhere a terminal does, and rewards the steep learning curve with a keyboard-driven workflow. Neovim is my primary editor, and I have written a [series]({{< ref "/pde" >}}) about my personal development environment.
 
 ### VS Code
 
-[VSCode] is a popular open-source text editor developed by Microsoft.
-It's built on top of the Electron framework and provides a modern, customizable user interface.
-It supports a wide range of programming languages and has a vast collection of extensions available.
-
-[VSCode] is a great choice if you're looking for a powerful and user-friendly editor that supports a wide range of programming languages.
-It's a popular choice among developers for its ease of use, extensive plugin ecosystem, and powerful debugging features.
+[VS Code] is Microsoft's open-source editor built on Electron. It supports nearly every language through extensions, has strong debugging features, and needs little configuration to be productive. Its main cost is resources: it is noticeably heavier than a terminal editor.
 
 ### JetBrains
 
-JetBrains is a company that develops a variety of popular IDEs, including IntelliJ IDEA, [PyCharm], and [Clion].
-These IDEs provide a complete development environment, with powerful code editors, debugging tools, and support for a wide range of programming languages and frameworks.
-JetBrains is a great choice if you're looking for a complete development environment that includes everything you need to build complex applications.
-It's particularly useful if you're working with a large codebase or complex projects, as it provides powerful refactoring tools and an intelligent code editor.
+[JetBrains] builds full IDEs such as IntelliJ IDEA, [PyCharm], and [CLion]. They ship with a refactoring engine, a debugger, and deep language understanding that no plugin stack quite matches, which makes them my choice for large codebases. The trade-offs are licence cost and resource usage.
 
-Here's a quick rundown of how the editors compare:
+In short: Neovim for speed and customization, VS Code for ease of use and breadth, JetBrains for heavyweight refactoring and debugging.
 
-[Neovim] is highly customizable and has a strong focus on keyboard shortcuts, but has a steeper learning curve.
-[VSCode] is user-friendly and supports a wide range of programming languages, with a vast collection of plugins available, but can be slow and resource-intensive.
-JetBrains provides a complete development environment with powerful code editors, debugging tools, and support for a wide range of programming languages and frameworks, but can be costly and resource-intensive.
+## Applications
 
-Overall, each editor has its own strengths and weaknesses, and choosing the right one will depend on your personal preferences and needs.
-[Neovim] is a great choice if you're looking for a highly customizable and fast editor, while [VSCode] is a popular choice if you're looking for a user-friendly editor that supports a wide range of programming languages.
-JetBrains is a great choice if you're looking for a complete development environment.
+Everything else I install on a new Mac, with a one-line note on why. Many of these are available as Homebrew casks; my install scripts and config files are in my dotfiles on GitHub.
 
-## 7. Application
+- [Alfred] launcher, clipboard history, and workflows that replace Spotlight
+- [Default Folder X] adds recent and favorite folders to every open and save dialog
+- [Docker] isolated environments for development and deployment
+- [Chrome] my browser
+- [IINA] a modern video player for macOS
+- [Imagine] compresses images before I upload them anywhere; small and effective
+- [Office] for documents that have to be Word or PowerPoint
+- [MonitorControl] controls brightness and volume of external monitors from the keyboard
+- [Monodraw] draws ASCII diagrams
+- [PDF Expert] the best PDF reader I have used on a Mac
+- [PicGo] uploads images to hosts such as GitHub; essential for writing this blog
+- [SnippetsLab] my code snippet manager; integrates with Alfred
+- [Xcode] Apple's IDE and developer toolchain
+- [Zoom] meetings
+- [Xmind] mind maps for organizing ideas
+- [Transmit] file transfer client for servers and cloud storage
+- [Time Sink] records how long each app is in use
+- [SoundSource] per-application audio control
+- [Reeder 5] RSS reader
+- [Notion] notes and project planning
+- ~~[One Switch]~~ one-click toggles for keep awake, hide desktop icons, and similar
+- [iShot] screenshot and screen recording tool
+- [Google Drive] cloud storage and file sharing
+- [Ferdi] collects Gmail, Slack, and other messaging services in one window
+- [Bartender] hides and organizes menu bar icons
+- [AlDente] limits charging to keep the battery healthy
+- [Zotero] my reference manager for research papers
+- [Fluent Reader] a modern desktop RSS reader
 
-This part list variety of applications used for different goals.
-Every application has a one-word description.
-Some of them can be installed by Homebrew.
-My config files and installation commands are kept in GitHub.
-
-- [Alfred] A tool can give your different control and efficiency in mac
-- [Default Folder x] A tool can empower default finder
-- [Docker] is a tool to create a safe environment for development or production
-- [Chrome] There is no reason not to use it. :heart:
-- [IINA] Great tool that is used to play video
-- [Imagine] Compress images before you upload somewhere. light and powerful!
-- [Office] :smile:
-- [MonitorControl] It manages brightness and sound for different monitors
-- [Monodraw] A tool is used to design fancy ASCII strings
-- [PDF Expert] Best PDF reader in Mac
-- [PicGo] A tool is used to upload images to _Web service_ like _GitHub_. It is beneficial for writing blogs.
-- [SnippetsLab] My favorite tool stored code snippets, and it can be integrated with Alfred
-- [Xcode] :smile:
-- [Zoom] MEETING!
-- [Xmind] always makes your creative and keeps your minds clears
-- [Transmit] Upload, download and manage files on servers with beautiful and powerful UI
-- [Time Sink] is a good tool to record your using time to track your behavior
-- [SoundSource] can help you get truly powerful control over all the audio
-- [Reeder 5] A RSS reader and keep control of your reading
-- [Notion] A excellent notion tool
-- ~~[One Switch]~~ can help you finish some progress like keep awake and hide icons on one button
-- [iShot] A great tool to take screenshots
-- [Google Drive] is a cloud storage service that allows you to store and share files with anyone
-- [Ferdi] can integrate other tools like Gmail, Slack, or others to allow you manage information in one place
-- [Bartender] is a great application to manage icons of all your working tools
-- [AlDente] is able to keep your battery healthy by controlling the power consumption
-- [Zotero] is my favorite tools to manage research papers
-- [Fluent Reader] is modern desktop RSS reader
+{{< signoff >}}
 
 <!-- link -->
 
@@ -525,3 +369,6 @@ My config files and installation commands are kept in GitHub.
 [jetbrains]: https://www.jetbrains.com
 [fluent reader]: https://github.com/yang991178/fluent-reader
 [wezterm]: https://wezfurlong.org/wezterm
+[yabai]: https://github.com/koekeishiya/yabai
+[skhd]: https://github.com/koekeishiya/skhd/
+[sketchybar]: https://github.com/FelixKratz/SketchyBar/

@@ -1,6 +1,6 @@
 ---
-title: Nei Saitou Neighbor Joining
-description: Implementing the Nei-Saitou Neighbor Joining algorithm to build phylogenetic trees, with bootstrap confidence evaluation.
+title: Building Phylogenetic Trees with Neighbor Joining in Python
+description: A from-scratch Python implementation of the Nei-Saitou neighbor joining algorithm for phylogenetic trees, with bootstrap support values.
 categories: ["Bioinformatics", "Algorithms"]
 tags: ["Python"]
 date: 2019-04-03
@@ -10,49 +10,60 @@ draft: false
 
 {{< katex >}}
 
-## 1. Background
+Neighbor joining (NJ) is a distance-based method for building phylogenetic trees. Given a matrix of pairwise distances between taxa, it repeatedly merges the closest pair of clusters until it has produced an unrooted tree with edge lengths. This post walks through the algorithm and then presents my full Python implementation, which also computes bootstrap support values for the resulting tree.
 
-Before diving into code, the description of NJ algorithm can be found in ![This Link](https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1605172209524.png), where first column indicates parent node, and second column is its children node, the last column is the value of edge.
+## Background
 
-## 2. Neighbor Joining Algorithm
+The figure below describes the expected output: the first column is the parent node, the second column is its child node, and the last column is the length of the edge between them.
 
-The Neighbor-joining Algorithm Given a distance matrix d compute an uprooted tree topology complete with edge lengths that tries to preserve the additive property: \\(d\_{i,m} + d\_{j,m} − d\_{i,j} = 2d\_{k,m}\\),
-where \\(k\\) is the k-th node on both routes from \\(i\\) and \\(j\\) to \\(m\\).
+![Edge table format: parent node, child node, and edge length columns](https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/1605172209524.png)
 
-1.  Let the set of clusters be called \\(L\\) and initially \\(i → C_i; ∀i\\) that is \\(| C_i | = 1\\) and \\(L = C_1 , C_2, \cdots, C_N\\).
-2.  \\(d\_{i,j}\\) is the distance from the initial distance matrix.
-3.  Compute "normalized distance matrix" \\(D\_{i,j}\\) for all \\(i, j\\) such that
-    $$D\_{i,j} = d\_{i,j} − (r_i + r_j ) \\ where\\ r_i = \\frac{1}{|L| -2} \\sum\_{z \in L} d\_{i,z}$$
-    This subtracts the average distance to all other nodes than the pair involved. **Note: this is not where we use the distance identity.**
-4.  Use normalized distance to \\((i, j) = \argmin D\_{i,j} \\; C_i,C_j \in L \\)
-5.  Merge \\(C_i \cup C_j \rightarrow C_k\\) where \\(k\\) is a new cluster number.
-6.  Mark old clusters as used so that effectively: \\(L \leftarrow L − C_i − C_j\\)
-7.  Compute a new normalized distance matrix including the new cluster \\(k\\) and excluding \\(i, j\\).
-    \\(d\_{k,z} = d\_{z,k} = (d\_{i,z} + d\_{j,,z} − d\_{i,j} ) \\; \forall z ∈ L 2\\)
-    This uses the additivity of the distances to compute the distance to the new cluster from each other node.
-8.  Compute the length of the edges from \\(k\\) to \\(i\\) and \\(j\\).
-    Even though \\(C_k\\)has assumed the role of both \\(C_i\\) and \\(C_j\\) you still need the edge length to \\(i\\) and \\(j\\) from $k$ in order to “draw” the tree.
-    $$edge\_{i,k} = (d\_{i,j} + r_i − r_j)$$
-    $$edge\_{j,k} = (d\_{i,j} + r_j − r_i)$$
-9.  Define height \\(h_k = d\_{i,j} /2\\) where \\(h_k\\) is the height of node that is the ancestor to all in \\(C_k\\).
-    When drawing the tree $h_k$ is the height above the baseline (where all the leaves are).
-10. \\(L \leftarrow L \cup C_k\\) While there is more than two clusters left go to step 3
-11. Join the remaining two clusters with:
-    $$edge\_{j,k} = d\_{i,j} $$
+## The neighbor joining algorithm
 
-**Implementation Notes Consider this part of the computation:**
-$$D\_{i,j} = d\_{i,j} − (r_i + r_j ) \\ where \\ r_i =  \\frac{1}{|L|-2} \\sum\_{z \\in L}d\_{i,z}$$
-The values of r\*z can be computed once each time we want to compute matrix
-\\(D\\).
-This saves a vast amount of time.
-Furthermore, since \\(D\_{i,j}\\) is only used to find the argmin of \\(D\_{i,j}\\) we actually don’t have to save array \\(D\\);
-we need to find the argmin of it.
-So computing all the r and then combine the argmin step with the computation of \\(D\_{i,j}\\)
+Given a distance matrix \\(d\\), NJ computes an unrooted tree topology with edge lengths that tries to preserve the additive property
 
-## 3. Implementation
+$$d_{i,m} + d_{j,m} - d_{i,j} = 2d_{k,m},$$
 
-I write code contained comments, and it is about 1000 lines that consumes me two whole days.
-Now let me show my code with rich comments. If you have any questions or recommendation, I am very glad to communicate with you! Please feel free to reach me.
+where \\(k\\) is the node shared by the routes from \\(i\\) and \\(j\\) to \\(m\\).
+
+1.  Let \\(L\\) be the set of clusters. Initially every taxon is its own cluster, \\(i \rightarrow C_i\\) for all \\(i\\), so \\(|C_i| = 1\\) and \\(L = \lbrace C_1, C_2, \cdots, C_N \rbrace\\).
+2.  \\(d_{i,j}\\) is the distance from the initial distance matrix.
+3.  Compute the normalized distance matrix \\(D_{i,j}\\) for all \\(i, j\\):
+
+    $$D_{i,j} = d_{i,j} - (r_i + r_j) \quad \text{where} \quad r_i = \frac{1}{|L| - 2} \sum_{z \in L} d_{i,z}$$
+
+    This subtracts the average distance to all nodes other than the pair involved. Note that this is not where the distance identity is used.
+4.  Pick the pair with the smallest normalized distance: \\((i, j) = \argmin D_{i,j}\\) over \\(C_i, C_j \in L\\).
+5.  Merge \\(C_i \cup C_j \rightarrow C_k\\), where \\(k\\) is a new cluster number.
+6.  Mark the old clusters as used, so that effectively \\(L \leftarrow L - C_i - C_j\\).
+7.  Compute a new distance matrix that includes the new cluster \\(k\\) and excludes \\(i\\) and \\(j\\). For every remaining cluster \\(z \in L\\):
+
+    $$d_{k,z} = d_{z,k} = \frac{1}{2}\left(d_{i,z} + d_{j,z} - d_{i,j}\right)$$
+
+    This uses the additivity of the distances to compute the distance from every other node to the new cluster.
+8.  Compute the lengths of the edges from \\(k\\) to \\(i\\) and \\(j\\). Even though \\(C_k\\) has taken over the role of both \\(C_i\\) and \\(C_j\\), you still need the edge lengths from \\(k\\) to \\(i\\) and \\(j\\) in order to draw the tree:
+
+    $$\text{edge}_{i,k} = \frac{1}{2}\left(d_{i,j} + r_i - r_j\right)$$
+
+    $$\text{edge}_{j,k} = \frac{1}{2}\left(d_{i,j} + r_j - r_i\right)$$
+
+9.  Define the height \\(h_k = d_{i,j} / 2\\), where \\(h_k\\) is the height of the node that is the ancestor of everything in \\(C_k\\). When drawing the tree, \\(h_k\\) is the height above the baseline where all the leaves sit.
+10. Set \\(L \leftarrow L \cup C_k\\). While more than two clusters remain, go back to step 3.
+11. Join the remaining two clusters \\(i\\) and \\(j\\) with a single edge:
+
+    $$\text{edge}_{i,j} = d_{i,j}$$
+
+### Implementation notes
+
+Consider this part of the computation:
+
+$$D_{i,j} = d_{i,j} - (r_i + r_j) \quad \text{where} \quad r_i = \frac{1}{|L| - 2} \sum_{z \in L} d_{i,z}$$
+
+The values \\(r_z\\) only need to be computed once each time we build the matrix \\(D\\), which saves a great deal of time. Furthermore, since \\(D_{i,j}\\) is only used to find its argmin, we never have to store the array \\(D\\) at all: compute all the \\(r\\) values first, then fold the argmin search into the computation of \\(D_{i,j}\\).
+
+## Implementation
+
+The code below is about 1,000 lines with comments and took me two full days to write. It integrates the distance-matrix computation, the NJ algorithm itself, tree traversal, and bootstrapping, and it writes both an edge file and a tree file. If you have any questions or suggestions, please feel free to reach out.
 
 ```python
 """
@@ -1028,4 +1039,4 @@ if __name__ == "__main__":
     main()
 ```
 
-**Thanks for your reading! Hopefully helpful!**
+{{< signoff >}}
