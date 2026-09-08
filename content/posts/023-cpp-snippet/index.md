@@ -1,6 +1,6 @@
 ---
-title: Code Snippets
-description: A growing reference of small, reusable C++ and Rust snippets I keep reaching for.
+title: Code Snippets I Keep Reaching For
+description: A growing reference of small, reusable C++, Rust, Python, and shell snippets that I keep copying between projects.
 categories: ["Software Development"]
 tags: ["C++", "Rust"]
 date: 2022-09-22
@@ -9,7 +9,11 @@ featured: false
 draft: false
 ---
 
-## Get Random numbers
+This is my personal scratchpad of snippets that I keep looking up: mostly C++, with a few Rust, Python, shell, and LaTeX entries mixed in.
+
+## Generate random numbers with the standard library
+
+Seed a Mersenne Twister from `std::random_device` and draw from a uniform distribution; this is the modern replacement for `rand()`.
 
 ```cpp
 #include <algorithm>
@@ -27,7 +31,9 @@ int main() {
 }
 ```
 
-## Get random numbers between min and max
+## Generate a random integer in a range with rand()
+
+When you are stuck with `std::rand()`, this maps its output evenly onto `[min, max]` without the modulo bias.
 
 ```cpp
 // Generate a random number between min and max (inclusive)
@@ -41,7 +47,9 @@ int getRandomNumber(int min, int max)
 }
 ```
 
-## Clear Input Stream
+## Recover from a failed input extraction
+
+After a failed `std::cin >> x`, the stream stays in an error state; clear it and discard the rest of the line before reading again.
 
 ```cpp
 if (std::cin.fail()) // has a previous extraction failed or overflowed?
@@ -52,7 +60,9 @@ if (std::cin.fail()) // has a previous extraction failed or overflowed?
 }
 ```
 
-## Compare Float Number
+## Compare floating-point numbers
+
+Combine an absolute epsilon (for values near zero) with Knuth's relative comparison to test whether two doubles are approximately equal.
 
 ```cpp
 #include <algorithm>
@@ -68,10 +78,40 @@ bool approximatelyEqualAbsRel(double a, double b, double absEpsilon, double relE
     // Otherwise fall back to Knuth's algorithm
     return (diff <= (std::max(std::abs(a), std::abs(b)) * relEpsilon));
 }
-
 ```
 
-## Shelang for Python
+## Measure elapsed time
+
+A minimal stopwatch built on `std::chrono::steady_clock` that reports elapsed seconds as a double.
+
+```cpp
+#include <chrono> // for std::chrono functions
+
+class Timer
+{
+private:
+	// Type aliases to make accessing nested type easier
+	using clock_type = std::chrono::steady_clock;
+	using second_type = std::chrono::duration<double, std::ratio<1> >;
+
+	std::chrono::time_point<clock_type> m_beg { clock_type::now() };
+
+public:
+	void reset()
+	{
+		m_beg = clock_type::now();
+	}
+
+	double elapsed() const
+	{
+		return std::chrono::duration_cast<second_type>(clock_type::now() - m_beg).count();
+	}
+};
+```
+
+## Python script header
+
+The shebang and module docstring I start every Python script with.
 
 ```python
 #!/usr/bin/env python3
@@ -86,7 +126,9 @@ bool approximatelyEqualAbsRel(double a, double b, double absEpsilon, double relE
 """
 ```
 
-## Shelang for Bash
+## Bash script header
+
+Strict mode for shell scripts: exit on error, treat unset variables as errors, and fail a pipeline if any stage fails.
 
 ```bash
 #!/bin/bash
@@ -95,7 +137,9 @@ set -u
 set -o pipefail
 ```
 
-## CLI for Rust
+## Command-line parsing in Rust with clap
+
+A `clap` derive skeleton with a verbosity flag, `env_logger`, and `human_panic` wired together.
 
 ```rust
 #[allow(unused)]
@@ -146,40 +190,17 @@ fn main() {
 }
 ```
 
-## Export port from two layers nodes
+## Forward a port through a jump host
+
+Chain two SSH tunnels to reach a port on a compute node that is only accessible from a login node.
 
 ```bash
 ssh -L 8899:localhost:8899 quest ssh -N -L 8899:localhost:8899 qgpu0101
 ```
 
-## Timer for C++
+## Gradient clipping in PyTorch
 
-```cpp
-#include <chrono> // for std::chrono functions
-
-class Timer
-{
-private:
-	// Type aliases to make accessing nested type easier
-	using clock_type = std::chrono::steady_clock;
-	using second_type = std::chrono::duration<double, std::ratio<1> >;
-
-	std::chrono::time_point<clock_type> m_beg { clock_type::now() };
-
-public:
-	void reset()
-	{
-		m_beg = clock_type::now();
-	}
-
-	double elapsed() const
-	{
-		return std::chrono::duration_cast<second_type>(clock_type::now() - m_beg).count();
-	}
-};
-```
-
-## Gradient Clipping
+Rescale all gradients so that their global L2 norm does not exceed `theta`.
 
 ```python
 def grad_clipping(net, theta):
@@ -192,10 +213,12 @@ def grad_clipping(net, theta):
 
   if norm > theta:
     for param in params:
-      param.grad[:] *= theta/nor
+      param.grad[:] *= theta / norm
 ```
 
-## RST Docstring directive
+## reStructuredText docstring directives
+
+The Sphinx directives I use most often inside docstrings.
 
 ```python
 :Example:
@@ -209,13 +232,17 @@ hello world!
 .. todo:: check that arg2 is non zero.
 ```
 
-## Git remove large files
+## Remove large files from Git history
+
+Strip every blob over 100 MB from the repository history with `git-filter-repo`.
 
 ```bash
 git filter-repo --force --strip-blobs-bigger-than 100M
 ```
 
-## Stop Colab Disconnect
+## Keep a Colab session alive
+
+Run this in the browser console to click the connect button every minute so the runtime does not disconnect.
 
 ```javascript
 function KeepClicking() {
@@ -225,19 +252,25 @@ function KeepClicking() {
 setInterval(KeepClicking, 60000);
 ```
 
-## Open Colab
+## Add an "Open in Colab" badge
 
-```
+Markdown for a badge that opens a GitHub-hosted notebook in Colab.
+
+```markdown
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
 ```
 
-## Srun for interactive shell
+## Start an interactive Slurm shell on a GPU node
+
+Request one GPU for an hour and drop into a shell on the allocated node.
 
 ```bash
 srun -n 1 -t 1:00:00 -p gpu --gres=gpu:tesla:1 --pty bash
 ```
 
-## Bash info for Slurm
+## Slurm batch script header
+
+The `#SBATCH` preamble I use for GPU jobs.
 
 ```bash
 #!/bin/bash -l
@@ -255,24 +288,29 @@ srun -n 1 -t 1:00:00 -p gpu --gres=gpu:tesla:1 --pty bash
 #SBATCH -p v100 # partitions
 cd $SLURM_SUBMIT_DIR
 date;hostname;pwd
-
 ```
 
-## Conda export env
+## Export and recreate a conda environment
+
+Dump the environment without the machine-specific `prefix` line, then rebuild it elsewhere.
 
 ```bash
 conda env export | grep -v '^prefix' > freeze.yml
 conda env create -f freeze.yml
 ```
 
-## Multiple output in Jupyter
+## Show every expression result in a Jupyter cell
+
+By default Jupyter only displays the last expression in a cell; this shows all of them.
 
 ```python
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
 ```
 
-## Multiple Images in Latex
+## Arrange multiple subfigures in LaTeX
+
+A two-by-two grid of images with individual captions using the `subcaption` package.
 
 ```latex
 \usepackage{subcaption}
@@ -303,7 +341,9 @@ InteractiveShell.ast_node_interactivity = "all"
 \end{figure}
 ```
 
-## Show fonts in Jupyter
+## List available fonts in Jupyter
+
+Render every font Matplotlib knows about in its own face so you can pick one visually.
 
 ```python
 import matplotlib.font_manager
@@ -317,7 +357,9 @@ code = "\n".join([make_html(font) for font in sorted(set([f.name for f in matplo
 HTML("<div style='column-count: 2;'>{}</div>".format(code))
 ```
 
-## Display image in Jupyter
+## Display an image file in Jupyter
+
+Show a local image inline at a fixed size.
 
 ```python
 from IPython.display import Image
@@ -325,3 +367,5 @@ from IPython.core.display import HTML
 PATH = "tree_default_max_depth.png"
 Image(filename = PATH , width=900, height=900)
 ```
+
+{{< signoff >}}

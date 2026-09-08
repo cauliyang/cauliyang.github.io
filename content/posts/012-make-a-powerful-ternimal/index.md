@@ -1,6 +1,6 @@
 ---
-title: Make A Powerful Terminal Workspace
-description: Building a fast, keyboard-driven terminal workspace with Alacritty, Zellij, and Fish.
+title: Make a Powerful Terminal Workspace
+description: How I built a fast, keyboard-driven terminal workspace from Wezterm, Fish, and Zellij, with notes on Alacritty.
 categories: ["Tools"]
 tags: ["Terminal", "macOS"]
 date: 2022-12-15
@@ -8,52 +8,41 @@ featured: false
 draft: false
 ---
 
-I recently made a change to my terminal setup, switching from using iTerm2 + Zsh + Tmux to Alacritty + Fish + Zellij.
-Now I use Wezterm + Fish + Zellij.
-I discovered that my new combination is extremely powerful and versatile.
-The flexibility to highly customize each of these tools was a significant factor in my decision to keep them.
+My terminal setup has gone through two changes.
+I first moved from iTerm2 + Zsh + Tmux to Alacritty + Fish + Zellij, and later swapped Alacritty for Wezterm.
+Today my stack is Wezterm + Fish + Zellij.
+The combination is fast and versatile, and the ability to customize each tool in depth is the main reason I have kept it.
+All of these tools are open source; the links below point to their download pages.
 
-{{< alert  icon="fire" cardColor="#e63946" iconColor="#1d3557" textColor="#f1faee"  >}}
-configuring these tools can be a time-consuming and frustrating process.
+{{< alert icon="triangle-exclamation" >}}
+Configuring these tools can be time-consuming and occasionally frustrating.
 {{< /alert >}}
 
-If you're interested in trying them out for yourself, you can click on the links provided to download the relevant tools.
-It's worth noting that these tools are open-source :rocket:
+## Wezterm
 
-## 0. Wezterm
+![Wezterm running with split panes and a tab bar](https://wezterm.org/screenshots/wezterm-vday-screenshot.png "From the Wezterm website")
 
-Welcome to the world of command-line interfaces and terminal emulators.
-If you're a developer, system administrator, or a tech enthusiast, you're likely no stranger to the terminal.
-But did you know that not all terminals are created equal? In this article, we'll introduce Wezterm,
-a modern, GPU-accelerated terminal emulator that takes your command-line work to the next level.
+[Wezterm] is a fast, highly customizable, cross-platform terminal emulator.
+It is written in Rust and uses OpenGL and DirectWrite for GPU-accelerated rendering.
+The features that matter most to me:
 
-![wezterm](https://wezfurlong.org/wezterm/screenshots/wezterm-vday-screenshot.png "from wezerm website")
+1. **Cross-platform support.** Wezterm runs on Windows, macOS, Linux, and FreeBSD, so the same configuration follows me across machines.
+2. **GPU-accelerated rendering.** Scrolling and typing stay smooth even under heavy output.
+3. **Extensive configuration.** Colors, fonts, transparency, and key bindings are all adjustable.
+4. **Built-in multiplexing.** Wezterm can run and manage multiple terminal sessions in a single window, much like tmux.
+5. **Shell integration.** Features such as automatic directory tracking and local echo come with it.
 
-Wezterm is a fast, highly customizable, and cross-platform terminal emulator that focuses on delivering a seamless user experience.
-It's built with a slew of features that make it a standout choice for those seeking a high-performance terminal emulator.
-Wezterm is developed in Rust and uses both OpenGL and DirectWrite for GPU acceleration to achieve its impressive performance.
-
-Here are some of the most compelling features of Wezterm:
-
-1. **Cross-Platform Support:** Wezterm works on various platforms, including Windows, macOS, Linux, and FreeBSD. This versatility makes it an excellent choice for those who work across different operating systems.
-2. **GPU-Accelerated Rendering:** Leveraging the power of your GPU, Wezterm ensures smooth scrolling and typing, even under heavy loads.
-3. **Highly Configurable:** Wezterm allows you to tailor your terminal environment to your liking, offering various customization options, including colors, fonts, transparency, and key bindings.
-4. **Multiplexer Support:** Wezterm includes built-in support for terminal multiplexing, similar to popular tools like tmux, allowing you to run and manage multiple terminal sessions within a single window.
-5. **Shell Integration:** With Wezterm's shell integration, you can enjoy features like automatic directory changing and local echo.
-
-Installing Wezterm is straightforward.
-For example, on macOS, you can use Homebrew to install Wezterm by running the following command in your terminal:
+On macOS, Homebrew installs it in one command:
 
 ```bash
 brew install wezterm
 ```
 
-For other platforms like Windows, Linux, and FreeBSD, you can download the appropriate installer or package from the [Wezterm GitHub releases page](https://github.com/wez/wezterm/releases).
-Once installed, you can launch Wezterm just like any other terminal emulator.
-Simply type `wezterm` in your existing terminal, or find it in your system's application menu.
-Wezterm's configuration file is written in Lua and typically resides in your home directory.
-You can customize various aspects of Wezterm by editing this configuration file.
-For example, to change the default font size, you can add the following to your configuration file:
+For Windows, Linux, and FreeBSD, download the installer or package from the [Wezterm GitHub releases page](https://github.com/wez/wezterm/releases).
+Once installed, launch it by typing `wezterm` in an existing terminal or from your application menu.
+
+The configuration file is written in Lua and lives in your home directory.
+For example, to change the default font size:
 
 ```lua
 wezterm = {
@@ -61,63 +50,56 @@ wezterm = {
 }
 ```
 
-Wezterm represents the next generation of terminal emulators, offering a slew of features that go above and beyond the capabilities of traditional terminals.
-Whether you're seeking better performance, more customization, or just a more pleasant terminal experience, Wezterm is worth checking out.
-Get ready to explore the world of command-line interfaces like never before with Wezterm!
+If you want better performance, more customization, or simply a more pleasant terminal, Wezterm is worth trying.
 
-## 1. Alacritty
+## Alacritty
 
-![alacritty](https://alacritty.org/alacritty_example.png)
+![Alacritty terminal window](https://alacritty.org/alacritty_example.png)
 
-After installing Alacritty, you can create a configuration file ~/.alacritty.yml, which is used to configure the terminal emulator.
-I use GitHub to host all of my configurations, including Alacritty's.
-My configuration file includes detailed comments to assist others in understanding the various options available.
+After installing [Alacritty], create a configuration file at `~/.alacritty.yml`.
+I keep all of my configurations, including Alacritty's, on GitHub, and the file is commented to explain the available options.
 
-One important aspect to keep in mind is that you may need to change the key mapping in order to map the `alt` key to the `option` or `meta` key on macOS.
-Information on how to address this issue can be found in [This issue].
-Fortunately, alacrity release new version (0.12.0) now, and we do not need to remapping keys one by one to use `alt` as `option`.
-We just use the following configuration simply.
+One thing to watch for on macOS: the `alt` key needs to be mapped to `option` (meta).
+The background is in [this issue].
+Since Alacritty 0.12.0 there is no need to remap keys one by one; a single option does it:
 
 ```yml
 window:
   option_as_alt: Both
 ```
 
-Additionally, you can also change the color theme to your preference.
-I enjoy using [base 16] themes.
+You can also change the color theme.
+I like the [base 16] themes.
 
-## 2. Zellij
+## Zellij
 
-Previously, I was using Tmux, which is a widely popular tool for managing terminal windows.
-Recently, I've been learning Rust and have been drawn to tools implemented using this language.
-[Zellij] is one such tool that caught my attention due to its user-friendliness compared to Tmux, which offers built-in key-mapping and helpful tips directly in the terminal.
-This eliminates the need to constantly reference a cheat-sheet.
-The configuration file for [Zellij] can be found at `~/.config/zellij/config.kdl.`
-To be honest, you may not need to add any configurations at all.
-Similar to [Alacritty], you can also change the color theme of [Zellij] as per your preference.
+I used Tmux for a long time, but since learning Rust I have been drawn to tools written in it.
+[Zellij] is one of them.
+It is friendlier than Tmux: key bindings are built in and hints are displayed directly in the terminal, so there is no need to keep a cheat sheet open.
+The configuration file lives at `~/.config/zellij/config.kdl`, and honestly you may not need to add anything to it.
+As with Alacritty, the color theme is easy to change.
 
 {{< carousel images="gallery/*" interval="2500" >}}
 
-## 3. Fish
+## Fish
 
-I have grown to truly appreciate [Fish], it has saved me a lot of time.
-In comparison to Zsh, Fish does not require the installation of numerous plugins to access powerful features.
-Fish provides out-of-the-box features such as auto-suggestion, searching through command history and fancy completion making it much more user-friendly.
-Of course, if desired, you can install plugins, but I find that it is not necessary.
-[Fisher] is a plugins' management tool for [Fish] shell, and you can look it up to find recommended plugins.
-Fish also allows for high degree of customization, such as changing the prompt and greeting message according to your preference.
-I use [Tide] prompt, it is a clean and visually appealing prompt.
+[Fish] has saved me a lot of time.
+Unlike Zsh, it does not need a pile of plugins to be useful: autosuggestions, history search, and rich completions work out of the box.
+Plugins are available if you want them; [Fisher] is the plugin manager for Fish, and its README lists recommended plugins.
+Fish is also easy to customize, from the prompt to the greeting message.
+I use the Tide prompt, which is clean and visually appealing.
 
 {{< carousel images="gallery/fish/*" interval="2500" >}}
 
-## 4. Summary
+## Summary
 
-The provided documentation for these tools should be sufficient to get you started on using them.
-You can use [my configuration] as a reference for modifying your own.
+The official documentation for each tool is enough to get started, and you can use [my configuration] as a reference when adapting your own.
 
 {{< github repo="cauliyang/dotfiles" >}}
 
-I use a lot of powerful and fancy terminal applications and I have shared my setup in my blog, specifically in my [desktop setup] post.
+I rely on many other terminal applications as well; the full setup is described in my [desktop setup] post.
+
+{{< signoff >}}
 
 <!-- link -->
 

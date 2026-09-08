@@ -1,6 +1,6 @@
 ---
 title: Rust Algorithm
-description: Minning Algorithm in Rust
+description: Notes from reading the source of classic algorithms implemented in Rust.
 categories:
   - Algorithms
   - Software Development

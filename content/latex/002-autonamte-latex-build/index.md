@@ -1,6 +1,6 @@
 ---
-title: Autonamte Latex Build Processing
-description: build robust documentation system for LaTex.
+title: Automate Your LaTeX Build
+description: A step-by-step GitHub Actions workflow that compiles LaTeX documents with latexmk, uploads the PDFs, commits them back, and caches dependencies.
 categories: ["Writing"]
 tags: ["LaTeX", "CI"]
 date: 2023-09-01
@@ -10,21 +10,26 @@ series: ["LaTex Typesetting"]
 series_order: 1
 ---
 
-## Latex
+## Why automate a LaTeX build
 
-LaTeX functions as an intricate tool for the meticulous creation of scientific documents, enriched by a comprehensive ecosystem and an extensive assortment of templates.
-I habitually utilize LaTeX for a plethora of activities, including the annotation of notes, the authoring of scholarly articles, and the formulation of thesis.
-GitHub serves as an indispensable medium for version management and collaborative endeavors.
-As such, automating the assembly procedure of LaTeX documents through GitHub would confer significant benefits.
+LaTeX is my tool of choice for scientific writing: notes, papers, and my thesis all live in `.tex` files, with a large ecosystem of packages and templates behind them.
+GitHub is where I keep those files under version control and collaborate on them.
+Building the documents automatically on every push closes the loop: the compiled PDF is always up to date, and a broken build is caught immediately.
 
-## GitHub Action
+This post walks through a GitHub Actions workflow that compiles LaTeX documents, stores the resulting PDFs, commits them back to the repository, and caches dependencies to keep the build fast.
 
-In an era where automation reigns supreme, GitHub Actions distinguish themselves as a paramount utility for streamlining software operations.
-This blog explores the nuances of configuring a GitHub Action to autonomously compile LaTeX manuscripts, archive the resulting files, and initiate subsequent code commits.
-Embark with us on this enlightening journey.
-Utilizing the `actions/checkout` action, we commence by crafting a rudimentary YAML file designed to trigger the compilation sequence for the LaTeX manuscript.
+## Build a basic workflow
 
-{{<github repo="actions/checkout">}}
+The first version of the workflow only checks out the repository with `actions/checkout`, then compiles it with `xu-cheng/latex-action`, which wraps `latexmk` in a container with a full TeX Live installation.
+
+{{< github repo="actions/checkout" >}}
+
+{{< github repo="xu-cheng/latex-action" >}}
+
+{{< steps >}}
+
+{{< step number="1" title="Check out the repository" >}}
+Create `.github/workflows/build.yml` with a single job that checks out the code on every push.
 
 ```yml
 name: Build LaTeX document
@@ -37,10 +42,10 @@ jobs:
         uses: actions/checkout@v3
 ```
 
-To elevate the compilation workflow, the `xu-cheng/latex-action` action can be enlisted.
-This grants the flexibility to delineate auxiliary parameters, such as the root file and the destination directory for output.
+{{< /step >}}
 
-{{<github repo="xu-cheng/latex-action">}}
+{{< step number="2" title="Compile the document" >}}
+Add a `xu-cheng/latex-action` step. It accepts the root file, the engine, and extra `latexmk` arguments. Here `main.tex` is compiled with `lualatex`, shell escape is enabled, and the output goes to the current directory.
 
 ```yml
 name: Build LaTeX document
@@ -61,9 +66,10 @@ jobs:
           args: "-output-directory=."
 ```
 
-In this configuration, we utilize `lualatex` to compile `main.tex`, incorporating the `shell_escape` feature, with the output directed to the current directory.
-It is often advantageous to arrange the resultant files systematically.
-To illustrate this, the example demonstrates how to modify the output directory for the LaTeX documents, designating `./gallery` as the target location.
+{{< /step >}}
+
+{{< step number="3" title="Choose an output directory" >}}
+Keeping build products in a dedicated folder is tidier. Point `-output-directory` at `./gallery` to collect the PDFs there.
 
 ```yml
 name: Build LaTeX document
@@ -84,7 +90,10 @@ jobs:
           args: "-output-directory=./gallery"
 ```
 
-Simultaneously, GitHub Actions simplifies the process of archiving the generated PDF for future reference or in-depth scrutiny.
+{{< /step >}}
+
+{{< step number="4" title="Upload the PDF as an artifact" >}}
+To keep a copy of every build, upload the PDF with `actions/upload-artifact`. The file then appears in the artifact section of the workflow run.
 
 ```yml
 name: Build LaTeX document
@@ -111,21 +120,25 @@ jobs:
           path: main.pdf
 ```
 
-In this step, we upload the compiled `main.pdf` file, making it accessible for download from the artifact section of the corresponding GitHub Action, as illustrated in the subsequent figure.
+{{< /step >}}
 
-[![artifact](imgs/artifact.png "artifact")](https://github.com/xu-cheng/latex-action/actions/runs/6061408257)
+{{< /steps >}}
 
-## Compilation of Multiple Documents
+The uploaded `main.pdf` can be downloaded from the run summary, as shown below.
 
-Additionally, the setup affords us the flexibility to compile an array of `.tex` files situated in nested directories.
-In this instance, we compile both `main.tex` and all `.tex` files residing within the `source/` directory.
+[![Artifact section of a GitHub Actions run showing the uploaded PDF](imgs/artifact.png "Artifact section of a workflow run")](https://github.com/xu-cheng/latex-action/actions/runs/6061408257)
+
+## Compile multiple documents
+
+The same action can compile several `.tex` files, including files in nested directories.
+Set `root_file` to a glob and enable `glob_root_file`:
 
 ```yml
 root_file: "source/*.tex"
 glob_root_file: true
 ```
 
-The resultant artifacts are neatly stored in the `./gallery` directory.
+The workflow below compiles both `main.tex` and every `.tex` file under `source/`, writing all output to `./gallery`.
 
 ```yml
 name: Build LaTeX document
@@ -155,11 +168,12 @@ jobs:
           args: "-output-directory=./gallery"
 ```
 
-## Committing Recent Modifications
+## Commit the build output
 
-Significantly, the GitHub actions also enable us to automate the task of committing alterations back to the repository.
+The workflow can also commit the generated files back to the repository, so the PDFs in `gallery/` always match the sources.
+The commit is made with the built-in `github-actions[bot]` identity and pushed with `ad-m/github-push-action`.
 
-{{<github repo="ad-m/github-push-action">}}
+{{< github repo="ad-m/github-push-action" >}}
 
 ```yml
 name: Build LaTeX document
@@ -203,9 +217,10 @@ jobs:
           branch: main
 ```
 
-## Utilizing Caching Mechanisms
+## Cache dependencies
 
-Streamlining the workflow is effortlessly achieved through the deployment of GitHub Actions' caching capabilities, thereby reducing execution time and enhancing operational efficiency.
+Finally, `actions/cache` shortens the run time by restoring the TeX tree and the auxiliary files from previous builds.
+The cache keys are derived from the hash of all `.tex` files, so the cache is refreshed whenever the sources change.
 
 ```yml
 name: Build LaTeX document
@@ -265,9 +280,11 @@ jobs:
 
 ## Examples
 
-Utilizing GitHub Actions, we can construct a nuanced, yet efficient, workflow for the compilation of LaTeX manuscripts.
-The aforementioned examples merely act as foundational elements; truly, the possibilities are boundless.
+These workflows are a starting point rather than a finished product; adapt them to your own repository layout.
+Two of my repositories use this setup:
 
-{{<github repo="cauliyang/learn_tikz">}}
+{{< github repo="cauliyang/learn_tikz" >}}
 
-{{<github repo="cauliyang/learning_notes">}}
+{{< github repo="cauliyang/learning_notes" >}}
+
+{{< signoff >}}

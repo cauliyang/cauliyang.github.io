@@ -1,5 +1,5 @@
 ---
-title: C++ Development in Bioinformatics
+title: Building a C++ Development Environment With htslib
 description: How I set up a productive C++ environment for bioinformatics work, including htslib, build tools, and dependency management without root access.
 categories: ["Bioinformatics", "Software Development"]
 tags: ["C++"]
@@ -8,30 +8,42 @@ featured: false
 draft: false
 ---
 
-## 1.1 Config Compile Environment
+## Configure the compile environment
 
-I am currently planning to develop a tool using _C++_ in both Linux and macOS environments.
-However, I frequently encounter obstacles in the form of lacking root access to download dependencies using `apt-get install -y dependencies` directly in Ubuntu.
-Navigating the complicated dependency chain and compiling each library individually can be time-consuming, often taking a night or even a week to complete.
-One solution to this issue is to use a package manager such as **Conda**, which is primarily used in the _data science_ domain.
-**Conda** offers support for other languages such as _C++_, _Rust_ and _R_ as well.
-Concrete package names may change at any time, and it's necessary to search for the real package name.
-Therefore, **Conda** can be useful tool for installing _C++_ dependencies, particularly in the bioinformatics domain.
-It's worth mentioning that there are several other solutions available for managing _C++_ dependencies such as [Vcpkg], [Conan], and I use [CPM] as an alternative option.
+I am planning to develop a tool in C++ that runs on both Linux and macOS.
+The recurring obstacle is that I usually lack root access, so I cannot simply run `apt-get install` for dependencies on Ubuntu.
+Working through the dependency chain and compiling each library by hand takes anywhere from a night to a week.
 
-### 1.2 Install GCC or Clang
+One solution is a package manager such as [Conda], best known in data science but with good support for C++, Rust, and R as well.
+Package names change over time, so always search for the current name before installing.
+Conda is a practical way to install C++ dependencies, particularly in bioinformatics.
+Other C++ dependency managers exist too, such as [Vcpkg] and [Conan]; I use [CPM] as an alternative.
 
-When it comes to the compilation environment, it is important to install a compiler, and [GCC] or [Clang] may be your choices.
-In general, Linux systems will ship with GCC, but the version may be low (4.
-9).
-That will not allow you to use the latest features of _C++_.
-In the meantime, you do not have root access yet.
-But you can use [Conda] to install any version of GCC or Clang by running `conda install -c conda-forge gcc` or `conda install -c conda-forge clang`.
-Keep in mind that you should search for GCC or clang in [Conda cloud] first before installation in order to install the proper version.
+### Install GCC or Clang
 
-After installation, Conda may set three significant variables for you: `CFLAGS`, `CXXFLAGS,` and `LDFLAGS`.
-You can check that by using `echo $CFLAGS`.
-You need to set that in your `~/.bashrc` or `~/.zshrc` if you do not find that. Here are examples:
+You first need a compiler, and [GCC] or [Clang] are the usual choices.
+Linux systems ship with GCC, but the version may be old (4.9, for example), which rules out recent C++ features, and again you may not have root access.
+With Conda you can install any version of GCC or Clang without root.
+
+{{< steps >}}
+{{< step number="1" title="Find the right package" >}}
+Search for GCC or Clang on [Conda cloud](https://anaconda.org/) first so you install the proper version.
+{{< /step >}}
+{{< step number="2" title="Install the compiler" >}}
+
+```bash
+conda install -c conda-forge gcc
+# or
+conda install -c conda-forge clang
+```
+
+{{< /step >}}
+{{< step number="3" title="Check the compiler flags" >}}
+After installation, Conda may set three important variables for you: `CFLAGS`, `CXXFLAGS`, and `LDFLAGS`. Check with `echo $CFLAGS`. If they are missing, set them in `~/.bashrc` or `~/.zshrc`.
+{{< /step >}}
+{{< /steps >}}
+
+Here are the values from my setup:
 
 ```bash
 export CXXFLAGS="-fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /your_conda_absolute_path/miniconda3/include"
@@ -45,43 +57,38 @@ export CFLAGS="-march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-prote
 export LDFLAGS="-Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,--allow-shlib-undefined -Wl,-rpath,/your_conda_absolute_path/miniconda3/lib -Wl,-rpath-link,/your_conda_absolute_path/miniconda3/lib -L/your_conda_absolute_path/miniconda3/lib"
 ```
 
-**You must change your Conda absolute path to your path of Conda**.
-I installed Conda in the base environment, and I also recommend installing GCC or clang in the base environment.
+{{< alert icon="triangle-exclamation" >}}
+Replace `/your_conda_absolute_path` with the absolute path of your own Conda installation.
+{{< /alert >}}
 
-## 2. Add htslib dependencies
+I installed these in the base environment, and I recommend installing GCC or Clang there as well.
 
-**[Htslib]** is a classic and well-known library used to manage bioinformatics format files, including _bam_, _sam_, _vcf_, and _bcf,_ etc.
+## Add htslib dependencies
 
-**Htslib** is implemented in _C_ so that it is able to meet high performance requirements.
-So far, many popular tools, for example _[samtools]_ and _[bcftools],_ are all based on htslib.
-There are wrappers for other languages like _[pysam]_ based on _Python_, _[rhtslib]_ based on _R, and_ _\[rust_htslib\]_ based on _Rust_.
-That will enable people using different languages to apply htslib in their applications.
+[Htslib] is the classic library for reading and writing bioinformatics file formats, including BAM, SAM, VCF, and BCF.
 
-_[Zlib]_ is only one library that htslib must depend on.
-In the meantime, htslib has other dependencies, which enables htslib to have more rich features.
-Here, I will not explain what feature dependencies will provide respectably.
-The detailed information can be found on the [Htslib] website.
-**However, \*Conda\* can install htslib easily by `conda install htslib`**.
-Keep in mind that we can also define the library version with `conda install htslib=1.15.1`.
-As mentioned above, htslib may have been installed in your environment if samtools or bcftools are already installed.
+Htslib is implemented in C to meet high performance requirements.
+Many popular tools, such as [samtools] and [bcftools], are built on it.
+Wrappers exist for other languages, including [pysam] for Python, [rhtslib] for R, and rust-htslib for Rust, so htslib can be used from whichever language you prefer.
 
-### 2.1 Cmake Scripts
+[Zlib] is the only hard dependency of htslib.
+The remaining dependencies are optional and each unlocks extra features; I will not go through them here, but the [Htslib] website documents them in detail.
+Conda installs htslib in one step with `conda install htslib`, and you can pin a version with `conda install htslib=1.15.1`.
+If samtools or bcftools are already installed in your environment, htslib is likely there too.
 
-I use [Cmake] as a build system, and here are several useful and valuable Cmake scripts.
-You can use that in your project.
-I think it will help you fix most dependency problems with htslib.
+### CMake scripts
+
+I use [CMake] as the build system, and the following scripts have fixed most of my htslib dependency problems.
+You are welcome to use them in your own project.
 
 - [htslib.cmake]
-
 - [FindHTSlib.cmake]
-
 - [FindDeflate.cmake]
-
 - [zlib.cmake]
 
-Firstly, I assume your directory structure looks like this:
+I assume your directory structure looks like this:
 
-```bash
+```text
 .
 ├── CMakeLists.txt
 ├── build
@@ -90,24 +97,20 @@ Firstly, I assume your directory structure looks like this:
 └── source
 ```
 
-These cmake scripts should be found in the `cmake` directory. We can use in CmakeLists.txt
+Put the scripts in the `cmake` directory and include them from `CMakeLists.txt`:
 
 ```cmake
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 include(htslib)
 ```
 
-If `htslib` is found in your current environment, `cmake` will define the variables `HTSlib_FOUND` and HTSlib_INCLUDE_DIRS\`\`and`HTSlib_LIBRARIES`.
-Otherwise, `cmake`will build static htslib from sources, and`cmake`will check if every dependency of htslib exists respectively.
-If it exists,`cmake`will use the compiler flags of htslib to build a static library.
-Otherwise,`cmake`will disable related compiler flags.
-However, [zlib] is the only one that must exist.
-So, if [zlib] does not exist,`cmake` will help you build [zlib] from source.
-All these CMake scripts can be found at the above link.
-Please feel free to explore that.
+If htslib is found in your environment, CMake defines `HTSlib_FOUND`, `HTSlib_INCLUDE_DIRS`, and `HTSlib_LIBRARIES`.
+Otherwise, CMake builds a static htslib from source, checking for each optional dependency in turn.
+If a dependency exists, CMake enables the corresponding htslib feature; if not, it disables the related configure flag.
+Zlib is the one dependency that must exist, so if it is missing, CMake builds it from source as well.
 
-Indeed, we use [FindHTSlib.cmake] to search for htslib.
-[htslib.cmake] is shown below, and I have added some comments to explain how it works.
+`FindHTSlib.cmake` does the actual search for htslib.
+`htslib.cmake` is shown below with comments explaining how it works.
 
 ```cmake
 include(ExternalProject)
@@ -133,7 +136,7 @@ else()
 
   set(disable_flags --disable-gcs --disable-s3 --disable-plugins)
 
-  # find lzma if not founed the disable compiler flags
+  # find lzma; if not found, disable the compiler flags
   find_package(LibLZMA)
   if(LIBLZMA_FOUND)
     include_directories(SYSTEM ${LIBLZMA_INCLUDE_DIRS})
@@ -142,7 +145,7 @@ else()
     list(APPEND disable_flags --disable-lzma)
   endif()
 
-# find curl if not founed the disable compiler flags
+  # find curl; if not found, disable the compiler flags
   find_package(CURL)
   if(CURL_FOUND)
     include_directories(SYSTEM ${CURL_INCLUDE_DIRS})
@@ -151,7 +154,7 @@ else()
     list(APPEND disable_flags --disable-libcurl)
   endif()
 
-#find bzip2 if not founed the disable compiler flags
+  # find bzip2; if not found, disable the compiler flags
   find_package(BZip2)
   if(BZIP2_FOUND)
     include_directories(SYSTEM ${BZIP2_INCLUDE_DIRS})
@@ -160,7 +163,7 @@ else()
     list(APPEND disable_flags --disable-bz2)
   endif()
 
-  # find defalte if not founed the disable compiler flags
+  # find deflate; if not found, disable the compiler flags
   find_package(Deflate)
   if(Deflate_FOUND)
     include_directories(SYSTEM ${Deflate_INCLUDE_DIRS})
@@ -168,7 +171,7 @@ else()
   endif()
 
   message(STATUS " dependencies: ${deps_LIB}")
-  # compiler and install htslib from source
+  # compile and install htslib from source
   ExternalProject_Add(
     htslib
     PREFIX ${htslib_PREFIX}
@@ -180,7 +183,7 @@ else()
     INSTALL_COMMAND ${MAKE_COMMAND} install prefix=${htslib_INSTALL}
   )
 
-# user pre-defined variable (-DZLIB_BUILD=ON) to control is build zlib from sources
+  # user-defined variable (-DZLIB_BUILD=ON) controls whether zlib is built from source
   message(STATUS "ZLIB_BUILD: ${ZLIB_BUILD}")
   if(ZLIB_BUILD)
     include(cmake/zlib.cmake)
@@ -200,7 +203,7 @@ else()
   endif()
   list(APPEND deps_LIB ${zlib_LIBRARIES})
 
-# define two variables for usage
+  # define two variables for downstream use
   set(HTSlib_INCLUDE_DIRS ${htslib_INSTALL}/include)
   set(HTSlib_LIBRARIES ${htslib_INSTALL}/lib/libhts.a ${deps_LIB})
   message(STATUS "HTSlib_INCLUDE_DIRS: ${HTSlib_INCLUDE_DIRS}")
@@ -209,42 +212,41 @@ else()
 endif()
 ```
 
-Now you can use the htslib like this in cmake:
+Now you can link against htslib like this:
 
 ```cmake
 add_library(test test.h test.cpp)
 
 # if htslib is not in your environment
 if(NOT HTSlib_FOUND)
- # if htslib build from source you need add this
+  # if htslib is built from source you need to add this
   add_dependencies(${PROJECT_NAME} htslib)
 endif()
 
 target_link_libraries(test PRIVATE ${HTSlib_LIBRARIES})
 target_include_directories(test PRIVATE ${HTSlib_INCLUDE_DIRS} ${HTSlib_INCLUDE_DIRS}/htslib)
-
 ```
 
-You can change `PRIVATE` to `PUBLIC` if you want to export htslib. It depends on your goal.
+Change `PRIVATE` to `PUBLIC` if you want to export htslib to dependents of your target.
 
-## 3. Recommend Practices
+## Recommended practices
 
-In the beginning, I recommend you use a suitable directory structure. Here are a few of the best examples:
+Start with a sensible directory structure. A few good templates:
 
 - <https://github.com/TheLartians/ModernCppStarter>
 - <https://github.com/cpp-best-practices/gui_starter_template>
 - <https://github.com/filipdutescu/modern-cpp-template>
 
-I prefer the first one. Using a good template can help you learn other tools in order to make the project better.
-After you dive into one of the templates, I think you will learn more than you imagined.
+I prefer the first one.
+A good template also introduces you to the surrounding tooling, and once you dig into one you will learn more than you expect.
 
-## 4. Summary
+## Summary
 
-In this blog, I will introduce how to install `C++` dependencies and how to configure `htslib` in your development environment.
-Various cmake scripts are provided and can help the project fix `htslib` dependency problems smoothly.
-The source of these scripts at the top.
-If you have any questions, please feel free to reach me.
-Thanks for your time and reading!
+This post covered how to install C++ dependencies without root access and how to configure htslib in your development environment.
+The CMake scripts linked above should resolve most htslib dependency problems.
+If you have any questions, feel free to reach out.
+
+{{< signoff >}}
 
 <!---link--->
 

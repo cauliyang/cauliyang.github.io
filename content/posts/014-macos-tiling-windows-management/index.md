@@ -1,6 +1,6 @@
 ---
-title: Tiling Windows Management in macOS
-description: A keyboard-driven tiling setup on macOS using yabai, skhd, stackline, and sketchybar.
+title: Tiling Window Management on macOS
+description: How yabai, skhd, stackline, and SketchyBar give macOS a keyboard-driven tiling workflow, and why the setup effort is worth it.
 categories: ["Tools"]
 tags: ["macOS"]
 date: 2022-12-20
@@ -8,62 +8,60 @@ featured: false
 draft: false
 ---
 
-## 1. Aims
+## Why tiling
 
-The philosophy of Vim's motion has had a profound influence on me, leading me to fully embrace [Neovim].
-The notion of having to reposition windows using a mouse is anathema to me.
-I greatly value the experience of utilizing solely the keyboard.
-As such, I set out to find a tool to aid me in managing windows seamlessly.
-Eventually, I discovered a quartet of exceptional tools that I highly recommend giving a try.
-To this day, they continue to surpass my expectations and enhance my productivity.
+Vim's approach to motion changed how I work and led me to [Neovim] full time.
+Once you are used to it, reaching for the mouse to drag a window into place feels wrong.
+I wanted the whole desktop to be driven from the keyboard, so I went looking for a window manager that could do it on macOS.
+I ended up with four tools that work together, and they have held up well since.
 
-{{< alert  icon="fire" cardColor="#e63946" iconColor="#1d3557" textColor="#f1faee"  >}}
-Configuration is time-consuming, and you can give up if you do not like that.\*\*
-However, that means you have already missed one amazing thing.
+{{< alert icon="triangle-exclamation" >}}
+Configuring these tools takes real time, and it is tempting to give up halfway.
+Push through: the result is one of the best changes I have made to my workflow.
 {{< /alert >}}
 
-## 2. Tools
+## The tools
 
-### [yabai]
+### yabai
 
-[Yabai] is tiling windows manager akin to [i3], falling under the category of BSP window managers.
-Its capabilities are robust enough to provide a fluid experience.
-It can be tailored to your preferences through binding any key to execute commands in [yabai].
-You can view the video linked below to witness the power of [yabai].
-Another notable tool, [Skhd], is developed by the same talented individual who created [yabai].
+[yabai] is a tiling window manager in the spirit of [i3]: a binary space partitioning (BSP) manager that splits the screen recursively as windows open.
+It is fast enough to feel native, and every action it supports can be bound to a key through its command-line interface.
+The video below shows what it can do.
+[skhd], covered next, is written by the same author.
 
-[![YTB](https://img.youtube.com/vi/AdwhjIg_Xe4/0.jpg)](https://www.youtube.com/watch?v=AdwhjIg_Xe4&ab_channel=StephenHuan)
+{{< github repo="koekeishiya/yabai" >}}
 
-### [Skhd]
+[![Demo video of yabai tiling windows on macOS](https://img.youtube.com/vi/AdwhjIg_Xe4/0.jpg)](https://www.youtube.com/watch?v=AdwhjIg_Xe4&ab_channel=StephenHuan)
 
-[Skhd] is key mapping tool that can allow you bind keys to execute command line tool.
-For example `ctrl + alt - left: yabai -m display --focus west || yabai -m display --focus recent`, it means that `ctrl + alt - left` will cause [ yabai ] to move focus to difference monitors.
+### skhd
 
-More importantly, [skhd] allows for the creations of multiple modes, similar to Vim's modal editing.
-Each mode can have its won set of motion commands, distinguished by their unique prefix.
-This is an incredibly powerful feature, as it reduces the need for memorizing a plethora of complex key combination.
-You need only remember the prefix of the mode you're currently in.
-[Skhd] seamlessly integrates with [Yabai] and [sketchybar], resulting in an unparalleled user experience.
+[skhd] is a hotkey daemon: it binds key combinations to shell commands.
+For example, `ctrl + alt - left : yabai -m display --focus west || yabai -m display --focus recent` moves focus to the display on the left, falling back to the most recently used display.
 
-### [Stackline]
+More importantly, skhd supports modes, much like Vim's modal editing.
+Each mode has its own set of bindings and is entered through a unique prefix, so you only need to remember the prefix for the mode you want rather than a large set of unrelated key combinations.
+skhd integrates cleanly with both [yabai] and [SketchyBar].
 
-[Stackline] is a tool that enables the visualization of stack indicators, allowing you to easily discern which program is currently at the top of the stack and make changes accordingly.
-The read arrow serves as the [stackline] indicator.
+### stackline
 
-{{< figure src= "https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/20221220213154.png" numbered="true" width="533" >}}
+[stackline] draws indicators for yabai's window stacks, so you can see which window is on top of a stack and switch between them without guessing.
+The red arrow in the screenshot below is the stackline indicator.
 
-### [SketchyBar]
+{{< figure src="https://cdn.jsdelivr.net/gh/cauliyang/blog-image@main//img/20221220213154.png" alt="Tiled macOS desktop with a stackline indicator and a SketchyBar status bar" numbered="true" width="533" >}}
 
-[SketchyBar] is menu bar tool that can be paired with [yabai] and [skhd] to display a wealth of information.
-As seen in the top portion of the previous screenshot, it can be customized to include any pertinent information you desire.
+### SketchyBar
 
-## 3. Take home message
+[SketchyBar] replaces the macOS menu bar with a fully scriptable status bar.
+Paired with yabai and skhd it can show the current space, the active mode, and anything else you can query from a shell script; the bar at the top of the screenshot above is my configuration.
 
-I must acknowledge that the configuration process can be both tedious and frustrating, a necessary trade-off for attaining a high degree of customization.
-These tools all possess an array of fancy features, made possible through their high degrees of customization.
-I will share [my personal configuration] and their documentation also provide ample information to assist in the process.
-Patience is key, as the time invested in configuring these tools will ultimately pay off in terms of the enhanced functionality they provide.
-If you have any other recommendations or alternatives, please do not hesitate to share them.
+## Take-home message
+
+The configuration is tedious and occasionally frustrating; that is the price of this much flexibility.
+[My personal configuration] is public, and each tool's documentation is thorough, so you do not have to start from scratch.
+The time spent pays for itself once the keyboard drives everything.
+If you know other tools or alternatives worth trying, I would like to hear about them.
+
+{{< signoff >}}
 
 <!-- links -->
 

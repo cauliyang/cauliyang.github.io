@@ -8,18 +8,18 @@ featured: false
 draft: true
 ---
 
-# Transformer
+## Transformer
 
-# Attention Layer
+## Attention Layer
 
-## Attention Score
+### Attention Score
 
-## Masked Embedding
+### Masked Embedding
 
-# Encoder
+## Encoder
 
-# Decoder
+## Decoder
 
-## Sampling Strategy
+### Sampling Strategy
 
-# Encoder-Decoder
+## Encoder-Decoder

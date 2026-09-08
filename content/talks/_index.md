@@ -1,12 +1,13 @@
 ---
 title: "Talks"
+description: "Slides and materials from talks, workshops, and challenge entries on bioinformatics tools and data visualization."
 showDate: false
 showAuthor: false
 invertPagination: true
 ---
 
 {{< lead >}}
-Dive into a world where voices from across the globe converge to share knowledge, inspire change, and ignite curiosity.
+Slides and materials from my talks, workshops, and challenge entries.
 {{< /lead >}}
 
 ---

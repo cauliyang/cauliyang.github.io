@@ -1,6 +1,6 @@
 ---
-title: TikZ-Learning Journey
-description: visualization in LaTex.
+title: My TikZ Learning Journey
+description: A growing gallery of TikZ diagrams and their LaTeX source, collected while I learn to draw technical figures with TikZ.
 categories: ["Writing"]
 tags: ["LaTeX", "TikZ"]
 date: 2023-06-02
@@ -17,53 +17,35 @@ series_order: 2
 
 ## Why
 
-Welcome to 'My TikZ-Learning Journey', a space where I document my exploration with the wonderful TikZ library in LaTeX.
-LaTeX is a typesetting system used widely in academia and industries for the production of scientific and technical documents.
-Of its many features, the one I've recently been fascinated with is the TikZ library - a versatile package for crafting detailed and professional-grade diagrams.
+LaTeX is the standard typesetting system for scientific and technical documents in academia and industry.
+Among its many packages, the one I have been most absorbed in lately is TikZ, a versatile package for drawing detailed, publication-quality diagrams.
 
-This [open-source repository][repo] is more than just a personal notebook.
-It's an arena where I intend to share my collection of TikZ codes with you all.
-This collection, which will gradually expand, is not just about sharing the product of my learning process but about giving you an insight into my journey of learning and experimenting with TikZ.
+This post and the accompanying [open-source repository][repo] are where I collect the TikZ code I write along the way.
+The collection grows gradually, and it is meant to show not just the finished figures but the process of learning and experimenting with TikZ.
+Whether you are new to LaTeX and TikZ or an experienced user looking for examples, I hope it is useful.
 
-Whether you are a beginner just starting out with LaTeX and TikZ, or an experienced user searching for a fresh perspective, I hope my shared learning path will inspire and assist you.
+## What is TikZ
 
-## What is TikZ?
+TikZ is a high-level drawing language built on top of LaTeX.
+It produces complex, precise graphics directly inside a LaTeX document, from simple geometric figures to flowcharts, network diagrams, and logic circuits.
+That breadth is also what makes TikZ daunting to learn.
 
-TikZ is a higher-level drawing language built on top of the LaTeX document preparation system.
-It allows the creation of complex, beautiful graphics, all at the heart of LaTeX.
-Despite its power, TikZ can be daunting to learn due to its comprehensive nature.
-From creating simple geometrical figures to developing intricate diagrams such as flowcharts, network diagrams, or logic circuits, TikZ provides the tools for us to implement our imagination in a precise, structured manner.
+## What to expect from the repository
 
-## What can you expect from this repository?
+The repository documents my progress as I go deeper into TikZ: the code, the problems I ran into, and how I solved them.
+Over time it should show the progression from simple drawings to more intricate, multi-part diagrams.
 
-This repository is intended to be a living testament to my learning journey.
-As I delve deeper into the intricacies of TikZ, I'll be documenting and sharing my codes, the challenges I faced, and how I overcame them.
-You can expect to see the evolution of my work from simple drawings to intricate, multifaceted diagrams.
-
-While I'll try to annotate my code and explain my thought process wherever possible, please bear in mind that this project is primarily a reflection of my self-directed learning.
-It isn't structured as a course or guide.
-However, I do believe that by seeing the practical application of TikZ commands and observing how they can be manipulated to generate diverse outputs, you'll gain valuable insights and understanding of TikZ.
-
-I encourage you all to experiment with the shared codes, tweak them, and make them your own.
-By sharing my journey, I aim to inspire you to embark on your own exploration of TikZ and LaTeX.
-
-## Join me on this journey
-
-As we navigate the complexities of learning TikZ together, we'll inevitably stumble, err, and grow.
-Remember, this learning journey isn't about perfection.
-It's about the experience of trying, learning, and improving.
-With that in mind, I warmly invite you to join me on this adventure of understanding and mastering TikZ in LaTeX.
-
-Let's dive into the fascinating world of technical diagrams together, one line of code at a time.
+I try to annotate the code and explain my reasoning where I can, but the project is a record of self-directed learning rather than a structured course or guide.
+Seeing TikZ commands applied to real figures, and how small changes alter the output, is still a practical way to build intuition for the package.
+Feel free to take the code, tweak it, and make it your own.
 
 {{< github repo="cauliyang/learn_tikz" >}}
 
-Happy learning!
-
-{{< alert  icon="fire" cardColor="#e63946" iconColor="#1d3557" textColor="#f1faee"  >}}
-Note: This blog will be updated periodically to reflect my ongoing progress with TikZ.
-Do keep checking back for fresh codes and insights.
+{{< alert icon="circle-info" >}}
+This post is updated periodically as my work with TikZ progresses, so check back for new figures and code.
 {{< /alert >}}
+
+{{< signoff >}}
 
 <!-- links -->
 
