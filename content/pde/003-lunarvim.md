@@ -1,6 +1,6 @@
 ---
 title: Supercharge Your Productivity with Neovim - Building a Customized Development Environment
-description: the article will focus on using the text editor Neovim to create a highly efficient and personalized development environment. The article will cover topics such as installing and configuring Neovim, customizing the user interface, configuring plugins, and optimizing the workflow.
+description: A hands-on guide to building a fast, personalized Neovim setup with LunarVim, from install to plugins and workflow.
 categories:
   - Tools
 tags:

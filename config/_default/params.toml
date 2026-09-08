@@ -11,6 +11,7 @@ autoSwitchAppearance = false
 
 enableSearch = true
 enableCodeCopy = true
+enableStructuredBreadcrumbs = true
 
 mainSections = ["posts", "projects", "pde", "latex"]
 # robots = ""
@@ -18,15 +19,17 @@ mainSections = ["posts", "projects", "pde", "latex"]
 disableImageOptimization = false
 
 defaultBackgroundImage = "img/hero-bytesoflife.jpg" # used as default for background images
+backgroundCanvas = true # fixed site-wide backdrop behind every page
 defaultFeaturedImage = "img/featured-default.jpg"   # used as default for featured images in all articles
 defaultSocialImage = "img/og-default.png"           # used as default OG/Twitter card
 
+disableTextInHeader = true # the wordmark logo already carries the site title
 highlightCurrentMenuArea = true
 smartTOC = true
 smartTOCHideUnfocusedChildren = true
 
 [header]
-layout = "fixed" # valid options: basic, fixed, fixed-fill, fixed-fill-blur
+layout = "fixed-fill-blur" # valid options: basic, fixed, fixed-fill, fixed-gradient, fixed-fill-blur, floating
 
 [footer]
 showMenu = true
@@ -37,7 +40,6 @@ showScrollToTop = true
 
 [homepage]
 layout = "background"            # valid options: page, profile, hero, card, background, custom
-homepageImage = "img/hero-bytesoflife.jpg" # used in: hero, and card
 showRecent = true
 showRecentItems = 10
 showMoreLink = true
@@ -53,7 +55,7 @@ showLikes = true
 showDateUpdated = true
 showAuthor = true
 showHero = true
-heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+heroStyle = "big" # valid options: basic, big, background, thumbAndBackground
 layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
 layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
 showBreadcrumbs = true
@@ -66,33 +68,28 @@ showHeadingAnchors = true
 showPagination = true
 invertPagination = false
 showReadingTime = true
+showReadingProgress = true
+showZenMode = true
 showTableOfContents = true
 showRelatedContent = true
 relatedContentLimit = 5
 showTaxonomies = true
+showCategoriesInSecondaryColor = true
 showAuthorsBadges = true
 showWordCount = true
 showComments = true
-sharingLinks = [
-  "linkedin",
-  "x",
-  "reddit",
-  "pinterest",
-  "facebook",
-  "email",
-  "whatsapp",
-  "telegram",
-]
+sharingLinks = ["linkedin", "x", "reddit", "email"]
 
 [list]
 showHero = true
+featureImageHover = true
 heroStyle = "background"            # valid options: basic, big, background, thumbAndBackground
 layoutBackgroundBlur = true         # only used when heroStyle equals background or thumbAndBackground
 layoutBackgroundHeaderSpace = false # only used when heroStyle equals background
 showBreadcrumbs = true
 showSummary = false
-showViews = true
-showLikes = true
+showViews = false
+showLikes = false
 showTableOfContents = true
 showCards = false
 groupByYear = true
@@ -108,8 +105,8 @@ showTermCount = true
 showHero = true
 heroStyle = "background"   # valid options: basic, big, background, thumbAndBackground
 showBreadcrumbs = true
-showViews = true
-showLikes = true
+showViews = false
+showLikes = false
 showTableOfContents = true
 cardView = false
 
@@ -117,8 +114,8 @@ cardView = false
 showHero = true
 heroStyle = "background"    # valid options: basic, big, background, thumbAndBackground
 showBreadcrumbs = false
-showViews = true
-showLikes = true
+showViews = false
+showLikes = false
 showTableOfContents = true
 groupByYear = false
 cardView = false

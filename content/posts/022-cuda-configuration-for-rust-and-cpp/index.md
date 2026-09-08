@@ -111,8 +111,8 @@ mamba install gcc=11.0 gxx=11.0 cmake
 It's essential to define the environment variable `CUDA_ROOT` in order to effectively utilize CUDA.
 
 ```bash
-CUDA_ROOT=/home/mambaforg/envs/cuda RUSTFLAGS="-L/home/mambaforge/envs/cuda/lib/stubs" cargo run
-CUDA_ROOT=/home/mambaforg/envs/cuda g++ -o test test.cpp
+CUDA_ROOT=/home/mambaforge/envs/cuda RUSTFLAGS="-L/home/mambaforge/envs/cuda/lib/stubs" cargo run
+CUDA_ROOT=/home/mambaforge/envs/cuda g++ -o test test.cpp
 ```
 
 Let's configure an environment-specific variable so as to obviate the need for setting `CUDA_ROOT` repeatedly.
@@ -205,13 +205,13 @@ cd candle
 Let's assume that we have already configured the environment variables `CUDA_ROOT` and `RUSTFLAGS`.
 
 ```bash
-cargo run --examples whisper --features cuda --realease
+cargo run --example whisper --features cuda --release
 ```
 
 Alternatively, employ temporary environment variables for the session.
 
 ```bash
-CUDA_ROOT="/home/mambaforge/env/cuda"  RUSTFLAGS="-L/home/mambaforge/env/cuda/lib/stubs" cargo run --examples whisper --features cuda --realease
+CUDA_ROOT="/home/mambaforge/env/cuda"  RUSTFLAGS="-L/home/mambaforge/env/cuda/lib/stubs" cargo run --example whisper --features cuda --release
 ```
 
 ![whisper](imgs/whisper.png "whisper")
@@ -228,11 +228,7 @@ The generated image:
 
 ![image](imgs/sd_final.png "generated image")
 
-## 5. Quick start for [llama.cpp]
-
-[llama.cpp] will be coming soon.
-
-## 6. Bonus
+## 5. Bonus
 
 A bash script is used to apply an interactive computing node using `slurm`.
 Changing `-p b1171 --account=b1171` if you use the script.
@@ -284,7 +280,7 @@ else
 fi
 ```
 
-## 7. Canveat
+## 6. Caveat
 
 `undefined reference to `memcpy@GLIBC_2.14'`
 
@@ -310,11 +306,13 @@ module spider cuda
 module load cuda/gcc-11.3.0
 ```
 
-## 8. Q & A
+## 7. Q & A
 
-- why not to use `module load`
-
-`module load` is great but we canont control everything 🤪.
+{{< accordion >}}
+{{< accordionItem title="Why not just use module load?" >}}
+`module load` is great, but we cannot control everything 🤪. Installing CUDA into a conda environment keeps the toolchain reproducible and independent of what the cluster admins ship.
+{{< /accordionItem >}}
+{{< /accordion >}}
 
 [^1]: https://github.com/flosse/rust-web-framework-comparison
 

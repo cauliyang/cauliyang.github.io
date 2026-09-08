@@ -1,6 +1,6 @@
 ---
 title: "DeepChopper: A Genomic Language Model that Cleans Up Nanopore Direct RNA Sequencing"
-description: "How we built a HyenaDNA-based model to detect adapter-bridged chimera artifacts at single-nucleotide resolution: the story, the science, and the engineering behind it."
+description: "The story, science, and engineering behind a HyenaDNA-based model that finds adapter-bridged chimera artifacts at single-nucleotide resolution."
 categories: ["Bioinformatics", "Machine Learning", "Writing"]
 tags: ["Deep Learning", "Nanopore", "Language Model", "Adapter Trimming", "Rust"]
 date: 2026-05-07
@@ -154,7 +154,8 @@ A few things from this project changed how I think about ML for sequencing.
 
 DeepChopper is open source. If you sequence dRNA-seq data, RNA002 or RNA004, there is a reasonable chance some non-trivial fraction of your "fusions" are adapters in disguise. It only takes one run to find out.
 
-- **GitHub:** [github.com/ylab-hi/DeepChopper](https://github.com/ylab-hi/DeepChopper)
+{{< github repo="ylab-hi/DeepChopper" >}}
+
 - **Documentation:** [ylab-hi.github.io/DeepChopper](https://ylab-hi.github.io/DeepChopper/)
 - **Project page on this site:** [DeepChopper project](/projects/005-deepchopper/)
 

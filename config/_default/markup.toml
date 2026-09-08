@@ -2,8 +2,20 @@
 # These settings are required for the theme to function.
 
 [goldmark]
+[goldmark.parser]
+wrapStandAloneImageWithinParagraph = false
+[goldmark.parser.attribute]
+block = true
+
 [goldmark.renderer]
 unsafe = true
+
+# Keep math out of the Markdown parser so `_` and `\` survive to KaTeX.
+[goldmark.extensions.passthrough]
+enable = true
+[goldmark.extensions.passthrough.delimiters]
+block = [['\[', '\]'], ['$$', '$$']]
+inline = [['\(', '\)']]
 
 [highlight]
 noClasses = false

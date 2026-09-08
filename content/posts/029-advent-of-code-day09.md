@@ -1,6 +1,6 @@
 ---
-title: Bioinformatics Algorithm Library aka BINARY
-description: A collection of algorithms and data structures that are designed for modern C++ bioinformatics applications.
+title: "Advent of Code: Day 9 in Rust"
+description: Solving Advent of Code day 9 in Rust.
 categories:
   - Bioinformatics
   - Algorithms

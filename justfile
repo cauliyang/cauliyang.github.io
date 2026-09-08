@@ -56,3 +56,7 @@ commit: format build
     git add .
     aic
     # Changes committed.
+
+# Regenerates the procedural brand artwork (hero, featured fallback, OG card)
+brand-art:
+	python3 scripts/brand_art.py

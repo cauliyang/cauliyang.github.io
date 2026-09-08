@@ -3,7 +3,7 @@ title: Short Code Example
 description: showing all available short codes
 date: 2022-06-24
 featured: false
-draft: false
+draft: true
 showAuthor: false
 showAuthorsBadges: false
 showComments: false

@@ -13,27 +13,6 @@ tags: ["macOS", "Development"]
 
 {{< carousel images="gallery/*" interval="2500" >}}
 
-## TODO
-
-<!-- https://github.com/ibraheemdev/modern-unix -->
-<!-- - [ ] https://github.com/junegunn/fzf/blob/master/ADVANCED.md -->
-
-- [ ] add latex
-- [ ] add lsd
-- [ ] add fd
-- [ ] add fzf
-- [ ] add ripgrep
-- [ ] add procs
-- [ ] add zoxide
-- [ ] add gitui
-- [ ] add btop
-
-<!-- Act as a blog writer. You will act as a creative and engaging technical writer and create tutorial on how
-to do different stuff on specific topic.I will provide you with the topic and you will come up with an engaging
-article about the topic. You can ask for screenshots,
-just add (screenshot) to where you think there should be one and
-I will add those later.These are the first basic topic: "introduce chatgpt" -->
-
 ## TLDR
 
 |                  |               |                    |               |
@@ -304,7 +283,7 @@ cargo install ouch
 Topgrade is a free and open-source utility for upgrading all your packages.
 It's designed to be fast, flexible, and easy to use, with a simple command-line interface that allows you to quickly upgrade your packages without worrying about dependencies or conflicts.
 
-{{< figure src="https://github.com/topgrade-rs/topgrade/blob/main/doc/topgrade_demo.gif" width=500 >}}
+{{< figure src="https://raw.githubusercontent.com/topgrade-rs/topgrade/main/doc/topgrade_demo.gif" width=500 >}}
 
 Here's how to get started with Topgrade:
 
@@ -416,7 +395,7 @@ It's a powerful text editor that's highly customizable, with a strong focus on k
 if you're looking for a lightweight, fast, and highly configurable editor.
 It's great for coding in a terminal, with a vast array of plugins available for customizing workflow.
 It does have a steeper learning curve than some other editors.
-Neovim is my favorite tool and I have written a [blog]({{< ref "001-rust-noodles" >}}) about personal developed environment.
+Neovim is my favorite tool and I have written a [series]({{< ref "/pde" >}}) about my personal development environment.
 
 ### VS Code
 
